@@ -7,6 +7,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Menu } from "lucide-react";
 
 const aiItems = [
   { id: "agents", label: "Agents" },
@@ -40,6 +43,78 @@ export const SiteHeader = () => {
           <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
           <span className="sr-only">Automate To Sell</span>
         </Link>
+
+        <div className="md:hidden flex items-center gap-2">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" aria-label="Open menu">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80">
+              <nav className="mt-6 space-y-4">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="ai">
+                    <AccordionTrigger>AI Solutions</AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="space-y-2">
+                        {aiItems.map((item) => (
+                          <li key={item.id}>
+                            <SheetClose asChild>
+                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
+                                {item.label}
+                              </button>
+                            </SheetClose>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="ecom">
+                    <AccordionTrigger>e‑Commerce</AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="space-y-2">
+                        {ecommerceItems.map((item) => (
+                          <li key={item.id}>
+                            <SheetClose asChild>
+                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
+                                {item.label}
+                              </button>
+                            </SheetClose>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="ads">
+                    <AccordionTrigger>Ad Management</AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="space-y-2">
+                        {adItems.map((item) => (
+                          <li key={item.id}>
+                            <SheetClose asChild>
+                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
+                                {item.label}
+                              </button>
+                            </SheetClose>
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                <div className="pt-2 space-y-2">
+                  <SheetClose asChild>
+                    <button onClick={() => handleScroll('about')} className="w-full text-left py-1.5 hover:text-primary">About</button>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <button onClick={() => handleScroll('contact')} className="w-full text-left py-1.5 hover:text-primary">Contact</button>
+                  </SheetClose>
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
 
         <div className="hidden md:flex items-center gap-6">
           <DropdownMenu>
