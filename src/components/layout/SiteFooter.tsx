@@ -4,9 +4,12 @@ export const SiteFooter = () => {
       <div className="container py-10 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-3">
         <p>© {new Date().getFullYear()} Automate To Sell. All rights reserved.</p>
         <nav className="flex items-center gap-6">
+          <a href="#" className="hover:text-primary">Home</a>
           <a href="#ai-solutions" className="hover:text-primary">AI Solutions</a>
-          <a href="#e-commerce" className="hover:text-primary">e‑Commerce</a>
-          <a href="#ad-management" className="hover:text-primary">Ad Management</a>
+          <a href="#vibe-coding" className="hover:text-primary">Vibe Coding</a>
+          <a href="#e-commerce" className="hover:text-primary">E‑Commerce</a>
+          <a href="#social-content" className="hover:text-primary">Social Content</a>
+          <a href="#sales-marketing-automation" className="hover:text-primary">Sales & Marketing Automation</a>
           <a href="#about" className="hover:text-primary">About</a>
           <a href="#contact" className="hover:text-primary">Contact</a>
         </nav>

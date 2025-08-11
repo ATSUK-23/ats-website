@@ -52,111 +52,50 @@ export const SiteHeader = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
-              <nav className="mt-6 space-y-4">
-                <Accordion type="single" collapsible>
-                  <AccordionItem value="ai">
-                    <AccordionTrigger>AI Solutions</AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="space-y-2">
-                        {aiItems.map((item) => (
-                          <li key={item.id}>
-                            <SheetClose asChild>
-                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
-                                {item.label}
-                              </button>
-                            </SheetClose>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="ecom">
-                    <AccordionTrigger>e‑Commerce</AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="space-y-2">
-                        {ecommerceItems.map((item) => (
-                          <li key={item.id}>
-                            <SheetClose asChild>
-                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
-                                {item.label}
-                              </button>
-                            </SheetClose>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="ads">
-                    <AccordionTrigger>Ad Management</AccordionTrigger>
-                    <AccordionContent>
-                      <ul className="space-y-2">
-                        {adItems.map((item) => (
-                          <li key={item.id}>
-                            <SheetClose asChild>
-                              <button onClick={() => handleScroll(item.id)} className="w-full text-left py-1.5 hover:text-primary">
-                                {item.label}
-                              </button>
-                            </SheetClose>
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-                <div className="pt-2 space-y-2">
-                  <SheetClose asChild>
-                    <button onClick={() => handleScroll('about')} className="w-full text-left py-1.5 hover:text-primary">About</button>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <button onClick={() => handleScroll('contact')} className="w-full text-left py-1.5 hover:text-primary">Contact</button>
-                  </SheetClose>
-                </div>
+              <nav className="mt-6 space-y-2">
+                <SheetClose asChild>
+                  <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="w-full text-left py-1.5 hover:text-primary">Home</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('ai-solutions')} className="w-full text-left py-1.5 hover:text-primary">AI Solutions</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('vibe-coding')} className="w-full text-left py-1.5 hover:text-primary">Vibe Coding</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('e-commerce')} className="w-full text-left py-1.5 hover:text-primary">E‑Commerce</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('social-content')} className="w-full text-left py-1.5 hover:text-primary">Social Content</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('sales-marketing-automation')} className="w-full text-left py-1.5 hover:text-primary">Sales & Marketing Automation</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('about')} className="w-full text-left py-1.5 hover:text-primary">About</button>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('contact')} className="w-full text-left py-1.5 hover:text-primary">Contact</button>
+                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">AI Solutions</DropdownMenuTrigger>
-            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
-              {aiItems.map((item) => (
-                <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
-                  {item.label}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">e-Commerce</DropdownMenuTrigger>
-            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
-              {ecommerceItems.map((item) => (
-                <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
-                  {item.label}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">Ad Management</DropdownMenuTrigger>
-            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
-              {adItems.map((item) => (
-                <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
-                  {item.label}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <button onClick={() => handleScroll("about")} className="text-sm font-medium hover:text-primary transition-colors">About</button>
-          <button onClick={() => handleScroll("contact")} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm font-medium hover:text-primary transition-colors">Home</button>
+          <button onClick={() => handleScroll('ai-solutions')} className="text-sm font-medium hover:text-primary transition-colors">AI Solutions</button>
+          <button onClick={() => handleScroll('vibe-coding')} className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</button>
+          <button onClick={() => handleScroll('e-commerce')} className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</button>
+          <button onClick={() => handleScroll('social-content')} className="text-sm font-medium hover:text-primary transition-colors">Social Content</button>
+          <button onClick={() => handleScroll('sales-marketing-automation')} className="text-sm font-medium hover:text-primary transition-colors">Sales & Marketing Automation</button>
+          <button onClick={() => handleScroll('about')} className="text-sm font-medium hover:text-primary transition-colors">About</button>
+          <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
         </div>
 
         <div className="flex items-center gap-3">
           <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-            <Button variant="hero" size="sm">Book Intro Call</Button>
+            <Button variant="hero" size="sm">Book Audit</Button>
           </a>
         </div>
       </nav>
