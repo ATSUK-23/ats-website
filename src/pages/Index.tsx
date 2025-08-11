@@ -3,6 +3,13 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import Hero from "@/components/sections/Hero";
 import Contact from "@/components/sections/Contact";
 import { Button } from "@/components/ui/button";
+import SplitSection from "@/components/sections/SplitSection";
+
+import whyImg from "@/assets/why-choose-us.jpg";
+import auditImg from "@/assets/audit-process.jpg";
+import workshopsImg from "@/assets/workshops.jpg";
+import sourcingImg from "@/assets/solution-sourcing.jpg";
+import pillarsImg from "@/assets/service-pillars.jpg";
 
 const Index = () => {
   const jsonLd = {
@@ -20,62 +27,73 @@ const Index = () => {
       <main>
         <Hero />
 
-        {/* Why Businesses Choose Us */}
-        <section id="about" className="container py-16 md:py-24">
-          <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">Technology Should Serve Your Strategy — Not Replace It</h2>
-            <p className="mt-4 text-muted-foreground">
-              The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it’s easy to get lost in “shiny object” syndrome.
-              We cut through the noise to:
-            </p>
-          </header>
-          <ul className="mt-8 grid gap-3 text-sm md:text-base text-muted-foreground">
-            <li>• Analyse your processes end-to-end</li>
-            <li>• Identify where automation and AI can create measurable ROI</li>
-            <li>• Recommend only what you truly need</li>
-            <li>• Integrate everything into one seamless system</li>
-          </ul>
-          <p className="mt-6 text-muted-foreground">We’re not tied to one software vendor. Our loyalty is to your results.</p>
-        </section>
+        <SplitSection
+          id="about"
+          title="Technology Should Serve Your Strategy — Not Replace It"
+          image={whyImg}
+          imageAlt="Before and after comparison of messy vs streamlined automated business systems"
+        
+          description={(
+            <>
+              <p>
+                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it’s easy to get lost in “shiny object” syndrome. We cut through the noise to:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                <li>Analyse your processes end-to-end</li>
+                <li>Identify where automation and AI can create measurable ROI</li>
+                <li>Recommend only what you truly need</li>
+                <li>Integrate everything into one seamless system</li>
+              </ul>
+              <p className="pt-2">We’re not tied to one software vendor. Our loyalty is to your results.</p>
+            </>
+          )}
+        />
 
-        {/* Audit First, Automate Second */}
-        <section id="audit" className="container py-16 md:py-24">
-          <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">Your Automation Journey Starts with a Business Process Audit</h2>
-            <p className="mt-4 text-muted-foreground">
+        <SplitSection
+          id="audit"
+          reverse
+          title="Your Automation Journey Starts with a Business Process Audit"
+          image={auditImg}
+          imageAlt="Dashboard flow showing Audit → Recommendations → Implementation → Results"
+          description={(
+            <p>
               The fastest way to see results is to start with a clear picture of where you are now. Our Business Process Audit covers:
             </p>
-          </header>
-          <div className="mt-6 grid gap-3 text-sm md:text-base text-muted-foreground md:grid-cols-3">
-            <ul className="space-y-2">
-              <li>• Sales & Marketing</li>
-              <li>• Product Development</li>
+          )}
+        >
+          <div className="grid gap-3 md:grid-cols-3 text-muted-foreground">
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Sales & Marketing</li>
+              <li>Product Development</li>
             </ul>
-            <ul className="space-y-2">
-              <li>• IT & Operations</li>
-              <li>• Customer Support</li>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>IT & Operations</li>
+              <li>Customer Support</li>
             </ul>
-            <ul className="space-y-2">
-              <li>• Finance & Reporting</li>
-              <li>• And more…</li>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Finance & Reporting</li>
+              <li>And more…</li>
             </ul>
           </div>
-          <div className="mt-8">
+          <div className="mt-6">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="hero" size="lg">Book Your Audit Now</Button>
             </a>
           </div>
-        </section>
+        </SplitSection>
 
-        {/* Internal Training & Workshops */}
-        <section id="workshops" className="container py-16 md:py-24">
-          <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">Upskill Your Team to Harness AI & Automation In-House</h2>
-            <p className="mt-4 text-muted-foreground">
+        <SplitSection
+          id="workshops"
+          title="Upskill Your Team to Harness AI & Automation In-House"
+          image={workshopsImg}
+          imageAlt="Professional workshop with team and facilitator at whiteboard"
+          description={(
+            <p>
               We don’t just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
             </p>
-          </header>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          )}
+        >
+          <div className="grid gap-6 md:grid-cols-2">
             <article className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Open Workshops</h3>
               <p className="mt-2 text-sm text-muted-foreground">Open to all, great for networking and shared learning.</p>
@@ -86,27 +104,33 @@ const Index = () => {
             </article>
           </div>
           <p className="mt-6 text-muted-foreground">Your staff leave confident, capable, and ready to get the most from your automation investment.</p>
-        </section>
+        </SplitSection>
 
-        {/* Expert Solution Sourcing */}
-        <section id="solution-sourcing" className="container py-16 md:py-24">
-          <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">We Find and Manage the Right Suppliers for You</h2>
-            <p className="mt-4 text-muted-foreground">No one platform does it all — and no single vendor is best at everything. We’ll:</p>
-          </header>
-          <ul className="mt-8 grid gap-3 text-sm md:text-base text-muted-foreground">
-            <li>• Identify the best-fit automation & AI providers for your needs</li>
-            <li>• Manage the vendor relationship</li>
-            <li>• Integrate multiple solutions into a single, efficient system</li>
-          </ul>
-        </section>
+        <SplitSection
+          id="solution-sourcing"
+          reverse
+          title="We Find and Manage the Right Suppliers for You"
+          image={sourcingImg}
+          imageAlt="Multiple tech vendors flowing into one unified automation hub"
+          description={(
+            <>
+              <p>No one platform does it all — and no single vendor is best at everything. We’ll:</p>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                <li>Identify the best-fit automation & AI providers for your needs</li>
+                <li>Manage the vendor relationship</li>
+                <li>Integrate multiple solutions into a single, efficient system</li>
+              </ul>
+            </>
+          )}
+        />
 
-        {/* Our Core Services (Service Pillars) */}
-        <section id="service-pillars" className="container py-16 md:py-24">
-          <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">End-to-End Automation & AI Expertise</h2>
-          </header>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <SplitSection
+          id="service-pillars"
+          title="End-to-End Automation & AI Expertise"
+          image={pillarsImg}
+          imageAlt="Five modern flat icons for AI Solutions, Vibe Coding, E‑Commerce, Social Content, and Sales & Marketing Automation"
+        >
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">AI Solutions</h3>
               <p className="mt-2 text-sm text-muted-foreground">Intelligent agents, voice automation, audits, and workshops.</p>
@@ -128,7 +152,7 @@ const Index = () => {
               <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up sequences.</p>
             </article>
           </div>
-        </section>
+        </SplitSection>
 
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
