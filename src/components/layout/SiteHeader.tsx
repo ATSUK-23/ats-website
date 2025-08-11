@@ -34,7 +34,7 @@ export const SiteHeader = () => {
   };
 
   return (
-    <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[80]">
       <nav className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
           <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
@@ -44,7 +44,7 @@ export const SiteHeader = () => {
         <div className="hidden md:flex items-center gap-6">
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">AI Solutions</DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
+            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
               {aiItems.map((item) => (
                 <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
                   {item.label}
@@ -55,7 +55,7 @@ export const SiteHeader = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">e-Commerce</DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
+            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
               {ecommerceItems.map((item) => (
                 <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
                   {item.label}
@@ -66,7 +66,7 @@ export const SiteHeader = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">Ad Management</DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
+            <DropdownMenuContent align="start" sideOffset={8} className="z-[90] bg-popover text-popover-foreground border shadow-md">
               {adItems.map((item) => (
                 <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
                   {item.label}
