@@ -6,46 +6,34 @@ type Solution = {
 
 const solutions: Solution[] = [
   {
-    id: "your-ai-brain",
-    title: "Your AI Brain",
+    id: "agents",
+    title: "Agents",
     blurb:
-      "Centralize company knowledge into an intelligent system that answers prospects instantly and guides them to the next step 24/7.",
+      "Deploy text and voice agents that qualify, assist and route customers 24/7 to boost conversions and satisfaction.",
   },
   {
-    id: "talking-websites",
-    title: "Talking Websites",
+    id: "voice",
+    title: "Voice",
     blurb:
-      "Enable natural 1-2-1 dialogue so visitors can use their voice to discover how you solve their unique problems.",
+      "Add natural, conversational voice experiences across web and phone to answer questions and guide next steps.",
   },
   {
-    id: "ai-receptionist",
-    title: "24/7 Multi-Tasking Receptionist",
+    id: "audits",
+    title: "Audits",
     blurb:
-      "Handle customer questions, qualification and routing to the right human when needed—on any channel, any time.",
+      "Assess your current stack and workflows to uncover high‑impact automation opportunities and quick wins.",
   },
   {
-    id: "digital-assistant",
-    title: "Intelligent Digital Store Assistance",
+    id: "workshops",
+    title: "Workshops",
     blurb:
-      "Hand-hold shoppers through their entire journey pre and post purchase to increase satisfaction and revenue.",
+      "Hands‑on sessions with your team to define AI strategy, prioritize use cases and align success metrics.",
   },
   {
-    id: "speed-to-lead",
-    title: "Speed To Lead Forms",
+    id: "vibe-coding",
+    title: "Vibe Coding",
     blurb:
-      "Convert leads at the moment of highest intent with ultra-fast follow-up before they’re lost forever.",
-  },
-  {
-    id: "maximise-conversions",
-    title: "Maximise Conversions",
-    blurb:
-      "Re-engage prospects at scale and lock in appointments with smart, automated reminders.",
-  },
-  {
-    id: "social-agents",
-    title: "Social Agents",
-    blurb:
-      "Automate next steps for prospects who discover you across social platforms to capture and qualify demand.",
+      "Rapid prototyping to bring ideas to life, validate assumptions and iterate toward the ideal customer experience.",
   },
 ];
 

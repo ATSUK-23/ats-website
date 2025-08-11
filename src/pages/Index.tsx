@@ -45,6 +45,51 @@ const Index = () => {
 
         <AISolutions />
 
+        <section id="e-commerce" className="container py-16 md:py-24">
+          <header className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold">e‑Commerce</h2>
+            <p className="mt-3 text-muted-foreground">Systems that scale globally across storefronts and channels.</p>
+          </header>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <article id="global-systems" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Global Systems</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Plan architecture for multi‑region growth, fulfillment and compliance.</p>
+            </article>
+            <article id="shopify" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Shopify</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Conversion‑focused storefronts, apps and integrations for scale.</p>
+            </article>
+            <article id="marketplaces" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Marketplaces</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Expand to Amazon, eBay and more with unified operations.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="ad-management" className="container py-16 md:py-24">
+          <header className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold">Ad Management</h2>
+            <p className="mt-3 text-muted-foreground">Media systems that pair creative with automation for measurable ROI.</p>
+          </header>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Social Content</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Performance content engines that feed paid and organic channels.</p>
+            </article>
+            <article id="s-m-automation" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">S&M Automation</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Sales & marketing automation that accelerates lead‑to‑revenue.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" className="container py-16 md:py-24">
+          <header className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold">About</h2>
+            <p className="mt-3 text-muted-foreground">Decades in digital, e‑commerce and automation. We help you choose the right strategy and partners—then ship.</p>
+          </header>
+        </section>
+
         <section id="case-studies" className="container py-16 md:py-24">
           <header className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold">Results</h2>

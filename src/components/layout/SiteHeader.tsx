@@ -9,13 +9,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const aiItems = [
-  { id: "your-ai-brain", label: "Your AI Brain" },
-  { id: "talking-websites", label: "Talking Websites" },
-  { id: "ai-receptionist", label: "24/7 Multi-Tasking Receptionist" },
-  { id: "digital-assistant", label: "Intelligent Digital Store Assistance" },
-  { id: "speed-to-lead", label: "Speed To Lead Forms" },
-  { id: "maximise-conversions", label: "Maximise Conversions" },
-  { id: "social-agents", label: "Social Agents" },
+  { id: "agents", label: "Agents" },
+  { id: "voice", label: "Voice" },
+  { id: "audits", label: "Audits" },
+  { id: "workshops", label: "Workshops" },
+  { id: "vibe-coding", label: "Vibe Coding" },
+];
+
+const ecommerceItems = [
+  { id: "global-systems", label: "Global Systems" },
+  { id: "shopify", label: "Shopify" },
+  { id: "marketplaces", label: "Marketplaces" },
+];
+
+const adItems = [
+  { id: "social-content", label: "Social Content" },
+  { id: "s-m-automation", label: "S&M Automation" },
 ];
 
 export const SiteHeader = () => {
@@ -33,8 +42,6 @@ export const SiteHeader = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
-          <button onClick={() => handleScroll("services")} className="text-sm font-medium hover:text-primary transition-colors">Services</button>
-
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">AI Solutions</DropdownMenuTrigger>
             <DropdownMenuContent align="start">
@@ -46,7 +53,29 @@ export const SiteHeader = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <button onClick={() => handleScroll("case-studies")} className="text-sm font-medium hover:text-primary transition-colors">Case Studies</button>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">e-Commerce</DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              {ecommerceItems.map((item) => (
+                <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
+                  {item.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium focus:outline-none">Ad Management</DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              {adItems.map((item) => (
+                <DropdownMenuItem key={item.id} onSelect={() => handleScroll(item.id)}>
+                  {item.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <button onClick={() => handleScroll("about")} className="text-sm font-medium hover:text-primary transition-colors">About</button>
           <button onClick={() => handleScroll("contact")} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
         </div>
 
