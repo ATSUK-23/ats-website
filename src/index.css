@@ -36,6 +36,11 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
+    /* Brand tokens */
+    --brand: 217 91% 60%; /* primary brand blue */
+    --brand-2: 199 89% 48%; /* cyan accent */
+    --brand-foreground: 210 40% 98%;
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;

@@ -1,0 +1,32 @@
+import { Button } from "@/components/ui/button";
+
+export const Hero = () => {
+  return (
+    <section className="relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-[hsl(var(--brand)/0.15)] blur-3xl" />
+      </div>
+
+      <div className="container py-16 md:py-24 text-center">
+        <p className="text-sm tracking-wider text-muted-foreground uppercase">Automation & AI Consultancy</p>
+        <h1 className="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">
+          Automate To Sell: AI Automation Consulting
+        </h1>
+        <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          We review what your business needs, recommend the right strategy, then implement it with the most suitable tech providers.
+        </p>
+
+        <div className="mt-8 flex items-center justify-center gap-4">
+          <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
+            <Button variant="hero" size="lg">Book Intro Call</Button>
+          </a>
+          <a href="#your-ai-brain">
+            <Button variant="outline" size="lg">Explore AI Solutions</Button>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
