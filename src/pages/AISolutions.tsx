@@ -5,7 +5,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
-const aiBrainBackground = "/lovable-uploads/5b3ddc78-0ad5-4484-a251-21601e15d3be.png";
+const aiBrainBackground = "/lovable-uploads/924a7d77-7fc5-4519-858c-c9f930246863.png";
 import aiKnowledgeComparison from "@/assets/ai-knowledge-comparison.jpg";
 import aiProcessSteps from "@/assets/ai-process-steps.jpg";
 import aiServicesGrid from "@/assets/ai-services-grid.jpg";
