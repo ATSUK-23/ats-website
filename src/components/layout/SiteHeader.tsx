@@ -38,7 +38,7 @@ export const SiteHeader = () => {
 
   return (
     <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[80]">
-      <nav className="container flex items-center justify-between py-4">
+      <nav className="container flex items-center justify-between py-4 min-h-[4rem]">
         <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
           <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
           <span className="sr-only">Automate To Sell</span>
@@ -79,18 +79,17 @@ export const SiteHeader = () => {
           </Sheet>
         </div>
 
-        <div className="hidden md:flex items-center gap-6">
-          
-          <Link to="/ai-solutions" className="text-sm font-medium hover:text-primary transition-colors">AI Solutions</Link>
-          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</Link>
-          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</Link>
-          <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors">Social Content</Link>
-          <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors">Sales Funnel Automation</Link>
-          <button onClick={() => handleScroll('about')} className="text-sm font-medium hover:text-primary transition-colors">About</button>
-          <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
+        <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
+          <Link to="/ai-solutions" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">AI Solutions</Link>
+          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Vibe Coding</Link>
+          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">E‑Commerce</Link>
+          <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Social Content</Link>
+          <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Sales Funnel Automation</Link>
+          <button onClick={() => handleScroll('about')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">About</button>
+          <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Contact</button>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-shrink-0">
           <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
             <Button variant="hero" size="sm">Book Audit</Button>
           </a>
