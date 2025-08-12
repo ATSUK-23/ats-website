@@ -12,7 +12,7 @@ import businessAutomatedImage from "@/assets/business-automated.jpg";
 
 const SalesFunnelAutomation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 dark">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50">
       <Helmet>
         <title>Sales Funnel Automation - Automate To Sell</title>
         <meta name="description" content="Automated sales & marketing systems built for your business. Streamline sales, nurture leads, and grow revenue with smart automation strategies." />
@@ -29,7 +29,7 @@ const SalesFunnelAutomation = () => {
           ctaText="Book a Sales & Marketing Automation Consultation"
           ctaLink="https://www.automatetosell.com/ats-application"
           backgroundImage={salesHeroImage}
-          className="dark:bg-gradient-to-br dark:from-background dark:via-background/95 dark:to-muted/30"
+          className="bg-gradient-to-br from-background via-background/95 to-muted/30"
         />
 
         <SplitSection
