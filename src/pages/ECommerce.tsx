@@ -10,11 +10,8 @@ import marketplacesImage from "@/assets/marketplaces.jpg";
 import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
-import globalEcommerceHero from "@/assets/global-ecommerce-hero.jpg";
-
 const ECommerce = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>E-Commerce Solutions - Scale Your Online Sales | Automate To Sell</title>
         <meta name="description" content="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." />
@@ -22,52 +19,25 @@ const ECommerce = () => {
         <link rel="canonical" href="https://automatetosell.com/e-commerce" />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "E-Commerce Solutions",
-            "description": "Scale your online sales with smart e-commerce systems and automation",
-            "provider": {
-              "@type": "Organization",
-              "name": "Automate To Sell"
-            },
-            "serviceType": "E-Commerce Development and Management",
-            "areaServed": "Worldwide"
-          })}
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "E-Commerce Solutions",
+          "description": "Scale your online sales with smart e-commerce systems and automation",
+          "provider": {
+            "@type": "Organization",
+            "name": "Automate To Sell"
+          },
+          "serviceType": "E-Commerce Development and Management",
+          "areaServed": "Worldwide"
+        })}
         </script>
       </Helmet>
 
       <SiteHeader />
 
       <main>
-        {/* New Global Hero Section */}
-        <section className="relative overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${globalEcommerceHero})` }}
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          
-          <div className="container py-16 md:py-24 text-center relative z-10">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
-              Take Your Winning Products Global Without Growing Your Team
-            </h1>
-            <p className="mt-5 text-lg md:text-xl max-w-3xl mx-auto text-slate-200">
-              Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7.
-            </p>
-
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <Button variant="hero" size="lg">
-                Start Your Global Expansion
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Original Hero Section */}
-        <SplitSection
-          title="Scale Your Online Sales with Smart E-Commerce Systems"
-          description={
-            <>
+        {/* Hero Section */}
+        <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
@@ -79,23 +49,14 @@ const ECommerce = () => {
                   Book an E-Commerce Consultation
                 </Button>
               </div>
-            </>
-          }
-          image={heroImage}
-          imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management"
-        />
+            </>} image={heroImage} imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" />
 
         {/* Global Systems */}
-        <SplitSection
-          title="One View of Your Entire Business"
-          description={
-            <>
+        <SplitSection title="One View of Your Entire Business" description={<>
               <p className="mb-4">
                 If you're selling across multiple countries, channels, or fulfilment partners, you need more than a storefront — you need a connected system.
               </p>
-              <p className="mb-6">
-                We unify your e-commerce stack so inventory, orders, payments, and customer data flow smoothly between your website, marketplaces, warehouses, and analytics.
-              </p>
+              <p className="mb-6">We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.</p>
               <div className="space-y-2 mb-6">
                 <h4 className="font-semibold text-lg">What We Do:</h4>
                 <ul className="space-y-2 text-muted-foreground">
@@ -109,18 +70,10 @@ const ECommerce = () => {
               <p className="font-medium">
                 One source of truth for your entire operation means less manual work, fewer errors, and more time to focus on growth.
               </p>
-            </>
-          }
-          image={globalSystemsImage}
-          imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management"
-          reverse
-        />
+            </>} image={globalSystemsImage} imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management" reverse />
 
         {/* Shopify */}
-        <SplitSection
-          title="Shopify Stores Built to Sell and Scale"
-          description={
-            <>
+        <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
               <p className="mb-6">
                 Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup — we can design, build, and optimise your store to convert more visitors into buyers.
               </p>
@@ -137,17 +90,10 @@ const ECommerce = () => {
               <p className="font-medium">
                 We don't just build a store — we create a sales engine that's easy to manage and built for future growth.
               </p>
-            </>
-          }
-          image={shopifyImage}
-          imageAlt="Modern Shopify store interface with conversion optimization and sales analytics"
-        />
+            </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
 
         {/* Marketplaces */}
-        <SplitSection
-          title="Win on Amazon, eBay, Etsy and Beyond"
-          description={
-            <>
+        <SplitSection title="Win on Amazon, eBay, Etsy and Beyond" description={<>
               <p className="mb-6">
                 Marketplaces are powerful growth channels — if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
               </p>
@@ -164,18 +110,10 @@ const ECommerce = () => {
               <p className="font-medium">
                 Maximise visibility, stay competitive, and keep your marketplace operations running smoothly — without burning hours on repetitive tasks.
               </p>
-            </>
-          }
-          image={marketplacesImage}
-          imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync"
-          reverse
-        />
+            </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
 
         {/* Ad Management */}
-        <SplitSection
-          title="Performance Ads That Drive Sales"
-          description={
-            <>
+        <SplitSection title="Performance Ads That Drive Sales" description={<>
               <p className="mb-6">
                 We run e-commerce ad campaigns that combine creativity with automation to drive traffic, increase conversions, and deliver measurable ROI.
               </p>
@@ -192,17 +130,10 @@ const ECommerce = () => {
               <p className="font-medium">
                 Stop wasting ad spend — our performance-focused campaigns ensure every dollar works harder to bring you more sales.
               </p>
-            </>
-          }
-          image={adManagementImage}
-          imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization"
-        />
+            </>} image={adManagementImage} imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" />
 
         {/* Crowdfunding */}
-        <SplitSection
-          title="Launch Your Product to the World — and Get Funded Fast"
-          description={
-            <>
+        <SplitSection title="Launch Your Product to the World — and Get Funded Fast" description={<>
               <p className="mb-4">
                 Crowdfunding is one of the most powerful ways to launch a new product, test the market, and build a loyal customer base before you've even shipped.
               </p>
@@ -239,12 +170,7 @@ const ECommerce = () => {
               <Button variant="hero" size="lg">
                 Book a Crowdfunding Strategy Call
               </Button>
-            </>
-          }
-          image={crowdfundingImage}
-          imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress"
-          reverse
-        />
+            </>} image={crowdfundingImage} imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" reverse />
 
         {/* e-Comm-as-a-Service Section */}
         <section className="py-16 md:py-24 bg-background">
@@ -319,26 +245,17 @@ const ECommerce = () => {
         </section>
 
         {/* Final CTA */}
-        <SplitSection
-          title="Let's Grow Your E-Commerce Sales Together"
-          description={
-            <>
+        <SplitSection title="Let's Grow Your E-Commerce Sales Together" description={<>
               <p className="mb-6">
                 Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
               </p>
               <Button variant="hero" size="lg">
                 Book Your Consultation
               </Button>
-            </>
-          }
-          image={growthImage}
-          imageAlt="E-commerce growth visualization showing sales scaling and global reach"
-        />
+            </>} image={growthImage} imageAlt="E-commerce growth visualization showing sales scaling and global reach" />
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default ECommerce;
