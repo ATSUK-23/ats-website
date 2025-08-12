@@ -60,7 +60,7 @@ export const SiteHeader = () => {
                   <button onClick={() => handleScroll('ai-solutions')} className="w-full text-left py-1.5 hover:text-primary">AI Solutions</button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <button onClick={() => handleScroll('vibe-coding')} className="w-full text-left py-1.5 hover:text-primary">Vibe Coding</button>
+                  <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <button onClick={() => handleScroll('e-commerce')} className="w-full text-left py-1.5 hover:text-primary">E‑Commerce</button>
@@ -85,7 +85,7 @@ export const SiteHeader = () => {
         <div className="hidden md:flex items-center gap-6">
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm font-medium hover:text-primary transition-colors">Home</button>
           <button onClick={() => handleScroll('ai-solutions')} className="text-sm font-medium hover:text-primary transition-colors">AI Solutions</button>
-          <button onClick={() => handleScroll('vibe-coding')} className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</button>
+          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</Link>
           <button onClick={() => handleScroll('e-commerce')} className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</button>
           <button onClick={() => handleScroll('social-content')} className="text-sm font-medium hover:text-primary transition-colors">Social Content</button>
           <button onClick={() => handleScroll('sales-marketing-automation')} className="text-sm font-medium hover:text-primary transition-colors">Sales & Marketing Automation</button>

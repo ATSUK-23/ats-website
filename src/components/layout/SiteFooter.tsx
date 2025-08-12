@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export const SiteFooter = () => {
   return (
     <footer className="border-t">
@@ -6,7 +7,7 @@ export const SiteFooter = () => {
         <nav className="flex items-center gap-6">
           <a href="#" className="hover:text-primary">Home</a>
           <a href="#ai-solutions" className="hover:text-primary">AI Solutions</a>
-          <a href="#vibe-coding" className="hover:text-primary">Vibe Coding</a>
+          <Link to="/vibe-coding" className="hover:text-primary">Vibe Coding</Link>
           <a href="#e-commerce" className="hover:text-primary">E‑Commerce</a>
           <a href="#social-content" className="hover:text-primary">Social Content</a>
           <a href="#sales-marketing-automation" className="hover:text-primary">Sales & Marketing Automation</a>
