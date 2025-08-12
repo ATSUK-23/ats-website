@@ -20,13 +20,13 @@ export const HeroSection = ({
   return (
     <section className={`relative overflow-hidden ${className}`}>
       {backgroundImage && (
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-20">
           <img 
             src={backgroundImage} 
             alt="" 
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
       )}
       
