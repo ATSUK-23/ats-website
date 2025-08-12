@@ -31,9 +31,7 @@ export default function AISolutions() {
 
         {/* Description under hero */}
         <section className="container py-16 text-center">
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            We help develop your AI strategy, source the best tech solution partners, and even manage implementation — letting you focus on looking after clients!
-          </p>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">We help develop your AI strategy, source the best tech solution partners, and even manage implementation — letting you focus on looking after clients!</p>
           <div className="mt-8 flex items-center justify-center gap-4">
             
           </div>
