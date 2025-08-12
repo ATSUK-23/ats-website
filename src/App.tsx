@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import VibeCoding from "./pages/VibeCoding";
+import SocialContent from "./pages/SocialContent";
 import ECommerce from "./pages/ECommerce";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/vibe-coding" element={<VibeCoding />} />
             <Route path="/e-commerce" element={<ECommerce />} />
+            <Route path="/social-content" element={<SocialContent />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

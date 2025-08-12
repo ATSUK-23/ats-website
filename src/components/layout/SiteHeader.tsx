@@ -66,10 +66,10 @@ export const SiteHeader = () => {
                   <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <button onClick={() => handleScroll('social-content')} className="w-full text-left py-1.5 hover:text-primary">Social Content</button>
+                  <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <button onClick={() => handleScroll('sales-marketing-automation')} className="w-full text-left py-1.5 hover:text-primary">Sales & Marketing Automation</button>
+                  <button onClick={() => handleScroll('sales-marketing-automation')} className="w-full text-left py-1.5 hover:text-primary">Sales Funnel Automation</button>
                 </SheetClose>
                 <SheetClose asChild>
                   <button onClick={() => handleScroll('about')} className="w-full text-left py-1.5 hover:text-primary">About</button>
@@ -87,8 +87,8 @@ export const SiteHeader = () => {
           <button onClick={() => handleScroll('ai-solutions')} className="text-sm font-medium hover:text-primary transition-colors">AI Solutions</button>
           <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</Link>
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</Link>
-          <button onClick={() => handleScroll('social-content')} className="text-sm font-medium hover:text-primary transition-colors">Social Content</button>
-          <button onClick={() => handleScroll('sales-marketing-automation')} className="text-sm font-medium hover:text-primary transition-colors">Sales & Marketing Automation</button>
+          <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors">Social Content</Link>
+          <button onClick={() => handleScroll('sales-marketing-automation')} className="text-sm font-medium hover:text-primary transition-colors">Sales Funnel Automation</button>
           <button onClick={() => handleScroll('about')} className="text-sm font-medium hover:text-primary transition-colors">About</button>
           <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
         </div>
