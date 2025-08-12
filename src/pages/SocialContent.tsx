@@ -12,7 +12,7 @@ import influenceGrowthImage from "@/assets/influence-growth.jpg";
 
 const SocialContent = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Social Content & Personal Branding - Grow Your Influence | Automate To Sell</title>
         <meta name="description" content="Transform your ideas into a powerful online presence. Our done-for-you social content system helps you build your personal brand, grow influence, and attract opportunities." />

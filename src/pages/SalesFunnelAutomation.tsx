@@ -12,7 +12,7 @@ import businessAutomatedImage from "@/assets/business-automated.jpg";
 
 const SalesFunnelAutomation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 text-foreground">
       <Helmet>
         <title>Sales Funnel Automation - Automate To Sell</title>
         <meta name="description" content="Automated sales & marketing systems built for your business. Streamline sales, nurture leads, and grow revenue with smart automation strategies." />

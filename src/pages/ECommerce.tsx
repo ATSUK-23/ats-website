@@ -13,7 +13,7 @@ import growthImage from "@/assets/ecommerce-growth.jpg";
 
 const ECommerce = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>E-Commerce Solutions - Scale Your Online Sales | Automate To Sell</title>
         <meta name="description" content="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." />
