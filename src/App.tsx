@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import VibeCoding from "./pages/VibeCoding";
 import SocialContent from "./pages/SocialContent";
 import ECommerce from "./pages/ECommerce";
+import SalesFunnelAutomation from "./pages/SalesFunnelAutomation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/vibe-coding" element={<VibeCoding />} />
             <Route path="/e-commerce" element={<ECommerce />} />
             <Route path="/social-content" element={<SocialContent />} />
+            <Route path="/sales-funnel-automation" element={<SalesFunnelAutomation />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

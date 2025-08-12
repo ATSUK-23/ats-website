@@ -69,7 +69,7 @@ export const SiteHeader = () => {
                   <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <button onClick={() => handleScroll('sales-marketing-automation')} className="w-full text-left py-1.5 hover:text-primary">Sales Funnel Automation</button>
+                  <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <button onClick={() => handleScroll('about')} className="w-full text-left py-1.5 hover:text-primary">About</button>
@@ -88,7 +88,7 @@ export const SiteHeader = () => {
           <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</Link>
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</Link>
           <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors">Social Content</Link>
-          <button onClick={() => handleScroll('sales-marketing-automation')} className="text-sm font-medium hover:text-primary transition-colors">Sales Funnel Automation</button>
+          <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors">Sales Funnel Automation</Link>
           <button onClick={() => handleScroll('about')} className="text-sm font-medium hover:text-primary transition-colors">About</button>
           <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors">Contact</button>
         </div>
