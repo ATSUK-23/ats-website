@@ -54,9 +54,6 @@ export const SiteHeader = () => {
             <SheetContent side="right" className="w-80">
               <nav className="mt-6 space-y-2">
                 <SheetClose asChild>
-                  <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="w-full text-left py-1.5 hover:text-primary">Home</button>
-                </SheetClose>
-                <SheetClose asChild>
                   <Link to="/ai-solutions" className="w-full text-left py-1.5 hover:text-primary block">AI Solutions</Link>
                 </SheetClose>
                 <SheetClose asChild>
@@ -83,7 +80,7 @@ export const SiteHeader = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm font-medium hover:text-primary transition-colors">Home</button>
+          
           <Link to="/ai-solutions" className="text-sm font-medium hover:text-primary transition-colors">AI Solutions</Link>
           <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors">Vibe Coding</Link>
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors">E‑Commerce</Link>
