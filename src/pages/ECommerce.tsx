@@ -10,6 +10,7 @@ import marketplacesImage from "@/assets/marketplaces.jpg";
 import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
+import globalEcommerceHero from "@/assets/global-ecommerce-hero.jpg";
 
 const ECommerce = () => {
   return (
@@ -38,7 +39,31 @@ const ECommerce = () => {
       <SiteHeader />
 
       <main>
-        {/* Hero Section */}
+        {/* New Global Hero Section */}
+        <section className="relative overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${globalEcommerceHero})` }}
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          
+          <div className="container py-16 md:py-24 text-center relative z-10">
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
+              Take Your Winning Products Global Without Growing Your Team
+            </h1>
+            <p className="mt-5 text-lg md:text-xl max-w-3xl mx-auto text-slate-200">
+              Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7.
+            </p>
+
+            <div className="mt-8 flex items-center justify-center gap-4">
+              <Button variant="hero" size="lg">
+                Start Your Global Expansion
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Original Hero Section */}
         <SplitSection
           title="Scale Your Online Sales with Smart E-Commerce Systems"
           description={
