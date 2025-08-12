@@ -5,7 +5,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
-import aiBrainHero from "@/assets/ai-brain-hero.jpg";
+import aiBrainBackground from "@/assets/ai-brain-background.jpg";
 import aiKnowledgeComparison from "@/assets/ai-knowledge-comparison.jpg";
 import aiProcessSteps from "@/assets/ai-process-steps.jpg";
 import aiServicesGrid from "@/assets/ai-services-grid.jpg";
@@ -14,7 +14,7 @@ import martinKeeneProfile from "@/assets/martin-keene-profile.jpeg";
 import { Brain, Zap, Users, TrendingUp, Phone, MessageSquare, ShoppingCart, Target, RotateCcw, Share2 } from "lucide-react";
 
 export default function AISolutions() {
-  console.log('AI Solutions page rendering', { aiBrainHero, aiKnowledgeComparison });
+  console.log('AI Solutions page rendering', { aiBrainBackground, aiKnowledgeComparison });
   
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -32,7 +32,7 @@ export default function AISolutions() {
           subtitle="AI solutions that delight your customers, boost sales, increase efficiency, slash costs & maximise profits."
           ctaText="Book an Introduction Call"
           ctaLink="#contact"
-          backgroundImage={aiBrainHero}
+          backgroundImage={aiBrainBackground}
           className="py-24 md:py-32"
         />
 
@@ -282,7 +282,7 @@ export default function AISolutions() {
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img 
-              src={aiBrainHero} 
+              src={aiBrainBackground} 
               alt="" 
               className="w-full h-full object-cover opacity-30"
             />
