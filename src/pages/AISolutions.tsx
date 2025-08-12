@@ -14,6 +14,8 @@ import martinKeeneProfile from "@/assets/martin-keene-profile.jpeg";
 import { Brain, Zap, Users, TrendingUp, Phone, MessageSquare, ShoppingCart, Target, RotateCcw, Share2 } from "lucide-react";
 
 export default function AISolutions() {
+  console.log('AI Solutions page rendering', { aiBrainHero, aiKnowledgeComparison });
+  
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
