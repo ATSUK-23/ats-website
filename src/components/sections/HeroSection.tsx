@@ -6,6 +6,7 @@ interface HeroSectionProps {
   ctaLink: string;
   backgroundImage?: string;
   className?: string;
+  children?: React.ReactNode;
 }
 export const HeroSection = ({
   title,
@@ -13,7 +14,8 @@ export const HeroSection = ({
   ctaText,
   ctaLink,
   backgroundImage,
-  className = ""
+  className = "",
+  children
 }: HeroSectionProps) => {
   return <section className={`relative overflow-hidden ${className}`} style={{
     backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
@@ -36,6 +38,8 @@ export const HeroSection = ({
             <Button variant="hero" size="lg">{ctaText}</Button>
           </a>
         </div>
+        
+        {children}
       </div>
     </section>;
 };
