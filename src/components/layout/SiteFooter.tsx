@@ -8,7 +8,7 @@ export const SiteFooter = () => {
           <a href="#" className="hover:text-primary">Home</a>
           <a href="#ai-solutions" className="hover:text-primary">AI Solutions</a>
           <Link to="/vibe-coding" className="hover:text-primary">Vibe Coding</Link>
-          <a href="#e-commerce" className="hover:text-primary">E‑Commerce</a>
+          <Link to="/e-commerce" className="hover:text-primary">E‑Commerce</Link>
           <a href="#social-content" className="hover:text-primary">Social Content</a>
           <a href="#sales-marketing-automation" className="hover:text-primary">Sales & Marketing Automation</a>
           <a href="#about" className="hover:text-primary">About</a>
