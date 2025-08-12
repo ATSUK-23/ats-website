@@ -3,7 +3,9 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import { Button } from "@/components/ui/button";
 import SplitSection from "@/components/sections/SplitSection";
+import HeroSection from "@/components/sections/HeroSection";
 import heroImage from "@/assets/ecommerce-hero.jpg";
+import globalEcommerceHero from "@/assets/global-ecommerce-hero.jpg";
 import globalSystemsImage from "@/assets/global-systems.jpg";
 import shopifyImage from "@/assets/shopify-stores.jpg";
 import marketplacesImage from "@/assets/marketplaces.jpg";
@@ -37,6 +39,16 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
+        <HeroSection 
+          title="Take Your Winning Products Global Without Growing Your Team"
+          subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7."
+          ctaText="Book Your Global Strategy Call"
+          ctaLink="#contact"
+          backgroundImage={globalEcommerceHero}
+          className="text-white"
+        />
+
+        {/* Original Split Section */}
         <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
