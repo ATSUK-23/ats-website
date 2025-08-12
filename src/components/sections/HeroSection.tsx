@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 interface HeroSectionProps {
   title: string;
   subtitle: string;
@@ -8,32 +7,27 @@ interface HeroSectionProps {
   backgroundImage?: string;
   className?: string;
 }
-
-export const HeroSection = ({ 
-  title, 
-  subtitle, 
-  ctaText, 
-  ctaLink, 
-  backgroundImage, 
-  className = "" 
+export const HeroSection = ({
+  title,
+  subtitle,
+  ctaText,
+  ctaLink,
+  backgroundImage,
+  className = ""
 }: HeroSectionProps) => {
-  return (
-    <section 
-      className={`relative overflow-hidden ${className}`}
-      style={{
-        backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+  return <section className={`relative overflow-hidden ${className}`} style={{
+    backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
       <div className="absolute inset-0 bg-black/50" />
       
       <div className="container py-16 md:py-24 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           {title}
         </h1>
-        <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+        <p className="mt-5 text-lg md:text-xl max-w-3xl mx-auto text-slate-200">
           {subtitle}
         </p>
 
@@ -43,8 +37,6 @@ export const HeroSection = ({
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
