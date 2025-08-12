@@ -18,26 +18,18 @@ export const HeroSection = ({
   className = "" 
 }: HeroSectionProps) => {
   return (
-    <section className={`relative overflow-hidden ${className}`}>
-      {backgroundImage && (
-        <div 
-          className="absolute inset-0 -z-20 opacity-30"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
-      )}
+    <section 
+      className={`relative overflow-hidden ${className}`}
+      style={{
+        backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50" />
       
-      <div className="absolute inset-0 -z-10 bg-background/70" />
-      
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-[hsl(var(--brand)/0.15)] blur-3xl" />
-      </div>
-
-      <div className="container py-16 md:py-24 text-center">
+      <div className="container py-16 md:py-24 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           {title}
         </h1>
