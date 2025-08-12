@@ -221,6 +221,78 @@ const ECommerce = () => {
           reverse
         />
 
+        {/* e-Comm-as-a-Service Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">e-Comm-as-a-Service</h2>
+              <div className="max-w-4xl mx-auto space-y-4 text-muted-foreground">
+                <p className="text-lg">
+                  Our e-Comm-as-a-Service provides a battle tested online sales system which includes customer targeting, sales conversions optimization, automated end to end order fulfilment & customer data management with 24/7 hands on customer support.
+                </p>
+                <p className="text-lg font-medium">
+                  Our solution enables your business to rapidly scale globally without needing to increases your resources!
+                </p>
+              </div>
+            </div>
+
+            {/* 4 Columns */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              <div className="text-center space-y-4">
+                <h3 className="text-xl font-bold text-primary">CUSTOMER TARGETING</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p className="font-medium">How do you get your ideal customers to discover your products?</p>
+                  <p>Using paid Search & Social Media, we create ad campaigns which target your ideal clients and drive them to your online proposition.</p>
+                  <p className="font-medium">This includes Facebook, Instagram, Google, TikTok & YouTube.</p>
+                </div>
+              </div>
+
+              <div className="text-center space-y-4">
+                <h3 className="text-xl font-bold text-primary">SALES CONVERSIONS</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>Ensure your products are available in the best sales platforms to simplify your customers purchase.</p>
+                  <p>This could be Shopify, Marketplaces or even Sales Funnels.</p>
+                  <p className="font-medium">It is crucial that your product is easily available to purchase in your customers preferred digital shopping location.</p>
+                </div>
+              </div>
+
+              <div className="text-center space-y-4">
+                <h3 className="text-xl font-bold text-primary">CUSTOMER MANAGEMENT</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>Centralise all customer data in a single tech platform.</p>
+                  <p>Simple to access and use with complete visibility on your customers data.</p>
+                  <p className="font-medium">We also provide 24/7 customer support solutions you can rely on to ensure your customers are looked after during pre & post purchase.</p>
+                </div>
+              </div>
+
+              <div className="text-center space-y-4">
+                <h3 className="text-xl font-bold text-primary">AUTOMATED FULFILMENT</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>End to End from manufacturer's bulk shipment to your warehouse through to last mile delivery to your customer.</p>
+                  <p className="font-medium">All sales channels and fulfilment partners in all territories are integrated and automated to maximize speed of delivery whilst reducing people resources</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Content */}
+            <div className="bg-card rounded-lg p-8 border">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <h3 className="text-2xl font-bold">Strategy & Business Case Development</h3>
+                <p className="text-muted-foreground">
+                  We help you structure your D2C offers to boost engagement, increase cart size, and drive repeat purchases—setting you up for long-term success and a profitable exit strategy.
+                </p>
+                <div className="text-lg font-medium space-y-2">
+                  <p>You keep your focus on creating outstanding products whilst we</p>
+                  <p className="text-primary font-bold text-xl">AUTOMATE & SCALE your global e-commerce business</p>
+                </div>
+                <Button variant="hero" size="lg" className="mt-6">
+                  Book Your e-Comm Strategy Session
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <SplitSection
           title="Let's Grow Your E-Commerce Sales Together"
