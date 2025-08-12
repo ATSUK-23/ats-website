@@ -25,6 +25,14 @@ export const HeroSection = ({
             src={backgroundImage} 
             alt="" 
             className="w-full h-full object-cover opacity-30"
+            onLoad={() => console.log('Background image loaded successfully:', backgroundImage)}
+            onError={(e) => console.error('Background image failed to load:', backgroundImage, e)}
+            style={{ 
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
           />
           <div className="absolute inset-0 bg-background/70" />
         </div>
