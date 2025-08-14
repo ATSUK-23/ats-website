@@ -4,17 +4,14 @@ const heroImageUrl = "/lovable-uploads/ad4bdc88-175b-440a-b084-366efb956989.png"
 export const Hero = () => {
   console.log("Hero component rendering with image:", heroImageUrl);
   
-  return <section className="relative overflow-hidden">
+  return <section className="relative overflow-hidden" style={{
+    backgroundImage: `url(${heroImageUrl})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
+      <div className="absolute inset-0 bg-black/50" />
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60" 
-          style={{
-            backgroundImage: `url(${heroImageUrl})`
-          }}
-          onLoad={() => console.log("Background image loaded successfully")}
-          onError={() => console.log("Background image failed to load")}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
         <div className="absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-[hsl(var(--brand)/0.15)] blur-3xl" />
       </div>
 
