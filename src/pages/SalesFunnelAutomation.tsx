@@ -9,10 +9,8 @@ import automationBenefitsImage from "@/assets/automation-benefits.jpg";
 import ghlPlatformImage from "@/assets/ghl-platform.jpg";
 import systemIntegrationImage from "@/assets/system-integration.jpg";
 import businessAutomatedImage from "@/assets/business-automated.jpg";
-
 const SalesFunnelAutomation = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 text-foreground">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 text-foreground">
       <Helmet>
         <title>Sales Funnel Automation - Automate To Sell</title>
         <meta name="description" content="Automated sales & marketing systems built for your business. Streamline sales, nurture leads, and grow revenue with smart automation strategies." />
@@ -23,21 +21,13 @@ const SalesFunnelAutomation = () => {
       <SiteHeader />
       
       <main>
-        <HeroSection
-          title="Automated Sales & Marketing Systems, Built for Your Business"
-          subtitle="We design and implement smart automation strategies using the right Martech tools utilising our GoHighLevel agency to streamline your sales, nurture leads, and grow revenue without increasing your workload."
-          ctaText="Book a Sales & Marketing Automation Consultation"
-          ctaLink="https://www.automatetosell.com/ats-application"
-          backgroundImage={salesHeroImage}
-        />
+        <HeroSection title="Automated Sales & Marketing Systems, Built for Your Business" subtitle="We design and implement smart automation strategies using the right Martech tools utilising our GoHighLevel agency to streamline your sales, nurture leads, and grow revenue without increasing your workload." ctaText="Book a Sales & Marketing Automation Consultation" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage={salesHeroImage} />
 
-        <SplitSection
-          title="Why Automation Matters"
-          image={automationBenefitsImage}
-          imageAlt="Business automation benefits and 24/7 lead response"
-          description={
-            <div className="space-y-4">
-              <p>Today's customers expect instant responses, personalised experiences, and consistent follow-up. Without automation, that's impossible to deliver at scale.</p>
+        <SplitSection title="Why Automation Matters" image={automationBenefitsImage} imageAlt="Business automation benefits and 24/7 lead response" description={<div className="space-y-4">
+              <p>Today's customers expect instant responses, personalised experiences, and consistent follow-up.
+
+
+Without automation, that's impossible to deliver at scale.</p>
               <p className="font-semibold">The right Sales & Marketing Automation system:</p>
               <ul className="space-y-2 list-disc list-inside">
                 <li>Responds instantly to leads 24/7</li>
@@ -46,17 +36,9 @@ const SalesFunnelAutomation = () => {
                 <li>Ensures every customer gets the right message at the right time</li>
               </ul>
               <p>But the key is <em>right</em>. Automation is only powerful when it's tailored to your business — not just stacked with tech for the sake of it.</p>
-            </div>
-          }
-        />
+            </div>} />
 
-        <SplitSection
-          title="Our Process – From Strategy to Fully-Integrated Systems"
-          image={ghlPlatformImage}
-          imageAlt="GoHighLevel platform and automation system setup"
-          reverse
-          description={
-            <div className="space-y-6">
+        <SplitSection title="Our Process – From Strategy to Fully-Integrated Systems" image={ghlPlatformImage} imageAlt="GoHighLevel platform and automation system setup" reverse description={<div className="space-y-6">
               <div>
                 <h3 className="font-semibold mb-2">Step 1 – Discovery & Strategy</h3>
                 <p className="text-sm">We start by understanding your sales process, marketing channels, and customer journey. Together, we identify the best opportunities for automation and map a clear strategy.</p>
@@ -78,16 +60,9 @@ const SalesFunnelAutomation = () => {
                   <li>Integration with existing tools (e.g., payment processors, e-commerce, analytics)</li>
                 </ul>
               </div>
-            </div>
-          }
-        />
+            </div>} />
 
-        <SplitSection
-          title="Complete Implementation & Support"
-          image={systemIntegrationImage}
-          imageAlt="System integration and testing process"
-          description={
-            <div className="space-y-6">
+        <SplitSection title="Complete Implementation & Support" image={systemIntegrationImage} imageAlt="System integration and testing process" description={<div className="space-y-6">
               <div>
                 <h3 className="font-semibold mb-2">Step 4 – Testing & Training</h3>
                 <p className="text-sm">We fully test every integration and train your team so they can manage, monitor, and optimise your system.</p>
@@ -106,17 +81,9 @@ const SalesFunnelAutomation = () => {
                   <li><strong>Measurable Results</strong> – track every lead, deal, and conversion from a single dashboard</li>
                 </ul>
               </div>
-            </div>
-          }
-        />
+            </div>} />
 
-        <SplitSection
-          title="Your Business, Automated"
-          image={businessAutomatedImage}
-          imageAlt="Business growth through automation and increased revenue"
-          reverse
-          description={
-            <div className="space-y-4">
+        <SplitSection title="Your Business, Automated" image={businessAutomatedImage} imageAlt="Business growth through automation and increased revenue" reverse description={<div className="space-y-4">
               <p>With the right sales and marketing automation system, you can:</p>
               <ul className="space-y-2 list-disc list-inside">
                 <li>Capture more leads without spending more on ads</li>
@@ -125,9 +92,7 @@ const SalesFunnelAutomation = () => {
                 <li>Increase revenue while reducing manual work</li>
               </ul>
               <p className="font-medium">The result: More time for you and your team to focus on high-value tasks while your system keeps working in the background.</p>
-            </div>
-          }
-        />
+            </div>} />
 
         <section className="container py-16 md:py-24 text-center">
           <div className="max-w-3xl mx-auto">
@@ -147,8 +112,6 @@ const SalesFunnelAutomation = () => {
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default SalesFunnelAutomation;
