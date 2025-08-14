@@ -40,23 +40,17 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
-        <HeroSection 
-          title="Take Your Winning Products Global Without Growing Your Team"
-          subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7."
-          ctaText="Book Your Global Strategy Call"
-          ctaLink="#contact"
-          backgroundImage={globalEcommerceHero}
-          className="text-white"
-        />
+        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Your Global Strategy Call" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
 
         {/* Original Split Section */}
         <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
-              <p>
-                From global commerce systems to Shopify stores, marketplaces, and ad management — we bring the strategy, the tech, and the hands-on implementation to get your products in front of the right customers and keep sales growing without adding operational headaches.
-              </p>
+              <p>Your Product. Every Market. Fully Managed.
+
+
+We expand your winning product into new countries with a complete, done-for-you system — from Shopify and marketplaces to local fulfilment and order automation — so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Button variant="hero" size="lg">
                   Book an E-Commerce Consultation
