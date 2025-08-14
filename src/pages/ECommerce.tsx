@@ -140,6 +140,26 @@ We expand your winning product into new countries with a complete, done-for-you 
               </p>
             </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
 
+        {/* Shopify */}
+        <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
+              <p className="mb-6">
+                Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup — we can design, build, and optimise your store to convert more visitors into buyers.
+              </p>
+              <div className="space-y-2 mb-6">
+                <h4 className="font-semibold text-lg">What We Do:</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Custom theme design and development</li>
+                  <li>• App integrations to extend store functionality</li>
+                  <li>• Conversion rate optimisation and A/B testing</li>
+                  <li>• Subscription, bundle, and upsell systems</li>
+                  <li>• Headless Shopify builds for faster, flexible storefronts</li>
+                </ul>
+              </div>
+              <p className="font-medium">
+                We don't just build a store — we create a sales engine that's easy to manage and built for future growth.
+              </p>
+            </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
+
         {/* Global Systems */}
         <SplitSection title="One View of Your Entire Business" description={<>
               <p className="mb-4">
@@ -160,26 +180,6 @@ We expand your winning product into new countries with a complete, done-for-you 
                 One source of truth for your entire operation means less manual work, fewer errors, and more time to focus on growth.
               </p>
             </>} image={globalSystemsImage} imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management" reverse />
-
-        {/* Shopify */}
-        <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
-              <p className="mb-6">
-                Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup — we can design, build, and optimise your store to convert more visitors into buyers.
-              </p>
-              <div className="space-y-2 mb-6">
-                <h4 className="font-semibold text-lg">What We Do:</h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Custom theme design and development</li>
-                  <li>• App integrations to extend store functionality</li>
-                  <li>• Conversion rate optimisation and A/B testing</li>
-                  <li>• Subscription, bundle, and upsell systems</li>
-                  <li>• Headless Shopify builds for faster, flexible storefronts</li>
-                </ul>
-              </div>
-              <p className="font-medium">
-                We don't just build a store — we create a sales engine that's easy to manage and built for future growth.
-              </p>
-            </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
 
         {/* Ad Management */}
         <SplitSection title="Performance Ads That Drive Sales" description={<>
