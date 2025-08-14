@@ -19,7 +19,7 @@ export const Hero = () => {
         <p className="text-sm tracking-wider text-muted-foreground uppercase">Automation & AI Consultancy</p>
         <h1 className="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">Automation & AI That Works for Your Business!
 Not the Other Way Around</h1>
-        <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don’t need.</p>
+        <p className="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don’t need.</p>
 
         <div className="mt-8 flex items-center justify-center gap-4">
           <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
