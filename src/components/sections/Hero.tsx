@@ -10,7 +10,7 @@ export const Hero = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
   }}>
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/70" />
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-[hsl(var(--brand)/0.15)] blur-3xl" />
       </div>
