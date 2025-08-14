@@ -56,7 +56,7 @@ const VibeCoding = () => {
         />
 
         {/* What is Vibe Coding */}
-        <SplitSection id="vibe-hero" title="Build It, Show It, Get Buy-In" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
+        <SplitSection id="vibe-hero" title="Build It, Show It, Sell It!" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
 
 
 Whether you need a customer portal, e-commerce platform, internal dashboard, or a brand-new app, we can take you from concept to working prototype faster than you thought possible.</p>}>
