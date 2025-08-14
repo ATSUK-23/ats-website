@@ -12,6 +12,7 @@ import marketplacesImage from "@/assets/marketplaces.jpg";
 import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
+import { ShoppingCart, Factory, Lightbulb } from "lucide-react";
 const ECommerce = () => {
   return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
@@ -62,6 +63,68 @@ const ECommerce = () => {
                 </Button>
               </div>
             </>} image={heroImage} imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" />
+
+        {/* Who We Help Go Global Section */}
+        <section className="py-16 md:py-24 bg-muted/50">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Help Go Global</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Expand your reach, own your customer relationships, and grow your revenue across multiple countries, marketplaces, and D2C channels.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* e-Commerce Sellers */}
+              <div className="text-center space-y-6">
+                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <ShoppingCart className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">e-Commerce Sellers</h3>
+                  <div className="space-y-4 text-muted-foreground">
+                    <p className="font-medium">Already selling successfully online in one channel or country?</p>
+                    <p>
+                      You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions — including North America, the UK, Europe, APAC, and Japan — without the complexity of building local teams.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Manufacturers */}
+              <div className="text-center space-y-6">
+                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Factory className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Manufacturers</h3>
+                  <div className="space-y-4 text-muted-foreground">
+                    <p className="font-medium">Want to create a profitable Direct-to-Consumer (D2C) revenue stream?</p>
+                    <p>
+                      Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand — and position it for acquisition.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Inventors & Creators */}
+              <div className="text-center space-y-6">
+                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Lightbulb className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Inventors & Creators</h3>
+                  <div className="space-y-4 text-muted-foreground">
+                    <p className="font-medium">Turn your bold product ideas into global success stories.</p>
+                    <p>
+                      Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production — then expand distribution through multiple countries, marketplaces, and D2C stores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Global Systems */}
         <SplitSection title="One View of Your Entire Business" description={<>
