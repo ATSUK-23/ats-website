@@ -120,6 +120,26 @@ We expand your winning product into new countries with a complete, done-for-you 
           </div>
         </section>
 
+        {/* Marketplaces */}
+        <SplitSection title="Win on Amazon, eBay, Etsy and Beyond" description={<>
+              <p className="mb-6">
+                Marketplaces are powerful growth channels — if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
+              </p>
+              <div className="space-y-2 mb-6">
+                <h4 className="font-semibold text-lg">What We Do:</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Marketplace account setup and integration</li>
+                  <li>• Product listing optimisation and keyword targeting</li>
+                  <li>• Automated inventory sync across platforms</li>
+                  <li>• Marketplace advertising and promotions</li>
+                  <li>• Policy compliance and IP protection monitoring</li>
+                </ul>
+              </div>
+              <p className="font-medium">
+                Maximise visibility, stay competitive, and keep your marketplace operations running smoothly — without burning hours on repetitive tasks.
+              </p>
+            </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
+
         {/* Global Systems */}
         <SplitSection title="One View of Your Entire Business" description={<>
               <p className="mb-4">
@@ -160,26 +180,6 @@ We expand your winning product into new countries with a complete, done-for-you 
                 We don't just build a store — we create a sales engine that's easy to manage and built for future growth.
               </p>
             </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
-
-        {/* Marketplaces */}
-        <SplitSection title="Win on Amazon, eBay, Etsy and Beyond" description={<>
-              <p className="mb-6">
-                Marketplaces are powerful growth channels — if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
-              </p>
-              <div className="space-y-2 mb-6">
-                <h4 className="font-semibold text-lg">What We Do:</h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Marketplace account setup and integration</li>
-                  <li>• Product listing optimisation and keyword targeting</li>
-                  <li>• Automated inventory sync across platforms</li>
-                  <li>• Marketplace advertising and promotions</li>
-                  <li>• Policy compliance and IP protection monitoring</li>
-                </ul>
-              </div>
-              <p className="font-medium">
-                Maximise visibility, stay competitive, and keep your marketplace operations running smoothly — without burning hours on repetitive tasks.
-              </p>
-            </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
 
         {/* Ad Management */}
         <SplitSection title="Performance Ads That Drive Sales" description={<>
