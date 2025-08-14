@@ -47,10 +47,10 @@ const ECommerce = () => {
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
-              <p>Your Product. Every Market. Fully Managed.
+              <p>Your Product. Every Market. Fully Managed. 
 
 
-We expand your winning product into new countries with a complete, done-for-you system — from Shopify and marketplaces to local fulfilment and order automation — so you grow faster without extra staff or complexity.</p>
+We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to local fulfilment and order automation — so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Button variant="hero" size="lg">
                   Book an E-Commerce Consultation
