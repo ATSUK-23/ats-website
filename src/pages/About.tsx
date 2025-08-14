@@ -73,40 +73,37 @@ const About = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   My work is built on a deep understanding of how to connect digital tools with real-world outcomes.
                 </p>
+
+                <p className="text-lg leading-relaxed mb-6">
+                  I was an early adopter of ClickFunnels, joining the platform in October 2014 and completing their inaugural Certification Program the following year.
+                </p>
+
+                <p className="text-lg leading-relaxed mb-6">
+                  In partnership with one client we were recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.
+                </p>
+
+                <p className="text-lg leading-relaxed mb-6">
+                  In 2020, I expanded my expertise into Go High Level, launching my own digital agency to support clients with turn key scalable marketing systems and smart automation.
+                </p>
+
+                <p className="text-lg leading-relaxed mb-6">
+                  Currently based in London, I've also lived and worked in Munich, Sydney, and Los Angeles, experiences that have enriched both my professional outlook and personal life. I'm passionate about sunny climates, global perspectives, and my guilty pleasure?...fine dining experiences.
+                </p>
               </div>
             </div>
           </div>
 
           <div className="bg-card rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-6">Professional Achievements</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-brand mt-3 flex-shrink-0"></div>
-                <p className="text-lg">
-                  <strong>Early ClickFunnels Adopter:</strong> Joined the platform in October 2014 and completed their inaugural Certification Program the following year.
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-brand mt-3 flex-shrink-0"></div>
-                <p className="text-lg">
-                  <strong>2 Comma Club Recognition:</strong> In partnership with one client we were recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 rounded-full bg-brand mt-3 flex-shrink-0"></div>
-                <p className="text-lg">
-                  <strong>Go High Level Expertise:</strong> In 2020, I expanded my expertise into Go High Level, launching my own digital agency to support clients with turn key scalable marketing systems and smart automation.
-                </p>
-              </div>
+            <h3 className="text-2xl font-bold mb-6">Awards & Recognition</h3>
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/lovable-uploads/424228f5-13aa-4f5c-ab81-cbc8a096400c.png" 
+                alt="Two Comma Club Award recognition plaque featuring Martin Keene"
+                className="max-w-md w-full rounded-lg shadow-lg"
+              />
             </div>
-          </div>
-
-          <div className="bg-card rounded-xl p-8">
-            <h3 className="text-2xl font-bold mb-4">Global Perspective</h3>
-            <p className="text-lg leading-relaxed">
-              Currently based in London, I've also lived and worked in Munich, Sydney, and Los Angeles, experiences that have enriched both my professional outlook and personal life. I'm passionate about sunny climates, global perspectives, and my guilty pleasure?...fine dining experiences.
+            <p className="text-lg leading-relaxed text-center">
+              Recognition for excellence in building automated systems that generate significant revenue for clients.
             </p>
           </div>
 

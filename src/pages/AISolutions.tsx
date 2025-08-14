@@ -195,23 +195,6 @@ export default function AISolutions() {
               </div>
             </div>} image={industriesServed} imageAlt="Industries we serve icons" />
 
-        {/* About Founder */}
-        <SplitSection id="founder" title="Meet Martin Keene" description={<div>
-              <p className="mb-4">
-                With 20+ years of digital innovation experience, Martin brings deep expertise in e-commerce and automation to help businesses transform through AI.
-              </p>
-              <p className="mb-4">
-                Having worked with major clients generating $50m–$60m in revenues, Martin combines global experience with practical implementation knowledge.
-              </p>
-              <p className="mb-6">
-                His international background and proven track record make him the ideal partner to guide your AI transformation journey.
-              </p>
-              <Button variant="outline" asChild>
-                <a href="https://www.linkedin.com/in/martinkeene/" target="_blank" rel="noopener noreferrer">
-                  View LinkedIn Profile
-                </a>
-              </Button>
-            </div>} image={martinKeeneProfile} imageAlt="Martin Keene, Founder" reverse />
 
         {/* Final CTA */}
         <section className="relative py-24 md:py-32 overflow-hidden">
