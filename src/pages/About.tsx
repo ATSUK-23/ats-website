@@ -39,6 +39,13 @@ const About = () => {
                   </Button>
                 </a>
               </div>
+              
+              <div className="mt-8">
+                <img src="/lovable-uploads/424228f5-13aa-4f5c-ab81-cbc8a096400c.png" alt="Two Comma Club Award recognition plaque featuring Martin Keene" className="max-w-md w-full rounded-lg shadow-lg mx-auto" />
+                <p className="text-sm text-muted-foreground text-center mt-4">
+                  Recognition for excellence in building automated systems that generate significant revenue for clients.
+                </p>
+              </div>
             </div>
 
             <div className="md:col-span-2">
@@ -76,15 +83,6 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-card rounded-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold mb-6">Awards & Recognition</h3>
-            <div className="flex justify-center mb-6">
-              <img src="/lovable-uploads/424228f5-13aa-4f5c-ab81-cbc8a096400c.png" alt="Two Comma Club Award recognition plaque featuring Martin Keene" className="max-w-md w-full rounded-lg shadow-lg" />
-            </div>
-            <p className="text-lg leading-relaxed text-center">
-              Recognition for excellence in building automated systems that generate significant revenue for clients.
-            </p>
-          </div>
 
           <div className="text-center mt-12">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noopener noreferrer">
