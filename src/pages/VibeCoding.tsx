@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
+import HeroSection from "@/components/sections/HeroSection";
 import { Button } from "@/components/ui/button";
 import vibeHero from "@/assets/vibe-hero.jpg";
 import vibeWhatIs from "@/assets/vibe-what-is.jpg";
@@ -46,7 +47,16 @@ const VibeCoding = () => {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <SplitSection id="vibe-hero" title="Build Your Website or App in Days, Not Months — With Vibe Coding" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
+        <HeroSection
+          title="From Idea to Prototype in Days, Not Months"
+          subtitle="Build your website or app faster with AI-powered Vibe Coding"
+          ctaText="Book a Vibe Coding Workshop"
+          ctaLink="https://www.automatetosell.com/ats-application"
+          backgroundImage="/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png"
+        />
+
+        {/* What is Vibe Coding */}
+        <SplitSection id="vibe-hero" title="Build Your Website or App in Days, Not Months — With Vibe Coding" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
 
 
 Whether you need a customer portal, e-commerce platform, internal dashboard, or a brand-new app, we can take you from concept to working prototype faster than you thought possible.</p>}>
