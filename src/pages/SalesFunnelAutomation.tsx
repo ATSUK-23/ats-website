@@ -25,7 +25,7 @@ const SalesFunnelAutomation = () => {
       <main>
         <HeroSection
           title="Automated Sales & Marketing Systems, Built for Your Business"
-          subtitle="We design and implement smart automation strategies using the right Martech tools — including our GoHighLevel agency platform — to streamline your sales, nurture leads, and grow revenue without increasing your workload."
+          subtitle="We design and implement smart automation strategies using the right Martech tools utilising our GoHighLevel agency to streamline your sales, nurture leads, and grow revenue without increasing your workload."
           ctaText="Book a Sales & Marketing Automation Consultation"
           ctaLink="https://www.automatetosell.com/ats-application"
           backgroundImage={salesHeroImage}
