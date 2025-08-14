@@ -23,7 +23,7 @@ const About = () => {
             </p>
           </header>
 
-          <div className="grid md:grid-cols-3 gap-8 items-start mb-12">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-12 items-start mb-12">
             <div className="md:col-span-1">
               <div className="relative">
                 <img src={profileImage} alt="Martin Keene - Digital Marketing Expert" className="w-full max-w-sm mx-auto rounded-xl shadow-lg" />
