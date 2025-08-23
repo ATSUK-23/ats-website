@@ -49,7 +49,7 @@ const VibeCoding = () => {
         {/* Hero */}
         <HeroSection
           title="From Idea to Prototype in Days, Not Months"
-          subtitle="Build your website or app faster with AI-powered Vibe Coding"
+          subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding"
           ctaText="Book a Vibe Coding Workshop"
           ctaLink="https://www.automatetosell.com/ats-application"
           backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png"
