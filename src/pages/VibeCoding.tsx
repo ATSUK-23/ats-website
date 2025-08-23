@@ -78,7 +78,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             </>} />
 
         {/* On-Site Workshops */}
-        <SplitSection id="vibe-workshops" title="On-Site Vibe Coding Workshops" image={vibeWorkshops} imageAlt="Facilitator leading an on-site workshop with a team and whiteboard" description={<p>Join one of our open workshops or we can run immersive, hands-on workshops at your location. Your team works alongside our experts to:</p>}>
+        <SplitSection id="vibe-workshops" title="Vibe Coding Workshops" image={vibeWorkshops} imageAlt="Facilitator leading an on-site workshop with a team and whiteboard" description={<p>Join one of our open workshops or we can run immersive, hands-on workshops at your location. Your team works alongside our experts to:</p>}>
           <div className="grid gap-3 md:grid-cols-2 text-muted-foreground">
             <ul className="list-disc pl-5 space-y-2">
               <li>Define the problem and desired outcomes</li>
