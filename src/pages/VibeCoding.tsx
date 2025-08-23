@@ -118,7 +118,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         <SplitSection id="vibe-cta" reverse title="Let’s Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you’re starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg">Book Your On-Site Workshop</Button>
+              <Button variant="hero" size="lg">Book a Vibe Coding Workshop</Button>
             </a>
             <a href="#contact">
               <Button variant="outline" size="lg" className="bg-transparent">Talk to a Vibe Coding Expert</Button>
