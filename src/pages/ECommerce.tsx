@@ -74,12 +74,12 @@ We expand your winning product into new countries with a complete, done-for-you 
 
         {/* Customer Results Section */}
         <section className="py-16 md:py-24 bg-muted/50">
-          <div className="container">
-            <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="container max-w-7xl">
+            <div className="flex flex-col lg:flex-row gap-8">
               {/* Video - 25% */}
-              <div className="w-full lg:w-1/4">
+              <div className="w-full lg:w-[25%] flex-shrink-0">
                 <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
-                  <div className="relative" style={{ paddingBottom: '177.78%' }}>
+                  <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
                     <iframe
                       src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
@@ -91,48 +91,30 @@ We expand your winning product into new countries with a complete, done-for-you 
               </div>
               
               {/* Content - 75% */}
-              <div className="w-full lg:w-3/4">
-                <div className="space-y-8">
+              <div className="w-full lg:w-[75%]">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years — With Just 5 Staff</h3>
+                
+                <div className="space-y-6">
                   <div>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
-                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years — With Just 5 Staff</h3>
+                    <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
+                    <p className="text-lg text-muted-foreground mb-6">From one Amazon store to a worldwide operation in under 4 years.</p>
                   </div>
                   
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
-                      <p className="text-lg text-muted-foreground mb-6">From one Amazon store to a worldwide operation in under 4 years.</p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="text-lg font-bold mb-6">Today:</h5>
-                      <div className="grid sm:grid-cols-2 gap-8">
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-3 h-3 bg-primary rounded-full"></div>
-                            <span className="text-lg font-semibold">15+ marketplaces</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="w-3 h-3 bg-primary rounded-full"></div>
-                            <span className="text-lg font-semibold">6 Shopify stores</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="w-3 h-3 bg-primary rounded-full"></div>
-                            <span className="text-lg font-semibold">6 fulfilment partners</span>
-                          </div>
-                        </div>
-                        <div className="flex items-start">
-                          <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary w-full">
-                            <p className="text-xl font-bold text-primary mb-2">$1M+ monthly revenue</p>
-                            <p className="text-muted-foreground">across multiple continents</p>
-                          </div>
-                        </div>
+                  <div>
+                    <h5 className="text-lg font-bold mb-4">Today:</h5>
+                    <div className="space-y-4">
+                      <div className="text-lg font-semibold">• 15+ marketplaces</div>
+                      <div className="text-lg font-semibold">• 6 Shopify stores</div>
+                      <div className="text-lg font-semibold">• 6 fulfilment partners</div>
+                      <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary inline-block">
+                        <span className="text-xl font-bold text-primary">$1M+ monthly revenue across multiple continents</span>
                       </div>
                     </div>
-                    
-                    <div className="bg-card p-6 rounded-lg border mt-8">
-                      <p className="text-lg font-bold">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
-                    </div>
+                  </div>
+                  
+                  <div className="bg-card p-6 rounded-lg border">
+                    <p className="text-lg font-bold">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
                   </div>
                 </div>
               </div>
