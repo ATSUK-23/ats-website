@@ -45,7 +45,7 @@ const ECommerce = () => {
         {/* Original Split Section */}
         <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
               <p className="text-lg mb-4">
-                We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
+                We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
               <p>Your Product. Every Market. Fully Managed.   
 We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to localise fulfilment, order automation and customer support so you grow faster without extra staff or complexity.</p>
@@ -77,7 +77,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                   <div className="space-y-4 text-muted-foreground">
                     <p className="font-medium">Already selling successfully online in one channel or country?</p>
                     <p>
-                      You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions — including North America, the UK, Europe, APAC, and Japan — without the complexity of building local teams.
+                      You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions including North America, the UK, Europe, APAC, and Japan without the complexity of building local teams.
                     </p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                   <div className="space-y-4 text-muted-foreground">
                     <p className="font-medium">Want to create a profitable Direct-to-Consumer (D2C) revenue stream?</p>
                     <p>
-                      Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand — and position it for acquisition.
+                      Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand and position it for acquisition.
                     </p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                   <div className="space-y-4 text-muted-foreground">
                     <p className="font-medium">Turn your bold product ideas into global success stories.</p>
                     <p>
-                      Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production — then expand distribution through multiple countries, marketplaces, and D2C stores.
+                      Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production then expand distribution through multiple countries, marketplaces, and D2C stores.
                     </p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ We expand your winning product into new countries with a complete, done-for-you 
         {/* Marketplaces */}
         <SplitSection title="Win on Amazon, eBay, Etsy and Beyond" description={<>
               <p className="mb-6">
-                Marketplaces are powerful growth channels — if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
+                Marketplaces are powerful growth channels if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
               </p>
               <div className="space-y-2 mb-6">
                 <h4 className="font-semibold text-lg">What We Do:</h4>
@@ -134,14 +134,14 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </ul>
               </div>
               <p className="font-medium">
-                Maximise visibility, stay competitive, and keep your marketplace operations running smoothly — without burning hours on repetitive tasks.
+                Maximise visibility, stay competitive, and keep your marketplace operations running smoothly without burning hours on repetitive tasks.
               </p>
             </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
 
         {/* Shopify */}
         <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
               <p className="mb-6">
-                Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup — we can design, build, and optimise your store to convert more visitors into buyers.
+                Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup we can design, build, and optimise your store to convert more visitors into buyers.
               </p>
               <div className="space-y-2 mb-6">
                 <h4 className="font-semibold text-lg">What We Do:</h4>
@@ -154,14 +154,14 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </ul>
               </div>
               <p className="font-medium">
-                We don't just build a store — we create a sales engine that's easy to manage and built for future growth.
+                We don't just build a store we create a sales engine that's easy to manage and built for future growth.
               </p>
             </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
 
         {/* Global Systems */}
         <SplitSection title="One View of Your Entire Business" description={<>
               <p className="mb-4">
-                If you're selling across multiple countries, channels, or fulfilment partners, you need more than a storefront — you need a connected system.
+                If you're selling across multiple countries, channels, or fulfilment partners, you need more than a storefront you need a connected system.
               </p>
               <p className="mb-6">We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.</p>
               <div className="space-y-2 mb-6">
@@ -195,7 +195,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </ul>
               </div>
               <p className="font-medium">
-                Stop wasting ad spend — our performance-focused campaigns ensure every dollar works harder to bring you more sales.
+                Stop wasting ad spend our performance-focused campaigns ensure every dollar works harder to bring you more sales.
               </p>
             </>} image={adManagementImage} imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" />
 

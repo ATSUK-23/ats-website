@@ -34,9 +34,9 @@ export default function AISolutions() {
 
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Unlock the Power of Your Company's AI Brain" description={<p>
-              Imagine having all your company's best knowledge — from marketing materials to sales proposals, onboarding guides, training resources, and service insights — in one intelligent system, available 24/7.
+              Imagine having all your company's best knowledge from marketing materials to sales proposals, onboarding guides, training resources, and service insights in one intelligent system, available 24/7.
               <br /><br />
-              Your AI Brain consolidates your business's expertise into a central hub, enabling prospects and customers to get instant, natural, real-time answers — without waiting for a reply or sifting through endless content.
+              Your AI Brain consolidates your business's expertise into a central hub, enabling prospects and customers to get instant, natural, real-time answers without waiting for a reply or sifting through endless content.
             </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* How It Works Section */}

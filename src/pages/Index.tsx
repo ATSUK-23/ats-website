@@ -29,7 +29,7 @@ const Index = () => {
 
         <SplitSection
           id="about"
-          title="Technology Should Serve Your Strategy — Not Replace It"
+          title="Technology Should Serve Your Strategy, Not Replace It"
           image={whyImg}
           imageAlt="Before and after comparison of messy vs streamlined automated business systems"
         

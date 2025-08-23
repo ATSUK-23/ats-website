@@ -15,7 +15,7 @@ const VibeCoding = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Vibe Coding — Rapid Prototyping & App Builds",
+    name: "Vibe Coding Rapid Prototyping & App Builds",
     serviceType: "Vibe Coding",
     url: "https://automatetosell.com/vibe-coding",
     provider: {
@@ -78,7 +78,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                 <li>We bring the frameworks, tools, and technical know-how.</li>
                 <li>Together, we turn ideas into testable, functional products in record time.</li>
               </ul>
-              <p className="pt-2">Unlike traditional development, where months can pass before you see results, Vibe Coding delivers tangible outputs within days — so you can validate ideas, win customers, and secure investment faster.</p>
+              <p className="pt-2">Unlike traditional development, where months can pass before you see results, Vibe Coding delivers tangible outputs within days so you can validate ideas, win customers, and secure investment faster.</p>
             </>} />
 
         {/* On-Site Workshops */}
@@ -90,7 +90,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             </ul>
             <ul className="list-disc pl-5 space-y-2">
               <li>Select the right tools and platforms</li>
-              <li>Start building live — in real time</li>
+              <li>Start building live in real time</li>
             </ul>
           </div>
           <p className="mt-4 text-muted-foreground">By the end of the session, you’ll have the foundation of your website or app ready to expand.</p>
@@ -102,7 +102,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             <li><strong>Step 1 – Discovery & Strategy:</strong> We review your goals, challenges, and existing systems to ensure we’re solving the right problem.</li>
             <li><strong>Step 2 – Rapid Prototyping:</strong> In just a few days, we create a working prototype you can click through, share, and test with users.</li>
             <li><strong>Step 3 – Build & Integrate:</strong> We develop the core product using AI-assisted and low-code tools, integrating with your existing tech stack (e.g., CRM, e-commerce, analytics).</li>
-            <li><strong>Step 4 – Test & Refine:</strong> We run live tests, gather feedback, and make rapid improvements — without weeks of delays.</li>
+            <li><strong>Step 4 – Test & Refine:</strong> We run live tests, gather feedback, and make rapid improvements without weeks of delays.</li>
             <li><strong>Step 5 – Launch & Support:</strong> We deploy your website or app, train your team, and provide ongoing support to keep everything running smoothly.</li>
           </ol>
         </SplitSection>
@@ -119,7 +119,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* CTA Bottom */}
-        <SplitSection id="vibe-cta" reverse title="Let’s Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you’re starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster — and with less stress — than you imagined.</p>}>
+        <SplitSection id="vibe-cta" reverse title="Let’s Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you’re starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="secondary" size="lg">Book Your On-Site Workshop</Button>

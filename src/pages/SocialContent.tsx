@@ -43,7 +43,7 @@ const SocialContent = () => {
           description={
             <>
               <p className="text-lg mb-6">
-                Your personal brand is your most valuable business asset. We help you create, curate, publish, and distribute authentic content so you can grow your influence, attract opportunities, and scale your company — without losing focus on running it.
+                Your personal brand is your most valuable business asset. We help you create, curate, publish, and distribute authentic content so you can grow your influence, attract opportunities, and scale your company without losing focus on running it.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" size="lg">
@@ -62,7 +62,7 @@ const SocialContent = () => {
           description={
             <>
               <p className="mb-6">
-                In today's market, people don't just buy products or services — they buy into people.
+                In today's market, people don't just buy products or services they buy into people.
               </p>
               <div className="space-y-2 mb-6">
                 <h4 className="font-semibold text-lg">A strong personal brand:</h4>
@@ -74,7 +74,7 @@ const SocialContent = () => {
                 </ul>
               </div>
               <p className="font-medium">
-                If you're not building your brand, you're missing the chance to make your voice — and your business — stand out.
+                If you're not building your brand, you're missing the chance to make your voice and your business stand out.
               </p>
             </>
           }
@@ -89,12 +89,12 @@ const SocialContent = () => {
           description={
             <>
               <p className="mb-6">
-                We've designed a simple, streamlined process that lets you capture the real you — then leaves the rest to us.
+                We've designed a simple, streamlined process that lets you capture the real you then leaves the rest to us.
               </p>
               <div className="space-y-4 mb-6">
                 <div>
                   <h5 className="font-semibold">Step 1 – Content Capture</h5>
-                  <p className="text-muted-foreground">We guide you in creating authentic, "raw" content — short videos, insights, stories, and moments from your business.</p>
+                  <p className="text-muted-foreground">We guide you in creating authentic, "raw" content short videos, insights, stories, and moments from your business.</p>
                 </div>
                 <div>
                   <h5 className="font-semibold">Step 2 – Curation & Editing</h5>
@@ -106,7 +106,7 @@ const SocialContent = () => {
                 </div>
                 <div>
                   <h5 className="font-semibold">Step 4 – Performance Insights</h5>
-                  <p className="text-muted-foreground">You get regular reports showing growth in your audience, engagement, and influence — without having to lift a finger.</p>
+                  <p className="text-muted-foreground">You get regular reports showing growth in your audience, engagement, and influence without having to lift a finger.</p>
                 </div>
               </div>
             </>
@@ -121,7 +121,7 @@ const SocialContent = () => {
           description={
             <>
               <p className="mb-6">
-                AI and generic stock content are everywhere — but they can't replace your voice, your face, your experiences.
+                AI and generic stock content are everywhere but they can't replace your voice, your face, your experiences.
               </p>
               <p className="font-medium">
                 By starting with real content from you, we keep your brand authentic while scaling your visibility far beyond what you could do alone.
@@ -168,7 +168,7 @@ const SocialContent = () => {
           description={
             <>
               <p className="mb-6">
-                Building your personal brand isn't optional — it's a growth multiplier. With our system, you stay authentic, visible, and in demand while staying focused on running your business.
+                Building your personal brand isn't optional it's a growth multiplier. With our system, you stay authentic, visible, and in demand while staying focused on running your business.
               </p>
               <Button variant="hero" size="lg">
                 Start Building Your Brand Today

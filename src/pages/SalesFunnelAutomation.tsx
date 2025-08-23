@@ -35,7 +35,7 @@ Without automation, that's impossible to deliver at scale.</p>
                 <li>Keeps your sales pipeline full without manual chasing</li>
                 <li>Ensures every customer gets the right message at the right time</li>
               </ul>
-              <p>But the key is <em>right</em>. Automation is only powerful when it's tailored to your business — not just stacked with tech for the sake of it.</p>
+              <p>But the key is <em>right</em>. Automation is only powerful when it's tailored to your business not just stacked with tech for the sake of it.</p>
             </div>} />
 
         <SplitSection title="Our Process – From Strategy to Fully-Integrated Systems" image={ghlPlatformImage} imageAlt="GoHighLevel platform and automation system setup" reverse description={<div className="space-y-6">
@@ -45,7 +45,7 @@ Without automation, that's impossible to deliver at scale.</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Step 2 – Platform Selection</h3>
-                <p className="text-sm">As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available — but we only recommend the tools you actually need.</p>
+                <p className="text-sm">As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.</p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Step 3 – System Build</h3>
@@ -77,7 +77,7 @@ Without automation, that's impossible to deliver at scale.</p>
                   <li><strong>Certified GHL Agency Owner</strong> – deep expertise with GoHighLevel's CRM, funnel, and automation tools</li>
                   <li><strong>Martech Strategy First</strong> – technology serves the strategy, not the other way around</li>
                   <li><strong>Full Integration Capability</strong> – we connect your sales, marketing, and customer service into one seamless system</li>
-                  <li><strong>AI When It's Useful</strong> – we integrate AI features where they drive ROI — not because it's trendy</li>
+                  <li><strong>AI When It's Useful</strong> – we integrate AI features where they drive ROI not because it's trendy</li>
                   <li><strong>Measurable Results</strong> – track every lead, deal, and conversion from a single dashboard</li>
                 </ul>
               </div>
@@ -100,7 +100,7 @@ Without automation, that's impossible to deliver at scale.</p>
               Let's Build a Sales & Marketing Machine for Your Business
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We'll work with you to create an automation strategy, select the right tech, and build an integrated system that turns prospects into customers — automatically.
+              We'll work with you to create an automation strategy, select the right tech, and build an integrated system that turns prospects into customers automatically.
             </p>
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button size="lg" className="text-lg px-8 py-3">
