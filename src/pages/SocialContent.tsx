@@ -47,6 +47,25 @@ const SocialContent = () => {
           backgroundImage={heroImage}
         />
 
+        {/* Original Hero Content Section */}
+        <SplitSection
+          title="Turn Your Ideas into a Powerful Online Presence"
+          description={
+            <>
+              <p className="text-lg mb-6">
+                Your personal brand is your most valuable business asset. We help you create, curate, publish, and distribute authentic content so you can grow your influence, attract opportunities, and scale your company without losing focus on running it.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="hero" size="lg">
+                  Book Your Social Content Strategy Call
+                </Button>
+              </div>
+            </>
+          }
+          image={heroImage}
+          imageAlt="Professional content creation workspace with cameras, lights, and editing equipment"
+        />
+
         {/* Why Personal Branding Matters */}
         <SplitSection
           title="Why Personal Branding Matters for Business Growth"
