@@ -75,15 +75,10 @@ We expand your winning product into new countries with a complete, done-for-you 
         {/* Customer Results Section */}
         <section className="py-16 md:py-24 bg-muted/50">
           <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">$40K to $50M in 4 Years — With Just 5 Staff</h3>
-            </div>
-            
-            <div className="grid lg:grid-cols-5 gap-8 items-start">
-              {/* Video - Takes 2 columns */}
-              <div className="lg:col-span-2">
-                <div className="rounded-xl overflow-hidden border bg-card shadow-sm max-w-sm mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
+              {/* Video - 25% (1 column of 4) */}
+              <div className="lg:col-span-1">
+                <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
                   <div className="relative" style={{ paddingBottom: '177.78%' }}>
                     <iframe
                       src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -95,63 +90,48 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </div>
               </div>
               
-              {/* Content - Takes 3 columns */}
+              {/* Content - 75% (3 columns of 4) */}
               <div className="lg:col-span-3">
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div>
-                    <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
-                    <p className="text-lg text-muted-foreground mb-4">From one Amazon store to a worldwide operation in under 4 years.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
+                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years — With Just 5 Staff</h3>
                   </div>
                   
-                  <div>
-                    <h4 className="text-lg font-bold mb-4">Today:</h4>
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="font-medium">15+ marketplaces</span>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
+                      <p className="text-lg text-muted-foreground mb-6">From one Amazon store to a worldwide operation in under 4 years.</p>
+                    </div>
+                    
+                    <div>
+                      <h5 className="text-lg font-bold mb-6">Today:</h5>
+                      <div className="grid sm:grid-cols-2 gap-8">
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-3 h-3 bg-primary rounded-full"></div>
+                            <span className="text-lg font-semibold">15+ marketplaces</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-3 h-3 bg-primary rounded-full"></div>
+                            <span className="text-lg font-semibold">6 Shopify stores</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-3 h-3 bg-primary rounded-full"></div>
+                            <span className="text-lg font-semibold">6 fulfilment partners</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="font-medium">6 Shopify stores</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="font-medium">6 fulfilment partners</span>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
-                          <p className="text-lg font-bold text-primary">$1M+ monthly revenue</p>
-                          <p className="text-sm text-muted-foreground">across multiple continents</p>
+                        <div className="flex items-start">
+                          <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary w-full">
+                            <p className="text-xl font-bold text-primary mb-2">$1M+ monthly revenue</p>
+                            <p className="text-muted-foreground">across multiple continents</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="bg-card p-6 rounded-lg border">
-                    <h5 className="text-lg font-bold mb-4">All managed by only 5 staff:</h5>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                          <span>1 Operations Director</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                          <span>3 part-time support agents</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                          <span>1 tech role</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                          <span>The CEO</span>
-                        </div>
-                      </div>
+                    
+                    <div className="bg-card p-6 rounded-lg border mt-8">
+                      <p className="text-lg font-bold mb-4">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
                     </div>
                   </div>
                 </div>
