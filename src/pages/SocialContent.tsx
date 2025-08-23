@@ -107,7 +107,7 @@ const SocialContent = () => {
                   <p className="text-muted-foreground">We guide you in creating authentic, "raw" content short videos, insights, stories, and moments from your business.</p>
                 </div>
                 <div>
-                  <h5 className="font-semibold">Step 2 – Curation & Editing</h5>
+                  <h5 className="font-bold">Step 2 – Curation & Editing</h5>
                   <p className="text-muted-foreground">Our team edits, enhances, and repurposes your content into polished, platform-ready posts, tailored to your brand voice.</p>
                 </div>
                 <div>
