@@ -44,7 +44,7 @@ const SocialContent = () => {
           subtitle="Your personal profile is your most powerful sales tool. We help you create and share authentic content that builds trust, grows influence, and drives business."
           ctaText="Book Your Social Content Strategy Call"
           ctaLink="https://calendly.com/automatetosell"
-          backgroundImage={heroImage}
+          backgroundImage="/lovable-uploads/09efc9f0-7701-4022-a165-746abba2ea45.png"
         />
 
         {/* Original Hero Content Section */}
