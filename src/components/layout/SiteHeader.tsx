@@ -69,6 +69,9 @@ export const SiteHeader = () => {
                   <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
                 </SheetClose>
                 <SheetClose asChild>
+                  <Link to="/training" className="w-full text-left py-1.5 hover:text-primary block">Training</Link>
+                </SheetClose>
+                <SheetClose asChild>
                   <Link to="/about" className="w-full text-left py-1.5 hover:text-primary block">About</Link>
                 </SheetClose>
                 <SheetClose asChild>
@@ -85,6 +88,7 @@ export const SiteHeader = () => {
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">E‑Commerce</Link>
           <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Social Content</Link>
           <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Sales Funnel Automation</Link>
+          <Link to="/training" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Training</Link>
           <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">About</Link>
           <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Contact</button>
         </div>
