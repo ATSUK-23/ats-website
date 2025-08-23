@@ -72,9 +72,9 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                 
                 <li>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days — giving you something tangible to test and refine immediately.</li>
               </ul>
-              <p className="pt-2">It helps businesses rapidly explore opportunities — from apps to e-commerce tools — validating ideas with users before major investment, ensuring smarter decisions and faster growth.
-
-For entrepreneurs, Vibe Coding is a launchpad — turning concepts in your head into clickable prototypes to share with investors, partners, and customers for instant traction.</p>
+              <p className="pt-2">It helps businesses rapidly explore opportunities from apps to e-commerce tools, validating ideas with users before major investment, ensuring smarter decisions and faster growth.</p>
+              
+              <p>For entrepreneurs, Vibe Coding is a launchpad turning concepts in your head into clickable prototypes to share with investors, partners, and customers for instant traction.</p>
             </>} />
 
         {/* On-Site Workshops */}
