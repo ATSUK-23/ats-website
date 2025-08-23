@@ -125,24 +125,6 @@ const SocialContent = () => {
           imageAlt="Content creation system workflow showing capture, editing, publishing, and analytics steps"
         />
 
-        {/* Real Content Advantage */}
-        <SplitSection
-          title="The Real Content Advantage"
-          description={
-            <>
-              <p className="mb-6">
-                AI and generic stock content are everywhere but they can't replace your voice, your face, your experiences.
-              </p>
-              <p className="font-medium">
-                By starting with real content from you, we keep your brand authentic while scaling your visibility far beyond what you could do alone.
-              </p>
-            </>
-          }
-          image={authenticContentImage}
-          imageAlt="Authentic vs artificial content comparison showing real person content versus AI generated content"
-          reverse
-        />
-
         {/* You Stay the Expert */}
         <SplitSection
           title="You Stay the Expert. We Do the Work."
@@ -170,6 +152,7 @@ const SocialContent = () => {
           }
           image={doneForYouImage}
           imageAlt="Done-for-you service showing expert team handling content while business owner focuses on core business"
+          reverse
         />
 
         {/* Final CTA */}
