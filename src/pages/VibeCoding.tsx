@@ -89,13 +89,13 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
               <li>Start building live in real time</li>
             </ul>
           </div>
-          <p className="mt-4 text-muted-foreground">By the end of the session, you’ll have the foundation of your website or app ready to expand.</p>
+          <p className="mt-4 text-muted-foreground">By the end of the session, you'll have the foundation of your website or app ready to expand.</p>
         </SplitSection>
 
         {/* Full Process */}
-        <SplitSection id="vibe-process" reverse title="Full Vibe Coding Process" image={vibeProcess} imageAlt="Elegant flow diagram showing discovery, prototype, build, test, and launch" description={<p>When you want us to guide the full build, here’s the process we’ll lead you through:</p>}>
+        <SplitSection id="vibe-process" reverse title="Full Vibe Coding Process" image={vibeProcess} imageAlt="Elegant flow diagram showing discovery, prototype, build, test, and launch" description={<p>When you want us to guide the full build, here's the process we'll lead you through:</p>}>
           <ol className="list-decimal pl-5 space-y-2 text-muted-foreground">
-            <li><strong>Step 1 – Discovery & Strategy:</strong> We review your goals, challenges, and existing systems to ensure we’re solving the right problem.</li>
+            <li><strong className="font-bold text-white">Step 1 – Discovery & Strategy:</strong> We review your goals, challenges, and existing systems to ensure we're solving the right problem.</li>
             <li><strong className="font-bold text-white">Step 2 – Rapid Prototyping:</strong> In just a few days, we create a working prototype you can click through, share, and test with users.</li>
             <li><strong className="font-bold text-white">Step 3 – Build & Integrate:</strong> We develop the core product using AI-assisted and low-code tools, integrating with your existing tech stack (e.g., CRM, e-commerce, analytics).</li>
             <li><strong className="font-bold text-white">Step 4 – Test & Refine:</strong> We run live tests, gather feedback, and make rapid improvements without weeks of delays.</li>
@@ -115,7 +115,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* CTA Bottom */}
-        <SplitSection id="vibe-cta" reverse title="Let’s Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you’re starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
+        <SplitSection id="vibe-cta" reverse title="Let's Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you're starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="hero" size="lg">Book a Vibe Coding Workshop</Button>
