@@ -239,7 +239,7 @@ export default function Training() {
           ctaText="Speak to a Training Specialist"
           ctaLink="#contact"
           backgroundImage={trainingHeroBackground}
-          className="py-12 md:py-16"
+          className="py-8 md:py-12"
         >
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -272,7 +272,7 @@ export default function Training() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {packages.map((pkg, index) => (
-                <Card key={index} className="relative bg-white/80 backdrop-blur-sm">
+                <Card key={index} className="relative bg-white/10 backdrop-blur-sm border-white/20">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <CardTitle className="text-xl">{pkg.title}</CardTitle>
