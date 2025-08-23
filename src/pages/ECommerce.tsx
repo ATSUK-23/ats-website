@@ -75,9 +75,9 @@ We expand your winning product into new countries with a complete, done-for-you 
         {/* Customer Results Section */}
         <section className="py-16 md:py-24 bg-muted/50">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
-              {/* Video - 25% (1 column of 4) */}
-              <div className="lg:col-span-1">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              {/* Video - 25% */}
+              <div className="w-full lg:w-1/4">
                 <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
                   <div className="relative" style={{ paddingBottom: '177.78%' }}>
                     <iframe
@@ -90,8 +90,8 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </div>
               </div>
               
-              {/* Content - 75% (3 columns of 4) */}
-              <div className="lg:col-span-3">
+              {/* Content - 75% */}
+              <div className="w-full lg:w-3/4">
                 <div className="space-y-8">
                   <div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
@@ -131,7 +131,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                     </div>
                     
                     <div className="bg-card p-6 rounded-lg border mt-8">
-                      <p className="text-lg font-bold mb-4">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
+                      <p className="text-lg font-bold">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
                     </div>
                   </div>
                 </div>
