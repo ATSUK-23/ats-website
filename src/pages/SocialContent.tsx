@@ -40,8 +40,8 @@ const SocialContent = () => {
       <main>
         {/* Hero Section */}
         <HeroSection
-          title="In Today's Market, People Buy People"
-          subtitle="Your personal profile is your most powerful sales tool. We help you create and share authentic content that builds trust, grows influence, and drives business."
+          title="If You're Not Building Your Personal Brand, You're Being Forgotten"
+          subtitle="Stand out in a noisy world with a content system that turns your ideas into consistent, high-impact social presence."
           ctaText="Book Your Social Content Strategy Call"
           ctaLink="https://calendly.com/automatetosell"
           backgroundImage="/lovable-uploads/09efc9f0-7701-4022-a165-746abba2ea45.png"
