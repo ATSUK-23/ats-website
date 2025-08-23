@@ -47,13 +47,7 @@ const VibeCoding = () => {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <HeroSection
-          title="From Idea to Prototype in Days, Not Months"
-          subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding"
-          ctaText="Book a Vibe Coding Workshop"
-          ctaLink="https://www.automatetosell.com/ats-application"
-          backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png"
-        />
+        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="Book a Vibe Coding Workshop" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
 
         {/* What is Vibe Coding */}
         <SplitSection id="vibe-hero" title="Build It, Show It, Sell It!" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
@@ -72,13 +66,15 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
 
         {/* What is Vibe Coding */}
         <SplitSection id="what-is-vibe-coding" reverse title="What is Vibe Coding?" image={vibeWhatIs} imageAlt="Composite of AI-assisted and low-code collaboration interfaces" description={<>
-              <p>Vibe Coding is our accelerated build method that combines your team’s knowledge with our expertise in AI-assisted development and low-code platforms.</p>
+              <p>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days — giving you something tangible to test and refine immediately.</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                <li>You bring the vision.</li>
-                <li>We bring the frameworks, tools, and technical know-how.</li>
-                <li>Together, we turn ideas into testable, functional products in record time.</li>
+                
+                
+                <li>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days — giving you something tangible to test and refine immediately.</li>
               </ul>
-              <p className="pt-2">Unlike traditional development, where months can pass before you see results, Vibe Coding delivers tangible outputs within days so you can validate ideas, win customers, and secure investment faster.</p>
+              <p className="pt-2">Unlike traditional development, where months can pass before you see results, Vibe Coding delivers tangible outputs within days so you can validate ideas, win customers, and secure investment faster.
+
+        </p>
             </>} />
 
         {/* On-Site Workshops */}
