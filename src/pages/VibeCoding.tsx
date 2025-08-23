@@ -66,7 +66,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
 
         {/* What is Vibe Coding */}
         <SplitSection id="what-is-vibe-coding" reverse title="What is Vibe Coding?" image={vibeWhatIs} imageAlt="Composite of AI-assisted and low-code collaboration interfaces" description={<>
-              <p>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days — giving you something tangible to test and refine immediately.</p>
+              <p>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days giving you something tangible to test and refine immediately.</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 
                 
