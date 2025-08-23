@@ -333,7 +333,7 @@ const Agents = () => {
           subtitle="Launch AI agents as apps, automations, or integrations—wherever you need them."
           ctaText="Start Building"
           ctaLink="https://www.automatetosell.com/ats-application"
-          backgroundImage="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png"
+          backgroundImage="/lovable-uploads/6f46dcfa-73ab-402b-8d25-de2cdf561d8c.png"
         />
 
         {/* Agent Collections */}
