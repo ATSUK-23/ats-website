@@ -47,7 +47,7 @@ const ECommerce = () => {
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
-              <p>Your Product. Every Market. Fully Managed.   
+              <p>Your Product. Every Market. Fully Managed.   
 We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to localise fulfilment, order automation and customer support so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Button variant="hero" size="lg">
@@ -55,6 +55,66 @@ We expand your winning product into new countries with a complete, done-for-you 
                 </Button>
               </div>
             </>} image={heroImage} imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" />
+
+        {/* Customer Results Section */}
+        <section className="py-16 md:py-24 bg-muted/50">
+          <div className="container">
+            <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-2">
+              {/* Content */}
+              <div className="order-2 lg:order-1">
+                <div className="max-w-2xl">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">CUSTOMER RESULTS</h2>
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">$40K to $50M in 4 Years — With Just 5 Staff</h3>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
+                      <p className="text-lg text-muted-foreground mb-4">From one Amazon store to a worldwide operation in under 4 years.</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-lg font-bold mb-4">Today:</h4>
+                      <div className="grid sm:grid-cols-2 gap-4 text-muted-foreground">
+                        <div className="space-y-2">
+                          <p className="font-medium">• 15+ marketplaces</p>
+                          <p className="font-medium">• 6 Shopify stores</p>
+                          <p className="font-medium">• 6 fulfilment partners</p>
+                        </div>
+                        <div className="space-y-2">
+                          <p className="font-medium text-primary">$1M+ monthly revenue across multiple continents</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-card p-6 rounded-lg border">
+                      <p className="text-lg font-medium mb-2">All managed by only:</p>
+                      <ul className="space-y-1 text-muted-foreground">
+                        <li>• 1 Operations Director</li>
+                        <li>• 3 part-time support agents</li>
+                        <li>• 1 tech role</li>
+                        <li>• The CEO</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Video */}
+              <div className="order-1 lg:order-2">
+                <div className="rounded-xl overflow-hidden border bg-card shadow-sm max-w-md mx-auto">
+                  <div className="relative" style={{ paddingBottom: '177.78%' }}>
+                    <iframe
+                      src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      title="Fraser Importing Success Story"
+                      className="absolute top-0 left-0 w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Who We Help Go Global Section */}
         <section className="py-16 md:py-24 bg-muted/50">
