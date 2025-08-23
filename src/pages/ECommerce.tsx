@@ -13,8 +13,10 @@ import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
 import { ShoppingCart, Factory, Lightbulb } from "lucide-react";
+
 const ECommerce = () => {
-  return <div className="min-h-screen bg-background text-foreground">
+  return (
+    <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>E-Commerce Solutions - Scale Your Online Sales | Automate To Sell</title>
         <meta name="description" content="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." />
@@ -40,10 +42,20 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
-        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Your Global Strategy Call" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
+        <HeroSection 
+          title="Take Your Winning Products Global Without Growing Your Team" 
+          subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." 
+          ctaText="Book Your Global Strategy Call" 
+          ctaLink="#contact" 
+          backgroundImage={globalEcommerceHero} 
+          className="text-white" 
+        />
 
         {/* Original Split Section */}
-        <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
+        <SplitSection 
+          title="Scale Your Online Sales with Smart E-Commerce Systems" 
+          description={
+            <>
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
@@ -54,54 +66,24 @@ We expand your winning product into new countries with a complete, done-for-you 
                   Book an E-Commerce Consultation
                 </Button>
               </div>
-            </>} image={heroImage} imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" />
+            </>
+          } 
+          image={heroImage} 
+          imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" 
+        />
 
         {/* Customer Results Section */}
         <section className="py-16 md:py-24 bg-muted/50">
           <div className="container">
-            <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-2">
-              {/* Content */}
-              <div className="order-2 lg:order-1">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">CUSTOMER RESULTS</h2>
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">$40K to $50M in 4 Years — With Just 5 Staff</h3>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
-                      <p className="text-lg text-muted-foreground mb-4">From one Amazon store to a worldwide operation in under 4 years.</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-lg font-bold mb-4">Today:</h4>
-                      <div className="grid sm:grid-cols-2 gap-4 text-muted-foreground">
-                        <div className="space-y-2">
-                          <p className="font-medium">• 15+ marketplaces</p>
-                          <p className="font-medium">• 6 Shopify stores</p>
-                          <p className="font-medium">• 6 fulfilment partners</p>
-                        </div>
-                        <div className="space-y-2">
-                          <p className="font-medium text-primary">$1M+ monthly revenue across multiple continents</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-card p-6 rounded-lg border">
-                      <p className="text-lg font-medium mb-2">All managed by only:</p>
-                      <ul className="space-y-1 text-muted-foreground">
-                        <li>• 1 Operations Director</li>
-                        <li>• 3 part-time support agents</li>
-                        <li>• 1 tech role</li>
-                        <li>• The CEO</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Video */}
-              <div className="order-1 lg:order-2">
-                <div className="rounded-xl overflow-hidden border bg-card shadow-sm max-w-md mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary">$40K to $50M in 4 Years — With Just 5 Staff</h3>
+            </div>
+            
+            <div className="grid lg:grid-cols-5 gap-8 items-start">
+              {/* Video - Takes 2 columns */}
+              <div className="lg:col-span-2">
+                <div className="rounded-xl overflow-hidden border bg-card shadow-sm max-w-sm mx-auto">
                   <div className="relative" style={{ paddingBottom: '177.78%' }}>
                     <iframe
                       src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -112,12 +94,74 @@ We expand your winning product into new countries with a complete, done-for-you 
                   </div>
                 </div>
               </div>
+              
+              {/* Content - Takes 3 columns */}
+              <div className="lg:col-span-3">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
+                    <p className="text-lg text-muted-foreground mb-4">From one Amazon store to a worldwide operation in under 4 years.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-bold mb-4">Today:</h4>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span className="font-medium">15+ marketplaces</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span className="font-medium">6 Shopify stores</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <span className="font-medium">6 fulfilment partners</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary">
+                          <p className="text-lg font-bold text-primary">$1M+ monthly revenue</p>
+                          <p className="text-sm text-muted-foreground">across multiple continents</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card p-6 rounded-lg border">
+                    <h5 className="text-lg font-bold mb-4">All managed by only 5 staff:</h5>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span>1 Operations Director</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span>3 part-time support agents</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span>1 tech role</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                          <span>The CEO</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Who We Help Go Global Section */}
-        <section className="py-16 md:py-24 bg-muted/50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Help Go Global</h2>
@@ -179,7 +223,10 @@ We expand your winning product into new countries with a complete, done-for-you 
         </section>
 
         {/* Marketplaces */}
-        <SplitSection title="Win on Amazon, eBay, Etsy and Beyond" description={<>
+        <SplitSection 
+          title="Win on Amazon, eBay, Etsy and Beyond" 
+          description={
+            <>
               <p className="mb-6">
                 Marketplaces are powerful growth channels if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
               </p>
@@ -196,10 +243,18 @@ We expand your winning product into new countries with a complete, done-for-you 
               <p className="font-medium">
                 Maximise visibility, stay competitive, and keep your marketplace operations running smoothly without burning hours on repetitive tasks.
               </p>
-            </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
+            </>
+          } 
+          image={marketplacesImage} 
+          imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" 
+          reverse 
+        />
 
         {/* Shopify */}
-        <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
+        <SplitSection 
+          title="Shopify Stores Built to Sell and Scale" 
+          description={
+            <>
               <p className="mb-6">
                 Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup we can design, build, and optimise your store to convert more visitors into buyers.
               </p>
@@ -216,10 +271,17 @@ We expand your winning product into new countries with a complete, done-for-you 
               <p className="font-medium">
                 We don't just build a store we create a sales engine that's easy to manage and built for future growth.
               </p>
-            </>} image={shopifyImage} imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" />
+            </>
+          } 
+          image={shopifyImage} 
+          imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" 
+        />
 
         {/* Global Systems */}
-        <SplitSection title="One View of Your Entire Business" description={<>
+        <SplitSection 
+          title="One View of Your Entire Business" 
+          description={
+            <>
               <p className="mb-4">
                 If you're selling across multiple countries, channels, or fulfilment partners, you need more than a storefront you need a connected system.
               </p>
@@ -237,10 +299,18 @@ We expand your winning product into new countries with a complete, done-for-you 
               <p className="font-medium">
                 One source of truth for your entire operation means less manual work, fewer errors, and more time to focus on growth.
               </p>
-            </>} image={globalSystemsImage} imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management" reverse />
+            </>
+          } 
+          image={globalSystemsImage} 
+          imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management" 
+          reverse 
+        />
 
         {/* Ad Management */}
-        <SplitSection title="Performance Ads That Drive Sales" description={<>
+        <SplitSection 
+          title="Performance Ads That Drive Sales" 
+          description={
+            <>
               <p className="mb-6">
                 We run e-commerce ad campaigns that combine creativity with automation to drive traffic, increase conversions, and deliver measurable ROI.
               </p>
@@ -257,10 +327,17 @@ We expand your winning product into new countries with a complete, done-for-you 
               <p className="font-medium">
                 Stop wasting ad spend our performance-focused campaigns ensure every dollar works harder to bring you more sales.
               </p>
-            </>} image={adManagementImage} imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" />
+            </>
+          } 
+          image={adManagementImage} 
+          imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" 
+        />
 
         {/* Crowdfunding */}
-        <SplitSection title="Launch Your Product to the World — and Get Funded Fast" description={<>
+        <SplitSection 
+          title="Launch Your Product to the World — and Get Funded Fast" 
+          description={
+            <>
               <p className="mb-4">
                 Crowdfunding is one of the most powerful ways to launch a new product, test the market, and build a loyal customer base before you've even shipped.
               </p>
@@ -297,7 +374,12 @@ We expand your winning product into new countries with a complete, done-for-you 
               <Button variant="hero" size="lg">
                 Book a Crowdfunding Strategy Call
               </Button>
-            </>} image={crowdfundingImage} imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" reverse />
+            </>
+          } 
+          image={crowdfundingImage} 
+          imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" 
+          reverse 
+        />
 
         {/* e-Comm-as-a-Service Section */}
         <section className="py-16 md:py-24 bg-background">
@@ -372,17 +454,26 @@ We expand your winning product into new countries with a complete, done-for-you 
         </section>
 
         {/* Final CTA */}
-        <SplitSection title="Let's Grow Your E-Commerce Sales Together" description={<>
+        <SplitSection 
+          title="Let's Grow Your E-Commerce Sales Together" 
+          description={
+            <>
               <p className="mb-6">
                 Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
               </p>
               <Button variant="hero" size="lg">
                 Book Your Consultation
               </Button>
-            </>} image={growthImage} imageAlt="E-commerce growth visualization showing sales scaling and global reach" />
+            </>
+          } 
+          image={growthImage} 
+          imageAlt="E-commerce growth visualization showing sales scaling and global reach" 
+        />
       </main>
 
       <SiteFooter />
-    </div>;
+    </div>
+  );
 };
+
 export default ECommerce;
