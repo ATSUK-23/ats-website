@@ -12,85 +12,213 @@ import { Clock, Users, Star, Award, BookOpen, Zap } from "lucide-react";
 const trainingHeroBackground = "/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png";
 
 export default function Training() {
+  const packages = [
+    {
+      title: "Small Business Package",
+      description: "Any 3 workshops",
+      discount: "20% off",
+      price: "From £1,200",
+      savings: "Save up to £390",
+      features: ["Choose any 3 workshops", "Flexible scheduling", "Priority booking"]
+    },
+    {
+      title: "Team Discount",
+      description: "5+ participants",
+      discount: "10% off",
+      price: "Per person",
+      savings: "Group booking benefits",
+      features: ["Bulk booking discounts", "Group coordination", "Team certificates"]
+    },
+    {
+      title: "Early Bird Special",
+      description: "Bookings 6+ weeks in advance",
+      discount: "15% off",
+      price: "All courses",
+      savings: "Plan ahead and save",
+      features: ["Advanced booking discount", "Guaranteed scheduling", "Free rescheduling"]
+    }
+  ];
+
   const trainingPrograms = [
     {
       category: "Foundation Courses",
       description: "Essential AI knowledge for getting started",
       courses: [
         {
-          title: "AI Fundamentals for Business",
-          duration: "2 hours",
+          title: "AI Quick-Start Essentials",
+          duration: "90 minutes",
           level: "Beginner",
           format: "Online",
-          price: "£199",
-          maxParticipants: "20",
-          description: "Perfect introduction to AI for business owners and managers. Learn the basics of AI, explore practical applications, and understand how AI can transform your operations.",
-          features: ["AI basics explained simply", "Real world examples", "Practical exercises", "Take-home resources"]
+          price: "£150",
+          maxParticipants: "25",
+          description: "90-minute introduction to AI fundamentals and immediate-use tools like ChatGPT, Claude, and basic automation. Perfect for businesses taking their first steps into AI. Includes practical exercises and take-home resources.",
+          features: ["AI fundamentals", "Immediate-use tools", "Practical exercises", "Take-home resources"],
+          audience: "Business owners new to AI, administrative staff, small teams",
+          platform: "Google Meet",
+          dates: "Sep 1, Sep 15, Oct 6..."
         },
         {
-          title: "AI Tools Mastery Workshop",
-          duration: "Half day",
+          title: "AI Tools & Platforms Mastery",
+          duration: "3 x 90-minute sessions",
           level: "Beginner",
-          format: "Online/In-person",
-          price: "£399",
+          format: "Online",
+          price: "£350",
           maxParticipants: "15",
-          description: "Hands-on training with the most powerful AI tools available today. Learn to use ChatGPT, Claude, Midjourney, and automation tools effectively.",
-          features: ["Live tool demonstrations", "Hands-on practice", "Custom prompts library", "30-day support"]
+          description: "Hands-on training with ChatGPT, Canva AI, automation tools, and productivity platforms. Three 90-minute sessions covering essential AI tools for daily operations, workflow creation, and productivity enhancement.",
+          features: ["ChatGPT mastery", "Canva AI training", "Automation tools", "Productivity platforms"],
+          audience: "All staff levels, operational teams, administrative professionals",
+          platform: "Google Meet",
+          dates: "Sep 2-16, Sep 30-Oct 14, Oct 27-Nov 10..."
+        },
+        {
+          title: "AI Fundamentals for Small Business Leaders",
+          duration: "Full day intensive",
+          level: "Beginner",
+          format: "In-person",
+          price: "£450",
+          maxParticipants: "12",
+          description: "Essential foundation covering AI basics without technical jargon, opportunity identification specific to small businesses, strategic AI roadmap development, ROI assessment, and building an AI-ready culture. Full-day intensive for decision-makers.",
+          features: ["AI basics without jargon", "Opportunity identification", "Strategic roadmap", "ROI assessment"],
+          audience: "Business owners, senior managers, decision-makers, C-suite executives",
+          platform: "Surbiton & Rugby locations available"
         }
       ]
     },
     {
-      category: "Advanced Programs",
-      description: "Deep-dive training for strategic implementation",
+      category: "Applied AI Training",
+      description: "Practical implementation for specific business functions",
       courses: [
         {
-          title: "AI Strategy & Implementation",
-          duration: "Full day",
+          title: "AI Marketing & Sales Acceleration",
+          duration: "Full day workshop",
           level: "Intermediate",
-          format: "In-person/Virtual",
-          price: "£799",
+          format: "In-person",
+          price: "£500",
           maxParticipants: "12",
-          description: "Comprehensive program for leaders ready to implement AI across their organization. Develop your AI strategy, identify opportunities, and create an implementation roadmap.",
-          features: ["Strategic planning session", "ROI calculation methods", "Implementation roadmap", "3-month follow-up"]
+          description: "Focus on customer acquisition, lead generation, and sales process optimisation using AI technologies. Covers AI-driven customer segmentation, automated content creation, predictive sales analytics, and CRM optimisation.",
+          features: ["Customer acquisition", "Lead generation", "Sales optimisation", "CRM enhancement"],
+          audience: "Marketing teams, sales professionals, business development managers",
+          platform: "Surbiton & Rugby locations available"
         },
         {
-          title: "Custom AI Solutions Training",
-          duration: "2 days",
-          level: "Advanced",
-          format: "Bespoke",
-          price: "Contact us",
-          maxParticipants: "8",
-          description: "Tailored training program designed specifically for your business needs. Includes custom AI solution development and team training.",
-          features: ["Bespoke curriculum", "Custom AI tools", "Ongoing support", "Team certification"]
+          title: "AI Process Automation Clinic",
+          duration: "3-hour workshop",
+          level: "Intermediate",
+          format: "Online",
+          price: "£250",
+          maxParticipants: "12",
+          description: "Practical 3-hour workshop identifying and implementing workflow automation opportunities. Participants bring real business processes for hands-on optimisation using AI tools. Includes templates and follow-up resources.",
+          features: ["Workflow automation", "Hands-on optimisation", "Templates included", "Follow-up resources"],
+          audience: "Operations managers, process owners, administrative staff",
+          platform: "Google Meet",
+          dates: "Sep 5, Sep 19, Oct 3..."
         }
       ]
-    }
-  ];
-
-  const packages = [
-    {
-      title: "Starter Package",
-      description: "Any 2 foundation courses",
-      discount: "15% off",
-      price: "From £339",
-      savings: "Save £59",
-      features: ["2 courses of your choice", "Digital certificates", "Resource library access"]
     },
     {
-      title: "Business Package",
-      description: "Complete foundation + 1 advanced",
-      discount: "20% off",
-      price: "From £799",
-      savings: "Save £199",
-      features: ["3 courses included", "Priority booking", "Extended support"]
+      category: "Advanced AI Applications",
+      description: "Sophisticated AI solutions for experienced users",
+      courses: [
+        {
+          title: "AI Data & Analytics for Business Intelligence",
+          duration: "Full day workshop",
+          level: "Advanced",
+          format: "In-person",
+          price: "£650",
+          maxParticipants: "8",
+          description: "Transform data into actionable business insights using AI-powered analytics. Covers predictive modelling, automated reporting, customer behaviour analysis, and performance optimisation. Full-day workshop with hands-on exercises.",
+          features: ["Predictive modelling", "Automated reporting", "Behaviour analysis", "Performance optimisation"],
+          audience: "Data analysts, financial controllers, strategic planners, business intelligence teams",
+          platform: "Surbiton & Rugby locations available"
+        },
+        {
+          title: "AI Risk Management & Governance",
+          duration: "3 x 90-minute sessions",
+          level: "Advanced",
+          format: "Online",
+          price: "£400",
+          maxParticipants: "15",
+          description: "Essential framework for responsible AI implementation covering ethics, GDPR compliance, cybersecurity, risk assessment, and governance policies. Three 90-minute sessions for compliance officers and senior management.",
+          features: ["AI ethics", "GDPR compliance", "Risk assessment", "Governance policies"],
+          audience: "Compliance officers, senior management, legal teams, risk managers",
+          platform: "Google Meet",
+          dates: "Sep 3-17, Oct 1-15, Oct 29-Nov 12..."
+        }
+      ]
     },
     {
-      title: "Enterprise Package",
-      description: "Full program access",
-      discount: "25% off",
-      price: "Contact us",
-      savings: "Maximum savings",
-      features: ["All courses", "Custom scheduling", "Dedicated support"]
+      category: "Strategic AI Leadership",
+      description: "Executive-level AI transformation and leadership",
+      courses: [
+        {
+          title: "Industry-Specific AI Applications",
+          duration: "Full day workshop",
+          level: "Advanced",
+          format: "In-person",
+          price: "£600",
+          maxParticipants: "10",
+          description: "Tailored AI solutions for specific sectors including retail optimisation, professional services automation, manufacturing quality control, and healthcare management. Choose your industry track for targeted learning.",
+          features: ["Sector-specific solutions", "Industry tracks", "Targeted learning", "Practical applications"],
+          audience: "Industry-specific business owners, sector managers, specialised teams",
+          platform: "Surbiton & Rugby locations available",
+          tracks: "Retail & E-commerce, Professional Services..."
+        },
+        {
+          title: "AI Implementation Strategy & Change Management",
+          duration: "Full day workshop",
+          level: "Advanced",
+          format: "In-person",
+          price: "£650",
+          maxParticipants: "8",
+          description: "Comprehensive strategic planning for AI adoption covering roadmap development, change management, team training, success measurement, and scaling initiatives. Executive-level workshop for transformation leaders.",
+          features: ["Roadmap development", "Change management", "Success measurement", "Scaling initiatives"],
+          audience: "Senior executives, transformation leaders, department heads, C-suite",
+          platform: "Surbiton & Rugby locations available"
+        }
+      ]
+    },
+    {
+      category: "Comprehensive Programs",
+      description: "Multi-week programs for complete AI transformation",
+      courses: [
+        {
+          title: "AI Essentials Express Series",
+          duration: "6-week program",
+          level: "Beginner to Intermediate",
+          format: "Online",
+          price: "£400",
+          maxParticipants: "20",
+          description: "Complete 6-week AI introduction covering fundamentals, tools mastery, marketing applications, automation, analytics, and implementation planning. Weekly 90-minute sessions with assignments and practical exercises.",
+          features: ["6-week comprehensive program", "Weekly sessions", "Practical assignments", "Implementation planning"],
+          audience: "Complete beginners, small business owners, teams wanting comprehensive foundation",
+          platform: "Google Meet",
+          dates: "Sep 4-Oct 9, Oct 16-Nov 20..."
+        },
+        {
+          title: "Advanced AI Leadership Program",
+          duration: "8-week program",
+          level: "Advanced",
+          format: "Hybrid (Online + In-person)",
+          price: "£800",
+          maxParticipants: "15",
+          description: "Strategic 8-week program combining online learning with intensive in-person workshop. Covers AI vision development, technology selection, implementation management, and organisational transformation for senior leaders.",
+          features: ["8-week strategic program", "Hybrid delivery", "Vision development", "Organisational transformation"],
+          audience: "Senior executives, C-suite, transformation leaders, strategic decision-makers",
+          platform: "Online sessions + Surbiton workshop"
+        },
+        {
+          title: "AI Prototyping Workshop",
+          duration: "1-day intensive",
+          level: "Intermediate",
+          format: "In-person or Virtual",
+          price: "£397",
+          maxParticipants: "12",
+          description: "Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.",
+          features: ["Build AI prototypes", "Test solutions", "Implementation roadmap", "Real business challenges"],
+          audience: "Business leaders, product managers, innovation teams",
+          platform: "Surbiton & Rugby locations available"
+        }
+      ]
     }
   ];
 
@@ -136,9 +264,9 @@ export default function Training() {
         <section className="py-16 bg-secondary/5">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Training Packages & Discounts</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our AI Training Programs</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Choose from our flexible packages designed to meet different business needs and budgets.
+                12 specialised courses from £150-800 per delegate • Foundation to Advanced Level
               </p>
             </div>
 
@@ -209,26 +337,47 @@ export default function Training() {
                           </div>
                         </div>
                       </CardHeader>
-                      <CardContent>
-                        <p className="text-sm mb-4">{course.description}</p>
-                        
-                        <div className="space-y-2 mb-4">
-                          {course.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center text-sm">
-                              <Award className="w-4 h-4 mr-2 text-primary" />
-                              {feature}
-                            </div>
-                          ))}
-                        </div>
+                       <CardContent>
+                         <p className="text-sm mb-4">{course.description}</p>
+                         
+                         {course.audience && (
+                           <div className="mb-3">
+                             <span className="text-xs font-semibold text-muted-foreground">Target audience: </span>
+                             <span className="text-xs">{course.audience}</span>
+                           </div>
+                         )}
+                         
+                         {course.platform && (
+                           <div className="mb-3">
+                             <span className="text-xs font-semibold text-muted-foreground">Platform: </span>
+                             <span className="text-xs">{course.platform}</span>
+                           </div>
+                         )}
+                         
+                         {course.dates && (
+                           <div className="mb-4">
+                             <span className="text-xs font-semibold text-muted-foreground">Available dates: </span>
+                             <span className="text-xs">{course.dates}</span>
+                           </div>
+                         )}
+                         
+                         <div className="space-y-2 mb-4">
+                           {course.features.map((feature, idx) => (
+                             <div key={idx} className="flex items-center text-sm">
+                               <Award className="w-4 h-4 mr-2 text-primary" />
+                               {feature}
+                             </div>
+                           ))}
+                         </div>
 
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="text-2xl font-bold text-primary">{course.price}</div>
-                            <div className="text-xs text-muted-foreground">{course.format}</div>
-                          </div>
-                          <Button>Book Now</Button>
-                        </div>
-                      </CardContent>
+                         <div className="flex items-center justify-between">
+                           <div>
+                             <div className="text-2xl font-bold text-primary">{course.price}</div>
+                             <div className="text-xs text-muted-foreground">{course.format}</div>
+                           </div>
+                           <Button>Book Now • {course.price}</Button>
+                         </div>
+                       </CardContent>
                     </Card>
                   ))}
                 </div>
@@ -237,65 +386,222 @@ export default function Training() {
           </div>
         </section>
 
-        {/* Why Choose Our Training Section */}
-        <SplitSection 
-          id="why-choose-training"
-          title="Why Choose Our AI Training Programs?"
-          description={
-            <div className="space-y-4">
-              <p>
-                Our training programs are designed by AI implementation experts who understand both the technology and the practical challenges businesses face.
+        {/* Training Benefits Section */}
+        <section className="py-16 bg-secondary/5">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Training Benefits</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Measurable improvements in team performance and business outcomes
               </p>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Practical Focus:</strong> Every course includes hands-on exercises and real-world applications relevant to your industry.
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Expert Trainers:</strong> Learn from certified AI specialists with proven track records in business implementation.
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Ongoing Support:</strong> All courses include post-training support to help you implement what you've learned.
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                  <div>
-                    <strong>Flexible Delivery:</strong> Choose from online, in-person, or hybrid training formats to suit your team's needs.
-                  </div>
-                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="text-center p-6">
+                <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Increased Productivity</h3>
+                <p className="text-sm text-muted-foreground">Teams become 40% more efficient with proper AI tool training</p>
+              </Card>
+              <Card className="text-center p-6">
+                <Star className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Competitive Advantage</h3>
+                <p className="text-sm text-muted-foreground">Stay ahead with cutting-edge AI knowledge and skills</p>
+              </Card>
+              <Card className="text-center p-6">
+                <Users className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Reduced Resistance</h3>
+                <p className="text-sm text-muted-foreground">Overcome AI adoption barriers through education and understanding</p>
+              </Card>
+              <Card className="text-center p-6">
+                <Award className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-bold mb-2">Innovation Culture</h3>
+                <p className="text-sm text-muted-foreground">Foster a culture of innovation and continuous learning</p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Comprehensive Curriculum Section */}
+        <section className="py-16">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Curriculum</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Everything your team needs to succeed with AI
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">AI Fundamentals</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Understanding AI and Machine Learning</li>
+                  <li>• AI vs Traditional Automation</li>
+                  <li>• Current AI Landscape</li>
+                  <li>• Future Trends and Opportunities</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Practical Tool Usage</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• ChatGPT and Language Models</li>
+                  <li>• AI Writing and Content Tools</li>
+                  <li>• Image and Video AI</li>
+                  <li>• Business Intelligence AI</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Prompt Engineering</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Effective Prompt Design</li>
+                  <li>• Context and Instructions</li>
+                  <li>• Chain of Thought Prompting</li>
+                  <li>• Error Handling and Refinement</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Strategic Implementation</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• AI Strategy Development</li>
+                  <li>• Change Management</li>
+                  <li>• ROI Measurement</li>
+                  <li>• Risk Assessment and Mitigation</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Ethics and Governance</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• AI Ethics and Bias</li>
+                  <li>• Data Privacy and Security</li>
+                  <li>• Regulatory Compliance</li>
+                  <li>• Responsible AI Practices</li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Industry Applications</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Sales and Marketing AI</li>
+                  <li>• Customer Service Automation</li>
+                  <li>• Operations Optimisation</li>
+                  <li>• Financial Analysis AI</li>
+                </ul>
               </div>
             </div>
-          }
-          image="/lovable-uploads/925210b2-3594-4c64-8a4a-2f65e141bb1b.png"
-          imageAlt="AI training session with participants learning practical skills"
-          reverse
-        />
+          </div>
+        </section>
+
+        {/* Flexible Delivery Options Section */}
+        <section className="py-16 bg-secondary/5">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Flexible Delivery Options</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Choose the format that works best for your team
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="p-6">
+                <h3 className="text-lg font-bold mb-3">In-Person Workshops</h3>
+                <p className="text-sm text-muted-foreground mb-4">Interactive face-to-face training at your location or ours</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• Direct interaction</li>
+                  <li>• Team building</li>
+                  <li>• Hands-on practice</li>
+                  <li>• Immediate feedback</li>
+                </ul>
+              </Card>
+              <Card className="p-6">
+                <h3 className="text-lg font-bold mb-3">Virtual Training</h3>
+                <p className="text-sm text-muted-foreground mb-4">Live online sessions with full interaction and engagement</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• Cost effective</li>
+                  <li>• Flexible scheduling</li>
+                  <li>• Remote accessibility</li>
+                  <li>• Recorded sessions</li>
+                </ul>
+              </Card>
+              <Card className="p-6">
+                <h3 className="text-lg font-bold mb-3">Hybrid Programs</h3>
+                <p className="text-sm text-muted-foreground mb-4">Combination of online learning and in-person workshops</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• Best of both worlds</li>
+                  <li>• Flexible learning</li>
+                  <li>• Progressive skill building</li>
+                  <li>• Ongoing support</li>
+                </ul>
+              </Card>
+              <Card className="p-6">
+                <h3 className="text-lg font-bold mb-3">Self-Paced Learning</h3>
+                <p className="text-sm text-muted-foreground mb-4">Comprehensive online modules with mentor support</p>
+                <ul className="space-y-1 text-sm">
+                  <li>• Learn at your pace</li>
+                  <li>• Repeat modules</li>
+                  <li>• 24/7 access</li>
+                  <li>• Certificate upon completion</li>
+                </ul>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Success Stories Section */}
+        <section className="py-16">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Real transformations from our training programs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Card className="p-6">
+                <blockquote className="text-lg mb-4">
+                  "The AI training transformed our team's understanding and confidence. We're now implementing AI solutions that have improved our efficiency by 45%."
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <div className="font-semibold">Paul Beales</div>
+                    <div className="text-sm text-muted-foreground">Operations Director</div>
+                    <div className="text-sm text-muted-foreground">Cronos Group Ltd</div>
+                  </div>
+                </div>
+              </Card>
+              <Card className="p-6">
+                <blockquote className="text-lg mb-4">
+                  "Epitome's training program gave us the knowledge and tools to integrate AI strategically across our business. The ROI has been exceptional."
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <div className="font-semibold">Colin Grant</div>
+                    <div className="text-sm text-muted-foreground">Technical Director</div>
+                    <div className="text-sm text-muted-foreground">RES Ltd</div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Final CTA Section */}
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Team's AI Capabilities?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Upskill Your Team?</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-              Join hundreds of businesses who have already upskilled their teams with our comprehensive AI training programs.
+              Invest in your team's future with comprehensive AI training that delivers real business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary">
-                View Course Calendar
+                Book Training Now
               </Button>
               <Button size="lg" variant="outline">
-                Speak to a Training Specialist
+                Need an AI Audit 1st?
               </Button>
             </div>
           </div>
         </section>
+
 
         <Contact />
       </main>
