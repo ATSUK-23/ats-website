@@ -103,19 +103,19 @@ const SocialContent = () => {
               </p>
               <div className="space-y-4 mb-6">
                 <div>
-                  <h5 className="font-semibold">Step 1 – Content Capture</h5>
+                  <h5 className="font-bold text-white">Step 1 – Content Capture</h5>
                   <p className="text-muted-foreground">We guide you in creating authentic, "raw" content short videos, insights, stories, and moments from your business.</p>
                 </div>
                 <div>
-                  <h5 className="font-bold">Step 2 – Curation & Editing</h5>
+                  <h5 className="font-bold text-white">Step 2 – Curation & Editing</h5>
                   <p className="text-muted-foreground">Our team edits, enhances, and repurposes your content into polished, platform-ready posts, tailored to your brand voice.</p>
                 </div>
                 <div>
-                  <h5 className="font-semibold">Step 3 – Publishing & Distribution</h5>
+                  <h5 className="font-bold text-white">Step 3 – Publishing & Distribution</h5>
                   <p className="text-muted-foreground">We schedule and post across the right channels at the right times to maximise reach and engagement.</p>
                 </div>
                 <div>
-                  <h5 className="font-semibold">Step 4 – Performance Insights</h5>
+                  <h5 className="font-bold text-white">Step 4 – Performance Insights</h5>
                   <p className="text-muted-foreground">You get regular reports showing growth in your audience, engagement, and influence without having to lift a finger.</p>
                 </div>
               </div>
