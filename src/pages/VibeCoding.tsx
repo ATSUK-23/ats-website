@@ -70,7 +70,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 
                 
-                <li>Vibe Coding blends AI, low-code, and collaboration to turn ideas into prototypes in days — giving you something tangible to test and refine immediately.</li>
+                
               </ul>
               <p className="pt-2">It helps businesses rapidly explore opportunities from apps to e-commerce tools, validating ideas with users before major investment, ensuring smarter decisions and faster growth.</p>
               
