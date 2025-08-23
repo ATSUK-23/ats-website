@@ -12,11 +12,11 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Menu } from "lucide-react";
 
 const aiItems = [
-  { id: "agents", label: "Agents" },
-  { id: "voice", label: "Voice" },
-  { id: "audits", label: "Audits" },
-  { id: "workshops", label: "Workshops" },
-  { id: "vibe-coding", label: "Vibe Coding" },
+  { id: "agents", label: "Agents", description: "Intelligent Automation For Workflows" },
+  { id: "voice", label: "Voice AI", description: "1-2-1 Conversations With Prospects" },
+  { id: "audits", label: "AI Audit", description: "How You Build Your AI Brain" },
+  { id: "workshops", label: "Workshops", description: "Hands-on AI Implementation Training" },
+  { id: "vibe-coding", label: "Vibe Coding", description: "Rapid Prototyping & App Development" },
 ];
 
 const ecommerceItems = [
@@ -83,7 +83,22 @@ export const SiteHeader = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
-          <Link to="/ai-solutions" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">AI Solutions</Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">AI Solutions</DropdownMenuTrigger>
+            <DropdownMenuContent className="w-80 p-2 bg-gray-800 border-gray-700 shadow-lg">
+              {aiItems.map((item) => (
+                <DropdownMenuItem key={item.id} className="p-0">
+                  <Link 
+                    to="/ai-solutions" 
+                    className="w-full p-3 rounded-md hover:bg-gray-700 transition-colors block"
+                  >
+                    <div className="font-medium text-white">{item.label}</div>
+                    <div className="text-sm text-gray-300 mt-1">{item.description}</div>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Vibe Coding</Link>
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">E‑Commerce</Link>
           <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Social Content</Link>

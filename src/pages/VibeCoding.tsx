@@ -96,10 +96,10 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         <SplitSection id="vibe-process" reverse title="Full Vibe Coding Process" image={vibeProcess} imageAlt="Elegant flow diagram showing discovery, prototype, build, test, and launch" description={<p>When you want us to guide the full build, here’s the process we’ll lead you through:</p>}>
           <ol className="list-decimal pl-5 space-y-2 text-muted-foreground">
             <li><strong>Step 1 – Discovery & Strategy:</strong> We review your goals, challenges, and existing systems to ensure we’re solving the right problem.</li>
-            <li><strong>Step 2 – Rapid Prototyping:</strong> In just a few days, we create a working prototype you can click through, share, and test with users.</li>
-            <li><strong>Step 3 – Build & Integrate:</strong> We develop the core product using AI-assisted and low-code tools, integrating with your existing tech stack (e.g., CRM, e-commerce, analytics).</li>
-            <li><strong>Step 4 – Test & Refine:</strong> We run live tests, gather feedback, and make rapid improvements without weeks of delays.</li>
-            <li><strong>Step 5 – Launch & Support:</strong> We deploy your website or app, train your team, and provide ongoing support to keep everything running smoothly.</li>
+            <li><strong className="font-bold text-white">Step 2 – Rapid Prototyping:</strong> In just a few days, we create a working prototype you can click through, share, and test with users.</li>
+            <li><strong className="font-bold text-white">Step 3 – Build & Integrate:</strong> We develop the core product using AI-assisted and low-code tools, integrating with your existing tech stack (e.g., CRM, e-commerce, analytics).</li>
+            <li><strong className="font-bold text-white">Step 4 – Test & Refine:</strong> We run live tests, gather feedback, and make rapid improvements without weeks of delays.</li>
+            <li><strong className="font-bold text-white">Step 5 – Launch & Support:</strong> We deploy your website or app, train your team, and provide ongoing support to keep everything running smoothly.</li>
           </ol>
         </SplitSection>
 
