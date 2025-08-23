@@ -40,17 +40,15 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
-        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Strategy Call To Grow Your Global e-Commerce Business" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
+        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Your Global Strategy Call" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
 
         {/* Original Split Section */}
         <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
               <p className="text-lg mb-4">
                 We help businesses design, integrate, and automate their e-commerce operations — so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
               </p>
-              <p>Your Product. Every Market. Fully Managed. 
-
-
-We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to local fulfilment and order automation — so you grow faster without extra staff or complexity.</p>
+              <p>Your Product. Every Market. Fully Managed.  
+We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to localise fulfilment, order automation and customer support so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
                 <Button variant="hero" size="lg">
                   Book an E-Commerce Consultation
