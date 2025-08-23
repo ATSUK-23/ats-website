@@ -40,7 +40,7 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
-        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Your Global Strategy Call" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
+        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Strategy Call To Grow Your Global e-Commerce Business" ctaLink="#contact" backgroundImage={globalEcommerceHero} className="text-white" />
 
         {/* Original Split Section */}
         <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
