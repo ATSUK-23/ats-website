@@ -31,6 +31,38 @@ export default function AISolutions() {
           <p className="text-lg text-white/90 max-w-4xl mx-auto mt-6">We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!</p>
         </HeroSection>
 
+        {/* Knowledge Comparison Section */}
+        <SplitSection id="knowledge-comparison" title="Your Knowledge vs Generic AI" description={<div>
+              <p className="mb-6">
+                While generic AI like ChatGPT has broad knowledge, your AI Brain has deep, specific knowledge about your business, your customers, and your industry.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  <span>Your specific products, services, and pricing</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  <span>Your company's unique processes and expertise</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  <span>Your customer success stories and case studies</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  </div>
+                  <span>Industry-specific terminology and solutions</span>
+                </div>
+              </div>
+            </div>} image={aiKnowledgeComparison} imageAlt="Comparison between generic AI and specialized business AI" reverse />
 
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Unlock the Power of Your Company's AI Brain" description={<p>
@@ -201,6 +233,21 @@ export default function AISolutions() {
               </div>
             </div>} image={industriesServed} imageAlt="Industries we serve icons" />
 
+        {/* Team Introduction */}
+        <SplitSection id="team-intro" title="Meet Martin Keene - Your AI Solutions Partner" description={<div>
+              <p className="mb-4">
+                Martin Keene brings over 20 years of experience in business automation and AI solutions. As the founder of Automate to Sell, he's helped hundreds of businesses implement AI strategies that drive real results.
+              </p>
+              <p className="mb-6">
+                "I've seen firsthand how AI can transform businesses when implemented correctly. My approach is simple: understand your business, identify the right opportunities, and connect you with the best solution partners to make it happen."
+              </p>
+              <div className="space-y-2 text-sm">
+                <div>✓ 20+ years in business automation</div>
+                <div>✓ Certified GoHighLevel expert</div>
+                <div>✓ 500+ successful implementations</div>
+                <div>✓ Trusted by businesses across multiple industries</div>
+              </div>
+            </div>} image={martinKeeneProfile} imageAlt="Martin Keene, AI Solutions Expert" />
 
         {/* Final CTA */}
         <section className="relative py-24 md:py-32 overflow-hidden">
