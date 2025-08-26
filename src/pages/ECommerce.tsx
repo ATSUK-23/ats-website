@@ -12,7 +12,7 @@ import marketplacesImage from "@/assets/marketplaces.jpg";
 import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
-import { ShoppingCart, Factory, Lightbulb } from "lucide-react";
+import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
 
 const ECommerce = () => {
   return (
@@ -440,54 +440,108 @@ const ECommerce = () => {
         </section>
 
         {/* e-Comm-as-a-Service Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">e-Comm-as-a-Service</h2>
+        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl opacity-30" />
+          
+          <div className="container relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  e-Comm-as-a-Service
+                </span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8" />
               <div className="max-w-4xl mx-auto space-y-4 text-muted-foreground">
                 <p className="text-lg">
                   Our e-Comm-as-a-Service provides a battle tested online sales system which includes customer targeting, sales conversions optimization, automated end to end order fulfilment & customer data management with 24/7 hands on customer support.
                 </p>
-                <p className="text-lg font-medium">
+                <p className="text-lg font-medium text-primary">
                   Our solution enables your business to rapidly scale globally without needing to increases your resources!
                 </p>
               </div>
             </div>
 
-            {/* 4 Columns */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-              <div className="text-center space-y-4">
-                <h3 className="text-xl font-bold text-primary">CUSTOMER TARGETING</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p className="font-medium">How do you get your ideal customers to discover your products?</p>
-                  <p>Using paid Search & Social Media, we create ad campaigns which target your ideal clients and drive them to your online proposition.</p>
-                  <p className="font-medium">This includes Facebook, Instagram, Google, TikTok & YouTube.</p>
+            {/* 4 Service Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Customer Targeting */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
+                <div className="relative bg-card/80 backdrop-blur-sm p-8 rounded-xl border shadow-lg hover-scale">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-center mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                    Customer Targeting
+                  </h3>
+                  <div className="space-y-4 text-muted-foreground text-center">
+                    <p className="font-medium text-foreground">How do you get your ideal customers to discover your products?</p>
+                    <p className="text-sm">Using paid Search & Social Media, we create ad campaigns which target your ideal clients and drive them to your online proposition.</p>
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <p className="font-medium text-primary text-sm">Facebook • Instagram • Google • TikTok • YouTube</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="text-center space-y-4">
-                <h3 className="text-xl font-bold text-primary">SALES CONVERSIONS</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p>Ensure your products are available in the best sales platforms to simplify your customers purchase.</p>
-                  <p>This could be Shopify, Marketplaces or even Sales Funnels.</p>
-                  <p className="font-medium">It is crucial that your product is easily available to purchase in your customers preferred digital shopping location.</p>
+              {/* Sales Conversions */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
+                <div className="relative bg-card/80 backdrop-blur-sm p-8 rounded-xl border shadow-lg hover-scale">
+                  <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-center mb-6 bg-gradient-to-r from-secondary to-secondary/80 bg-clip-text text-transparent">
+                    Sales Conversions
+                  </h3>
+                  <div className="space-y-4 text-muted-foreground text-center">
+                    <p className="text-sm">Ensure your products are available in the best sales platforms to simplify your customers purchase.</p>
+                    <p className="text-sm">This could be Shopify, Marketplaces or even Sales Funnels.</p>
+                    <div className="bg-secondary/10 p-3 rounded-lg">
+                      <p className="font-medium text-secondary text-sm">It is crucial that your product is easily available to purchase in your customers preferred digital shopping location.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="text-center space-y-4">
-                <h3 className="text-xl font-bold text-primary">CUSTOMER MANAGEMENT</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p>Centralise all customer data in a single tech platform.</p>
-                  <p>Simple to access and use with complete visibility on your customers data.</p>
-                  <p className="font-medium">We also provide 24/7 customer support solutions you can rely on to ensure your customers are looked after during pre & post purchase.</p>
+              {/* Customer Management */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
+                <div className="relative bg-card/80 backdrop-blur-sm p-8 rounded-xl border shadow-lg hover-scale">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-center mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    Customer Management
+                  </h3>
+                  <div className="space-y-4 text-muted-foreground text-center">
+                    <p className="text-sm">Centralise all customer data in a single tech platform.</p>
+                    <p className="text-sm">Simple to access and use with complete visibility on your customers data.</p>
+                    <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-3 rounded-lg border border-primary/20">
+                      <p className="font-medium text-primary text-sm">We also provide 24/7 customer support solutions you can rely on to ensure your customers are looked after during pre & post purchase.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="text-center space-y-4">
-                <h3 className="text-xl font-bold text-primary">AUTOMATED FULFILMENT</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p>End to End from manufacturer's bulk shipment to your warehouse through to last mile delivery to your customer.</p>
-                  <p className="font-medium">All sales channels and fulfilment partners in all territories are integrated and automated to maximize speed of delivery whilst reducing people resources</p>
+              {/* Automated Fulfilment */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
+                <div className="relative bg-card/80 backdrop-blur-sm p-8 rounded-xl border shadow-lg hover-scale">
+                  <div className="w-16 h-16 bg-gradient-to-r from-secondary to-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Truck className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-center mb-6 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                    Automated Fulfilment
+                  </h3>
+                  <div className="space-y-4 text-muted-foreground text-center">
+                    <p className="text-sm">End to End from manufacturer's bulk shipment to your warehouse through to last mile delivery to your customer.</p>
+                    <div className="bg-secondary/10 p-3 rounded-lg">
+                      <p className="font-medium text-secondary text-sm">All sales channels and fulfilment partners in all territories are integrated and automated to maximize speed of delivery whilst reducing people resources</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
