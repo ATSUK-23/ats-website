@@ -7,10 +7,8 @@ import HeroSection from "@/components/sections/HeroSection";
 import SplitSection from "@/components/sections/SplitSection";
 import { Contact } from "@/components/sections/Contact";
 import { Phone, MessageCircle, Calendar, Users, TrendingUp, Clock, Shield, Zap, CheckCircle, Star } from "lucide-react";
-
 const VoiceAI = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Voice AI Solutions - Human-Like AI Voice & Chat Assistants | Automate To Sell</title>
         <meta name="description" content="Elevate your business with human-like AI voice and chat assistants. Delight customers, capture leads, and grow revenue 24/7. No coding required." />
@@ -20,14 +18,7 @@ const VoiceAI = () => {
       
       <main>
         {/* Hero Section */}
-        <HeroSection
-          title="Elevate Your Business With Human-Like AI Voice & Chat Assistants"
-          subtitle="Delight customers, capture more leads, and grow revenue with AI-powered voice and chat that works 24/7. No coding, no complexity just results."
-          ctaText="Start Free Trial"
-          ctaLink="https://www.automatetosell.com/ats-application"
-          backgroundImage="/lovable-uploads/a0a37eb9-ee13-49f7-b089-029ad1a11537.png"
-          className="min-h-[70vh]"
-        >
+        <HeroSection title="Elevate Your Business With Human-Like AI Voice & Chat Assistants" subtitle="Delight customers, capture more leads, and grow revenue with AI-powered voice and chat that works 24/7. No coding, no complexity—just results." ctaText="Start Free Trial" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage="/lovable-uploads/a0a37eb9-ee13-49f7-b089-029ad1a11537.png" className="min-h-[70vh]">
           <div className="mt-8 flex items-center justify-center gap-4">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
@@ -38,31 +29,7 @@ const VoiceAI = () => {
         </HeroSection>
 
         {/* Social Proof */}
-        <section className="py-16 bg-muted/30">
-          <div className="container text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">
-              Trusted by businesses worldwide to power millions of conversations
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="flex items-center gap-3 justify-center">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="font-medium">Millions of calls & messages delivered</span>
-              </div>
-              <div className="flex items-center gap-3 justify-center">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="font-medium">99.99998% uptime</span>
-              </div>
-              <div className="flex items-center gap-3 justify-center">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="font-medium">Proven at scale in multiple industries</span>
-              </div>
-              <div className="flex items-center gap-3 justify-center">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="font-medium">Thousands of businesses already using AI assistants</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Outbound AI Use Cases */}
         <section className="py-16">
@@ -243,9 +210,7 @@ const VoiceAI = () => {
             <Card className="max-w-4xl mx-auto p-8">
               <CardContent className="text-center space-y-4">
                 <div className="flex justify-center gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <blockquote className="text-lg italic">
                   "After testing multiple providers, Assistable was the only one that handled over 25,000 calls flawlessly. Reliability and features are unmatched."
@@ -323,8 +288,6 @@ const VoiceAI = () => {
       </main>
 
       <SiteFooter />
-    </>
-  );
+    </>;
 };
-
 export default VoiceAI;
