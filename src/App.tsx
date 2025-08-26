@@ -13,6 +13,7 @@ import Training from "./pages/Training";
 import About from "./pages/About";
 import AISolutions from "./pages/AISolutions";
 import Agents from "./pages/Agents";
+import VoiceAI from "./pages/VoiceAI";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/sales-funnel-automation" element={<SalesFunnelAutomation />} />
             <Route path="/ai-solutions" element={<AISolutions />} />
             <Route path="/agents" element={<Agents />} />
+            <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
