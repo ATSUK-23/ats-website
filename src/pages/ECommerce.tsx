@@ -73,48 +73,147 @@ We expand your winning product into new countries with a complete, done-for-you 
         />
 
         {/* Customer Results Section */}
-        <section className="py-16 md:py-24 bg-muted/50">
-          <div className="container max-w-7xl">
-            <div className="flex flex-col lg:flex-row gap-8">
-              {/* Video - 25% */}
-              <div className="w-full lg:w-[25%] flex-shrink-0">
-                <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
-                  <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
-                    <iframe
-                      src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                      title="Fraser Importing Success Story"
-                      className="absolute top-0 left-0 w-full h-full"
-                    />
+        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-primary/10 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/20 rounded-full blur-3xl opacity-30" />
+          
+          <div className="container max-w-7xl relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-16 animate-fade-in">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  CUSTOMER RESULTS
+                </span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8" />
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+              {/* Video Section */}
+              <div className="lg:col-span-1 space-y-6">
+                <div className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                  <div className="relative rounded-xl overflow-hidden border bg-card shadow-lg hover-scale">
+                    <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                      <iframe
+                        src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                        title="Fraser Importing Success Story"
+                        className="absolute top-0 left-0 w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Company Info Card */}
+                <div className="bg-card/80 backdrop-blur-sm p-6 rounded-xl border shadow-lg">
+                  <h4 className="text-xl font-bold mb-2 text-primary">Fraser Importing</h4>
+                  <p className="text-muted-foreground mb-4">Global Medical Products Distributor</p>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">Active Since 2020</span>
                   </div>
                 </div>
               </div>
-              
-              {/* Content - 75% */}
-              <div className="w-full lg:w-[75%]">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
-                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years With Just 5 Staff</h3>
-                
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Fraser Importing – Global Distributor of Medical Products</h4>
-                    <p className="text-lg text-muted-foreground mb-6">From one Amazon store to a worldwide operation in under 4 years.</p>
+
+              {/* Main Results Content */}
+              <div className="lg:col-span-2 space-y-8">
+                {/* Hero Stat */}
+                <div className="text-center lg:text-left">
+                  <div className="inline-block">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                      <span className="text-muted-foreground">From</span>{" "}
+                      <span className="text-primary">$40K</span>{" "}
+                      <span className="text-muted-foreground">to</span>{" "}
+                      <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">$50M</span>
+                    </h3>
+                    <p className="text-xl text-muted-foreground mb-2">in just 4 years</p>
+                    <p className="text-lg font-semibold text-primary">With only 5 staff members</p>
                   </div>
+                </div>
+
+                {/* Journey Timeline */}
+                <div className="relative">
+                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary" />
                   
-                  <div>
-                    <h5 className="text-lg font-bold mb-4">Today:</h5>
-                    <div className="space-y-4">
-                      <div className="text-lg font-semibold">• 15+ marketplaces</div>
-                      <div className="text-lg font-semibold">• 6 Shopify stores</div>
-                      <div className="text-lg font-semibold">• 6 fulfilment partners</div>
-                      <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary inline-block">
-                        <span className="text-xl font-bold text-primary">$1M+ monthly revenue across multiple continents</span>
+                  <div className="space-y-8">
+                    {/* Before */}
+                    <div className="flex items-start gap-6">
+                      <div className="relative">
+                        <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center border-4 border-background shadow-lg">
+                          <span className="text-2xl font-bold text-muted-foreground">1</span>
+                        </div>
+                      </div>
+                      <div className="flex-1 bg-card/50 p-6 rounded-xl border">
+                        <h5 className="text-lg font-bold mb-2">Starting Point (2020)</h5>
+                        <p className="text-muted-foreground">Single Amazon store, $40K revenue, manual operations</p>
+                      </div>
+                    </div>
+
+                    {/* After */}
+                    <div className="flex items-start gap-6">
+                      <div className="relative">
+                        <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center border-4 border-background shadow-lg">
+                          <span className="text-2xl font-bold text-white">2</span>
+                        </div>
+                      </div>
+                      <div className="flex-1 bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-xl border border-primary/20">
+                        <h5 className="text-lg font-bold mb-4 text-primary">Today (2024)</h5>
+                        <div className="grid md:grid-cols-2 gap-4 mb-6">
+                          <div className="bg-card/80 p-4 rounded-lg">
+                            <div className="text-2xl font-bold text-primary mb-1">15+</div>
+                            <div className="text-sm text-muted-foreground">Marketplaces</div>
+                          </div>
+                          <div className="bg-card/80 p-4 rounded-lg">
+                            <div className="text-2xl font-bold text-primary mb-1">6</div>
+                            <div className="text-sm text-muted-foreground">Shopify Stores</div>
+                          </div>
+                          <div className="bg-card/80 p-4 rounded-lg">
+                            <div className="text-2xl font-bold text-primary mb-1">6</div>
+                            <div className="text-sm text-muted-foreground">Fulfilment Partners</div>
+                          </div>
+                          <div className="bg-card/80 p-4 rounded-lg">
+                            <div className="text-2xl font-bold text-primary mb-1">5</div>
+                            <div className="text-sm text-muted-foreground">Total Staff</div>
+                          </div>
+                        </div>
+                        
+                        {/* Revenue Highlight */}
+                        <div className="bg-gradient-to-r from-primary to-secondary p-6 rounded-xl text-white text-center">
+                          <div className="text-3xl md:text-4xl font-bold mb-2">$1M+</div>
+                          <div className="text-lg">Monthly Revenue</div>
+                          <div className="text-sm opacity-90 mt-1">Across Multiple Continents</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="bg-card p-6 rounded-lg border">
-                    <p className="text-lg font-bold">All managed by only 1 Operations Director, 3 part-time support agents, 1 tech role, and the CEO.</p>
+                </div>
+
+                {/* Team Structure */}
+                <div className="bg-card/60 backdrop-blur-sm p-6 rounded-xl border">
+                  <h5 className="text-lg font-bold mb-4 flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full" />
+                    Lean Team Structure
+                  </h5>
+                  <div className="grid md:grid-cols-5 gap-3 text-center">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="font-semibold text-sm">Operations Director</div>
+                    </div>
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="font-semibold text-sm">3 Support Agents</div>
+                      <div className="text-xs text-muted-foreground">(Part-time)</div>
+                    </div>
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="font-semibold text-sm">Tech Role</div>
+                    </div>
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="font-semibold text-sm">CEO</div>
+                    </div>
+                    <div className="bg-gradient-to-r from-primary to-secondary p-3 rounded-lg text-white">
+                      <div className="font-semibold text-sm">Total: 5</div>
+                    </div>
                   </div>
                 </div>
               </div>
