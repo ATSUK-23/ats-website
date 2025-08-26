@@ -31,6 +31,19 @@ export default function AISolutions() {
           <p className="text-lg text-white/90 max-w-4xl mx-auto mt-6">We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!</p>
         </HeroSection>
 
+        {/* AI Brain Power Section */}
+        <SplitSection id="ai-brain-power" title="Unlock the Power of Your Company's AI Brain" description={<p>
+              Imagine having all your company&apos;s best knowledge, everything in your team&apos;s heads, your marketing materials, sales proposals, onboarding guides, training and your service insights...all in one place and available to prospects 24/7?
+              <br /><br />
+              Your AI brain does just that.
+              <br /><br />
+              It pulls together expertise from across your company and consolidates it into an intelligent system.
+              <br /><br />
+              By building an AI brain for your business, you can unleash the potential of this information, allowing your prospects to quickly and easily discover how your company can solve their unique problems.
+              <br /><br />
+              Instead of sifting through pages of content or waiting for someone on your team to explain or reply to them, prospects can find the exact answers they need with natural real-time responses on their schedule.
+            </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
+
         {/* Knowledge Comparison Section */}
         <SplitSection id="knowledge-comparison" title="Your Knowledge vs Generic AI" description={<div>
               <p className="mb-6">
@@ -63,19 +76,6 @@ export default function AISolutions() {
                 </div>
               </div>
             </div>} image={aiKnowledgeComparison} imageAlt="Comparison between generic AI and specialized business AI" reverse />
-
-        {/* AI Brain Power Section */}
-        <SplitSection id="ai-brain-power" title="Unlock the Power of Your Company's AI Brain" description={<p>
-              Imagine having all your company&apos;s best knowledge, everything in your team&apos;s heads, your marketing materials, sales proposals, onboarding guides, training and your service insights...all in one place and available to prospects 24/7?
-              <br /><br />
-              Your AI brain does just that.
-              <br /><br />
-              It pulls together expertise from across your company and consolidates it into an intelligent system.
-              <br /><br />
-              By building an AI brain for your business, you can unleash the potential of this information, allowing your prospects to quickly and easily discover how your company can solve their unique problems.
-              <br /><br />
-              Instead of sifting through pages of content or waiting for someone on your team to explain or reply to them, prospects can find the exact answers they need with natural real-time responses on their schedule.
-            </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* How It Works Section */}
         <SplitSection id="how-it-works" title="How It Works" description={<div className="space-y-6">
