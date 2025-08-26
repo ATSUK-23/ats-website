@@ -100,7 +100,7 @@ const Index = () => {
             </article>
             <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
             </article>
             <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
