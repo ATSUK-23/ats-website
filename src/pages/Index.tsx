@@ -108,7 +108,8 @@ const Index = () => {
             </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 15 Specialised courses for beginner to advanced. 12 specialised courses from £150-800 per delegate • Foundation to Advanced Level</p>
+              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
+15 Specialised courses for beginner to advanced. </p>
             </article>
           </div>
         </SplitSection>
