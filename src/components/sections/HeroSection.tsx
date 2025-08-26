@@ -26,7 +26,7 @@ export const HeroSection = ({
       <div className="absolute inset-0 bg-black/50" />
       
       <div className="container py-16 md:py-24 text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight capitalize">
           {title}
         </h1>
         <p className="mt-5 text-lg md:text-xl max-w-3xl mx-auto text-slate-200">
