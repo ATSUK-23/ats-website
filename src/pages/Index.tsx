@@ -104,7 +104,7 @@ const Index = () => {
             </article>
             <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
-              <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up sequences.</p>
+              <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up e-mail sequences, calendar booking, 3rd party integrations</p>
             </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
