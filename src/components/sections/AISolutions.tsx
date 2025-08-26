@@ -43,7 +43,7 @@ export const AISolutions = () => {
       <header className="max-w-2xl">
         <h2 className="text-3xl md:text-4xl font-bold">AI Solutions</h2>
         <p className="mt-3 text-muted-foreground">
-          We help develop your AI strategy, source the best tech partner and manage implementation—so you can focus on clients.
+          We help develop your AI strategy, source the best tech partner and manage implementation so you can focus on clients.
         </p>
       </header>
 

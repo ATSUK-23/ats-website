@@ -330,7 +330,7 @@ const Agents = () => {
         {/* Hero Section */}
         <HeroSection
           title="Automate Anything with AI Agents"
-          subtitle="Launch AI agents as apps, automations, or integrations—wherever you need them."
+          subtitle="Launch AI agents as apps, automations, or integrations wherever you need them."
           ctaText="Start Building"
           ctaLink="https://www.automatetosell.com/ats-application"
           backgroundImage="/lovable-uploads/6f46dcfa-73ab-402b-8d25-de2cdf561d8c.png"

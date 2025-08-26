@@ -93,7 +93,7 @@ const VoiceAI = () => {
                   </div>
                   <h3 className="font-semibold">Meeting Scheduling & Reminders</h3>
                   <p className="text-sm text-muted-foreground">
-                    Never miss a meeting—AI handles bookings, confirmations, and reminders automatically.
+                    Never miss a meeting AI handles bookings, confirmations, and reminders automatically.
                   </p>
                 </CardContent>
               </Card>
@@ -239,7 +239,7 @@ const VoiceAI = () => {
                 <blockquote className="text-lg italic">
                   "After testing multiple providers, Assistable was the only one that handled over 25,000 calls flawlessly. Reliability and features are unmatched."
                 </blockquote>
-                <cite className="text-muted-foreground font-medium">— Maurice M.</cite>
+                <cite className="text-muted-foreground font-medium">Maurice M.</cite>
               </CardContent>
             </Card>
           </div>
@@ -252,7 +252,7 @@ const VoiceAI = () => {
               Simple, Scalable Pricing
             </h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Pick the plan that fits your business—upgrade as you grow.
+              Pick the plan that fits your business upgrade as you grow.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <Card className="p-6">
@@ -298,7 +298,7 @@ const VoiceAI = () => {
               Your Customers Expect Speed. Your Business Deserves Growth.
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              Put AI to work for you—capture every lead, delight every customer, and scale without limits.
+              Put AI to work for you capture every lead, delight every customer, and scale without limits.
             </p>
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="secondary" size="lg">

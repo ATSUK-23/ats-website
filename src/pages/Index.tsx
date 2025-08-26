@@ -36,7 +36,7 @@ const Index = () => {
           description={(
             <>
               <p>
-                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it’s easy to get lost in “shiny object” syndrome. We cut through the noise to:
+                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it's easy to get lost in "shiny object" syndrome. We cut through the noise to:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Analyse your processes end-to-end</li>
@@ -44,7 +44,7 @@ const Index = () => {
                 <li>Recommend only what you truly need</li>
                 <li>Integrate everything into one seamless system</li>
               </ul>
-              <p className="pt-2">We’re not tied to one software vendor. Our loyalty is to your results.</p>
+              <p className="pt-2">We're not tied to one software vendor. Our loyalty is to your results.</p>
             </>
           )}
         />
@@ -89,7 +89,7 @@ const Index = () => {
           imageAlt="Professional workshop with team and facilitator at whiteboard"
           description={(
             <p>
-              We don’t just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
+              We don't just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
             </p>
           )}
         >
@@ -114,7 +114,7 @@ const Index = () => {
           imageAlt="Multiple tech vendors flowing into one unified automation hub"
           description={(
             <>
-              <p>No one platform does it all — and no single vendor is best at everything. We’ll:</p>
+              <p>No one platform does it all and no single vendor is best at everything. We will:</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Identify the best-fit automation & AI providers for your needs</li>
                 <li>Manage the vendor relationship</li>
@@ -159,9 +159,9 @@ const Index = () => {
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold">Work Smarter. Grow Faster.</h2>
             <p className="mt-4 max-w-2xl mx-auto">
-              Let’s design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
+              Let us design a strategy, choose the right tools, and build automation systems that deliver results so you can focus on growing your business.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
                 <Button variant="secondary" size="lg">Book Your Business Automation Audit</Button>
               </a>

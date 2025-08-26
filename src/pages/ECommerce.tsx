@@ -93,7 +93,7 @@ We expand your winning product into new countries with a complete, done-for-you 
               {/* Content - 75% */}
               <div className="w-full lg:w-[75%]">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">CUSTOMER RESULTS</h2>
-                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years — With Just 5 Staff</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">$40K to $50M in 4 Years With Just 5 Staff</h3>
                 
                 <div className="space-y-6">
                   <div>
@@ -297,7 +297,7 @@ We expand your winning product into new countries with a complete, done-for-you 
 
         {/* Crowdfunding */}
         <SplitSection 
-          title="Launch Your Product to the World — and Get Funded Fast" 
+          title="Launch Your Product to the World and Get Funded Fast" 
           description={
             <>
               <p className="mb-4">
@@ -307,7 +307,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                 That's why we've partnered with LaunchBoom — the No. 1 launch agency in the world, helping product creators raise over $175M to create their dream businesses.
               </p>
               <p className="mb-6">
-                Certified by Kickstarter and Indiegogo, LaunchBoom has developed a proprietary 4-step process proven to deliver results — with many campaigns funded in less than 24 hours (average funding time: just 15 minutes).
+                Certified by Kickstarter and Indiegogo, LaunchBoom has developed a proprietary 4-step process proven to deliver results with many campaigns funded in less than 24 hours (average funding time: just 15 minutes).
               </p>
               <div className="space-y-4 mb-6">
                 <h4 className="font-semibold text-lg">The LaunchBoom 4-Step Process:</h4>
@@ -326,7 +326,7 @@ We expand your winning product into new countries with a complete, done-for-you 
                   </div>
                   <div>
                     <h5 className="font-medium">4. LaunchBoom 🚀</h5>
-                    <p className="text-muted-foreground">Launch on Kickstarter or Indiegogo with a campaign primed to succeed — and get funded fast.</p>
+                    <p className="text-muted-foreground">Launch on Kickstarter or Indiegogo with a campaign primed to succeed and get funded fast.</p>
                   </div>
                 </div>
               </div>
@@ -401,7 +401,7 @@ We expand your winning product into new countries with a complete, done-for-you 
               <div className="max-w-4xl mx-auto text-center space-y-6">
                 <h3 className="text-2xl font-bold">Strategy & Business Case Development</h3>
                 <p className="text-muted-foreground">
-                  We help you structure your D2C offers to boost engagement, increase cart size, and drive repeat purchases—setting you up for long-term success and a profitable exit strategy.
+                  We help you structure your D2C offers to boost engagement, increase cart size, and drive repeat purchases setting you up for long-term success and a profitable exit strategy.
                 </p>
                 <div className="text-lg font-medium space-y-2">
                   <p>You keep your focus on creating outstanding products whilst we</p>
