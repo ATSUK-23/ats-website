@@ -84,7 +84,7 @@ const Index = () => {
               </ul>
             </>} />
 
-        <SplitSection id="service-pillars" title="End-to-End Automation & AI Expertise" image={pillarsImg} imageAlt="Five modern flat icons for AI Solutions, Vibe Coding, E‑Commerce, Social Content, and Sales & Marketing Automation">
+        <SplitSection id="service-pillars" title="End-to-End Automation & AI Expertise" image={pillarsImg} imageAlt="Six modern flat icons for AI Solutions, Vibe Coding, E‑Commerce, Social Content, Sales & Marketing Automation, and Training">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">AI Solutions</h3>
@@ -102,9 +102,13 @@ const Index = () => {
               <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
               <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content.</p>
             </article>
-            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm md:col-span-2 lg:col-span-1">
+            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
               <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up sequences.</p>
+            </article>
+            <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Training</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent</p>
             </article>
           </div>
         </SplitSection>
