@@ -337,34 +337,6 @@ We expand your winning product into new countries with a complete, done-for-you 
           imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" 
         />
 
-        {/* Global Systems */}
-        <SplitSection 
-          title="One View of Your Entire Business" 
-          description={
-            <>
-              <p className="mb-4">
-                If you're selling across multiple countries, channels, or fulfilment partners, you need more than a storefront you need a connected system.
-              </p>
-              <p className="mb-6">We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.</p>
-              <div className="space-y-2 mb-6">
-                <h4 className="font-semibold text-lg">What We Do:</h4>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• Multi-region product catalogues with currency and tax handling</li>
-                  <li>• Integration of ERP, CRM, WMS, and PIM systems</li>
-                  <li>• Centralised inventory and order management</li>
-                  <li>• Automated fulfilment and shipping workflows</li>
-                  <li>• Analytics and reporting dashboards for real-time insights</li>
-                </ul>
-              </div>
-              <p className="font-medium">
-                One source of truth for your entire operation means less manual work, fewer errors, and more time to focus on growth.
-              </p>
-            </>
-          } 
-          image={globalSystemsImage} 
-          imageAlt="Unified business systems dashboard showing connected ERP, CRM, and inventory management" 
-          reverse 
-        />
 
         {/* Ad Management */}
         <SplitSection 
@@ -391,6 +363,7 @@ We expand your winning product into new countries with a complete, done-for-you 
           } 
           image={adManagementImage} 
           imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" 
+          reverse 
         />
 
         {/* Crowdfunding */}
@@ -421,7 +394,7 @@ We expand your winning product into new countries with a complete, done-for-you 
         />
 
         {/* LaunchBoom 4-Step Process - Full Width */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-8 md:py-12 bg-muted/30">
           <div className="container">
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">The LaunchBoom 4-Step Process</h3>
@@ -519,22 +492,6 @@ We expand your winning product into new countries with a complete, done-for-you 
               </div>
             </div>
 
-            {/* Bottom Content */}
-            <div className="bg-card rounded-lg p-8 border">
-              <div className="max-w-4xl mx-auto text-center space-y-6">
-                <h3 className="text-2xl font-bold">Strategy & Business Case Development</h3>
-                <p className="text-muted-foreground">
-                  We help you structure your D2C offers to boost engagement, increase cart size, and drive repeat purchases setting you up for long-term success and a profitable exit strategy.
-                </p>
-                <div className="text-lg font-medium space-y-2">
-                  <p>You keep your focus on creating outstanding products whilst we</p>
-                  <p className="text-primary font-bold text-xl">AUTOMATE & SCALE your global e-commerce business</p>
-                </div>
-                <Button variant="hero" size="lg" className="mt-6">
-                  Book Your e-Comm Strategy Session
-                </Button>
-              </div>
-            </div>
           </div>
         </section>
 
