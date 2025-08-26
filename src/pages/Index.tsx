@@ -102,9 +102,13 @@ const Index = () => {
               <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
               <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content.</p>
             </article>
-            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm md:col-span-2 lg:col-span-1">
+            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
               <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up sequences.</p>
+            </article>
+            <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Training</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent</p>
             </article>
           </div>
         </SplitSection>
