@@ -70,7 +70,7 @@ const About = () => {
                   I was an early adopter of ClickFunnels, joining the platform in October 2014 and completing their inaugural Certification Program the following year.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">In partnership with one client I wsd recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.</p>
+                <p className="text-lg leading-relaxed mb-6">In partnership with one client I was recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.</p>
 
                 <p className="text-lg leading-relaxed mb-6">
                   In 2020, I expanded my expertise into Go High Level, launching my own digital agency to support clients with turn key scalable marketing systems and smart automation.
