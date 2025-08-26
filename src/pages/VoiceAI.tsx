@@ -22,7 +22,7 @@ const VoiceAI = () => {
         {/* Hero Section */}
         <HeroSection
           title="Elevate Your Business With Human-Like AI Voice & Chat Assistants"
-          subtitle="Delight customers, capture more leads, and grow revenue with AI-powered voice and chat that works 24/7. No coding, no complexity—just results."
+          subtitle="Delight customers, capture more leads, and grow revenue with AI-powered voice and chat that works 24/7. No coding, no complexity just results."
           ctaText="Start Free Trial"
           ctaLink="https://www.automatetosell.com/ats-application"
           backgroundImage="/lovable-uploads/a0a37eb9-ee13-49f7-b089-029ad1a11537.png"
