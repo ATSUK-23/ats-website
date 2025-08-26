@@ -284,7 +284,7 @@ We expand your winning product into new countries with a complete, done-for-you 
 
         {/* Marketplaces */}
         <SplitSection 
-          title="Win on Amazon, eBay, Etsy and Beyond" 
+          title="Win on Amazon, eBay and numerous other Marketplaces" 
           description={
             <>
               <p className="mb-6">
