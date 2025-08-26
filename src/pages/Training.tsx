@@ -234,7 +234,7 @@ export default function Training() {
       <main>
         {/* Hero Section */}
         <HeroSection 
-          title="TRANSFORM YOUR TEAM FROM AI CURIOUS TO AI COMPETENT"
+          title="Transform Your Team From AI Curious To AI Competent"
           subtitle="Comprehensive training programs that build AI literacy, practical skills, and strategic understanding across your organisation."
           ctaText="Speak to a Training Specialist"
           ctaLink="#contact"
