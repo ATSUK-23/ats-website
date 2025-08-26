@@ -29,7 +29,31 @@ const VoiceAI = () => {
         </HeroSection>
 
         {/* Social Proof */}
-        
+        <section className="py-16 bg-muted/50">
+          <div className="container text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">
+              Trusted by businesses worldwide to power millions of conversations
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Millions of calls & messages delivered</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">99.99998% uptime</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Proven at scale in multiple industries</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Thousands of businesses already using AI assistants</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Outbound AI Use Cases */}
         <section className="py-16">
