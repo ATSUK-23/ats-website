@@ -130,7 +130,6 @@ We expand your winning product into new countries with a complete, done-for-you 
                       <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">$50M</span>
                     </h3>
                     <p className="text-xl text-muted-foreground mb-2">in just 4 years</p>
-                    <p className="text-lg font-semibold text-primary">With only 5 staff members</p>
                   </div>
                 </div>
 
@@ -408,24 +407,36 @@ We expand your winning product into new countries with a complete, done-for-you 
               <p className="mb-6">
                 Certified by Kickstarter and Indiegogo, LaunchBoom has developed a proprietary 4-step process proven to deliver results with many campaigns funded in less than 24 hours (average funding time: just 15 minutes).
               </p>
-              <div className="space-y-4 mb-6">
-                <h4 className="font-semibold text-lg">The LaunchBoom 4-Step Process:</h4>
-                <div className="space-y-3">
-                  <div>
-                    <h5 className="font-medium">1. Set Up Funnel</h5>
-                    <p className="text-muted-foreground">Use proprietary strategies proven to convert 30–50× more and eliminate wasteful ad spend.</p>
+              <div className="mb-6">
+                <h4 className="font-semibold text-lg mb-6">The LaunchBoom 4-Step Process:</h4>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-card/50 p-6 rounded-lg border text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary font-bold text-xl">1</span>
+                    </div>
+                    <h5 className="font-medium mb-3">Set Up Funnel</h5>
+                    <p className="text-muted-foreground text-sm">Use proprietary strategies proven to convert 30–50× more and eliminate wasteful ad spend.</p>
                   </div>
-                  <div>
-                    <h5 className="font-medium">2. Test & Validate</h5>
-                    <p className="text-muted-foreground">Test your product and positioning with real customer demand before you commit to a full launch.</p>
+                  <div className="bg-card/50 p-6 rounded-lg border text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary font-bold text-xl">2</span>
+                    </div>
+                    <h5 className="font-medium mb-3">Test & Validate</h5>
+                    <p className="text-muted-foreground text-sm">Test your product and positioning with real customer demand before you commit to a full launch.</p>
                   </div>
-                  <div>
-                    <h5 className="font-medium">3. Build an Audience</h5>
-                    <p className="text-muted-foreground">Attract real buyers and craft a campaign message that speaks directly to them.</p>
+                  <div className="bg-card/50 p-6 rounded-lg border text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary font-bold text-xl">3</span>
+                    </div>
+                    <h5 className="font-medium mb-3">Build an Audience</h5>
+                    <p className="text-muted-foreground text-sm">Attract real buyers and craft a campaign message that speaks directly to them.</p>
                   </div>
-                  <div>
-                    <h5 className="font-medium">4. LaunchBoom 🚀</h5>
-                    <p className="text-muted-foreground">Launch on Kickstarter or Indiegogo with a campaign primed to succeed and get funded fast.</p>
+                  <div className="bg-card/50 p-6 rounded-lg border text-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">4</span>
+                    </div>
+                    <h5 className="font-medium mb-3">LaunchBoom 🚀</h5>
+                    <p className="text-muted-foreground text-sm">Launch on Kickstarter or Indiegogo with a campaign primed to succeed and get funded fast.</p>
                   </div>
                 </div>
               </div>
