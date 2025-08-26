@@ -320,7 +320,7 @@ export default function Training() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {program.courses.map((course, courseIndex) => (
-                    <Card key={courseIndex} className={`hover:shadow-lg transition-shadow ${program.category === 'Foundation Courses' ? 'bg-white/10 backdrop-blur-sm border-white/20' : ''}`}>
+                    <Card key={courseIndex} className="hover:shadow-lg transition-shadow bg-white/10 backdrop-blur-sm border-white/20">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-xl">{course.title}</CardTitle>
