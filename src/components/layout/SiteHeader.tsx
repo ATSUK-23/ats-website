@@ -50,7 +50,7 @@ export const SiteHeader = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
-              <nav className="mt-6 space-y-2">
+              <nav className="mt-16 space-y-2">
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="ai-solutions" className="border-b">
                     <AccordionTrigger className="text-left py-3 hover:text-primary hover:no-underline">
