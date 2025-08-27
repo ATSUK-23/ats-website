@@ -68,7 +68,7 @@ const ECommerce = () => {
               </div>
             </>
           } 
-          image={heroImage} 
+          image="/lovable-uploads/601d3277-bc1d-48ce-9652-1ba452af8b6b.png" 
           imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" 
         />
 
