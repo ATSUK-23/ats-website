@@ -52,8 +52,8 @@ export const SiteHeader = () => {
             <SheetContent side="right" className="w-80">
               <nav className="mt-6 space-y-2">
                 <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="ai-solutions" className="border-b-0">
-                    <AccordionTrigger className="text-left py-1.5 hover:text-primary hover:no-underline">
+                  <AccordionItem value="ai-solutions" className="border-b">
+                    <AccordionTrigger className="text-left py-3 hover:text-primary hover:no-underline">
                       AI Solutions
                     </AccordionTrigger>
                     <AccordionContent className="pb-2">
@@ -62,7 +62,7 @@ export const SiteHeader = () => {
                           <SheetClose asChild key={item.id}>
                             <Link 
                               to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-solutions"} 
-                              className="block py-1.5 text-sm hover:text-primary"
+                              className="block py-2 text-sm hover:text-primary"
                             >
                               {item.label}
                             </Link>
