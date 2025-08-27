@@ -37,11 +37,7 @@ export const SiteHeader = () => {
   return (
     <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[80]">
       <nav className="container flex items-center justify-between py-4 min-h-[4rem]">
-        <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
-          <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
-          <span className="sr-only">Automate To Sell</span>
-        </Link>
-
+        {/* Mobile layout: menu icon left, logo center */}
         <div className="md:hidden flex items-center gap-2">
           <Sheet>
             <SheetTrigger asChild>
@@ -97,6 +93,15 @@ export const SiteHeader = () => {
             </SheetContent>
           </Sheet>
         </div>
+
+        {/* Logo - center on mobile, left on desktop */}
+        <Link to="/" className="flex items-center gap-3 md:order-first absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none" aria-label="Automate To Sell Home">
+          <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
+          <span className="sr-only">Automate To Sell</span>
+        </Link>
+
+        {/* Spacer for mobile layout */}
+        <div className="md:hidden w-6"></div>
 
         <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
           <DropdownMenu>
