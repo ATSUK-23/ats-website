@@ -93,7 +93,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* Full Process */}
-        <SplitSection id="vibe-process" reverse title="Full Vibe Coding Process" image={vibeProcess} imageAlt="Elegant flow diagram showing discovery, prototype, build, test, and launch" description={<p>When you want us to guide the full build, here's the process we'll lead you through:</p>}>
+        <SplitSection id="vibe-process" reverse title="Full Vibe Coding Process" image="/lovable-uploads/ffdbbe6c-b5ec-48fa-b940-1e1cd9fd1e1b.png" imageAlt="Five-step process flow showing Discovery, Prototype, Build, Test, and Launch phases" description={<p>When you want us to guide the full build, here's the process we'll lead you through:</p>}>
           <ol className="list-decimal pl-5 space-y-2 text-muted-foreground">
             <li><strong className="font-bold text-white">Step 1 – Discovery & Strategy:</strong> We review your goals, challenges, and existing systems to ensure we're solving the right problem.</li>
             <li><strong className="font-bold text-white">Step 2 – Rapid Prototyping:</strong> In just a few days, we create a working prototype you can click through, share, and test with users.</li>

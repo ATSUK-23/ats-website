@@ -234,7 +234,7 @@ const ECommerce = () => {
               {/* e-Commerce Sellers */}
               <div className="group relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
-                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                <div className="relative bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
                     <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
@@ -253,7 +253,7 @@ const ECommerce = () => {
               {/* Manufacturers */}
               <div className="group relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
-                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                <div className="relative bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
                     <Factory className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
@@ -272,7 +272,7 @@ const ECommerce = () => {
               {/* Inventors & Creators */}
               <div className="group relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
-                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                <div className="relative bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
                     <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
