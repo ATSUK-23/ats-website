@@ -28,7 +28,7 @@ export default function AISolutions() {
       <main>
         {/* Hero Section */}
         <HeroSection title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" ctaText="Book an Introduction Call" ctaLink="#contact" backgroundImage={aiBrainBackground} className="py-16 md:py-24">
-          <p className="text-lg text-white/90 max-w-4xl mx-auto mt-6">We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!</p>
+          
         </HeroSection>
 
         {/* AI Brain Power Section */}
