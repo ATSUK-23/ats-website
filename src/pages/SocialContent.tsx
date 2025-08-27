@@ -56,7 +56,7 @@ const SocialContent = () => {
                 Your personal brand is your most valuable business asset. We help you create, curate, publish, and distribute authentic content so you can grow your influence, attract opportunities, and scale your company without losing focus on running it.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg">
+                <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
                   Book Your Social Content Strategy Call
                 </Button>
               </div>
@@ -133,7 +133,7 @@ const SocialContent = () => {
               <p className="mb-6">
                 Once you've shared your authentic content with us, your part is done. We take care of:
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6 text-muted-foreground">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3 mb-6 text-muted-foreground">
                 <ul className="space-y-2">
                   <li>• Editing and design</li>
                   <li>• Captions and copywriting</li>
@@ -163,7 +163,7 @@ const SocialContent = () => {
               <p className="mb-6">
                 Building your personal brand isn't optional it's a growth multiplier. With our system, you stay authentic, visible, and in demand while staying focused on running your business.
               </p>
-              <Button variant="hero" size="lg">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
                 Start Building Your Brand Today
               </Button>
             </>

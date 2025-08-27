@@ -38,7 +38,7 @@ const Index = () => {
         <SplitSection id="audit" reverse title="Your Automation Journey Starts with a Business Process Audit" image={auditImg} imageAlt="Dashboard flow showing Audit → Recommendations → Implementation → Results" description={<p>
               The fastest way to see results is to start with a clear picture of where you are now. Our Business Process Audit covers:
             </p>}>
-          <div className="grid gap-3 md:grid-cols-3 text-muted-foreground">
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 text-muted-foreground">
             <ul className="list-disc pl-5 space-y-2">
               <li>Sales & Marketing</li>
               <li>Product Development</li>
@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="mt-6">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg">Book Your Audit Now</Button>
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">Book Your Audit Now</Button>
             </a>
           </div>
         </SplitSection>

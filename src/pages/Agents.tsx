@@ -303,10 +303,10 @@ const Agents = () => {
   );
 
   const SectionGrid = ({ title, items }: { title: string; items: any[] }) => (
-    <section className="py-16">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <section className="py-12 sm:py-16">
+      <div className="container px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">{title}</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {items.map((item, index) => (
             <AgentCard key={index} {...item} />
           ))}
@@ -347,10 +347,10 @@ const Agents = () => {
         <SectionGrid title="Workspace & Management" items={workspaceManagement} />
 
         {/* Integrations Showcase */}
-        <section className="py-16 bg-muted/50">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Seamless Integrations</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <section className="py-12 sm:py-16 bg-muted/50">
+          <div className="container px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Seamless Integrations</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center">
               {integrationLogos.map((logo, index) => (
                 <div key={index} className="flex items-center justify-center p-4 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <span className="font-semibold text-muted-foreground">{logo}</span>
@@ -361,11 +361,11 @@ const Agents = () => {
         </section>
 
         {/* Final CTA Banner */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Automate Anything. Start Today.</h2>
+        <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
+          <div className="container text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Automate Anything. Start Today.</h2>
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg">Get Started Free</Button>
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Get Started Free</Button>
             </a>
           </div>
         </section>

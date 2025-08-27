@@ -29,12 +29,12 @@ const VoiceAI = () => {
         </HeroSection>
 
         {/* Social Proof */}
-        <section className="py-16 bg-muted/50">
-          <div className="container text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">
+        <section className="py-12 sm:py-16 bg-muted/50">
+          <div className="container text-center px-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
               Trusted by businesses worldwide to power millions of conversations
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
               <div className="flex items-center justify-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">Millions of calls & messages delivered</span>
@@ -56,14 +56,14 @@ const VoiceAI = () => {
         </section>
 
         {/* Outbound AI Use Cases */}
-        <section className="py-16">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-12 sm:py-16">
+          <div className="container px-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Grow Revenue With Smarter Outbound Calls
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               <Card className="p-6 text-center">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -113,14 +113,14 @@ const VoiceAI = () => {
         </section>
 
         {/* Inbound AI Use Cases */}
-        <section className="py-16 bg-muted/30">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="container px-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Never Miss Another Opportunity
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               <Card className="p-6 text-center">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -170,12 +170,12 @@ const VoiceAI = () => {
         </section>
 
         {/* Simplicity & Speed */}
-        <section className="py-16">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        <section className="py-12 sm:py-16">
+          <div className="container text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
               Launch in Minutes, No Tech Headaches
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
               <div className="space-y-4">
                 <div className="mx-auto w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
                   <Zap className="h-8 w-8 text-primary" />
@@ -199,17 +199,17 @@ const VoiceAI = () => {
         </section>
 
         {/* Enterprise Reliability */}
-        <section className="py-16 bg-muted/30">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="container px-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 AI That Scales As You Grow
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 Unlike cheap, consumer-grade tools, Assistable is built for business:
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center space-y-4">
                 <div className="mx-auto w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
                   <TrendingUp className="h-8 w-8 text-primary" />
@@ -246,15 +246,15 @@ const VoiceAI = () => {
         </section>
 
         {/* Pricing */}
-        <section className="py-16">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-12 sm:py-16">
+          <div className="container text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Simple, Scalable Pricing
             </h2>
-            <p className="text-lg text-muted-foreground mb-12">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12">
               Pick the plan that fits your business upgrade as you grow.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
               <Card className="p-6">
                 <CardContent className="space-y-4">
                   <h3 className="text-xl font-bold">Starter</h3>
@@ -280,28 +280,28 @@ const VoiceAI = () => {
                 </CardContent>
               </Card>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-                <Button variant="outline" size="lg">View Pricing Plans</Button>
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">View Pricing Plans</Button>
               </a>
               <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-                <Button variant="hero" size="lg">Start Free Trial</Button>
+                <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Start Free Trial</Button>
               </a>
             </div>
           </div>
         </section>
 
         {/* Closing CTA */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
+          <div className="container text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Your Customers Expect Speed. Your Business Deserves Growth.
             </h2>
-            <p className="text-lg mb-8 opacity-90">
+            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
               Put AI to work for you capture every lead, delight every customer, and scale without limits.
             </p>
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
                 Start Your Free Trial Today
               </Button>
             </a>

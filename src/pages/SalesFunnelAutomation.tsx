@@ -94,16 +94,16 @@ Without automation, that's impossible to deliver at scale.</p>
               <p className="font-medium">The result: More time for you and your team to focus on high-value tasks while your system keeps working in the background.</p>
             </div>} />
 
-        <section className="container py-16 md:py-24 text-center">
+        <section className="container py-12 sm:py-16 md:py-24 text-center px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               Let's Build a Sales & Marketing Machine for Your Business
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8">
               We'll work with you to create an automation strategy, select the right tech, and build an integrated system that turns prospects into customers automatically.
             </p>
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button size="lg" className="text-lg px-8 py-3">
+              <Button size="lg" className="text-sm sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto">
                 Book Your Consultation
               </Button>
             </a>

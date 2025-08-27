@@ -73,11 +73,11 @@ export default function AISolutions() {
         </SplitSection>
 
         {/* Benefits Section */}
-        <section className="container py-16 md:py-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Why Your Business Needs an AI Brain</h2>
+        <section className="container py-12 sm:py-16 md:py-24 px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Why Your Business Needs an AI Brain</h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
             <Card className="bg-card border">
               <CardContent className="p-6 text-center">
                 <TrendingUp className="w-12 h-12 mx-auto mb-4 text-primary" />
@@ -104,13 +104,13 @@ export default function AISolutions() {
 
 
         {/* Ongoing Support Section */}
-        <section className="container py-16 md:py-24">
+        <section className="container py-12 sm:py-16 md:py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ongoing AI Support & Growth</h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ongoing AI Support & Growth</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Your AI Brain evolves over time. We work with solution partners to train and optimise it, ensuring your business always stays ahead.
             </p>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 md:grid-cols-3">
               <div className="bg-card border rounded-lg p-6">
                 <Brain className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-semibold mb-2">AI & Human Monitoring</h3>
@@ -157,20 +157,20 @@ export default function AISolutions() {
 
 
         {/* Final CTA */}
-        <section className="relative py-24 md:py-32 overflow-hidden">
+        <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img src={aiBrainBackground} alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-background/80" />
           </div>
           
-          <div className="container text-center relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <div className="container text-center relative z-10 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
               Ready to Unlock Your AI Brain?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
               Transform your business with AI solutions that drive real results.
             </p>
-            <Button size="lg" className="text-lg px-8 py-4">
+            <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               Book an Introduction Call
             </Button>
           </div>

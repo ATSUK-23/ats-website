@@ -15,18 +15,18 @@ export const Hero = () => {
         <div className="absolute -top-32 left-1/2 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-[hsl(var(--brand)/0.15)] blur-3xl" />
       </div>
 
-      <div className="container py-16 md:py-24 text-center relative z-10">
-        <p className="text-sm tracking-wider text-muted-foreground uppercase">Automation & AI Consultancy</p>
-        <h1 className="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">Automation & AI That Works for Your Business!
+      <div className="container py-12 sm:py-16 md:py-24 text-center relative z-10 px-4">
+        <p className="text-xs sm:text-sm tracking-wider text-muted-foreground uppercase">Automation & AI Consultancy</p>
+        <h1 className="mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight">Automation & AI That Works for Your Business!
 Not the Other Way Around</h1>
-        <p className="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don’t need.</p>
+        <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don't need.</p>
 
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-            <Button variant="hero" size="lg">Book Your Business Automation Audit</Button>
+            <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book Your Business Automation Audit</Button>
           </a>
           <a href="#contact">
-            <Button variant="outline" size="lg">Talk to an Automation Expert</Button>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Talk to an Automation Expert</Button>
           </a>
         </div>
         </div>

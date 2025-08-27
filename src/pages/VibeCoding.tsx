@@ -54,12 +54,12 @@ const VibeCoding = () => {
 
 
 Whether you need a customer portal, e-commerce platform, internal dashboard, or a brand-new app, we can take you from concept to working prototype faster than you thought possible.</p>}>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg">Book a Vibe Coding Workshop</Button>
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book a Vibe Coding Workshop</Button>
             </a>
             <a href="#contact">
-              <Button variant="outline" size="lg" className="bg-transparent">Talk to a Vibe Coding Expert</Button>
+              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
             </a>
           </div>
         </SplitSection>
@@ -79,7 +79,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
 
         {/* On-Site Workshops */}
         <SplitSection id="vibe-workshops" title="Vibe Coding Workshops" image={vibeWorkshops} imageAlt="Facilitator leading an on-site workshop with a team and whiteboard" description={<p>Join one of our open workshops or we can run immersive, hands-on workshops at your location. Your team works alongside our experts to:</p>}>
-          <div className="grid gap-3 md:grid-cols-2 text-muted-foreground">
+          <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2 text-muted-foreground">
             <ul className="list-disc pl-5 space-y-2">
               <li>Define the problem and desired outcomes</li>
               <li>Map core features and user journeys</li>
@@ -116,12 +116,12 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
 
         {/* CTA Bottom */}
         <SplitSection id="vibe-cta" reverse title="Let's Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you're starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg">Book a Vibe Coding Workshop</Button>
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book a Vibe Coding Workshop</Button>
             </a>
             <a href="#contact">
-              <Button variant="outline" size="lg" className="bg-transparent">Talk to a Vibe Coding Expert</Button>
+              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
             </a>
           </div>
         </SplitSection>
