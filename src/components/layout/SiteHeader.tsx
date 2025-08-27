@@ -51,9 +51,27 @@ export const SiteHeader = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <nav className="mt-6 space-y-2">
-                <SheetClose asChild>
-                  <Link to="/ai-solutions" className="w-full text-left py-1.5 hover:text-primary block">AI Solutions</Link>
-                </SheetClose>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="ai-solutions" className="border-b-0">
+                    <AccordionTrigger className="text-left py-1.5 hover:text-primary hover:no-underline">
+                      AI Solutions
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2">
+                      <div className="ml-4 space-y-2">
+                        {aiItems.map((item) => (
+                          <SheetClose asChild key={item.id}>
+                            <Link 
+                              to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-solutions"} 
+                              className="block py-1.5 text-sm hover:text-primary"
+                            >
+                              {item.label}
+                            </Link>
+                          </SheetClose>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
                 <SheetClose asChild>
                   <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
                 </SheetClose>
