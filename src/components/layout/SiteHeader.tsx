@@ -129,7 +129,7 @@ export const SiteHeader = () => {
           <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Contact</button>
         </div>
 
-        <div className="flex items-center gap-3 flex-shrink-0">
+        <div className="flex items-center gap-3 flex-shrink-0 ml-auto md:ml-0">
           <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
             <Button variant="hero" size="sm">Book Audit</Button>
           </a>
