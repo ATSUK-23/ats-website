@@ -232,49 +232,58 @@ const ECommerce = () => {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* e-Commerce Sellers */}
-              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">e-Commerce Sellers</h3>
-                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
-                    <p className="font-medium">Already selling successfully online in one channel or country?</p>
-                    <p>
-                      You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions including North America, the UK, Europe, APAC, and Japan without the complexity of building local teams.
-                    </p>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
+                    <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-foreground">e-Commerce Sellers</h3>
+                    <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                      <p className="font-medium text-foreground/90">Already selling successfully online in one channel or country?</p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions including North America, the UK, Europe, APAC, and Japan without the complexity of building local teams.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Manufacturers */}
-              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Factory className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Manufacturers</h3>
-                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
-                    <p className="font-medium">Want to create a profitable Direct-to-Consumer (D2C) revenue stream?</p>
-                    <p>
-                      Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand and position it for acquisition.
-                    </p>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
+                    <Factory className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-foreground">Manufacturers</h3>
+                    <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                      <p className="font-medium text-foreground/90">Want to create a profitable Direct-to-Consumer (D2C) revenue stream?</p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand and position it for acquisition.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Inventors & Creators */}
-              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Inventors & Creators</h3>
-                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
-                    <p className="font-medium">Turn your bold product ideas into global success stories.</p>
-                    <p>
-                      Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production then expand distribution through multiple countries, marketplaces, and D2C stores.
-                    </p>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-300" />
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 sm:p-8 text-center space-y-4 sm:space-y-6 h-full hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center ring-1 ring-primary/20">
+                    <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-foreground">Inventors & Creators</h3>
+                    <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                      <p className="font-medium text-foreground/90">Turn your bold product ideas into global success stories.</p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production then expand distribution through multiple countries, marketplaces, and D2C stores.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
