@@ -76,7 +76,7 @@ const Index = () => {
         </SplitSection>
 
         <SplitSection id="solution-sourcing" reverse title="We Find and Manage the Right Suppliers for You" image={sourcingImg} imageAlt="Multiple tech vendors flowing into one unified automation hub" description={<>
-              <p>No one platform does it all — and no single vendor is best at everything. We’ll:</p>
+              <p>No one platform does it all and no single vendor is best at everything. We’ll:</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Identify the best-fit automation & AI providers for your needs</li>
                 <li>Manage the vendor relationship</li>
