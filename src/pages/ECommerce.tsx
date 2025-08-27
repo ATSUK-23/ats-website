@@ -73,29 +73,29 @@ const ECommerce = () => {
         />
 
         {/* Customer Results Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-primary/10 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-primary/10 relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/20 rounded-full blur-3xl opacity-30" />
+          <div className="absolute top-0 right-0 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-primary/20 rounded-full blur-3xl opacity-30" />
+          <div className="absolute bottom-0 left-0 w-36 sm:w-54 lg:w-72 h-36 sm:h-54 lg:h-72 bg-secondary/20 rounded-full blur-3xl opacity-30" />
           
-          <div className="container max-w-7xl relative z-10">
+          <div className="container px-4 sm:px-6 max-w-7xl relative z-10">
             {/* Section Header */}
-            <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   CUSTOMER RESULTS
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8" />
+              <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6 sm:mb-8" />
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+            <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 items-start">
               {/* Video Section */}
-              <div className="lg:col-span-1 space-y-6">
+              <div className="lg:col-span-1 space-y-4 sm:space-y-6">
                 <div className="group relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
-                  <div className="relative rounded-xl overflow-hidden border bg-card shadow-lg hover-scale">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg sm:rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                  <div className="relative rounded-lg sm:rounded-xl overflow-hidden border bg-card shadow-lg hover-scale">
                     <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
                       <iframe
                         src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -108,28 +108,28 @@ const ECommerce = () => {
                 </div>
                 
                 {/* Company Info Card */}
-                <div className="bg-card/80 backdrop-blur-sm p-6 rounded-xl border shadow-lg">
-                  <h4 className="text-xl font-bold mb-2 text-primary">Fraser Importing</h4>
-                  <p className="text-muted-foreground mb-4">Global Medical Products Distributor</p>
+                <div className="bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl border shadow-lg">
+                  <h4 className="text-lg sm:text-xl font-bold mb-2 text-primary">Fraser Importing</h4>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">Global Medical Products Distributor</p>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">Active Since 2020</span>
+                    <span className="text-xs sm:text-sm font-medium">Active Since 2020</span>
                   </div>
                 </div>
               </div>
 
               {/* Main Results Content */}
-              <div className="lg:col-span-2 space-y-8">
+              <div className="lg:col-span-2 space-y-6 sm:space-y-8">
                 {/* Hero Stat */}
                 <div className="text-center lg:text-left">
                   <div className="inline-block">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
                       <span className="text-muted-foreground">From</span>{" "}
                       <span className="text-primary">$40K</span>{" "}
                       <span className="text-muted-foreground">to</span>{" "}
                       <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">$50M</span>
                     </h3>
-                    <p className="text-xl text-muted-foreground mb-2">in just 4 years</p>
+                    <p className="text-lg sm:text-xl text-muted-foreground mb-2">in just 4 years</p>
                   </div>
                 </div>
 
@@ -221,24 +221,24 @@ const ECommerce = () => {
         </section>
 
         {/* Who We Help Go Global Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Help Go Global</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        <section className="py-12 sm:py-16 md:py-24 bg-background">
+          <div className="container px-4 sm:px-6">
+            <div className="text-center mb-10 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">Who We Help Go Global</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
                 Expand your reach, own your customer relationships, and grow your revenue across multiple countries, marketplaces, and D2C channels.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* e-Commerce Sellers */}
-              <div className="text-center space-y-6">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <ShoppingCart className="w-8 h-8 text-primary" />
+              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4">e-Commerce Sellers</h3>
-                  <div className="space-y-4 text-muted-foreground">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">e-Commerce Sellers</h3>
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                     <p className="font-medium">Already selling successfully online in one channel or country?</p>
                     <p>
                       You're sitting on a huge growth opportunity. We'll help you scale your winning products to new regions including North America, the UK, Europe, APAC, and Japan without the complexity of building local teams.
@@ -248,13 +248,13 @@ const ECommerce = () => {
               </div>
 
               {/* Manufacturers */}
-              <div className="text-center space-y-6">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Factory className="w-8 h-8 text-primary" />
+              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Factory className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4">Manufacturers</h3>
-                  <div className="space-y-4 text-muted-foreground">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Manufacturers</h3>
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                     <p className="font-medium">Want to create a profitable Direct-to-Consumer (D2C) revenue stream?</p>
                     <p>
                       Keep the customer relationship in-house and sell your products at retail margins. We'll help you transform your manufacturing expertise into a global retail brand and position it for acquisition.
@@ -264,13 +264,13 @@ const ECommerce = () => {
               </div>
 
               {/* Inventors & Creators */}
-              <div className="text-center space-y-6">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Lightbulb className="w-8 h-8 text-primary" />
+              <div className="text-center space-y-4 sm:space-y-6 p-4 sm:p-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-4">Inventors & Creators</h3>
-                  <div className="space-y-4 text-muted-foreground">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Inventors & Creators</h3>
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
                     <p className="font-medium">Turn your bold product ideas into global success stories.</p>
                     <p>
                       Using crowdfunding platforms and proven pre-launch strategies, we'll help you validate demand before you invest in production then expand distribution through multiple countries, marketplaces, and D2C stores.

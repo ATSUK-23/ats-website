@@ -12,27 +12,27 @@ interface SplitSectionProps {
 
 const SplitSection: React.FC<SplitSectionProps> = ({ id, title, description, image, imageAlt, reverse, children }) => {
   return (
-    <section id={id} className="container py-16 md:py-24">
-      <div className={`grid items-center gap-10 md:gap-12 md:grid-cols-2`}>
+    <section id={id} className="container px-4 sm:px-6 py-12 sm:py-16 md:py-24">
+      <div className={`grid items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-2`}>
         {/* Text */}
-        <article className={`${reverse ? "md:order-2" : "md:order-1"}`}>
+        <article className={`${reverse ? "lg:order-2" : "lg:order-1"} space-y-4 sm:space-y-6`}>
           <header className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold">{title}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">{title}</h2>
             {description ? (
-              <div className="mt-4 text-muted-foreground space-y-4">{description}</div>
+              <div className="mt-4 sm:mt-6 text-muted-foreground space-y-3 sm:space-y-4 text-sm sm:text-base">{description}</div>
             ) : null}
           </header>
-          {children ? <div className="mt-6">{children}</div> : null}
+          {children ? <div className="mt-4 sm:mt-6">{children}</div> : null}
         </article>
 
         {/* Image */}
-        <div className={`${reverse ? "md:order-1" : "md:order-2"}`}>
-          <div className="rounded-xl overflow-hidden border bg-card shadow-sm">
+        <div className={`${reverse ? "lg:order-1" : "lg:order-2"} mt-6 lg:mt-0`}>
+          <div className="rounded-lg sm:rounded-xl overflow-hidden border bg-card shadow-sm">
             <img
               src={image}
               alt={imageAlt}
               loading="lazy"
-              className="w-full h-[260px] sm:h-[320px] md:h-[380px] object-cover"
+              className="w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] object-cover"
             />
           </div>
         </div>
