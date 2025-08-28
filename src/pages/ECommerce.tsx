@@ -342,8 +342,8 @@ const ECommerce = () => {
               </p>
             </>
           } 
-          image={shopifyImage} 
-          imageAlt="Modern Shopify store interface with conversion optimization and sales analytics" 
+          image="/lovable-uploads/ad2c5a27-bfef-4380-8186-bbf7da1628bb.png" 
+          imageAlt="Shopify ecosystem integration diagram showing connected services and platforms"
         />
 
 
@@ -477,39 +477,41 @@ const ECommerce = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <SplitSection 
-          title="Let's Grow Your E-Commerce Sales Together" 
-          description={
-            <>
-              <p className="mb-6">
-                Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
-              </p>
-              <div className="mt-8 h-[625px]">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
-                  style={{width:'100%',height:'625px',border:'none',borderRadius:'4px'}}
-                  id="inline-CbkFi6g20BID9TrN7zmp" 
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="ATS E-commerce Application"
-                  data-height="625"
-                  data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
-                  data-form-id="CbkFi6g20BID9TrN7zmp"
-                  title="ATS E-commerce Application"
-                />
-                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-              </div>
-            </>
-          } 
-          image={growthImage} 
-          imageAlt="E-commerce growth visualization showing sales scaling and global reach" 
-        />
+        {/* CTA Text Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="container text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Grow Your E-Commerce Sales Together</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+              Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
+            </p>
+          </div>
+        </section>
+
+        {/* Full Width Form Section */}
+        <section className="py-12 bg-background">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
+                style={{width:'100%',height:'625px',border:'none',borderRadius:'4px'}}
+                id="inline-CbkFi6g20BID9TrN7zmp" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="ATS E-commerce Application"
+                data-height="625"
+                data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
+                data-form-id="CbkFi6g20BID9TrN7zmp"
+                title="ATS E-commerce Application"
+              />
+              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
