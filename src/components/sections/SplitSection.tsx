@@ -32,7 +32,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({ id, title, description, ima
               src={image}
               alt={imageAlt}
               loading="lazy"
-              className="w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] object-cover"
+              className="w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] object-contain bg-muted/20"
             />
           </div>
         </div>
