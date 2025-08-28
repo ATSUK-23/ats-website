@@ -13,7 +13,7 @@ interface SplitSectionProps {
 const SplitSection: React.FC<SplitSectionProps> = ({ id, title, description, image, imageAlt, reverse, children }) => {
   return (
     <section id={id} className="container px-4 sm:px-6 py-12 sm:py-16 md:py-24">
-      <div className={`grid items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-2`}>
+      <div className={`grid items-start gap-8 sm:gap-10 md:gap-12 lg:grid-cols-2`}>
         {/* Text */}
         <article className={`${reverse ? "lg:order-2" : "lg:order-1"} space-y-4 sm:space-y-6`}>
           <header className="max-w-3xl">
