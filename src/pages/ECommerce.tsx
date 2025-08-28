@@ -485,10 +485,10 @@ const ECommerce = () => {
               <p className="mb-6">
                 Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 h-[625px]">
                 <iframe
                   src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
-                  style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
+                  style={{width:'100%',height:'625px',border:'none',borderRadius:'4px'}}
                   id="inline-CbkFi6g20BID9TrN7zmp" 
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
