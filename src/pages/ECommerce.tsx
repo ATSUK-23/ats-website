@@ -288,6 +288,24 @@ const ECommerce = () => {
                 </div>
               </div>
             </div>
+            
+            {/* e-Comm-as-a-Service Content */}
+            <div className="text-center mt-16 py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5 rounded-2xl border">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  e-Comm-as-a-Service
+                </span>
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8" />
+              <div className="max-w-4xl mx-auto space-y-4 text-muted-foreground px-8">
+                <p className="text-lg">
+                  Our e-Comm-as-a-Service provides a battle tested online sales system which includes customer targeting, sales conversions optimization, automated end to end order fulfilment & customer data management with 24/7 hands on customer support.
+                </p>
+                <p className="text-lg font-medium text-primary">
+                  Our solution enables your business to rapidly scale globally without needing to increases your resources!
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -370,8 +388,8 @@ const ECommerce = () => {
               </p>
             </>
           } 
-          image={adManagementImage} 
-          imageAlt="Performance advertising dashboard with ROAS metrics and campaign optimization" 
+          image="/lovable-uploads/performance-ads-ecosystem.png" 
+          imageAlt="Multi-platform advertising ecosystem showing Google, Meta, TikTok, and Amazon ads integration"
           reverse 
         />
 
@@ -448,34 +466,6 @@ const ECommerce = () => {
           </div>
         </section>
 
-        {/* e-Comm-as-a-Service Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl opacity-30" />
-          
-          <div className="container relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  e-Comm-as-a-Service
-                </span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-8" />
-              <div className="max-w-4xl mx-auto space-y-4 text-muted-foreground">
-                <p className="text-lg">
-                  Our e-Comm-as-a-Service provides a battle tested online sales system which includes customer targeting, sales conversions optimization, automated end to end order fulfilment & customer data management with 24/7 hands on customer support.
-                </p>
-                <p className="text-lg font-medium text-primary">
-                  Our solution enables your business to rapidly scale globally without needing to increases your resources!
-                </p>
-              </div>
-            </div>
-
-
-          </div>
-        </section>
 
         {/* CTA Text Section */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
