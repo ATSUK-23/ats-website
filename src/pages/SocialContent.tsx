@@ -121,7 +121,7 @@ const SocialContent = () => {
               </div>
             </>
           }
-          image={contentSystemImage}
+          image="/lovable-uploads/465c8749-8c80-4369-b100-3ed2bd00dc51.png"
           imageAlt="Content creation system workflow showing capture, editing, publishing, and analytics steps"
         />
 
