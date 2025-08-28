@@ -485,9 +485,26 @@ const ECommerce = () => {
               <p className="mb-6">
                 Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
               </p>
-              <Button variant="hero" size="lg">
-                Book Your Consultation
-              </Button>
+              <div className="mt-8">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
+                  style={{width:'100%',height:'100%',border:'none',borderRadius:'4px'}}
+                  id="inline-CbkFi6g20BID9TrN7zmp" 
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="ATS E-commerce Application"
+                  data-height="625"
+                  data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
+                  data-form-id="CbkFi6g20BID9TrN7zmp"
+                  title="ATS E-commerce Application"
+                />
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+              </div>
             </>
           } 
           image={growthImage} 
