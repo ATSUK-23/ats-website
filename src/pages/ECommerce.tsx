@@ -388,7 +388,7 @@ const ECommerce = () => {
               </p>
             </>
           } 
-          image="/lovable-uploads/performance-ads-ecosystem.png" 
+          image="/lovable-uploads/be7b54d5-3430-46e2-b634-55880cea311c.png" 
           imageAlt="Multi-platform advertising ecosystem showing Google, Meta, TikTok, and Amazon ads integration"
           reverse 
         />
@@ -478,27 +478,37 @@ const ECommerce = () => {
         </section>
 
         {/* Full Width Form Section */}
-        <section className="py-12 bg-background">
+        <section className="py-12 bg-gradient-to-br from-secondary/5 via-background to-primary/5">
           <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
-                style={{width:'100%',height:'625px',border:'none',borderRadius:'4px'}}
-                id="inline-CbkFi6g20BID9TrN7zmp" 
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="ATS E-commerce Application"
-                data-height="625"
-                data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
-                data-form-id="CbkFi6g20BID9TrN7zmp"
-                title="ATS E-commerce Application"
-              />
-              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Complete Your Details To Explore Scaling Your Global e-Commerce Business
+                </span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+            </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-card/80 backdrop-blur-sm rounded-2xl border shadow-lg overflow-hidden">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
+                  style={{width:'100%',height:'750px',border:'none',borderRadius:'16px'}}
+                  id="inline-CbkFi6g20BID9TrN7zmp" 
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="ATS E-commerce Application"
+                  data-height="750"
+                  data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
+                  data-form-id="CbkFi6g20BID9TrN7zmp"
+                  title="ATS E-commerce Application"
+                />
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+              </div>
             </div>
           </div>
         </section>
