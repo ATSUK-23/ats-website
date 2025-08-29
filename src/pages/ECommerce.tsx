@@ -467,27 +467,15 @@ const ECommerce = () => {
         </section>
 
 
-        {/* CTA Text Section */}
+        {/* CTA Section with Embedded Form */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Grow Your E-Commerce Sales Together</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
               Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
             </p>
-          </div>
-        </section>
-
-        {/* Full Width Form Section */}
-        <section className="py-12 bg-gradient-to-br from-secondary/5 via-background to-primary/5">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Complete Your Details To Explore Scaling Your Global e-Commerce Business
-                </span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-            </div>
+            
+            {/* Embedded Form */}
             <div className="max-w-6xl mx-auto">
               <div className="bg-card/80 backdrop-blur-sm rounded-2xl border shadow-lg overflow-hidden">
                 <iframe
