@@ -415,7 +415,7 @@ const ECommerce = () => {
               </Button>
             </>
           } 
-          image={crowdfundingImage} 
+          image="/lovable-uploads/ee4cdcd5-6188-4808-b6a2-7339d263f6b5.png" 
           imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" 
           reverse 
         />
