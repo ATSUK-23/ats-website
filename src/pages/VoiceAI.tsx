@@ -29,32 +29,6 @@ const VoiceAI = () => {
           </div>
         </HeroSection>
 
-        {/* Social Proof */}
-        <section className="py-12 sm:py-16 bg-muted/50">
-          <div className="container text-center px-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
-              Trusted by businesses worldwide to power millions of conversations
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
-              <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Millions of calls & messages delivered</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">99.99998% uptime</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Proven at scale in multiple industries</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">Thousands of businesses already using AI assistants</span>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Inbound AI Use Cases */}
         <section className="py-12 sm:py-16 bg-muted/30">
@@ -63,7 +37,7 @@ const VoiceAI = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Never Miss Another Inbound Opportunity</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-primary" />
@@ -74,7 +48,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Users className="h-6 w-6 text-primary" />
@@ -85,7 +59,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Zap className="h-6 w-6 text-primary" />
@@ -96,7 +70,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Calendar className="h-6 w-6 text-primary" />
@@ -120,7 +94,7 @@ const VoiceAI = () => {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <TrendingUp className="h-6 w-6 text-primary" />
@@ -131,7 +105,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-primary" />
@@ -142,7 +116,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Calendar className="h-6 w-6 text-primary" />
@@ -153,7 +127,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center">
+              <Card className="p-6 text-center bg-transparent border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <MessageCircle className="h-6 w-6 text-primary" />
