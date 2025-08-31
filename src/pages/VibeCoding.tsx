@@ -47,7 +47,7 @@ const VibeCoding = () => {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="Book a Vibe Coding Workshop" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
+        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="LIVE 1 Day WorkShops in London" ctaLink="#vibe-cta" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
 
         {/* What is Vibe Coding */}
         <SplitSection id="vibe-hero" title="Build It, Show It, Sell It!" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
