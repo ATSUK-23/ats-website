@@ -37,7 +37,7 @@ const VoiceAI = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Never Miss Another Inbound Opportunity</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-primary" />
@@ -48,7 +48,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Users className="h-6 w-6 text-primary" />
@@ -59,7 +59,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Zap className="h-6 w-6 text-primary" />
@@ -70,7 +70,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Calendar className="h-6 w-6 text-primary" />
@@ -94,7 +94,7 @@ const VoiceAI = () => {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <TrendingUp className="h-6 w-6 text-primary" />
@@ -105,7 +105,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-primary" />
@@ -116,7 +116,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Calendar className="h-6 w-6 text-primary" />
@@ -127,7 +127,7 @@ const VoiceAI = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="p-6 text-center bg-transparent border-white/20">
+              <Card className="p-6 text-center bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="space-y-4">
                   <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <MessageCircle className="h-6 w-6 text-primary" />
