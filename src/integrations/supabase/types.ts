@@ -14,7 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      ecommerce_leads: {
+        Row: {
+          additional_info: string | null
+          biggest_challenge: string | null
+          company_name: string | null
+          email: string
+          first_name: string
+          goals: string | null
+          id: string
+          last_name: string
+          marketing_budget: string | null
+          phone: string | null
+          product_niche: string
+          sales_channels: string[] | null
+          sales_volume: string
+          submitted_at: string
+          updated_at: string
+        }
+        Insert: {
+          additional_info?: string | null
+          biggest_challenge?: string | null
+          company_name?: string | null
+          email: string
+          first_name: string
+          goals?: string | null
+          id?: string
+          last_name: string
+          marketing_budget?: string | null
+          phone?: string | null
+          product_niche: string
+          sales_channels?: string[] | null
+          sales_volume: string
+          submitted_at?: string
+          updated_at?: string
+        }
+        Update: {
+          additional_info?: string | null
+          biggest_challenge?: string | null
+          company_name?: string | null
+          email?: string
+          first_name?: string
+          goals?: string | null
+          id?: string
+          last_name?: string
+          marketing_budget?: string | null
+          phone?: string | null
+          product_niche?: string
+          sales_channels?: string[] | null
+          sales_volume?: string
+          submitted_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

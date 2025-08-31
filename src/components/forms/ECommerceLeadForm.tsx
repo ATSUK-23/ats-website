@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface FormData {
   firstName: string;
@@ -78,8 +79,29 @@ const ECommerceLeadForm = () => {
     }
 
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form submitted:", formData);
+      // Insert data into Supabase
+      const { error } = await supabase
+        .from('ecommerce_leads')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.mobile,
+          product_niche: formData.productNiche,
+          sales_channels: formData.salesChannels,
+          sales_volume: formData.monthlySales,
+          additional_info: `Patent: ${formData.hasPatent}, SKUs: ${formData.skuCount}, Unique features: ${formData.productUnique}`
+        });
+
+      if (error) {
+        console.error('Supabase error:', error);
+        toast({
+          title: "Something went wrong",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+        return;
+      }
       
       toast({
         title: "Thank you for your submission!",
@@ -100,6 +122,7 @@ const ECommerceLeadForm = () => {
         monthlySales: ""
       });
     } catch (error) {
+      console.error('Unexpected error:', error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",

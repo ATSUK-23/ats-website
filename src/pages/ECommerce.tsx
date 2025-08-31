@@ -307,6 +307,11 @@ const ECommerce = () => {
                   Our solution enables your business to rapidly scale globally without needing to increases your resources!
                 </p>
               </div>
+              <div className="mt-8">
+                <Button variant="hero" size="lg">
+                  Book Your Global Strategy Call
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -388,6 +393,11 @@ const ECommerce = () => {
               <p className="font-medium">
                 Stop wasting ad spend our performance-focused campaigns ensure every dollar works harder to bring you more sales.
               </p>
+              <div className="mt-6">
+                <Button variant="hero" size="lg">
+                  Book Your Global Strategy Call
+                </Button>
+              </div>
             </>
           } 
           image="/lovable-uploads/be7b54d5-3430-46e2-b634-55880cea311c.png" 
