@@ -57,7 +57,7 @@ export const SiteHeader = () => {
                         {aiItems.map((item) => (
                           <SheetClose asChild key={item.id}>
                             <Link 
-                              to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-solutions"} 
+                              to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-audit"}
                               className="block py-2 text-sm hover:text-primary"
                             >
                               {item.label}
@@ -110,7 +110,7 @@ export const SiteHeader = () => {
               {aiItems.map((item) => (
                 <DropdownMenuItem key={item.id} className="p-0">
                   <Link 
-                    to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-solutions"} 
+                    to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-audit"} 
                     className="w-full p-3 rounded-md hover:bg-gray-700 transition-colors block"
                   >
                     <div className="font-medium text-white">{item.label}</div>

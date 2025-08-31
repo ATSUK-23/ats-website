@@ -31,7 +31,7 @@ const App = () => (
             <Route path="/e-commerce" element={<ECommerce />} />
             <Route path="/social-content" element={<SocialContent />} />
             <Route path="/sales-funnel-automation" element={<SalesFunnelAutomation />} />
-            <Route path="/ai-solutions" element={<AISolutions />} />
+            <Route path="/ai-audit" element={<AISolutions />} />
             <Route path="/agents" element={<Agents />} />
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
