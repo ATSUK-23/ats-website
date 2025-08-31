@@ -55,8 +55,8 @@ const VibeCoding = () => {
 
 Whether you need a customer portal, e-commerce platform, internal dashboard, or a brand-new app, we can take you from concept to working prototype faster than you thought possible.</p>}>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book a Vibe Coding Workshop</Button>
+            <a href="#vibe-cta">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">LIVE 1 Day WorkShops in London</Button>
             </a>
             <a href="#contact">
               <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
@@ -120,8 +120,8 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
           <p>Once a month, we run a live 1-day workshop in London with our partners at Epitome. Only 12 spots available as its designed for maximum results.</p>
         </>}>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book a Vibe Coding Workshop</Button>
+            <a href="#vibe-cta">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">LIVE 1 Day WorkShops in London</Button>
             </a>
             <a href="#contact">
               <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
