@@ -243,7 +243,7 @@ export default function AISolutions() {
               Transform your business with AI solutions that drive real results.
             </p>
             <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-              Book an Introduction Call
+              Book Your Discovery Call
             </Button>
           </div>
         </section>
