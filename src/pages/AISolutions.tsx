@@ -95,34 +95,7 @@ export default function AISolutions() {
         </section>
 
         {/* Benefits Section */}
-        <section className="container py-12 sm:py-16 md:py-24 px-4">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Building Your AI Brain With Our AI Audit Process</h2>
-          </div>
-          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
-            <Card className="bg-card border">
-              <CardContent className="p-6 text-center">
-                <TrendingUp className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Accelerate Sales</h3>
-                <p className="text-muted-foreground">Faster decisions, faster cash flow.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card border">
-              <CardContent className="p-6 text-center">
-                <Users className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Enhance Customer Experience</h3>
-                <p className="text-muted-foreground">Instant, accurate answers build trust and loyalty.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card border">
-              <CardContent className="p-6 text-center">
-                <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Unlock New Opportunities</h3>
-                <p className="text-muted-foreground">Analyse interaction data to find new product and service gaps.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+        
 
 
         {/* Ongoing Support Section */}
