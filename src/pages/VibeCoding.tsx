@@ -115,7 +115,10 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* CTA Bottom */}
-        <SplitSection id="vibe-cta" reverse title="Let's Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<p>Whether you're starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>}>
+        <SplitSection id="vibe-cta" reverse title="Let's Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<>
+          <p>Whether you're starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>
+          <p>Once a month, we run a live 1-day workshop in London with our partners at Epitome. Only 12 spots available as its designed for maximum results.</p>
+        </>}>
           <div className="flex flex-col sm:flex-row gap-3">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
               <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book a Vibe Coding Workshop</Button>
