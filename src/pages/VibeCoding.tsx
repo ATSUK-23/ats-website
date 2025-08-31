@@ -120,8 +120,8 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
           <p>Once a month, we run a live 1-day workshop in London with our partners at Epitome. Only 12 spots available as its designed for maximum results.</p>
         </>}>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#vibe-cta">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">LIVE 1 Day WorkShops in London</Button>
+            <a href="https://theepitome.co.uk/ai-prototyping-workshop" target="_blank" rel="noreferrer">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Reserve Your Workshop Place</Button>
             </a>
             <a href="#contact">
               <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
