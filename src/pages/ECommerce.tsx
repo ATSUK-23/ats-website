@@ -12,6 +12,7 @@ import marketplacesImage from "@/assets/marketplaces.jpg";
 import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
+import ECommerceLeadForm from "@/components/forms/ECommerceLeadForm";
 import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
 
 
@@ -468,39 +469,8 @@ const ECommerce = () => {
         </section>
 
 
-        {/* CTA Section with Embedded Form */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Grow Your E-Commerce Sales Together</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-              Whether you're selling on one platform or across the globe, we'll help you choose the right tools, set up the right systems, and manage the right campaigns to scale your e-commerce business.
-            </p>
-            
-            {/* Embedded Form */}
-            <div className="max-w-6xl mx-auto">
-              <div className="bg-card/80 backdrop-blur-sm rounded-2xl border shadow-lg overflow-hidden">
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/CbkFi6g20BID9TrN7zmp"
-                  style={{width:'100%',height:'750px',border:'none',borderRadius:'16px'}}
-                  id="inline-CbkFi6g20BID9TrN7zmp" 
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="ATS E-commerce Application"
-                  data-height="750"
-                  data-layout-iframe-id="inline-CbkFi6g20BID9TrN7zmp"
-                  data-form-id="CbkFi6g20BID9TrN7zmp"
-                  title="ATS E-commerce Application"
-                />
-                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Lead Generation Form */}
+        <ECommerceLeadForm />
 
       </main>
 
