@@ -56,6 +56,61 @@ const VoiceAI = () => {
           </div>
         </section>
 
+        {/* Inbound AI Use Cases */}
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="container px-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Never Miss Another Inbound Opportunity</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              <Card className="p-6 text-center">
+                <CardContent className="space-y-4">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold">Inbound Lead Generation</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Instantly capture leads from incoming calls and inquiries.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center">
+                <CardContent className="space-y-4">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Users className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold">Customer Support & Service</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Deliver round-the-clock assistance with AI that answers FAQs and solves common issues.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center">
+                <CardContent className="space-y-4">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold">Speed to Lead</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Respond to new inquiries instantly, boosting conversion rates by engaging prospects at the right moment.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="p-6 text-center">
+                <CardContent className="space-y-4">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Calendar className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold">Appointment Management</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Let AI handle scheduling, confirmations, and rescheduling seamlessly.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Outbound AI Use Cases */}
         <section className="py-12 sm:py-16">
           <div className="container px-4">
@@ -106,61 +161,6 @@ const VoiceAI = () => {
                   <h3 className="font-semibold">Information Collection & Reviews</h3>
                   <p className="text-sm text-muted-foreground">
                     Capture valuable feedback and insights with AI-led surveys and reviews.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Inbound AI Use Cases */}
-        <section className="py-12 sm:py-16 bg-muted/30">
-          <div className="container px-4">
-            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Never Miss Another Inbound Opportunity</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <Card className="p-6 text-center">
-                <CardContent className="space-y-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold">Inbound Lead Generation</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Instantly capture leads from incoming calls and inquiries.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="p-6 text-center">
-                <CardContent className="space-y-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold">Customer Support & Service</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Deliver round-the-clock assistance with AI that answers FAQs and solves common issues.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="p-6 text-center">
-                <CardContent className="space-y-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Zap className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold">Speed to Lead</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Respond to new inquiries instantly, boosting conversion rates by engaging prospects at the right moment.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="p-6 text-center">
-                <CardContent className="space-y-4">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold">Appointment Management</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Let AI handle scheduling, confirmations, and rescheduling seamlessly.
                   </p>
                 </CardContent>
               </Card>
