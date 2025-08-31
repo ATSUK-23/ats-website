@@ -100,7 +100,7 @@ export default function AISolutions() {
 
 
         {/* 6-Stage AI Audit Process */}
-        <section className="container py-12 sm:py-16 md:py-24 px-4">
+        <section className="container py-6 sm:py-8 md:py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Our Proven 6-Stage AI Audit Process</h2>
@@ -201,7 +201,7 @@ export default function AISolutions() {
         </section>
 
         {/* Ongoing Support Section */}
-        <section className="container py-12 sm:py-16 md:py-24 px-4">
+        <section className="container py-6 sm:py-8 md:py-12 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ongoing AI Support & Growth</h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
@@ -229,7 +229,7 @@ export default function AISolutions() {
 
 
         {/* Final CTA */}
-        <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
+        <section className="relative py-8 sm:py-10 md:py-16 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img src={aiBrainBackground} alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-background/80" />
