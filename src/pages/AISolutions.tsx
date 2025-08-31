@@ -108,7 +108,7 @@ export default function AISolutions() {
             
             <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
               {/* Stage 1 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <Users className="w-8 h-8 text-primary" />
@@ -122,7 +122,7 @@ export default function AISolutions() {
               </Card>
 
               {/* Stage 2 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <Target className="w-8 h-8 text-primary" />
@@ -136,7 +136,7 @@ export default function AISolutions() {
               </Card>
 
               {/* Stage 3 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <MessageSquare className="w-8 h-8 text-primary" />
@@ -150,7 +150,7 @@ export default function AISolutions() {
               </Card>
 
               {/* Stage 4 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <Users className="w-8 h-8 text-primary" />
@@ -164,7 +164,7 @@ export default function AISolutions() {
               </Card>
 
               {/* Stage 5 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <TrendingUp className="w-8 h-8 text-primary" />
@@ -178,7 +178,7 @@ export default function AISolutions() {
               </Card>
 
               {/* Stage 6 */}
-              <Card className="bg-green-500/20 backdrop-blur-sm border-white/20 p-6">
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-center gap-3">
                     <Target className="w-8 h-8 text-primary" />
