@@ -32,7 +32,7 @@ export default function AISolutions() {
         </HeroSection>
 
         {/* AI Brain Power Section */}
-        <SplitSection id="ai-brain-power" title="Unlock the Power of Your Company's AI Brain" description={<p>
+        <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={<p>
               Imagine having all your company&apos;s best knowledge, everything in your team&apos;s heads, your marketing materials, sales proposals, onboarding guides, training and your service insights...all in one place and available to prospects 24/7?
               <br /><br />
               Your AI brain does just that.
