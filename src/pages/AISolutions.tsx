@@ -93,9 +93,12 @@ export default function AISolutions() {
           
           <div className="text-center max-w-4xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-foreground">The Next Step: Your AI Audit</h3>
-            <p className="text-base sm:text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6">
               Before we build your AI Brain, we start with a 6-stage AI Audit. It maps your systems, identifies high-value opportunities, and delivers a clear roadmap with costs and timelines.
             </p>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="#ai-form">Book Your AI Audit Discovery Call Today</a>
+            </Button>
           </div>
         </section>
 
@@ -143,9 +146,12 @@ export default function AISolutions() {
           </div>
           
           <div className="text-center">
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
               This isn't a sales pitch, it's a conversation designed to help you see what's possible and decide if moving forward makes sense.
             </p>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="#ai-form">Book Your AI Audit Discovery Call Today</a>
+            </Button>
           </div>
         </section>
 
@@ -248,8 +254,8 @@ export default function AISolutions() {
             </div>
 
             <div className="text-center mt-12">
-              <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4">
-                Book Your AI Audit Today
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                <a href="#ai-form">Book Your AI Audit Discovery Call Today</a>
               </Button>
             </div>
           </div>
