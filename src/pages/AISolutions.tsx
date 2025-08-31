@@ -54,7 +54,7 @@ export default function AISolutions() {
           </div>
           
           <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-8">
-            <Card className="bg-background/50 border backdrop-blur-sm">
+            <Card className="bg-card/60 border border-border/50 backdrop-blur-md shadow-lg">
               <CardContent className="p-6 text-center">
                 <Target className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Understand Your Business</h3>
@@ -62,7 +62,7 @@ export default function AISolutions() {
               </CardContent>
             </Card>
             
-            <Card className="bg-background/50 border backdrop-blur-sm">
+            <Card className="bg-card/60 border border-border/50 backdrop-blur-md shadow-lg">
               <CardContent className="p-6 text-center">
                 <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Identify AI Opportunities</h3>
@@ -70,7 +70,7 @@ export default function AISolutions() {
               </CardContent>
             </Card>
             
-            <Card className="bg-background/50 border backdrop-blur-sm">
+            <Card className="bg-card/60 border border-border/50 backdrop-blur-md shadow-lg">
               <CardContent className="p-6 text-center">
                 <RotateCcw className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Assess Current Readiness</h3>
@@ -78,7 +78,7 @@ export default function AISolutions() {
               </CardContent>
             </Card>
             
-            <Card className="bg-background/50 border backdrop-blur-sm">
+            <Card className="bg-card/60 border border-border/50 backdrop-blur-md shadow-lg">
               <CardContent className="p-6 text-center">
                 <Share2 className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Define Next Steps</h3>
