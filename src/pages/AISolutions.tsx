@@ -33,48 +33,66 @@ export default function AISolutions() {
 
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={
-            <div className="space-y-6">
-              <p>
-                Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7. That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
-              </p>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">How It Helps Every Part of Your Business</h3>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-foreground">Marketing – Centralized Knowledge</h4>
-                    <p>All your messaging, FAQs, and materials in one hub, so prospects find answers instantly.</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground">Sales – Smarter Qualification</h4>
-                    <p>AI responds in real time, handles routine questions, and connects hot leads directly to your team.</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground">Customer Support – Always On</h4>
-                    <p>Delivers instant, accurate answers 24/7 and routes complex queries to the right person.</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground">Onboarding & Training – Scalable Support</h4>
-                    <p>Provides step-by-step guides and training resources, making growth and adoption easier for clients and staff.</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground">Growth – Clear Next Steps</h4>
-                    <p>Guides prospects naturally to book calls, explore services, or purchase — like a personal sales assistant for every customer.</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">The Next Step: Your AI Audit</h3>
-                <p>Before we build your AI Brain, we start with a 6-stage AI Audit. It maps your systems, identifies high-value opportunities, and delivers a clear roadmap with costs and timelines.</p>
-              </div>
-            </div>
+            <p>
+              Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7. That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
+            </p>
           } image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
+
+        {/* How It Helps Every Part of Your Business */}
+        <section className="container py-8 sm:py-12 md:py-16 px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How It Helps Every Part of Your Business</h2>
+          </div>
+          
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mb-8 sm:mb-12">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Marketing</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Centralized Knowledge</h4>
+                <p className="text-sm text-muted-foreground">All your messaging, FAQs, and materials in one hub, so prospects find answers instantly.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Sales</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Smarter Qualification</h4>
+                <p className="text-sm text-muted-foreground">AI responds in real time, handles routine questions, and connects hot leads directly to your team.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Customer Support</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Always On</h4>
+                <p className="text-sm text-muted-foreground">Delivers instant, accurate answers 24/7 and routes complex queries to the right person.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Onboarding & Training</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Scalable Support</h4>
+                <p className="text-sm text-muted-foreground">Provides step-by-step guides and training resources, making growth and adoption easier for clients and staff.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Growth</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Clear Next Steps</h4>
+                <p className="text-sm text-muted-foreground">Guides prospects naturally to book calls, explore services, or purchase — like a personal sales assistant for every customer.</p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="text-center max-w-4xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-foreground">The Next Step: Your AI Audit</h3>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              Before we build your AI Brain, we start with a 6-stage AI Audit. It maps your systems, identifies high-value opportunities, and delivers a clear roadmap with costs and timelines.
+            </p>
+          </div>
+        </section>
 
         {/* Discovery Call Section */}
         <section className="container py-8 sm:py-12 md:py-16 px-4">
