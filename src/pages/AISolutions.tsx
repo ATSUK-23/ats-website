@@ -34,12 +34,14 @@ export default function AISolutions() {
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={
             <p>
-              Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7. That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
+              Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7.
+              <br /><br />
+              That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
             </p>
           } image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* How It Helps Every Part of Your Business */}
-        <section className="container py-8 sm:py-12 md:py-16 px-4">
+        <section className="container py-4 sm:py-6 md:py-8 px-4">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How It Helps Every Part of Your Business</h2>
           </div>
