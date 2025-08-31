@@ -45,32 +45,6 @@ export default function AISolutions() {
             </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
 
-        {/* How It Works Section */}
-        <SplitSection id="how-it-works" title="How It Works" description={<div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">1</div>
-                <div>
-                  <h3 className="font-semibold text-lg">Centralise Your Knowledge</h3>
-                  <p className="text-muted-foreground">Load your key business information into your AI Brain, making it the smartest "team member" in your organisation.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">2</div>
-                <div>
-                  <h3 className="font-semibold text-lg">Instant Discovery</h3>
-                  <p className="text-muted-foreground">24/7 access via text or voice, on any device, delivering the right answers immediately.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">3</div>
-                <div>
-                  <h3 className="font-semibold text-lg">Maximise Team Efficiency</h3>
-                  <p className="text-muted-foreground">AI qualifies needs, routes complex cases to the right team member, and leaves your people free for high-value work.</p>
-                </div>
-              </div>
-            </div>} image={aiProcessSteps} imageAlt="Three-step AI implementation process" reverse>
-          <Button size="lg" className="mt-6">See AI Brain in Action</Button>
-        </SplitSection>
 
         {/* Benefits Section */}
         <section className="container py-12 sm:py-16 md:py-24 px-4">
