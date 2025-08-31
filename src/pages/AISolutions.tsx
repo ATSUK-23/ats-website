@@ -45,16 +45,16 @@ export default function AISolutions() {
             </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* Discovery Call Section */}
-        <section className="container py-12 sm:py-16 md:py-24 px-4">
+        <section className="container py-8 sm:py-12 md:py-16 px-4">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Let's Start With a Discovery Call</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Before we dive into an AI Audit, we begin with a 60–90 minute discovery call to align on your goals, challenges, and opportunities. This ensures the audit is tailored to your business.
+              Before we dive into an AI Audit, we begin with a 60 to 90 minute discovery call to align on your goals, challenges, and opportunities. This ensures the audit is tailored to your business.
             </p>
           </div>
           
           <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-8">
-            <Card className="bg-card border">
+            <Card className="bg-background/50 border backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <Target className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Understand Your Business</h3>
@@ -62,15 +62,15 @@ export default function AISolutions() {
               </CardContent>
             </Card>
             
-            <Card className="bg-card border">
+            <Card className="bg-background/50 border backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Identify AI Opportunities</h3>
-                <p className="text-sm text-muted-foreground">Together, we'll explore where AI might add the most value — whether it's growth, efficiency, or customer experience.</p>
+                <p className="text-sm text-muted-foreground">Together, we'll explore where AI might add the most value, whether it's growth, efficiency, or customer experience.</p>
               </CardContent>
             </Card>
             
-            <Card className="bg-card border">
+            <Card className="bg-background/50 border backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <RotateCcw className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Assess Current Readiness</h3>
@@ -78,7 +78,7 @@ export default function AISolutions() {
               </CardContent>
             </Card>
             
-            <Card className="bg-card border">
+            <Card className="bg-background/50 border backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <Share2 className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-semibold mb-2">Define Next Steps</h3>
@@ -89,7 +89,7 @@ export default function AISolutions() {
           
           <div className="text-center">
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              This isn't a sales pitch — it's a conversation designed to help you see what's possible and decide if moving forward makes sense.
+              This isn't a sales pitch, it's a conversation designed to help you see what's possible and decide if moving forward makes sense.
             </p>
           </div>
         </section>
