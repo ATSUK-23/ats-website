@@ -75,7 +75,7 @@ export default function AISolutions() {
         {/* Benefits Section */}
         <section className="container py-12 sm:py-16 md:py-24 px-4">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Why Your Business Needs an AI Brain</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Building Your AI I Brain with Out AI Audit Process</h2>
           </div>
           <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
             <Card className="bg-card border">
