@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/sections/HeroSection";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-import AILeadForm from "@/components/forms/AILeadForm";
+import AIAgentsLeadForm from "@/components/forms/AIAgentsLeadForm";
 import { 
   Bot, 
   FileText, 
@@ -347,24 +347,31 @@ const Agents = () => {
         <SectionGrid title="Agent Development" items={agentDevelopment} />
         <SectionGrid title="Workspace & Management" items={workspaceManagement} />
 
-        {/* Integrations Showcase */}
-        <section className="py-12 sm:py-16 bg-muted/50">
-          <div className="container px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">Seamless Integrations</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8 items-center justify-items-center">
-              {integrationLogos.map((logo, index) => (
-                <div key={index} className="flex items-center justify-center p-4 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <span className="font-semibold text-muted-foreground">{logo}</span>
-                </div>
-              ))}
+        {/* Call to Action Buttons */}
+        <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
+          <div className="container px-4 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Ready to Build Your AI Agents?</h2>
+            <p className="text-lg text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto">
+              Transform your business with powerful AI agents that work 24/7. Get started today and see the difference automation can make.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="#ai-agents-form">
+                <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base">Start Building AI Agents</Button>
+              </a>
+              <a href="#ai-agents-form">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Get Free Consultation</Button>
+              </a>
+              <a href="#ai-agents-form">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">See Agent Examples</Button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Lead Form */}
-        <AILeadForm 
+        <AIAgentsLeadForm 
           formTag="Agents"
-          title="Ready to Build Your AI Agents?"
+          title="Build Your AI Agents Today"
           subtitle="Tell us about your automation needs and we'll help you build powerful AI agents that work 24/7."
         />
 
@@ -372,8 +379,8 @@ const Agents = () => {
         <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
           <div className="container text-center px-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Automate Anything. Start Today.</h2>
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Get Started Free</Button>
+            <a href="#ai-agents-form">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Start Building AI Agents</Button>
             </a>
           </div>
         </section>
