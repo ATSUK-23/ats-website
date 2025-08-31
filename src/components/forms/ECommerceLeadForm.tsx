@@ -1,0 +1,312 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast";
+
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  mobile: string;
+  productNiche: string;
+  hasPatent: string;
+  productUnique: string;
+  salesChannels: string[];
+  skuCount: string;
+  monthlySales: string;
+}
+
+const ECommerceLeadForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    productNiche: "",
+    hasPatent: "",
+    productUnique: "",
+    salesChannels: [],
+    skuCount: "",
+    monthlySales: ""
+  });
+
+  const salesChannelOptions = [
+    "Amazon",
+    "Ebay", 
+    "Shopify",
+    "Walmart",
+    "WP",
+    "Others"
+  ];
+
+  const handleInputChange = (field: keyof FormData, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleSalesChannelChange = (channel: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      salesChannels: checked 
+        ? [...prev.salesChannels, channel]
+        : prev.salesChannels.filter(c => c !== channel)
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      toast({
+        title: "Please fill in required fields",
+        description: "First name, last name, and email are required.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      // Here you would typically send the data to your backend
+      console.log("Form submitted:", formData);
+      
+      toast({
+        title: "Thank you for your submission!",
+        description: "We'll be in touch soon to help scale your e-commerce business.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        productNiche: "",
+        hasPatent: "",
+        productUnique: "",
+        salesChannels: [],
+        skuCount: "",
+        monthlySales: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <div className="container px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
+            <CardHeader className="text-center pb-8">
+              <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                Ready to Scale Your E-Commerce Business?
+              </CardTitle>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Tell us about your business and we'll show you how to expand globally with our proven systems.
+              </p>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Fields */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName" className="text-sm font-medium">
+                      First Name *
+                    </Label>
+                    <Input
+                      id="firstName"
+                      type="text"
+                      value={formData.firstName}
+                      onChange={(e) => handleInputChange("firstName", e.target.value)}
+                      required
+                      className="bg-background/50"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName" className="text-sm font-medium">
+                      Last Name *
+                    </Label>
+                    <Input
+                      id="lastName"
+                      type="text"
+                      value={formData.lastName}
+                      onChange={(e) => handleInputChange("lastName", e.target.value)}
+                      required
+                      className="bg-background/50"
+                    />
+                  </div>
+                </div>
+
+                {/* Contact Fields */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm font-medium">
+                      E-mail *
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
+                      required
+                      className="bg-background/50"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="mobile" className="text-sm font-medium">
+                      Mobile
+                    </Label>
+                    <Input
+                      id="mobile"
+                      type="tel"
+                      value={formData.mobile}
+                      onChange={(e) => handleInputChange("mobile", e.target.value)}
+                      className="bg-background/50"
+                    />
+                  </div>
+                </div>
+
+                {/* Product Niche */}
+                <div className="space-y-2">
+                  <Label htmlFor="productNiche" className="text-sm font-medium">
+                    Product Niche
+                  </Label>
+                  <Input
+                    id="productNiche"
+                    type="text"
+                    value={formData.productNiche}
+                    onChange={(e) => handleInputChange("productNiche", e.target.value)}
+                    placeholder="e.g., Health & Wellness, Electronics, Home & Garden"
+                    className="bg-background/50"
+                  />
+                </div>
+
+                {/* Patent Status */}
+                <div className="space-y-2">
+                  <Label htmlFor="hasPatent" className="text-sm font-medium">
+                    Do You Have A Patent?
+                  </Label>
+                  <Select value={formData.hasPatent} onValueChange={(value) => handleInputChange("hasPatent", value)}>
+                    <SelectTrigger className="bg-background/50">
+                      <SelectValue placeholder="Select patent status" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-card border border-border">
+                      <SelectItem value="yes">Yes</SelectItem>
+                      <SelectItem value="no">No</SelectItem>
+                      <SelectItem value="in-progress">In Progress</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Product Unique Features */}
+                <div className="space-y-2">
+                  <Label htmlFor="productUnique" className="text-sm font-medium">
+                    What is Unique About Your Product?
+                  </Label>
+                  <Textarea
+                    id="productUnique"
+                    value={formData.productUnique}
+                    onChange={(e) => handleInputChange("productUnique", e.target.value)}
+                    placeholder="Describe what makes your product stand out from competitors..."
+                    className="bg-background/50 min-h-[100px]"
+                  />
+                </div>
+
+                {/* Sales Channels */}
+                <div className="space-y-4">
+                  <Label className="text-sm font-medium">
+                    What Sales Channels Do You Use? (Select all that apply)
+                  </Label>
+                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    {salesChannelOptions.map((channel) => (
+                      <div key={channel} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={channel}
+                          checked={formData.salesChannels.includes(channel)}
+                          onCheckedChange={(checked) => 
+                            handleSalesChannelChange(channel, checked as boolean)
+                          }
+                        />
+                        <Label htmlFor={channel} className="text-sm font-normal">
+                          {channel}
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* SKU Count */}
+                <div className="space-y-2">
+                  <Label htmlFor="skuCount" className="text-sm font-medium">
+                    How Many SKUs Do You Have?
+                  </Label>
+                  <Input
+                    id="skuCount"
+                    type="number"
+                    value={formData.skuCount}
+                    onChange={(e) => handleInputChange("skuCount", e.target.value)}
+                    placeholder="Enter number of products/variants"
+                    className="bg-background/50"
+                  />
+                </div>
+
+                {/* Monthly Sales */}
+                <div className="space-y-2">
+                  <Label htmlFor="monthlySales" className="text-sm font-medium">
+                    Average Monthly Sales
+                  </Label>
+                  <Select value={formData.monthlySales} onValueChange={(value) => handleInputChange("monthlySales", value)}>
+                    <SelectTrigger className="bg-background/50">
+                      <SelectValue placeholder="Select monthly sales range" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-card border border-border">
+                      <SelectItem value="under-10k">&lt; $9,999</SelectItem>
+                      <SelectItem value="10k-25k">$10,000 - $24,999</SelectItem>
+                      <SelectItem value="25k-50k">$25,000 - $49,999</SelectItem>
+                      <SelectItem value="50k-100k">$50,000 - $99,999</SelectItem>
+                      <SelectItem value="100k-500k">$100,000 - $499,999</SelectItem>
+                      <SelectItem value="500k-1m">$500,000 - $999,999</SelectItem>
+                      <SelectItem value="over-1m">&gt; $1M</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-6">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full text-base font-semibold"
+                  >
+                    {isSubmitting ? "Submitting..." : "Help Me Scale My e-Commerce Business"}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ECommerceLeadForm;

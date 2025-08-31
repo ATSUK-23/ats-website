@@ -13,6 +13,7 @@ import adManagementImage from "@/assets/ad-management.jpg";
 import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
 import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
+import ECommerceLeadForm from "@/components/forms/ECommerceLeadForm";
 
 const ECommerce = () => {
   return (
@@ -500,6 +501,9 @@ const ECommerce = () => {
             </div>
           </div>
         </section>
+
+        {/* Lead Generation Form */}
+        <ECommerceLeadForm />
       </main>
 
       <SiteFooter />
