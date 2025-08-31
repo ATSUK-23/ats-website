@@ -48,7 +48,7 @@ const ECommerce = () => {
           title="Take Your Winning Products Global Without Growing Your Team" 
           subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." 
           ctaText="Book Your Global Strategy Call" 
-          ctaLink="#contact" 
+          ctaLink="#ecommerce-form" 
           backgroundImage={globalEcommerceHero} 
           className="text-white" 
         />
@@ -64,8 +64,8 @@ const ECommerce = () => {
               <p className="text-xl font-bold mb-4">Your Product. Every Market. Fully Managed.</p>
               <p>We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to localise fulfilment, order automation and customer support so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <Button variant="hero" size="lg">
-                  Book an E-Commerce Consultation
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#ecommerce-form">Book an E-Commerce Consultation</a>
                 </Button>
               </div>
             </>
@@ -308,8 +308,8 @@ const ECommerce = () => {
                 </p>
               </div>
               <div className="mt-8">
-                <Button variant="hero" size="lg">
-                  Book Your Global Strategy Call
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#ecommerce-form">Book Your Global Strategy Call</a>
                 </Button>
               </div>
             </div>
@@ -394,8 +394,8 @@ const ECommerce = () => {
                 Stop wasting ad spend our performance-focused campaigns ensure every dollar works harder to bring you more sales.
               </p>
               <div className="mt-6">
-                <Button variant="hero" size="lg">
-                  Book Your Global Strategy Call
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#ecommerce-form">Book Your Global Strategy Call</a>
                 </Button>
               </div>
             </>
@@ -422,8 +422,8 @@ const ECommerce = () => {
               <p className="font-medium mb-6">
                 By combining our e-commerce expertise with LaunchBoom's proven crowdfunding system, we help you reduce risk, maximise exposure, and bring your product to market with both funding and an audience in place.
               </p>
-              <Button variant="hero" size="lg">
-                Book a Crowdfunding Strategy Call
+              <Button variant="hero" size="lg" asChild>
+                <a href="#ecommerce-form">Book a Crowdfunding Strategy Call</a>
               </Button>
             </>
           } 

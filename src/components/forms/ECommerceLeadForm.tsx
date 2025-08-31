@@ -134,7 +134,7 @@ const ECommerceLeadForm = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <section id="ecommerce-form" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="container px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
