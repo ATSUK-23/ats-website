@@ -34,7 +34,7 @@ export default function AISolutions() {
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={
             <p>
-              Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7.
+              Imagine if all your company's knowledge from your team's expertise to sales decks, onboarding guides, and customer insights was captured in one intelligent system, available 24/7.
               <br /><br />
               That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
             </p>
