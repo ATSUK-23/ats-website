@@ -32,17 +32,49 @@ export default function AISolutions() {
         </HeroSection>
 
         {/* AI Brain Power Section */}
-        <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={<p>
-              Imagine having all your company&apos;s best knowledge, everything in your team&apos;s heads, your marketing materials, sales proposals, onboarding guides, training and your service insights...all in one place and available to prospects 24/7?
-              <br /><br />
-              Your AI brain does just that.
-              <br /><br />
-              It pulls together expertise from across your company and consolidates it into an intelligent system.
-              <br /><br />
-              By building an AI brain for your business, you can unleash the potential of this information, allowing your prospects to quickly and easily discover how your company can solve their unique problems.
-              <br /><br />
-              Instead of sifting through pages of content or waiting for someone on your team to explain or reply to them, prospects can find the exact answers they need with natural real-time responses on their schedule.
-            </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
+        <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={
+            <div className="space-y-6">
+              <p>
+                Imagine if all your company's knowledge — from your team's expertise to sales decks, onboarding guides, and customer insights — was captured in one intelligent system, available 24/7. That's your AI Brain. It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
+              </p>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">How It Helps Every Part of Your Business</h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground">Marketing – Centralized Knowledge</h4>
+                    <p>All your messaging, FAQs, and materials in one hub, so prospects find answers instantly.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-foreground">Sales – Smarter Qualification</h4>
+                    <p>AI responds in real time, handles routine questions, and connects hot leads directly to your team.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-foreground">Customer Support – Always On</h4>
+                    <p>Delivers instant, accurate answers 24/7 and routes complex queries to the right person.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-foreground">Onboarding & Training – Scalable Support</h4>
+                    <p>Provides step-by-step guides and training resources, making growth and adoption easier for clients and staff.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-foreground">Growth – Clear Next Steps</h4>
+                    <p>Guides prospects naturally to book calls, explore services, or purchase — like a personal sales assistant for every customer.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">The Next Step: Your AI Audit</h3>
+                <p>Before we build your AI Brain, we start with a 6-stage AI Audit. It maps your systems, identifies high-value opportunities, and delivers a clear roadmap with costs and timelines.</p>
+              </div>
+            </div>
+          } image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* Discovery Call Section */}
         <section className="container py-8 sm:py-12 md:py-16 px-4">
