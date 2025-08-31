@@ -49,7 +49,7 @@ export default function AISolutions() {
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Let's Start With a Discovery Call</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Before we dive into an AI Audit, we begin with a 60 to 90 minute discovery call to align on your goals, challenges, and opportunities. This ensures the audit is tailored to your business.
+              Before we dive into an AI Audit, we begin with a 45 - 60 minute discovery call to align on your goals, challenges, and opportunities. This ensures the audit is tailored to your business.
             </p>
           </div>
           
