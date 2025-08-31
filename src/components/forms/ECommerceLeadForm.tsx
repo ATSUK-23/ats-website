@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface FormData {
   firstName: string;
@@ -25,6 +26,8 @@ interface FormData {
 const ECommerceLeadForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -107,8 +110,12 @@ const ECommerceLeadForm = () => {
         title: "Thank you for your submission!",
         description: "We'll be in touch soon to help scale your e-commerce business.",
       });
+
+      // Store name and show success state
+      setSubmittedName(formData.firstName);
+      setIsSubmitted(true);
       
-      // Reset form
+      // Reset form data but keep success state
       setFormData({
         firstName: "",
         lastName: "",
@@ -133,6 +140,79 @@ const ECommerceLeadForm = () => {
     }
   };
 
+  // Success Message Component
+  const SuccessMessage = () => (
+    <CardContent className="text-center py-16">
+      <div className="space-y-8">
+        {/* Success Icon */}
+        <div className="flex justify-center">
+          <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg">
+            <CheckCircle2 className="w-12 h-12 text-white" />
+          </div>
+        </div>
+
+        {/* Thank You Message */}
+        <div className="space-y-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+            Thank You, {submittedName}!
+          </h3>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Your application has been successfully submitted. We're excited to help you scale your e-commerce business globally!
+          </p>
+        </div>
+
+        {/* What Happens Next */}
+        <div className="bg-card/50 border border-primary/20 rounded-xl p-8 max-w-3xl mx-auto">
+          <h4 className="text-xl font-semibold mb-6 text-foreground">What happens next?</h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Within 24 Hours</h5>
+                <p className="text-sm text-muted-foreground">Our team will review your application and reach out</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Strategy Call</h5>
+                <p className="text-sm text-muted-foreground">We'll schedule a personalized consultation</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <FileText className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Custom Plan</h5>
+                <p className="text-sm text-muted-foreground">Receive your global expansion roadmap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            In the meantime, check out some of our success stories and resources
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" size="lg" asChild>
+              <a href="/about">Our Success Stories</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/training">Free Resources</a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  );
+
   return (
     <section id="ecommerce-form" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="container px-4 sm:px-6">
@@ -146,8 +226,13 @@ const ECommerceLeadForm = () => {
                 Tell us about your business and we'll show you how to expand globally with our proven systems.
               </p>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            
+            {/* Conditional Content */}
+            {isSubmitted ? (
+              <SuccessMessage />
+            ) : (
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Fields */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -323,8 +408,9 @@ const ECommerceLeadForm = () => {
                     {isSubmitting ? "Submitting..." : "Help Me Scale My e-Commerce Business"}
                   </Button>
                 </div>
-              </form>
-            </CardContent>
+                </form>
+              </CardContent>
+            )}
           </Card>
         </div>
       </div>
