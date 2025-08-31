@@ -59,6 +59,51 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_voice: {
+        Row: {
+          additional_info: string | null
+          comments: string | null
+          company_name: string | null
+          email: string
+          first_name: string
+          form_tag: string
+          id: string
+          job_title: string | null
+          last_name: string
+          phone: string | null
+          submitted_at: string
+          updated_at: string
+        }
+        Insert: {
+          additional_info?: string | null
+          comments?: string | null
+          company_name?: string | null
+          email: string
+          first_name: string
+          form_tag: string
+          id?: string
+          job_title?: string | null
+          last_name: string
+          phone?: string | null
+          submitted_at?: string
+          updated_at?: string
+        }
+        Update: {
+          additional_info?: string | null
+          comments?: string | null
+          company_name?: string | null
+          email?: string
+          first_name?: string
+          form_tag?: string
+          id?: string
+          job_title?: string | null
+          last_name?: string
+          phone?: string | null
+          submitted_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       ecommerce_leads: {
         Row: {
           additional_info: string | null
