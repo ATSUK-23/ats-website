@@ -125,30 +125,94 @@ export default function AISolutions() {
           </div>
         </section>
 
-        {/* Launch Process */}
-        <SplitSection id="launch-process" title="The 3-Step Launch Process" description={<div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
-                <div>
-                  <h3 className="font-semibold text-lg">Discovery Call</h3>
-                  <p className="text-muted-foreground">Identify business processes to improve.</p>
+        {/* 6-Stage AI Audit Process */}
+        <section className="container py-12 sm:py-16 md:py-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Our Proven 6-Stage AI Audit Process</h2>
+            </div>
+            
+            <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+              {/* Stage 1 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Users className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 1 – Initial Alignment</h3>
                 </div>
+                <p className="text-muted-foreground">
+                  In our first meetings, we align on your strategic goals, current challenges, and expectations from AI. We identify why you want an AI audit—whether it's efficiency, growth, or compliance—and agree on the scope and desired outcomes. This sets the foundation for a productive engagement.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Weeks 1–2</p>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
-                <div>
-                  <h3 className="font-semibold text-lg">AI Brain Strategy</h3>
-                  <p className="text-muted-foreground">Get a high-level report with opportunities, priorities, and a roadmap.</p>
+
+              {/* Stage 2 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Target className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 2 – Current State Assessment</h3>
                 </div>
+                <p className="text-muted-foreground">
+                  We conduct structured interviews and data reviews across your teams. This helps us assess your AI readiness in six key areas: strategy, processes, data, technology, people, and governance. The output is a maturity heatmap that highlights gaps, risks, and potential opportunities for AI integration.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Weeks 1–2</p>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
-                <div>
-                  <h3 className="font-semibold text-lg">Solution Partner Match</h3>
-                  <p className="text-muted-foreground">We source, brief, and connect you with the best providers.</p>
+
+              {/* Stage 3 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <MessageSquare className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 3 – Preliminary Findings & Proposal</h3>
                 </div>
+                <p className="text-muted-foreground">
+                  We synthesize our findings into a clear picture of your AI opportunities. This includes a short list of critical use cases and quick wins. We then present a tailored proposal outlining the format and objectives of the upcoming face-to-face workshops with your team.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Weeks 3–4</p>
               </div>
-            </div>} image={aiProcessSteps} imageAlt="Three-step launch process diagram" reverse />
+
+              {/* Stage 4 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Users className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 4 – Face-to-Face Workshops</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  In a 1–2 day onsite workshop, we bring together leaders and cross-functional teams. Through breakout sessions and interactive exercises, we validate our findings, co-create new use cases, and prioritize them using a value-versus-feasibility lens. These sessions build alignment across departments.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Week 5</p>
+              </div>
+
+              {/* Stage 5 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 5 – Roadmap Development & Costing</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  We translate workshop outcomes into a detailed 6–24 month roadmap. This includes quick wins (0–3 months), mid-term initiatives (3–12 months), and long-term enterprise projects (12–24+ months). Each initiative is costed, with clear estimates for technology, training, and implementation.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Weeks 6–8</p>
+              </div>
+
+              {/* Stage 6 */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Target className="w-8 h-8 text-primary" />
+                  <h3 className="text-xl font-semibold">Stage 6 – Executive Presentation & Agreement</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  We deliver the final AI roadmap and business case to your leadership team. This includes the recommended initiatives, cost breakdown, and KPIs for measuring success. The objective is executive alignment on next steps and agreement to move into pilot or implementation phases.
+                </p>
+                <p className="text-sm font-medium text-primary">Timeframe: Week 9</p>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4">
+                Book Your AI Audit Today
+              </Button>
+            </div>
+          </div>
+        </section>
 
 
         {/* Final CTA */}
