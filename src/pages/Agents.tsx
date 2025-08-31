@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/sections/HeroSection";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import AILeadForm from "@/components/forms/AILeadForm";
 import { 
   Bot, 
   FileText, 
@@ -359,6 +360,13 @@ const Agents = () => {
             </div>
           </div>
         </section>
+
+        {/* Lead Form */}
+        <AILeadForm 
+          formTag="Agents"
+          title="Ready to Build Your AI Agents?"
+          subtitle="Tell us about your automation needs and we'll help you build powerful AI agents that work 24/7."
+        />
 
         {/* Final CTA Banner */}
         <section className="py-12 sm:py-16 bg-primary text-primary-foreground">

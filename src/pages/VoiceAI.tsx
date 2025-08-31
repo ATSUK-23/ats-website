@@ -6,6 +6,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import HeroSection from "@/components/sections/HeroSection";
 import SplitSection from "@/components/sections/SplitSection";
 import { Contact } from "@/components/sections/Contact";
+import AILeadForm from "@/components/forms/AILeadForm";
 import { Phone, MessageCircle, Calendar, Users, TrendingUp, Clock, Shield, Zap, CheckCircle, Star } from "lucide-react";
 const VoiceAI = () => {
   return <>
@@ -288,6 +289,13 @@ const VoiceAI = () => {
             </div>
           </div>
         </section>
+
+        {/* Lead Form */}
+        <AILeadForm 
+          formTag="Voice-AI"
+          title="Ready to Transform Your Customer Experience?"
+          subtitle="Get started with AI voice and chat assistants that delight customers and grow your business 24/7."
+        />
 
         {/* Closing CTA */}
         <section className="py-12 sm:py-16 bg-primary text-primary-foreground">

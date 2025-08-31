@@ -5,6 +5,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
+import AILeadForm from "@/components/forms/AILeadForm";
 const aiBrainBackground = "/lovable-uploads/924a7d77-7fc5-4519-858c-c9f930246863.png";
 import aiKnowledgeComparison from "@/assets/ai-knowledge-comparison.jpg";
 import aiProcessSteps from "@/assets/ai-process-steps.jpg";
@@ -282,6 +283,13 @@ export default function AISolutions() {
         </section>
 
 
+        {/* Lead Form */}
+        <AILeadForm 
+          formTag="Ai-Audit"
+          title="Ready to Unlock Your AI Brain?"
+          subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results."
+        />
+
         {/* Final CTA */}
         <section className="relative py-8 sm:py-10 md:py-16 overflow-hidden">
           <div className="absolute inset-0 -z-10">
@@ -291,10 +299,10 @@ export default function AISolutions() {
           
           <div className="container text-center relative z-10 px-4">
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-              Ready to Unlock Your AI Brain?
+              Transform Your Business Today
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Transform your business with AI solutions that drive real results.
+              Join hundreds of businesses already using AI to grow faster and operate smarter.
             </p>
             <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               Book Your Discovery Call
