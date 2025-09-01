@@ -145,12 +145,31 @@ export default function AISolutions() {
             </Card>
           </div>
           
-          <div className="text-center">
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-              This isn't a sales pitch, it's a conversation designed to help you see what's possible and decide if moving forward makes sense.
+          <div className="text-center mt-12">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Start with Our Free AI Assessment</h3>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
+              Take our comprehensive 23-question assessment to evaluate your business across 6 key AI domains and receive a personalised roadmap for AI adoption.
             </p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="#ai-form">Book Your AI Audit Discovery Call Today</a>
+            
+            <div className="grid gap-6 sm:gap-8 sm:grid-cols-3 max-w-4xl mx-auto mb-8">
+              <div className="text-center">
+                <h4 className="text-lg font-semibold mb-2">Comprehensive Analysis</h4>
+                <p className="text-sm text-muted-foreground">Evaluate readiness across 6 critical business domains</p>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-lg font-semibold mb-2">Personalised Report</h4>
+                <p className="text-sm text-muted-foreground">Detailed insights tailored to your business needs</p>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
+                <p className="text-sm text-muted-foreground">Free consultation to discuss results and next steps</p>
+              </div>
+            </div>
+            
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 mb-8">
+              Start Free Assessment
             </Button>
           </div>
         </section>
