@@ -47,7 +47,7 @@ export default function AISolutions() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How It Helps Every Part of Your Business</h2>
           </div>
           
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mb-8 sm:mb-12">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8 sm:mb-12">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold mb-3 text-foreground">Marketing</h3>
@@ -84,7 +84,31 @@ export default function AISolutions() {
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold mb-3 text-foreground">Growth</h3>
                 <h4 className="text-sm font-medium mb-2 text-primary">Clear Next Steps</h4>
-                <p className="text-sm text-muted-foreground">Guides prospects naturally to book calls, explore services, or purchase — like a personal sales assistant for every customer.</p>
+                <p className="text-sm text-muted-foreground">Guides prospects naturally to book calls, explore services, or purchase like a personal sales assistant for every customer.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Operations</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Streamlined Efficiency</h4>
+                <p className="text-sm text-muted-foreground">Automates routine workflows, monitors performance, and ensures smooth coordination across teams freeing up resources to focus on innovation.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">Finance</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Smarter Insights</h4>
+                <p className="text-sm text-muted-foreground">Tracks financial data, surfaces real-time reporting, and supports forecasting, helping leadership make faster, data-driven decisions.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-lg font-semibold mb-3 text-foreground">HR</h3>
+                <h4 className="text-sm font-medium mb-2 text-primary">Enhanced Employee Experience</h4>
+                <p className="text-sm text-muted-foreground">Assists with onboarding, training, and policy questions, while also supporting performance management making HR processes more efficient and employee-friendly.</p>
               </CardContent>
             </Card>
           </div>
