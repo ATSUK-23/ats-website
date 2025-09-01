@@ -332,6 +332,7 @@ export default function Training() {
                               course.level === 'Beginner' ? 'bg-green-500 border-white text-white' :
                               course.level === 'Intermediate' ? 'bg-orange-500 border-white text-white' :
                               course.level === 'Advanced' ? 'bg-blue-500 border-white text-white' :
+                              course.level === 'Beginner to Intermediate' ? 'bg-gradient-to-r from-green-500 to-orange-500 border-white text-white' :
                               ''
                             }
                           >
