@@ -45,6 +45,7 @@ const SocialContent = () => {
           ctaText="Book Your Social Content Strategy Call"
           ctaLink="https://calendly.com/automatetosell"
           backgroundImage="/lovable-uploads/09efc9f0-7701-4022-a165-746abba2ea45.png"
+          hideSecondaryButton
         />
 
         {/* Original Hero Content Section */}

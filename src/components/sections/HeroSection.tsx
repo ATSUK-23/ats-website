@@ -11,6 +11,7 @@ interface HeroSectionProps {
     primary?: string;
     secondary?: string;
   };
+  hideSecondaryButton?: boolean;
 }
 export const HeroSection = ({
   title,
@@ -20,7 +21,8 @@ export const HeroSection = ({
   backgroundImage,
   className = "",
   children,
-  customButtonClasses
+  customButtonClasses,
+  hideSecondaryButton = false
 }: HeroSectionProps) => {
   return <section className={`relative overflow-hidden ${className}`} style={{
     backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
@@ -48,13 +50,15 @@ export const HeroSection = ({
               {ctaText}
             </Button>
           </a>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
-          >
-            Schedule Consultation
-          </Button>
+          {!hideSecondaryButton && (
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
+            >
+              Schedule Consultation
+            </Button>
+          )}
         </div>
         
         {children}
