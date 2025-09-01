@@ -33,9 +33,14 @@ export const HeroSection = ({
           {subtitle}
         </p>
 
-        <div className="mt-6 sm:mt-8 flex items-center justify-center gap-4">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
+            Start AI Assessment
+          </Button>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">{ctaText}</Button>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base border-white/20 text-white hover:bg-white/10">
+              Schedule Consultation
+            </Button>
           </a>
         </div>
         
