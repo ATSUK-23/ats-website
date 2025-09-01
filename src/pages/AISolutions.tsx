@@ -262,6 +262,12 @@ export default function AISolutions() {
                 </CardContent>
               </Card>
             </div>
+            
+            <div className="text-center mt-8">
+              <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700" asChild>
+                <a href="#contact">Schedule Consultation</a>
+              </Button>
+            </div>
           </div>
         </section>
 
