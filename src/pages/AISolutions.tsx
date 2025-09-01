@@ -273,8 +273,17 @@ export default function AISolutions() {
             </div>
             
             <div className="text-center mt-8">
-              <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700" asChild>
-                <a href="#ai-lead-form">Schedule Consultation</a>
+              <Button 
+                size="lg" 
+                className="bg-blue-600 text-white hover:bg-blue-700"
+                onClick={() => {
+                  const element = document.getElementById('ai-lead-form');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Schedule Consultation
               </Button>
             </div>
           </div>
