@@ -85,114 +85,109 @@ export default function VibeCodingLeadForm({
   };
 
   return (
-    <section id="vibe-coding-form" className="container py-6 sm:py-8 md:py-12 px-4">
-      <div className="max-w-2xl mx-auto">
-        <Card className="bg-white/5 backdrop-blur-sm border-white/10">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl sm:text-3xl font-bold">{title}</CardTitle>
-            <CardDescription className="text-base sm:text-lg">
-              {subtitle}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <section id="vibe-coding-form" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <div className="container px-4 sm:px-6">
+        <div className="max-w-2xl mx-auto">
+          <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl sm:text-3xl font-bold">{title}</CardTitle>
+              <CardDescription className="text-base sm:text-lg">
+                {subtitle}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name *</Label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name *</Label>
+                  <Label htmlFor="email">Email *</Label>
                   <Input
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20"
                   />
                 </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name *</Label>
+                  <Label htmlFor="phone">Phone Number</Label>
                   <Input
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
                     onChange={handleChange}
-                    required
-                    className="bg-white/10 border-white/20"
                   />
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email">Email *</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-white/10 border-white/20"
-                />
-              </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="jobTitle">Job Title</Label>
+                    <Input
+                      id="jobTitle"
+                      name="jobTitle"
+                      value={formData.jobTitle}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="companyName">Company Name</Label>
+                    <Input
+                      id="companyName"
+                      name="companyName"
+                      value={formData.companyName}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="phone">Phone Number</Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="bg-white/10 border-white/20"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="jobTitle">Job Title</Label>
-                  <Input
-                    id="jobTitle"
-                    name="jobTitle"
-                    value={formData.jobTitle}
+                  <Label htmlFor="comments">Tell us about your project</Label>
+                  <Textarea
+                    id="comments"
+                    name="comments"
+                    value={formData.comments}
                     onChange={handleChange}
-                    className="bg-white/10 border-white/20"
+                    rows={4}
+                    placeholder="Describe your project idea, goals, or any specific requirements..."
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="companyName">Company Name</Label>
-                  <Input
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    className="bg-white/10 border-white/20"
-                  />
-                </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="comments">Tell us about your project</Label>
-                <Textarea
-                  id="comments"
-                  name="comments"
-                  value={formData.comments}
-                  onChange={handleChange}
-                  rows={4}
-                  className="bg-white/10 border-white/20"
-                  placeholder="Describe your project idea, goals, or any specific requirements..."
-                />
-              </div>
-
-              <Button 
-                type="submit" 
-                className="w-full" 
-                disabled={isSubmitting}
-                size="lg"
-              >
-                {isSubmitting ? "Submitting..." : "Get Started with Vibe Coding"}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+                <Button 
+                  type="submit" 
+                  className="w-full" 
+                  disabled={isSubmitting}
+                  size="lg"
+                >
+                  {isSubmitting ? "Submitting..." : "Get Started with Vibe Coding"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
