@@ -52,85 +52,91 @@ Without automation, that's impossible to deliver at scale.</p>
                 Our Process – From Strategy to Fully-Integrated Systems
               </h2>
               
-              {/* 5 Steps in Columns Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-                {/* Step 1 */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white font-bold text-lg">1</span>
+              {/* 5 Steps in 2 Rows Layout */}
+              <div className="space-y-6 md:space-y-8">
+                {/* First Row - 3 Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                  {/* Step 1 */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-white font-bold text-lg">1</span>
+                      </div>
+                      <h3 className="font-semibold text-white text-lg mb-3">Discovery & Strategy</h3>
                     </div>
-                    <h3 className="font-semibold text-white text-lg mb-3">Discovery & Strategy</h3>
+                    <p className="text-white/90 text-sm">
+                      We start by understanding your sales process, marketing channels, and customer journey. Together, we identify the best opportunities for automation and map a clear strategy.
+                    </p>
                   </div>
-                  <p className="text-white/90 text-sm">
-                    We start by understanding your sales process, marketing channels, and customer journey. Together, we identify the best opportunities for automation and map a clear strategy.
-                  </p>
+
+                  {/* Step 2 */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-white font-bold text-lg">2</span>
+                      </div>
+                      <h3 className="font-semibold text-white text-lg mb-3">Platform Selection</h3>
+                    </div>
+                    <p className="text-white/90 text-sm">
+                      As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.
+                    </p>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-white font-bold text-lg">3</span>
+                      </div>
+                      <h3 className="font-semibold text-white text-lg mb-3">System Build</h3>
+                    </div>
+                    <div className="text-white/90 text-sm">
+                      <p className="mb-3">We design and build your automation system, integrating:</p>
+                      <ul className="space-y-1 list-disc list-inside text-xs">
+                        <li>CRM setup and data migration</li>
+                        <li>Custom workflows and triggers</li>
+                        <li>Email and SMS follow-up sequences</li>
+                        <li>Landing pages and funnels</li>
+                        <li>Appointment scheduling</li>
+                        <li>AI-assisted lead qualification</li>
+                        <li>Integration with existing tools</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Step 2 */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white font-bold text-lg">2</span>
+                {/* Second Row - 2 Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                  {/* Step 4 */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-foreground font-bold text-lg">4</span>
+                      </div>
+                      <h3 className="font-semibold text-white text-lg mb-3">Testing & Training</h3>
                     </div>
-                    <h3 className="font-semibold text-white text-lg mb-3">Platform Selection</h3>
+                    <p className="text-white/90 text-sm">
+                      We fully test every integration and train your team so they can manage, monitor, and optimise your system.
+                    </p>
                   </div>
-                  <p className="text-white/90 text-sm">
-                    As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.
-                  </p>
-                </div>
 
-                {/* Step 3 */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white font-bold text-lg">3</span>
+                  {/* Step 5 */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-destructive rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-white font-bold text-lg">5</span>
+                      </div>
+                      <h3 className="font-semibold text-white text-lg mb-3">Ongoing Optimisation</h3>
                     </div>
-                    <h3 className="font-semibold text-white text-lg mb-3">System Build</h3>
+                    <p className="text-white/90 text-sm">
+                      We can continue to monitor performance, refine workflows, and add new capabilities as your business evolves.
+                    </p>
                   </div>
-                  <div className="text-white/90 text-sm">
-                    <p className="mb-3">We design and build your automation system, integrating:</p>
-                    <ul className="space-y-1 list-disc list-inside text-xs">
-                      <li>CRM setup and data migration</li>
-                      <li>Custom workflows and triggers</li>
-                      <li>Email and SMS follow-up sequences</li>
-                      <li>Landing pages and funnels</li>
-                      <li>Appointment scheduling</li>
-                      <li>AI-assisted lead qualification</li>
-                      <li>Integration with existing tools</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white font-bold text-lg">4</span>
-                    </div>
-                    <h3 className="font-semibold text-white text-lg mb-3">Testing & Training</h3>
-                  </div>
-                  <p className="text-white/90 text-sm">
-                    We fully test every integration and train your team so they can manage, monitor, and optimise your system.
-                  </p>
-                </div>
-
-                {/* Step 5 */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white font-bold text-lg">5</span>
-                    </div>
-                    <h3 className="font-semibold text-white text-lg mb-3">Ongoing Optimisation</h3>
-                  </div>
-                  <p className="text-white/90 text-sm">
-                    We can continue to monitor performance, refine workflows, and add new capabilities as your business evolves.
-                  </p>
                 </div>
               </div>
 
               {/* Why Work With Us Section */}
-              <div className="mt-12 md:mt-16 bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/20">
+              <div className="mt-12 md:mt-16">
                 <h3 className="font-semibold text-white text-xl mb-6 text-center">Why Work With Us</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   <div className="text-white/90 text-sm">
