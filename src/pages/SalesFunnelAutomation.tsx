@@ -135,28 +135,6 @@ Without automation, that's impossible to deliver at scale.</p>
                   </div>
                 </div>
               </div>
-
-              {/* Why Work With Us Section */}
-              <div className="mt-12 md:mt-16">
-                <h3 className="font-semibold text-white text-xl mb-6 text-center">Why Work With Us</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <div className="text-white/90 text-sm">
-                    <strong className="text-white">Certified GHL Agency Owner</strong> – deep expertise with GoHighLevel's CRM, funnel, and automation tools
-                  </div>
-                  <div className="text-white/90 text-sm">
-                    <strong className="text-white">Martech Strategy First</strong> – technology serves the strategy, not the other way around
-                  </div>
-                  <div className="text-white/90 text-sm">
-                    <strong className="text-white">Full Integration Capability</strong> – we connect your sales, marketing, and customer service into one seamless system
-                  </div>
-                  <div className="text-white/90 text-sm">
-                    <strong className="text-white">AI When It's Useful</strong> – we integrate AI features where they drive ROI not because it's trendy
-                  </div>
-                  <div className="text-white/90 text-sm">
-                    <strong className="text-white">Measurable Results</strong> – track every lead, deal, and conversion from a single dashboard
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
