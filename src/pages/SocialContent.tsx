@@ -156,23 +156,7 @@ const SocialContent = () => {
           reverse
         />
 
-        {/* Final CTA */}
-        <SplitSection
-          title="Ready to Grow Your Influence?"
-          description={
-            <>
-              <p className="mb-6">
-                Building your personal brand isn't optional it's a growth multiplier. With our system, you stay authentic, visible, and in demand while staying focused on running your business.
-              </p>
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
-                Start Building Your Brand Today
-              </Button>
-            </>
-          }
-          image={influenceGrowthImage}
-          imageAlt="Influence growth visualization showing expanding network and business opportunities"
-          reverse
-        />
+        {/* Final CTA section removed */}
       </main>
 
       {/* Social Content Lead Form */}
