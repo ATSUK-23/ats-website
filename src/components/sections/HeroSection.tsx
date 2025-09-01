@@ -40,7 +40,7 @@ export const HeroSection = ({
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button 
-            variant="hero" 
+            variant={customButtonClasses?.primary ? "default" : "hero"}
             size="lg" 
             className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.primary || ''}`}
           >
