@@ -41,9 +41,9 @@ Without automation, that's impossible to deliver at scale.</p>
 
         {/* Combined Process Section with Background */}
         <section className="relative py-12 sm:py-16 md:py-24">
-          {/* Background Image with Dark Overlay */}
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ghlPlatformImage})` }}>
-            <div className="absolute inset-0 bg-black/70"></div>
+          {/* Background with Dark Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/30 to-secondary/40">
+            <div className="absolute inset-0 bg-black/80"></div>
           </div>
           
           {/* Content */}

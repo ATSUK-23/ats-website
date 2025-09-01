@@ -82,7 +82,7 @@ const SFALeadForm = () => {
 
       // Send data to Zapier webhook
       try {
-        await fetch('https://hooks.zapier.com/hooks/catch/6684569/uhgqfrk/', {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqraq6/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
