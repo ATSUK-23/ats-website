@@ -75,10 +75,10 @@ export const SiteHeader = () => {
                   <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
+                  <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
+                  <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <Link to="/training" className="w-full text-left py-1.5 hover:text-primary block">Training</Link>
@@ -105,7 +105,7 @@ export const SiteHeader = () => {
 
         <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">AI Solutions</DropdownMenuTrigger>
+            <DropdownMenuTrigger className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">AI Solutions</DropdownMenuTrigger>
             <DropdownMenuContent className="w-80 p-2 bg-gray-800 border-gray-700 shadow-lg">
               {aiItems.map((item) => (
                 <DropdownMenuItem key={item.id} className="p-0">
@@ -120,13 +120,13 @@ export const SiteHeader = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Vibe Coding</Link>
-          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">E‑Commerce</Link>
-          <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Social Content</Link>
-          <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Sales Funnel Automation</Link>
-          <Link to="/training" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Training</Link>
-          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">About</Link>
-          <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap">Contact</button>
+          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Vibe Coding</Link>
+          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">E‑Commerce</Link>
+          <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Sales Funnel Automation</Link>
+          <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Social Content</Link>
+          <Link to="/training" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Training</Link>
+          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">About</Link>
+          <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Contact</button>
         </div>
 
         <div className="flex items-center gap-3 flex-shrink-0 ml-auto md:ml-0">
