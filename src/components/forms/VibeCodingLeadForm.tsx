@@ -41,6 +41,7 @@ export default function VibeCodingLeadForm({
     setIsSubmitting(true);
 
     try {
+      // Submit to Supabase
       const { error } = await supabase
         .from('vibe-coding')
         .insert({
@@ -55,6 +56,32 @@ export default function VibeCodingLeadForm({
         });
 
       if (error) throw error;
+
+      // Send to Zapier webhook
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhgjr5b/', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            jobTitle: formData.jobTitle,
+            companyName: formData.companyName,
+            comments: formData.comments,
+            formTag: 'Vibe-Coding',
+            timestamp: new Date().toISOString(),
+            source: 'Vibe Coding Lead Form'
+          }),
+        });
+      } catch (webhookError) {
+        console.error('Zapier webhook error:', webhookError);
+        // Don't fail the form submission if webhook fails
+      }
 
       toast({
         title: "Thank you!",
