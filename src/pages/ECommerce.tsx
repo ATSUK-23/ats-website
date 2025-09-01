@@ -51,6 +51,7 @@ const ECommerce = () => {
           ctaLink="#ecommerce-form" 
           backgroundImage={globalEcommerceHero} 
           className="text-white" 
+          hideSecondaryButton
         />
 
         {/* Original Split Section */}
