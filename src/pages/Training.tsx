@@ -586,32 +586,12 @@ export default function Training() {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Upskill Your Team?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-              Invest in your team's future with comprehensive AI training that delivers real business results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Book Training Now
-              </Button>
-              <Button size="lg" variant="outline">
-                Need an AI Audit 1st?
-              </Button>
-            </div>
-          </div>
-        </section>
-
         {/* Training Lead Form Section */}
         <section id="training-form" className="py-16">
           <div className="container">
             <TrainingLeadForm />
           </div>
         </section>
-
-        <Contact />
       </main>
 
       <SiteFooter />
