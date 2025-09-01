@@ -326,7 +326,17 @@ export default function Training() {
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-xl">{course.title}</CardTitle>
-                          <Badge variant="outline">{course.level}</Badge>
+                          <Badge 
+                            variant="outline" 
+                            className={
+                              course.level === 'Beginner' ? 'border-green-500 text-green-600 bg-green-50' :
+                              course.level === 'Intermediate' ? 'border-orange-500 text-orange-600 bg-orange-50' :
+                              course.level === 'Advanced' ? 'border-blue-500 text-blue-600 bg-blue-50' :
+                              ''
+                            }
+                          >
+                            {course.level}
+                          </Badge>
                         </div>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground">
                           <div className="flex items-center">
@@ -433,7 +443,7 @@ export default function Training() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="space-y-4">
                 <h3 className="text-xl font-bold">AI Fundamentals</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
