@@ -89,7 +89,7 @@ const SocialContent = () => {
               </p>
             </>
           }
-          image={brandingBenefitsImage}
+          image="/lovable-uploads/84e54615-c062-41eb-b049-ffebd344f1af.png"
           imageAlt="Business growth visualization showing personal brand impact with trust building and networking"
           reverse
         />
