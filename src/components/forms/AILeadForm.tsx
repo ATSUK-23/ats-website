@@ -85,6 +85,32 @@ const AILeadForm = ({ formTag, title, subtitle }: AILeadFormProps) => {
         });
         return;
       }
+
+      // Send data to Zapier webhook
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/6684569/uhgqfrk/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            mobile: formData.mobile,
+            jobTitle: formData.jobTitle,
+            companyName: formData.companyName,
+            comments: formData.comments,
+            formTag: formTag,
+            timestamp: new Date().toISOString(),
+            source: 'AI Audit Form'
+          }),
+        });
+      } catch (zapierError) {
+        console.warn('Zapier webhook failed:', zapierError);
+        // Don't show error to user since Supabase succeeded
+      }
       
       toast({
         title: "Thank you for your submission!",
