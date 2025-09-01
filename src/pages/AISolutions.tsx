@@ -38,7 +38,7 @@ export default function AISolutions() {
               <br /><br />
               That's your AI Brain!
               <br /><br />
-              It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
+              It consolidates everything you know so prospects, customers and every person in your company have instant, accurate answers whenever they need them.
             </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* How It Helps Every Part of Your Business */}
