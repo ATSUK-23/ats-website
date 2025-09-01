@@ -199,6 +199,72 @@ export default function AISolutions() {
 
 
 
+        {/* Our Audit Process */}
+        <section className="container py-6 sm:py-8 md:py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Our Audit Process</h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+                A proven methodology that delivers actionable insights and clear next steps
+              </p>
+            </div>
+            
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+              {/* Stage 1 */}
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">01</div>
+                    <h3 className="text-xl font-semibold mb-3">Initial Consultation</h3>
+                    <p className="text-muted-foreground text-sm">
+                      30-minute discovery call to understand your business goals and current state.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Stage 2 */}
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">02</div>
+                    <h3 className="text-xl font-semibold mb-3">Comprehensive Assessment</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Detailed evaluation of your systems, data, processes, and team capabilities.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Stage 3 */}
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">03</div>
+                    <h3 className="text-xl font-semibold mb-3">Analysis & Strategy</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Expert analysis with customised AI roadmap and implementation recommendations.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Stage 4 */}
+              <Card className="bg-green-500/15 backdrop-blur-sm border-white/20 p-6">
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">04</div>
+                    <h3 className="text-xl font-semibold mb-3">Report & Follow-up</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Detailed report delivery with ongoing consultation and support options.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* 6-Stage AI Audit Process */}
         <section className="container py-6 sm:py-8 md:py-12 px-4">
           <div className="max-w-6xl mx-auto">
