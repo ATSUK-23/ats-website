@@ -39,22 +39,22 @@ export const HeroSection = ({
         </p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button 
-            variant={customButtonClasses?.primary ? "default" : "hero"}
-            size="lg" 
-            className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.primary || ''}`}
-          >
-            Start AI Assessment
-          </Button>
           <a href={ctaLink}>
             <Button 
-              variant="outline" 
+              variant={customButtonClasses?.primary ? "default" : "hero"}
               size="lg" 
-              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
+              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.primary || ''}`}
             >
-              Schedule Consultation
+              {ctaText}
             </Button>
           </a>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
+          >
+            Schedule Consultation
+          </Button>
         </div>
         
         {children}
