@@ -31,7 +31,7 @@ export default function AISolutions() {
         <HeroSection 
           title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" 
           subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" 
-          ctaText="Book an Introduction Call" 
+          ctaText="Start AI Assessment" 
           ctaLink="#ai-lead-form" 
           backgroundImage={aiBrainBackground}
           className="py-16 md:py-24"
