@@ -27,7 +27,7 @@ const SplitSection: React.FC<SplitSectionProps> = ({ id, title, description, ima
 
         {/* Image */}
         <div className={`${reverse ? "lg:order-1" : "lg:order-2"} mt-6 lg:mt-0`}>
-          <div className="rounded-lg sm:rounded-xl overflow-hidden bg-card shadow-sm">
+          <div className="rounded-lg sm:rounded-xl overflow-hidden">
             <img
               src={image}
               alt={imageAlt}
