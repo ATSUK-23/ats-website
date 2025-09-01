@@ -198,7 +198,7 @@ export default function AISolutions() {
             </div>
             
             <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 mb-8">
-              Start Free Assessment
+              Start AI Assessment
             </Button>
           </div>
         </section>
@@ -381,25 +381,6 @@ export default function AISolutions() {
           <AILeadForm formTag="Ai-Audit" title="Ready to Unlock Your AI Brain?" subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results." />
         </div>
 
-        {/* Final CTA */}
-        <section className="relative py-8 sm:py-10 md:py-16 overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <img src={aiBrainBackground} alt="" className="w-full h-full object-cover opacity-30" />
-            <div className="absolute inset-0 bg-background/80" />
-          </div>
-          
-          <div className="container text-center relative z-10 px-4">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Business Today
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Join hundreds of businesses already using AI to grow faster and operate smarter.
-            </p>
-            <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-              Book Your Discovery Call
-            </Button>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />
