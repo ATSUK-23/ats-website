@@ -188,7 +188,7 @@ export default function AISolutions() {
               </div>
             </div>
             
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 mb-8">
+            <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 mb-8">
               Start Free Assessment
             </Button>
           </div>
