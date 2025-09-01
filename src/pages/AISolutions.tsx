@@ -33,15 +33,13 @@ export default function AISolutions() {
         </HeroSection>
 
         {/* AI Brain Power Section */}
-        <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={
-            <p>
+        <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={<p>
               Imagine if all your company's knowledge from your team's expertise to sales decks, onboarding guides, and customer insights was captured in one intelligent system, available 24/7.
               <br /><br />
               That's your AI Brain!
               <br /><br />
               It consolidates everything you know so prospects and customers get instant, accurate answers whenever they need them.
-            </p>
-          } image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
+            </p>} image="/lovable-uploads/d39c706b-cc98-4891-a1c7-7bf1e885d1c0.png" imageAlt="AI Brain technology visualization showing circuit patterns and neural networks" />
 
         {/* How It Helps Every Part of Your Business */}
         <section className="container py-4 sm:py-6 md:py-8 px-4">
@@ -92,12 +90,10 @@ export default function AISolutions() {
           </div>
           
           <div className="text-center max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-foreground">The Next Step: Your AI Audit</h3>
-            <p className="text-base sm:text-lg text-muted-foreground mb-6">
-              Before we build your AI Brain, we start with a 6-stage AI Audit. It maps your systems, identifies high-value opportunities, and delivers a clear roadmap with costs and timelines.
-            </p>
+            
+            
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="#ai-form">Book Your AI Audit Discovery Call Today</a>
+              
             </Button>
           </div>
         </section>
@@ -309,11 +305,7 @@ export default function AISolutions() {
 
 
         {/* Lead Form */}
-        <AILeadForm 
-          formTag="Ai-Audit"
-          title="Ready to Unlock Your AI Brain?"
-          subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results."
-        />
+        <AILeadForm formTag="Ai-Audit" title="Ready to Unlock Your AI Brain?" subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results." />
 
         {/* Final CTA */}
         <section className="relative py-8 sm:py-10 md:py-16 overflow-hidden">
