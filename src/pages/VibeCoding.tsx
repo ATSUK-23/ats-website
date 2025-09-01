@@ -3,6 +3,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
+import VibeCodingLeadForm from "@/components/forms/VibeCodingLeadForm";
 import { Button } from "@/components/ui/button";
 import vibeHero from "@/assets/vibe-hero.jpg";
 import vibeWhatIs from "@/assets/vibe-what-is.jpg";
@@ -90,6 +91,11 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             </ul>
           </div>
           <p className="mt-4 text-muted-foreground">By the end of the session, you'll have the foundation of your website or app ready to expand.</p>
+          <div className="mt-6">
+            <a href="#vibe-coding-form">
+              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
+            </a>
+          </div>
         </SplitSection>
 
         {/* Full Process */}
@@ -123,11 +129,11 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             <a href="https://theepitome.co.uk/ai-prototyping-workshop" target="_blank" rel="noreferrer">
               <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Reserve Your Workshop Place</Button>
             </a>
-            <a href="#contact">
-              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
-            </a>
           </div>
         </SplitSection>
+
+        {/* Vibe Coding Lead Form */}
+        <VibeCodingLeadForm />
       </main>
       <SiteFooter />
 
