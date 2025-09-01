@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface VibeCodingLeadFormProps {
   title?: string;
@@ -17,6 +18,8 @@ export default function VibeCodingLeadForm({
   subtitle = "Get in touch with our Vibe Coding experts and turn your idea into reality."
 }: VibeCodingLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
@@ -84,11 +87,15 @@ export default function VibeCodingLeadForm({
       }
 
       toast({
-        title: "Thank you!",
-        description: "Your submission has been received. We'll be in touch soon!",
+        title: "Thank you for your submission!",
+        description: "We'll be in touch soon to discuss your Vibe Coding project needs.",
       });
 
-      // Reset form
+      // Store name and show success state
+      setSubmittedName(formData.firstName);
+      setIsSubmitted(true);
+      
+      // Reset form data but keep success state
       setFormData({
         firstName: "",
         lastName: "",
@@ -111,88 +118,193 @@ export default function VibeCodingLeadForm({
     }
   };
 
+  // Success Message Component
+  const SuccessMessage = () => (
+    <CardContent className="text-center py-16">
+      <div className="space-y-8">
+        {/* Success Icon */}
+        <div className="flex justify-center">
+          <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg">
+            <CheckCircle2 className="w-12 h-12 text-white" />
+          </div>
+        </div>
+
+        {/* Thank You Message */}
+        <div className="space-y-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+            Thank You, {submittedName}!
+          </h3>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Your project application has been successfully submitted. We're excited to help you build your vision with Vibe Coding!
+          </p>
+        </div>
+
+        {/* What Happens Next */}
+        <div className="bg-card/50 border border-primary/20 rounded-xl p-8 max-w-3xl mx-auto">
+          <h4 className="text-xl font-semibold mb-6 text-foreground">What happens next?</h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Within 24 Hours</h5>
+                <p className="text-sm text-muted-foreground">Our Vibe Coding team will review your project and reach out</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Discovery Call</h5>
+                <p className="text-sm text-muted-foreground">We'll schedule a consultation to understand your vision</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <FileText className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Project Proposal</h5>
+                <p className="text-sm text-muted-foreground">Receive your custom development roadmap and timeline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            In the meantime, explore our Vibe Coding workshops and success stories
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" size="lg" asChild>
+              <a href="/training">Vibe Coding Workshops</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/about">Our Success Stories</a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  );
+
   return (
     <section id="vibe-coding-form" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="container px-4 sm:px-6">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl sm:text-3xl font-bold">{title}</CardTitle>
-              <CardDescription className="text-base sm:text-lg">
+            <CardHeader className="text-center pb-8">
+              <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                {title}
+              </CardTitle>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 {subtitle}
-              </CardDescription>
+              </p>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            {/* Conditional Content */}
+            {isSubmitted ? (
+              <SuccessMessage />
+            ) : (
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Fields */}
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name *</Label>
+                    <Label htmlFor="firstName" className="text-sm font-medium">
+                      First Name *
+                    </Label>
                     <Input
                       id="firstName"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       required
+                      className="bg-background/50"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Label htmlFor="lastName" className="text-sm font-medium">
+                      Last Name *
+                    </Label>
                     <Input
                       id="lastName"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       required
+                      className="bg-background/50"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Contact Fields */}
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="jobTitle">Job Title</Label>
+                    <Label htmlFor="email" className="text-sm font-medium">
+                      Email *
+                    </Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="bg-background/50"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-sm font-medium">
+                      Phone Number
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="bg-background/50"
+                    />
+                  </div>
+                </div>
+
+                {/* Job Fields */}
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="jobTitle" className="text-sm font-medium">
+                      Job Title
+                    </Label>
                     <Input
                       id="jobTitle"
                       name="jobTitle"
                       value={formData.jobTitle}
                       onChange={handleChange}
+                      className="bg-background/50"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="companyName">Company Name</Label>
+                    <Label htmlFor="companyName" className="text-sm font-medium">
+                      Company Name
+                    </Label>
                     <Input
                       id="companyName"
                       name="companyName"
                       value={formData.companyName}
                       onChange={handleChange}
+                      className="bg-background/50"
                     />
                   </div>
                 </div>
 
+                {/* Comments */}
                 <div className="space-y-2">
-                  <Label htmlFor="comments">Tell us about your project</Label>
+                  <Label htmlFor="comments" className="text-sm font-medium">
+                    Tell us about your project
+                  </Label>
                   <Textarea
                     id="comments"
                     name="comments"
@@ -200,19 +312,24 @@ export default function VibeCodingLeadForm({
                     onChange={handleChange}
                     rows={4}
                     placeholder="Describe your project idea, goals, or any specific requirements..."
+                    className="bg-background/50 min-h-[100px]"
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full" 
-                  disabled={isSubmitting}
-                  size="lg"
-                >
-                  {isSubmitting ? "Submitting..." : "Get Started with Vibe Coding"}
-                </Button>
+                {/* Submit Button */}
+                <div className="pt-6">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full text-base font-semibold"
+                  >
+                    {isSubmitting ? "Submitting..." : "Get Started with Vibe Coding"}
+                  </Button>
+                </div>
               </form>
-            </CardContent>
+              </CardContent>
+            )}
           </Card>
         </div>
       </div>
