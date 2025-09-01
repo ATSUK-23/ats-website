@@ -4,11 +4,11 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import { Button } from "@/components/ui/button";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
+import SocialContentLeadForm from "@/components/forms/SocialContentLeadForm";
 import heroImage from "@/assets/social-hero.jpg";
 import brandingBenefitsImage from "@/assets/personal-branding-benefits.jpg";
 import contentSystemImage from "@/assets/content-system.jpg";
 import authenticContentImage from "@/assets/authentic-content.jpg";
-import doneForYouImage from "@/assets/done-for-you.jpg";
 import influenceGrowthImage from "@/assets/influence-growth.jpg";
 
 const SocialContent = () => {
@@ -151,7 +151,7 @@ const SocialContent = () => {
               </p>
             </>
           }
-          image={doneForYouImage}
+          image="/lovable-uploads/9046c80a-b2b7-4a3d-b928-5fe896aa691e.png"
           imageAlt="Done-for-you service showing expert team handling content while business owner focuses on core business"
           reverse
         />
@@ -174,6 +174,9 @@ const SocialContent = () => {
           reverse
         />
       </main>
+
+      {/* Social Content Lead Form */}
+      <SocialContentLeadForm />
 
       <SiteFooter />
     </div>
