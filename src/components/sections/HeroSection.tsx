@@ -46,7 +46,7 @@ export const HeroSection = ({
           >
             Start AI Assessment
           </Button>
-          <a href={ctaLink} target="_blank" rel="noreferrer">
+          <a href={ctaLink}>
             <Button 
               variant="outline" 
               size="lg" 
