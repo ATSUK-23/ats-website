@@ -166,24 +166,24 @@ export default function AISolutions() {
           </div>
           
           <div className="text-center mt-12">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Start with Our Free AI Assessment</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-400">Start with Our Free AI Assessment</h3>
             <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
               Take our comprehensive 23-question assessment to evaluate your business across 6 key AI domains and receive a personalised roadmap for AI adoption.
             </p>
             
             <div className="grid gap-6 sm:gap-8 sm:grid-cols-3 max-w-4xl mx-auto mb-8">
               <div className="text-center">
-                <h4 className="text-lg font-semibold mb-2">Comprehensive Analysis</h4>
+                <h4 className="text-lg font-semibold mb-2 text-blue-300">Comprehensive Analysis</h4>
                 <p className="text-sm text-muted-foreground">Evaluate readiness across 6 critical business domains</p>
               </div>
               
               <div className="text-center">
-                <h4 className="text-lg font-semibold mb-2">Personalised Report</h4>
+                <h4 className="text-lg font-semibold mb-2 text-blue-300">Personalised Report</h4>
                 <p className="text-sm text-muted-foreground">Detailed insights tailored to your business needs</p>
               </div>
               
               <div className="text-center">
-                <h4 className="text-lg font-semibold mb-2">Expert Consultation</h4>
+                <h4 className="text-lg font-semibold mb-2 text-blue-300">Expert Consultation</h4>
                 <p className="text-sm text-muted-foreground">Free consultation to discuss results and next steps</p>
               </div>
             </div>
