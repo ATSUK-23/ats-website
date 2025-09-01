@@ -38,7 +38,7 @@ export const HeroSection = ({
             Start AI Assessment
           </Button>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base border-white/20 text-white hover:bg-white/10">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700">
               Schedule Consultation
             </Button>
           </a>
