@@ -102,12 +102,12 @@ export default function AISolutions() {
           </div>
         </section>
 
-        {/* Discovery Call Section */}
+        {/* Why Choose Our AI Audit Section */}
         <section className="container py-8 sm:py-12 md:py-16 px-4">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Let's Start With a Discovery Call</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Why Choose Our AI Audit?</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Before we dive into an AI Audit, we begin with a 45 - 60 minute discovery call to align on your goals, challenges, and opportunities. This ensures the audit is tailored to your business.
+              Professional assessment that reveals your AI opportunities and creates a clear path forward
             </p>
           </div>
           
@@ -115,32 +115,32 @@ export default function AISolutions() {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <Target className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-lg font-semibold mb-2">Understand Your Business</h3>
-                <p className="text-sm text-muted-foreground">We'll discuss your business model, current priorities, and the challenges you're facing.</p>
+                <h3 className="text-lg font-semibold mb-2">Strategic AI Planning</h3>
+                <p className="text-sm text-muted-foreground">Data-driven AI strategies aligned with your business objectives and growth plans.</p>
               </CardContent>
             </Card>
             
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-lg font-semibold mb-2">Identify AI Opportunities</h3>
-                <p className="text-sm text-muted-foreground">Together, we'll explore where AI might add the most value, whether it's growth, efficiency, or customer experience.</p>
+                <h3 className="text-lg font-semibold mb-2">Risk Assessment</h3>
+                <p className="text-sm text-muted-foreground">Identify potential risks and compliance requirements before implementation.</p>
               </CardContent>
             </Card>
             
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <RotateCcw className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-lg font-semibold mb-2">Assess Current Readiness</h3>
-                <p className="text-sm text-muted-foreground">We'll get a high-level view of your existing systems, data, and any AI initiatives already in motion.</p>
+                <h3 className="text-lg font-semibold mb-2">ROI Analysis</h3>
+                <p className="text-sm text-muted-foreground">Clear understanding of investment requirements and expected returns.</p>
               </CardContent>
             </Card>
             
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <Share2 className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-lg font-semibold mb-2">Define Next Steps</h3>
-                <p className="text-sm text-muted-foreground">By the end of the call, you'll have clarity on whether an AI Audit is the right move and how we'd structure it for you.</p>
+                <h3 className="text-lg font-semibold mb-2">Implementation Roadmap</h3>
+                <p className="text-sm text-muted-foreground">Detailed step-by-step plan for successful AI adoption in your business.</p>
               </CardContent>
             </Card>
           </div>
