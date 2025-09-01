@@ -32,8 +32,8 @@ export default function AISolutions() {
           title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" 
           subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" 
           ctaText="Book an Introduction Call" 
-          ctaLink="#contact" 
-          backgroundImage={aiBrainBackground} 
+          ctaLink="#ai-lead-form" 
+          backgroundImage={aiBrainBackground}
           className="py-16 md:py-24"
           customButtonClasses={{
             primary: "bg-green-700 text-white hover:bg-green-800",
@@ -274,7 +274,7 @@ export default function AISolutions() {
             
             <div className="text-center mt-8">
               <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700" asChild>
-                <a href="#contact">Schedule Consultation</a>
+                <a href="#ai-lead-form">Schedule Consultation</a>
               </Button>
             </div>
           </div>
@@ -368,7 +368,9 @@ export default function AISolutions() {
 
 
         {/* Lead Form */}
-        <AILeadForm formTag="Ai-Audit" title="Ready to Unlock Your AI Brain?" subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results." />
+        <div id="ai-lead-form">
+          <AILeadForm formTag="Ai-Audit" title="Ready to Unlock Your AI Brain?" subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results." />
+        </div>
 
         {/* Final CTA */}
         <section className="relative py-8 sm:py-10 md:py-16 overflow-hidden">
