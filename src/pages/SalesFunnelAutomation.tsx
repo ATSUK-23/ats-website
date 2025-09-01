@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import { HeroSection } from "@/components/sections/HeroSection";
+import SFALeadForm from "@/components/forms/SFALeadForm";
 import SplitSection from "@/components/sections/SplitSection";
 import salesHeroImage from "@/assets/sales-automation-hero.jpg";
 import automationBenefitsImage from "@/assets/automation-benefits.jpg";
@@ -59,8 +60,8 @@ Without automation, that's impossible to deliver at scale.</p>
                   {/* Step 1 */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white font-bold text-lg">1</span>
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-primary-foreground font-bold text-lg">1</span>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">Discovery & Strategy</h3>
                     </div>
@@ -73,7 +74,7 @@ Without automation, that's impossible to deliver at scale.</p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                     <div className="text-center mb-4">
                       <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white font-bold text-lg">2</span>
+                        <span className="text-primary-foreground font-bold text-lg">2</span>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">Platform Selection</h3>
                     </div>
@@ -85,8 +86,8 @@ Without automation, that's impossible to deliver at scale.</p>
                   {/* Step 3 */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white font-bold text-lg">3</span>
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-primary-foreground font-bold text-lg">3</span>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">System Build</h3>
                     </div>
@@ -110,8 +111,8 @@ Without automation, that's impossible to deliver at scale.</p>
                   {/* Step 4 */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-foreground font-bold text-lg">4</span>
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-primary-foreground font-bold text-lg">4</span>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">Testing & Training</h3>
                     </div>
@@ -123,8 +124,8 @@ Without automation, that's impossible to deliver at scale.</p>
                   {/* Step 5 */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="w-12 h-12 bg-destructive rounded-full flex items-center justify-center mx-auto mb-3">
-                        <span className="text-white font-bold text-lg">5</span>
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span className="text-primary-foreground font-bold text-lg">5</span>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">Ongoing Optimisation</h3>
                     </div>
@@ -171,21 +172,7 @@ Without automation, that's impossible to deliver at scale.</p>
               <p className="font-medium">The result: More time for you and your team to focus on high-value tasks while your system keeps working in the background.</p>
             </div>} />
 
-        <section className="container py-12 sm:py-16 md:py-24 text-center px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Let's Build a Sales & Marketing Machine for Your Business
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8">
-              We'll work with you to create an automation strategy, select the right tech, and build an integrated system that turns prospects into customers automatically.
-            </p>
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button size="lg" className="text-sm sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto">
-                Book Your Consultation
-              </Button>
-            </a>
-          </div>
-        </section>
+        <SFALeadForm />
       </main>
 
       <SiteFooter />
