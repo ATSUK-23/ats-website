@@ -28,9 +28,18 @@ export default function AISolutions() {
 
       <main>
         {/* Hero Section */}
-        <HeroSection title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" ctaText="Book an Introduction Call" ctaLink="#contact" backgroundImage={aiBrainBackground} className="py-16 md:py-24">
-          
-        </HeroSection>
+        <HeroSection 
+          title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" 
+          subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" 
+          ctaText="Book an Introduction Call" 
+          ctaLink="#contact" 
+          backgroundImage={aiBrainBackground} 
+          className="py-16 md:py-24"
+          customButtonClasses={{
+            primary: "bg-green-700 text-white hover:bg-green-800",
+            secondary: "bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700"
+          }}
+        />
 
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={<p>

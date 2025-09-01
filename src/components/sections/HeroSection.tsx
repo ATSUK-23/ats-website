@@ -7,6 +7,10 @@ interface HeroSectionProps {
   backgroundImage?: string;
   className?: string;
   children?: React.ReactNode;
+  customButtonClasses?: {
+    primary?: string;
+    secondary?: string;
+  };
 }
 export const HeroSection = ({
   title,
@@ -15,7 +19,8 @@ export const HeroSection = ({
   ctaLink,
   backgroundImage,
   className = "",
-  children
+  children,
+  customButtonClasses
 }: HeroSectionProps) => {
   return <section className={`relative overflow-hidden ${className}`} style={{
     backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
@@ -34,11 +39,19 @@ export const HeroSection = ({
         </p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.primary || ''}`}
+          >
             Start AI Assessment
           </Button>
           <a href={ctaLink} target="_blank" rel="noreferrer">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
+            >
               Schedule Consultation
             </Button>
           </a>
