@@ -329,9 +329,9 @@ export default function Training() {
                           <Badge 
                             variant="outline" 
                             className={
-                              course.level === 'Beginner' ? 'border-green-500 text-green-600 bg-green-50' :
-                              course.level === 'Intermediate' ? 'border-orange-500 text-orange-600 bg-orange-50' :
-                              course.level === 'Advanced' ? 'border-blue-500 text-blue-600 bg-blue-50' :
+                              course.level === 'Beginner' ? 'bg-green-500 border-white text-white' :
+                              course.level === 'Intermediate' ? 'bg-orange-500 border-white text-white' :
+                              course.level === 'Advanced' ? 'bg-blue-500 border-white text-white' :
                               ''
                             }
                           >
