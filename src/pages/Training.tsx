@@ -7,6 +7,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import HeroSection from "@/components/sections/HeroSection";
 import SplitSection from "@/components/sections/SplitSection";
 import Contact from "@/components/sections/Contact";
+import TrainingLeadForm from "@/components/forms/TrainingLeadForm";
 import { Clock, Users, Star, Award, BookOpen, Zap } from "lucide-react";
 
 const trainingHeroBackground = "/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png";
@@ -237,9 +238,10 @@ export default function Training() {
           title="Transform Your Team From AI Curious To AI Competent"
           subtitle="Comprehensive training programs that build AI literacy, practical skills, and strategic understanding across your organisation."
           ctaText="Speak to a Training Specialist"
-          ctaLink="#contact"
+          ctaLink="#training-form"
           backgroundImage={trainingHeroBackground}
           className="py-8 md:py-12"
+          hideSecondaryButton={true}
         >
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -602,6 +604,12 @@ export default function Training() {
           </div>
         </section>
 
+        {/* Training Lead Form Section */}
+        <section id="training-form" className="py-16">
+          <div className="container">
+            <TrainingLeadForm />
+          </div>
+        </section>
 
         <Contact />
       </main>
