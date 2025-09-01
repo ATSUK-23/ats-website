@@ -38,50 +38,121 @@ Without automation, that's impossible to deliver at scale.</p>
               <p>But the key is <em>right</em>. Automation is only powerful when it's tailored to your business not just stacked with tech for the sake of it.</p>
             </div>} />
 
-        <SplitSection title="Our Process – From Strategy to Fully-Integrated Systems" image={ghlPlatformImage} imageAlt="GoHighLevel platform and automation system setup" reverse description={<div className="space-y-6">
-              <div>
-                <h3 className="font-semibold mb-2">Step 1 – Discovery & Strategy</h3>
-                <p className="text-sm">We start by understanding your sales process, marketing channels, and customer journey. Together, we identify the best opportunities for automation and map a clear strategy.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Step 2 – Platform Selection</h3>
-                <p className="text-sm">As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Step 3 – System Build</h3>
-                <p className="text-sm mb-2">We design and build your automation system, integrating:</p>
-                <ul className="text-sm space-y-1 list-disc list-inside">
-                  <li>CRM setup and data migration</li>
-                  <li>Custom workflows and triggers</li>
-                  <li>Email and SMS follow-up sequences</li>
-                  <li>Landing pages and funnels</li>
-                  <li>Appointment scheduling</li>
-                  <li>AI-assisted lead qualification and messaging (when relevant)</li>
-                  <li>Integration with existing tools (e.g., payment processors, e-commerce, analytics)</li>
-                </ul>
-              </div>
-            </div>} />
+        {/* Combined Process Section with Background */}
+        <section className="relative py-12 sm:py-16 md:py-24">
+          {/* Background Image with Dark Overlay */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ghlPlatformImage})` }}>
+            <div className="absolute inset-0 bg-black/70"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="container relative z-10 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-white">
+                Our Process – From Strategy to Fully-Integrated Systems
+              </h2>
+              
+              {/* 5 Steps in Columns Layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+                {/* Step 1 */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white font-bold text-lg">1</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-lg mb-3">Discovery & Strategy</h3>
+                  </div>
+                  <p className="text-white/90 text-sm">
+                    We start by understanding your sales process, marketing channels, and customer journey. Together, we identify the best opportunities for automation and map a clear strategy.
+                  </p>
+                </div>
 
-        <SplitSection title="Complete Implementation & Support" image={systemIntegrationImage} imageAlt="System integration and testing process" description={<div className="space-y-6">
-              <div>
-                <h3 className="font-semibold mb-2">Step 4 – Testing & Training</h3>
-                <p className="text-sm">We fully test every integration and train your team so they can manage, monitor, and optimise your system.</p>
+                {/* Step 2 */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-lg mb-3">Platform Selection</h3>
+                  </div>
+                  <p className="text-white/90 text-sm">
+                    As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.
+                  </p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-lg mb-3">System Build</h3>
+                  </div>
+                  <div className="text-white/90 text-sm">
+                    <p className="mb-3">We design and build your automation system, integrating:</p>
+                    <ul className="space-y-1 list-disc list-inside text-xs">
+                      <li>CRM setup and data migration</li>
+                      <li>Custom workflows and triggers</li>
+                      <li>Email and SMS follow-up sequences</li>
+                      <li>Landing pages and funnels</li>
+                      <li>Appointment scheduling</li>
+                      <li>AI-assisted lead qualification</li>
+                      <li>Integration with existing tools</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white font-bold text-lg">4</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-lg mb-3">Testing & Training</h3>
+                  </div>
+                  <p className="text-white/90 text-sm">
+                    We fully test every integration and train your team so they can manage, monitor, and optimise your system.
+                  </p>
+                </div>
+
+                {/* Step 5 */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="text-center mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white font-bold text-lg">5</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-lg mb-3">Ongoing Optimisation</h3>
+                  </div>
+                  <p className="text-white/90 text-sm">
+                    We can continue to monitor performance, refine workflows, and add new capabilities as your business evolves.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold mb-2">Step 5 – Ongoing Optimisation</h3>
-                <p className="text-sm">We can continue to monitor performance, refine workflows, and add new capabilities as your business evolves.</p>
+
+              {/* Why Work With Us Section */}
+              <div className="mt-12 md:mt-16 bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/20">
+                <h3 className="font-semibold text-white text-xl mb-6 text-center">Why Work With Us</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="text-white/90 text-sm">
+                    <strong className="text-white">Certified GHL Agency Owner</strong> – deep expertise with GoHighLevel's CRM, funnel, and automation tools
+                  </div>
+                  <div className="text-white/90 text-sm">
+                    <strong className="text-white">Martech Strategy First</strong> – technology serves the strategy, not the other way around
+                  </div>
+                  <div className="text-white/90 text-sm">
+                    <strong className="text-white">Full Integration Capability</strong> – we connect your sales, marketing, and customer service into one seamless system
+                  </div>
+                  <div className="text-white/90 text-sm">
+                    <strong className="text-white">AI When It's Useful</strong> – we integrate AI features where they drive ROI not because it's trendy
+                  </div>
+                  <div className="text-white/90 text-sm">
+                    <strong className="text-white">Measurable Results</strong> – track every lead, deal, and conversion from a single dashboard
+                  </div>
+                </div>
               </div>
-              <div className="mt-8">
-                <h3 className="font-semibold mb-4">Why Work With Us</h3>
-                <ul className="space-y-2 text-sm">
-                  <li><strong>Certified GHL Agency Owner</strong> – deep expertise with GoHighLevel's CRM, funnel, and automation tools</li>
-                  <li><strong>Martech Strategy First</strong> – technology serves the strategy, not the other way around</li>
-                  <li><strong>Full Integration Capability</strong> – we connect your sales, marketing, and customer service into one seamless system</li>
-                  <li><strong>AI When It's Useful</strong> – we integrate AI features where they drive ROI not because it's trendy</li>
-                  <li><strong>Measurable Results</strong> – track every lead, deal, and conversion from a single dashboard</li>
-                </ul>
-              </div>
-            </div>} />
+            </div>
+          </div>
+        </section>
 
         <SplitSection title="Your Business, Automated" image={businessAutomatedImage} imageAlt="Business growth through automation and increased revenue" reverse description={<div className="space-y-4">
               <p>With the right sales and marketing automation system, you can:</p>
