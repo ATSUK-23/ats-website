@@ -14,6 +14,7 @@ import About from "./pages/About";
 import AISolutions from "./pages/AISolutions";
 import Agents from "./pages/Agents";
 import VoiceAI from "./pages/VoiceAI";
+import AIAssessment from "./pages/AIAssessment";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/social-content" element={<SocialContent />} />
             <Route path="/sales-funnel-automation" element={<SalesFunnelAutomation />} />
             <Route path="/ai-audit" element={<AISolutions />} />
+            <Route path="/ai-assessment" element={<AIAssessment />} />
             <Route path="/agents" element={<Agents />} />
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
