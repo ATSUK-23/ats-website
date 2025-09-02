@@ -427,7 +427,7 @@ export default function AIAssessment() {
                 Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
               </p>
               
-              <Button size="lg" onClick={() => setCurrentView('domains')} className="mb-4 bg-primary hover:bg-primary/90">
+              <Button size="lg" onClick={() => setCurrentView('assessment')} className="mb-4 bg-primary hover:bg-primary/90">
                 Start Your Assessment
               </Button>
               
@@ -453,18 +453,20 @@ export default function AIAssessment() {
                   {assessmentData.map((domain, index) => {
                     const IconComponent = domain.icon;
                     return (
-                      <Card key={index} className="text-left hover:shadow-lg transition-shadow bg-card/50 backdrop-blur">
+                      <Card key={index} className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur hover:bg-card/80 group cursor-pointer">
                         <CardContent className="p-6">
                           <div className="flex items-center gap-3 mb-3">
-                            <IconComponent className="h-6 w-6 text-primary" />
-                            <h3 className="font-semibold">{domain.domain}</h3>
+                            <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                              <IconComponent className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                            </div>
+                            <h3 className="font-semibold group-hover:text-primary transition-colors duration-300">{domain.domain}</h3>
                           </div>
-                          <p className="text-sm text-muted-foreground mb-3">
+                          <p className="text-sm text-muted-foreground mb-3 group-hover:text-muted-foreground/80 transition-colors duration-300">
                             {domain.description}
                           </p>
-                          <div className="text-xs text-muted-foreground space-y-1 border-t pt-3">
-                            <div>{domain.questions} questions</div>
-                            <div>{domain.weight}% weight</div>
+                          <div className="text-xs text-muted-foreground space-y-1 border-t pt-3 group-hover:border-primary/20 transition-colors duration-300">
+                            <div className="font-medium">{domain.questions} questions</div>
+                            <div className="font-medium">{domain.weight}% weight</div>
                           </div>
                         </CardContent>
                       </Card>
