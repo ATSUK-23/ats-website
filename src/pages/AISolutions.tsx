@@ -56,7 +56,7 @@ export default function AISolutions() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How It Helps Every Part of Your Business</h2>
           </div>
           
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8 sm:mb-12">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-12">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold mb-3 text-foreground">Marketing</h3>
@@ -78,22 +78,6 @@ export default function AISolutions() {
                 <h3 className="text-lg font-semibold mb-3 text-foreground">Customer Support</h3>
                 <h4 className="text-sm font-medium mb-2 text-primary">Always On</h4>
                 <p className="text-sm text-muted-foreground">Delivers instant, accurate answers 24/7 and routes complex queries to the right person.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-lg font-semibold mb-3 text-foreground">Onboarding & Training</h3>
-                <h4 className="text-sm font-medium mb-2 text-primary">Scalable Support</h4>
-                <p className="text-sm text-muted-foreground">Provides step-by-step guides and training resources, making growth and adoption easier for clients and staff.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-lg font-semibold mb-3 text-foreground">Growth</h3>
-                <h4 className="text-sm font-medium mb-2 text-primary">Clear Next Steps</h4>
-                <p className="text-sm text-muted-foreground">Guides prospects naturally to book calls, explore services, or purchase like a personal sales assistant for every customer.</p>
               </CardContent>
             </Card>
             
