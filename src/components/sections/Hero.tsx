@@ -22,7 +22,7 @@ Not the Other Way Around</h1>
         <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don't need.</p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
+          <a href="/ai-audit">
             <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book Your Business Automation Audit</Button>
           </a>
           <a href="#contact">
