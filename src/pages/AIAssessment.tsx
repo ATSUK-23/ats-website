@@ -455,17 +455,17 @@ export default function AIAssessment() {
                     return (
                       <Card key={index} className="relative bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 group cursor-pointer">
                         <CardContent className="p-6">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
+                          <div className="flex items-start gap-3 mb-3">
+                            <div className="p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
                               <IconComponent className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
                             </div>
-                            <h3 className="font-semibold text-white group-hover:text-white/90 transition-colors duration-300">{domain.domain}</h3>
+                            <h3 className="font-semibold text-white group-hover:text-white/90 transition-colors duration-300 text-left leading-tight">{domain.domain}</h3>
                           </div>
                           <p className="text-sm text-white/80 mb-3 group-hover:text-white/70 transition-colors duration-300">
                             {domain.description}
                           </p>
                           <div className="text-xs space-y-1 border-t border-white/20 pt-3 group-hover:border-white/30 transition-colors duration-300">
-                            <div className="text-gray-400 font-medium">{domain.questions} questions</div>
+                            <div className="text-green-400 font-medium">{domain.questions} questions</div>
                             <div className="text-red-400 font-medium">{domain.weight}% weight</div>
                           </div>
                         </CardContent>
