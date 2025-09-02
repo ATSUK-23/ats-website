@@ -3,6 +3,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import Hero from "@/components/sections/Hero";
 import Contact from "@/components/sections/Contact";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import SplitSection from "@/components/sections/SplitSection";
 import whyImg from "@/assets/why-choose-us.jpg";
 import auditImg from "@/assets/audit-process.jpg";
@@ -53,9 +54,9 @@ const Index = () => {
             </ul>
           </div>
           <div className="mt-6">
-            <a href="/ai-audit">
+            <Link to="/ai-audit">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">Book Your Audit Now</Button>
-            </a>
+            </Link>
           </div>
         </SplitSection>
 
@@ -126,9 +127,9 @@ const Index = () => {
               Let’s design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <a href="/ai-audit">
+              <Link to="/ai-audit">
                 <Button variant="secondary" size="lg">Book Your Business Automation Audit</Button>
-              </a>
+              </Link>
               <a href="#contact">
                 <Button variant="outline" size="lg" className="bg-transparent">Schedule a Call</Button>
               </a>

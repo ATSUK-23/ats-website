@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 const heroImageUrl = "/lovable-uploads/ad4bdc88-175b-440a-b084-366efb956989.png";
 
 export const Hero = () => {
@@ -22,9 +23,9 @@ Not the Other Way Around</h1>
         <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don't need.</p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <a href="/ai-audit">
+          <Link to="/ai-audit">
             <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book Your Business Automation Audit</Button>
-          </a>
+          </Link>
           <a href="#contact">
             <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Talk to an Automation Expert</Button>
           </a>
