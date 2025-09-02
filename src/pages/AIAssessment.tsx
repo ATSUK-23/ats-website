@@ -12,6 +12,10 @@ import { useState } from "react";
 const AIAssessment = () => {
   const [currentView, setCurrentView] = useState<'intro' | 'progress' | 'domains' | 'question'>('intro');
   const [currentQuestion, setCurrentQuestion] = useState(1);
+  
+  // Add console logs to debug
+  console.log('Current view:', currentView);
+  console.log('Current question:', currentQuestion);
   const totalQuestions = 23;
   const domains = [
     {

@@ -32,7 +32,7 @@ export default function AISolutions() {
           title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" 
           subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" 
           ctaText="Start AI Assessment" 
-          ctaLink="#ai-lead-form" 
+          ctaLink="/ai-assessment"
           backgroundImage={aiBrainBackground}
           className="py-16 md:py-24"
           customButtonClasses={{
@@ -197,8 +197,8 @@ export default function AISolutions() {
               </div>
             </div>
             
-            <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 mb-8">
-              Start AI Assessment
+            <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 mb-8" asChild>
+              <a href="/ai-assessment">Start AI Assessment</a>
             </Button>
           </div>
         </section>
