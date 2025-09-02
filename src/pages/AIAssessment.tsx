@@ -3,9 +3,16 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Database, Users, Settings, Shield, Zap, CheckCircle, BarChart3, Users2, Cog, ShieldCheck, Bolt } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Target, Database, Users, Settings, Shield, Zap, CheckCircle, BarChart3, Users2, Cog, ShieldCheck, Bolt, Clock, ArrowLeft, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const AIAssessment = () => {
+  const [currentView, setCurrentView] = useState<'intro' | 'progress' | 'domains' | 'question'>('intro');
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const totalQuestions = 23;
   const domains = [
     {
       icon: Target,
@@ -77,6 +84,8 @@ const AIAssessment = () => {
       <SiteHeader />
 
       <main className="min-h-screen">
+        {currentView === 'intro' && (
+        <>
         {/* Hero Section */}
         <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
@@ -89,7 +98,11 @@ const AIAssessment = () => {
               Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
             </p>
             
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 mb-8 text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 mb-8 text-lg px-8 py-4"
+              onClick={() => setCurrentView('progress')}
+            >
               Start Your Assessment
             </Button>
 
@@ -171,11 +184,236 @@ const AIAssessment = () => {
               size="lg" 
               variant="secondary"
               className="bg-background text-foreground hover:bg-background/90 text-lg px-8 py-4"
+              onClick={() => setCurrentView('progress')}
             >
               Begin Assessment Now
             </Button>
           </div>
         </section>
+        </>
+        )}
+
+        {/* Assessment Progress View */}
+        {currentView === 'progress' && (
+          <section className="py-8 bg-background min-h-screen">
+            <div className="container px-4 max-w-6xl mx-auto">
+              {/* Header */}
+              <div className="flex justify-between items-center mb-8">
+                <h1 className="text-2xl font-bold">Assessment Progress</h1>
+                <span className="text-muted-foreground">{currentQuestion} of {totalQuestions} questions completed</span>
+              </div>
+
+              {/* Overall Progress */}
+              <div className="mb-8">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm font-medium">Overall Progress</span>
+                  <span className="text-sm text-muted-foreground">{Math.round((currentQuestion / totalQuestions) * 100)}% complete</span>
+                </div>
+                <Progress value={(currentQuestion / totalQuestions) * 100} className="h-3" />
+              </div>
+
+              {/* Domain Progress Cards */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {[
+                  { title: "Strategic Foundation", completed: 0, total: 4 },
+                  { title: "Data & Infrastructure", completed: 0, total: 5 },
+                  { title: "Organisational Intelligence", completed: 0, total: 4 },
+                  { title: "Operational Excellence", completed: 0, total: 4 },
+                  { title: "Risk & Governance", completed: 0, total: 3 },
+                  { title: "Innovation Velocity", completed: 0, total: 3 }
+                ].map((domain, index) => (
+                  <Card key={index} className="bg-card border-2">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2">{domain.title}</h3>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm text-muted-foreground">{domain.completed}/{domain.total}</span>
+                      </div>
+                      <Progress value={(domain.completed / domain.total) * 100} className="h-2" />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex justify-center gap-4">
+                <Button 
+                  variant="outline" 
+                  onClick={() => setCurrentView('domains')}
+                  className="px-8"
+                >
+                  View Assessment Domains
+                </Button>
+                <Button 
+                  onClick={() => setCurrentView('question')}
+                  className="px-8"
+                >
+                  Continue Assessment
+                </Button>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Assessment Domains View */}
+        {currentView === 'domains' && (
+          <section className="py-8 bg-background min-h-screen">
+            <div className="container px-4 max-w-4xl mx-auto">
+              <Card className="bg-card border-2">
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold mb-6">Assessment Domains</h2>
+                  
+                  <div className="space-y-6">
+                    {[
+                      {
+                        title: "Strategic Foundation",
+                        description: "Leadership commitment, AI strategy alignment, and business case clarity",
+                        questions: 4,
+                        weight: 20,
+                        active: true
+                      },
+                      {
+                        title: "Data & Infrastructure", 
+                        description: "Data quality, accessibility, infrastructure scalability, and technical readiness",
+                        questions: 5,
+                        weight: 25,
+                        active: false
+                      },
+                      {
+                        title: "Organisational Intelligence",
+                        description: "Team skills, AI literacy, culture of innovation, and talent development", 
+                        questions: 4,
+                        weight: 20,
+                        active: false
+                      },
+                      {
+                        title: "Operational Excellence",
+                        description: "Process optimisation, automation readiness, and workflow integration potential",
+                        questions: 4, 
+                        weight: 15,
+                        active: false
+                      },
+                      {
+                        title: "Risk & Governance",
+                        description: "AI ethics, compliance readiness, security frameworks, and risk management",
+                        questions: 3,
+                        weight: 10,
+                        active: false
+                      },
+                      {
+                        title: "Innovation Velocity",
+                        description: "Speed of adoption, experimentation culture, and market responsiveness",
+                        questions: 3,
+                        weight: 10,
+                        active: false
+                      }
+                    ].map((domain, index) => (
+                      <div key={index} className={`flex items-start gap-4 p-4 rounded-lg border ${domain.active ? 'bg-primary/5 border-primary/20' : 'bg-muted/30 border-muted'}`}>
+                        <div className="flex-shrink-0 mt-1">
+                          {domain.active ? (
+                            <Clock className="h-5 w-5 text-primary" />
+                          ) : (
+                            <div className="h-5 w-5 rounded-full border-2 border-muted-foreground" />
+                          )}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-start mb-2">
+                            <h3 className="text-lg font-semibold text-primary">{domain.title}</h3>
+                            <span className="text-sm text-muted-foreground">{domain.questions} questions • {domain.weight}% weight</span>
+                          </div>
+                          <p className="text-muted-foreground mb-2">{domain.description}</p>
+                          {domain.active && (
+                            <p className="text-sm text-primary font-medium">→ Currently answering questions in this domain</p>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-center gap-4 mt-8">
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setCurrentView('progress')}
+                      className="px-8"
+                    >
+                      <ArrowLeft className="h-4 w-4 mr-2" />
+                      Back to Progress
+                    </Button>
+                    <Button 
+                      onClick={() => setCurrentView('question')}
+                      className="px-8"
+                    >
+                      Start Questions
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        )}
+
+        {/* Question View */}
+        {currentView === 'question' && (
+          <section className="py-8 bg-background min-h-screen">
+            <div className="container px-4 max-w-4xl mx-auto">
+              {/* Question Header */}
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="text-lg font-medium">Question {currentQuestion} of {totalQuestions}</h2>
+                <span className="text-lg font-medium text-primary">Strategic Foundation</span>
+              </div>
+
+              <Card className="bg-card border-2">
+                <CardContent className="p-8">
+                  <h1 className="text-2xl font-bold mb-8">
+                    How would you describe your organisation's current AI strategy and leadership commitment?
+                  </h1>
+
+                  <RadioGroup className="space-y-4">
+                    {[
+                      "No formal AI strategy exists; leadership shows minimal interest",
+                      "Informal discussions about AI, but no clear direction or commitment", 
+                      "Basic AI strategy drafted with moderate leadership buy-in",
+                      "Comprehensive AI strategy with strong leadership commitment and clear goals"
+                    ].map((option, index) => (
+                      <div key={index} className="flex items-start space-x-3 p-4 rounded-lg border border-muted hover:bg-muted/30 transition-colors">
+                        <RadioGroupItem value={option} id={`option-${index}`} className="mt-1" />
+                        <Label htmlFor={`option-${index}`} className="text-base leading-relaxed cursor-pointer flex-1">
+                          {option}
+                        </Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
+
+                  {/* Navigation */}
+                  <div className="flex justify-between items-center mt-8">
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setCurrentView('domains')}
+                      className="px-6"
+                    >
+                      <ArrowLeft className="h-4 w-4 mr-2" />
+                      Back to Intro
+                    </Button>
+                    
+                    <span className="text-muted-foreground">{currentQuestion} of {totalQuestions}</span>
+                    
+                    <Button 
+                      className="px-6"
+                      onClick={() => {
+                        if (currentQuestion < totalQuestions) {
+                          setCurrentQuestion(currentQuestion + 1);
+                        }
+                      }}
+                    >
+                      Next
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        )}
       </main>
 
       <SiteFooter />
