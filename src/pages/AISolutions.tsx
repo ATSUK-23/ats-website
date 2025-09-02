@@ -28,18 +28,10 @@ export default function AISolutions() {
 
       <main>
         {/* Hero Section */}
-        <HeroSection 
-          title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" 
-          subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" 
-          ctaText="Start AI Assessment" 
-          ctaLink="/ai-assessment"
-          backgroundImage={aiBrainBackground}
-          className="py-16 md:py-24"
-          customButtonClasses={{
-            primary: "bg-green-700 text-white hover:bg-green-800",
-            secondary: "bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700"
-          }}
-        />
+        <HeroSection title="UNLEASH THE AI BRAIN IN YOUR BUSINESS" subtitle="We help develop your AI strategy, source the best tech solution partners, and even manage implementation letting you focus on looking after clients!" ctaText="Start AI Assessment" ctaLink="/ai-assessment" backgroundImage={aiBrainBackground} className="py-16 md:py-24" customButtonClasses={{
+        primary: "bg-green-700 text-white hover:bg-green-800",
+        secondary: "bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:border-blue-700"
+      }} />
 
         {/* AI Brain Power Section */}
         <SplitSection id="ai-brain-power" title="Building Your AI Brain With Our AI Audit Process" description={<p>
@@ -53,7 +45,7 @@ export default function AISolutions() {
         {/* How It Helps Every Part of Your Business */}
         <section className="container py-4 sm:py-6 md:py-8 px-4">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How It Helps Every Part of Your Business</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">How AI Can Help Every Part of Your Business</h2>
           </div>
           
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-12">
@@ -257,16 +249,14 @@ export default function AISolutions() {
             </div>
             
             <div className="text-center mt-8">
-              <Button 
-                size="lg" 
-                className="bg-blue-600 text-white hover:bg-blue-700"
-                onClick={() => {
-                  const element = document.getElementById('ai-lead-form');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
+              <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700" onClick={() => {
+              const element = document.getElementById('ai-lead-form');
+              if (element) {
+                element.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            }}>
                 Schedule Consultation
               </Button>
             </div>
