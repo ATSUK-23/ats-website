@@ -1,7 +1,7 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import Hero from "@/components/sections/Hero";
-import Contact from "@/components/sections/Contact";
+import HomePageLeadForm from "@/components/forms/HomePageLeadForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SplitSection from "@/components/sections/SplitSection";
@@ -137,7 +137,7 @@ const Index = () => {
           </div>
         </section>
 
-        <Contact />
+        <HomePageLeadForm />
       </main>
       <SiteFooter />
 
