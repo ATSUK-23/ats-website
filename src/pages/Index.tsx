@@ -23,6 +23,40 @@ const Index = () => {
       <main>
         <Hero />
 
+        <section id="service-pillars" className="container py-8 sm:py-12 md:py-16 px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">End-to-End Automation & AI Expertise</h2>
+          </div>
+          
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">AI Solutions</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Audits to help build your Ai brain, intelligent agents, Ai voice automation and workshops.</p>
+            </article>
+            <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Vibe Coding</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Rapid prototyping for websites and apps. Workshops & Sprints</p>
+            </article>
+            <article id="e-commerce" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">E‑Commerce Global Systems</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Shopify, marketplaces, localised fulfilment & customer support, ad management.</p>
+            </article>
+            <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
+            </article>
+            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
+              <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up e-mail sequences, calendar booking, 3rd party integrations</p>
+            </article>
+            <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Training</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
+15 Specialised courses for beginner to advanced. </p>
+            </article>
+          </div>
+        </section>
+
         <SplitSection id="about" title="Technology Should Serve Your Strategy, Not Replace It" image={whyImg} imageAlt="Before and after comparison of messy vs streamlined automated business systems" description={<>
               <p>
                 The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it’s easy to get lost in “shiny object” syndrome. We cut through the noise to:
@@ -85,39 +119,6 @@ const Index = () => {
               </ul>
             </>} />
 
-        <section id="service-pillars" className="container py-8 sm:py-12 md:py-16 px-4">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">End-to-End Automation & AI Expertise</h2>
-          </div>
-          
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">AI Solutions</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Audits to help build your Ai brain, intelligent agents, Ai voice automation and workshops.</p>
-            </article>
-            <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Vibe Coding</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Rapid prototyping for websites and apps. Workshops & Sprints</p>
-            </article>
-            <article id="e-commerce" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">E‑Commerce Global Systems</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Shopify, marketplaces, localised fulfilment & customer support, ad management.</p>
-            </article>
-            <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
-            </article>
-            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
-              <p className="mt-2 text-sm text-muted-foreground">CRM, funnels, workflows, follow-up e-mail sequences, calendar booking, 3rd party integrations</p>
-            </article>
-            <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
-15 Specialised courses for beginner to advanced. </p>
-            </article>
-          </div>
-        </section>
 
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
