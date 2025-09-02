@@ -53,7 +53,7 @@ const Index = () => {
             </ul>
           </div>
           <div className="mt-6">
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
+            <a href="/ai-solutions">
               <Button variant="hero" size="lg" className="w-full sm:w-auto">Book Your Audit Now</Button>
             </a>
           </div>
@@ -126,7 +126,7 @@ const Index = () => {
               Let’s design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
+              <a href="/ai-solutions">
                 <Button variant="secondary" size="lg">Book Your Business Automation Audit</Button>
               </a>
               <a href="#contact">
