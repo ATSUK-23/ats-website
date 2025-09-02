@@ -459,9 +459,13 @@ export default function AIAssessment() {
                             <IconComponent className="h-6 w-6 text-primary" />
                             <h3 className="font-semibold">{domain.domain}</h3>
                           </div>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-muted-foreground mb-3">
                             {domain.description}
                           </p>
+                          <div className="text-xs text-muted-foreground space-y-1 border-t pt-3">
+                            <div>{domain.questions} questions</div>
+                            <div>{domain.weight}% weight</div>
+                          </div>
                         </CardContent>
                       </Card>
                     );
