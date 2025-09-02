@@ -84,8 +84,12 @@ const Index = () => {
               </ul>
             </>} />
 
-        <SplitSection id="service-pillars" title="End-to-End Automation & AI Expertise" image={pillarsImg} imageAlt="Six modern flat icons for AI Solutions, Vibe Coding, E‑Commerce, Social Content, Sales & Marketing Automation, and Training">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <section id="service-pillars" className="container py-8 sm:py-12 md:py-16 px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">End-to-End Automation & AI Expertise</h2>
+          </div>
+          
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">AI Solutions</h3>
               <p className="mt-2 text-sm text-muted-foreground">Audits to help build your Ai brain, intelligent agents, Ai voice automation and workshops.</p>
@@ -108,11 +112,11 @@ const Index = () => {
             </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
-15 Specialised courses for beginner to advanced. </p>
+              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
+15 Specialised courses for beginner to advanced. </p>
             </article>
           </div>
-        </SplitSection>
+        </section>
 
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
