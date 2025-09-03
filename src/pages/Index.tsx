@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SplitSection from "@/components/sections/SplitSection";
 import whyImg from "@/assets/why-choose-us.jpg";
-import auditImg from "@/assets/audit-process.jpg";
+const auditImg = "/lovable-uploads/aaacb4d8-8637-4ea7-a5bc-21cb8ee75793.png";
 import workshopsImg from "@/assets/workshops.jpg";
 const sourcingImg = "/lovable-uploads/bc0882a0-dbff-46c2-b567-5f2cdffb425b.png";
 import pillarsImg from "@/assets/service-pillars.jpg";
