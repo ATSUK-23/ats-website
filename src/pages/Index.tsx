@@ -8,8 +8,7 @@ import SplitSection from "@/components/sections/SplitSection";
 import whyImg from "@/assets/why-choose-us.jpg";
 const auditImg = "/lovable-uploads/aaacb4d8-8637-4ea7-a5bc-21cb8ee75793.png";
 import workshopsImg from "@/assets/workshops.jpg";
-const sourcingImg = "/lovable-uploads/30e796b0-a25d-4f10-8a37-3e87c2499f85.png";
-console.log("Solution sourcing image path:", sourcingImg);
+const sourcingImg = "/solution-sourcing-3d.png";
 const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
