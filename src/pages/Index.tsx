@@ -93,7 +93,7 @@ const Index = () => {
           </div>
         </SplitSection>
 
-        <SplitSection id="workshops" title="Upskill Your Team to Harness AI & Automation In-House" image={workshopsImg} imageAlt="Professional workshop with team and facilitator at whiteboard" description={<p>
+        <SplitSection id="workshops" title="Upskill Your Team to Harness AI & Automation (Workshops & Training)" image={workshopsImg} imageAlt="Professional workshop with team and facilitator at whiteboard" description={<p>
               We don’t just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
             </p>}>
           <div className="grid gap-6 md:grid-cols-2">
