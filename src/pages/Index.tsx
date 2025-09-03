@@ -9,7 +9,7 @@ import whyImg from "@/assets/why-choose-us.jpg";
 const auditImg = "/lovable-uploads/aaacb4d8-8637-4ea7-a5bc-21cb8ee75793.png";
 import workshopsImg from "@/assets/workshops.jpg";
 const sourcingImg = "/lovable-uploads/30e796b0-a25d-4f10-8a37-3e87c2499f85.png";
-import pillarsImg from "@/assets/service-pillars.jpg";
+console.log("Solution sourcing image path:", sourcingImg);
 const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -110,7 +110,7 @@ const Index = () => {
           <p className="mt-6 text-muted-foreground">Your staff leave confident, capable, and ready to get the most from your automation investment.</p>
         </SplitSection>
 
-        <SplitSection id="solution-sourcing" reverse title="We Find and Manage the Right Suppliers for You" image={sourcingImg} imageAlt="Multiple tech vendors flowing into one unified automation hub" description={<>
+        <SplitSection id="solution-sourcing" reverse title="We Find and Manage the Right Suppliers for You" image={sourcingImg} imageAlt="3D business building with department labels showing Sales, Marketing, IT & Operations, Customer Support, Finance & Reporting, and HR" description={<>
               <p>No one platform does it all and no single vendor is best at everything. We’ll:</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Identify the best-fit automation & AI providers for your needs</li>
