@@ -69,10 +69,10 @@ export const SiteHeader = () => {
                   </AccordionItem>
                 </Accordion>
                 <SheetClose asChild>
-                  <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
+                  <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
+                  <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
@@ -120,8 +120,8 @@ export const SiteHeader = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Vibe Coding</Link>
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">E‑Commerce</Link>
+          <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Vibe Coding</Link>
           <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Sales Funnel Automation</Link>
           <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Social Content</Link>
           <Link to="/training" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Training</Link>
