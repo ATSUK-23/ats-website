@@ -8,7 +8,7 @@ import SplitSection from "@/components/sections/SplitSection";
 import whyImg from "@/assets/why-choose-us.jpg";
 const auditImg = "/lovable-uploads/aaacb4d8-8637-4ea7-a5bc-21cb8ee75793.png";
 import workshopsImg from "@/assets/workshops.jpg";
-const sourcingImg = "/lovable-uploads/bc0882a0-dbff-46c2-b567-5f2cdffb425b.png";
+const sourcingImg = "/lovable-uploads/30e796b0-a25d-4f10-8a37-3e87c2499f85.png";
 import pillarsImg from "@/assets/service-pillars.jpg";
 const Index = () => {
   const jsonLd = {
