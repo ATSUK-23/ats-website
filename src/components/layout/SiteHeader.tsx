@@ -47,6 +47,9 @@ export const SiteHeader = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <nav className="mt-16 space-y-2">
+                <SheetClose asChild>
+                  <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
+                </SheetClose>
                 <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="ai-solutions" className="border-b">
                     <AccordionTrigger className="text-left py-3 hover:text-primary hover:no-underline">
@@ -68,9 +71,6 @@ export const SiteHeader = () => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-                <SheetClose asChild>
-                  <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
-                </SheetClose>
                 <SheetClose asChild>
                   <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
                 </SheetClose>
@@ -104,6 +104,7 @@ export const SiteHeader = () => {
         <div className="md:hidden w-6"></div>
 
         <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
+          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">E‑Commerce</Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">AI Solutions</DropdownMenuTrigger>
             <DropdownMenuContent className="w-80 p-2 bg-gray-800 border-gray-700 shadow-lg">
@@ -120,7 +121,6 @@ export const SiteHeader = () => {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">E‑Commerce</Link>
           <Link to="/vibe-coding" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Vibe Coding</Link>
           <Link to="/sales-funnel-automation" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Sales Funnel Automation</Link>
           <Link to="/social-content" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Social Content</Link>
