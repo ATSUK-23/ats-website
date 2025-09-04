@@ -48,7 +48,7 @@ const VibeCoding = () => {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="LIVE 1 Day WorkShops in London" ctaLink="#vibe-cta" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
+        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="Schedule Consultation" ctaLink="#vibe-coding-form" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
 
         {/* What is Vibe Coding */}
         <SplitSection id="vibe-hero" title="Build It, Show It, Sell It!" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
@@ -59,7 +59,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
             <a href="#vibe-cta">
               <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">LIVE 1 Day WorkShops in London</Button>
             </a>
-            <a href="#contact">
+            <a href="#vibe-coding-form">
               <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
             </a>
           </div>
@@ -128,6 +128,9 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
           <div className="flex flex-col sm:flex-row gap-3">
             <a href="https://theepitome.co.uk/ai-prototyping-workshop" target="_blank" rel="noreferrer">
               <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Reserve Your Workshop Place</Button>
+            </a>
+            <a href="#vibe-coding-form">
+              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
             </a>
           </div>
         </SplitSection>
