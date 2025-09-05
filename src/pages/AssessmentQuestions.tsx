@@ -503,17 +503,29 @@ export default function AssessmentQuestions() {
 
                 <RadioGroup value={selectedAnswer?.toString()} onValueChange={(value) => handleAnswer(parseInt(value))}>
                   <div className="space-y-4">
-                    {currentQuestion?.options.map((option, index) => (
-                      <div key={index} className="flex items-start space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
-                        <RadioGroupItem value={index.toString()} id={`option-${index}`} className="mt-1" />
-                        <Label 
-                          htmlFor={`option-${index}`} 
-                          className="flex-1 text-sm leading-relaxed cursor-pointer"
+                    {currentQuestion?.options.map((option, index) => {
+                      const isSelected = selectedAnswer === index;
+                      return (
+                        <div 
+                          key={index} 
+                          className={`flex items-start space-x-3 p-4 rounded-lg border transition-colors ${
+                            isSelected 
+                              ? 'border-green-500 bg-green-50 dark:bg-green-950/20' 
+                              : 'border hover:bg-muted/50'
+                          }`}
                         >
-                          {option}
-                        </Label>
-                      </div>
-                    ))}
+                          <RadioGroupItem value={index.toString()} id={`option-${index}`} className="mt-1" />
+                          <Label 
+                            htmlFor={`option-${index}`} 
+                            className={`flex-1 text-sm leading-relaxed cursor-pointer ${
+                              isSelected ? 'text-green-700 dark:text-green-300' : ''
+                            }`}
+                          >
+                            {option}
+                          </Label>
+                        </div>
+                      );
+                    })}
                   </div>
                 </RadioGroup>
               </CardContent>
