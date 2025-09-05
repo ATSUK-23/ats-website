@@ -461,7 +461,7 @@ export default function AIAssessment() {
                 Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
               </p>
               
-              <Button size="lg" onClick={() => setCurrentView('assessment')} className="mb-4 bg-primary hover:bg-primary/90">
+              <Button size="lg" onClick={() => setCurrentView('domains')} className="mb-4 bg-primary hover:bg-primary/90">
                 Start Your Assessment
               </Button>
               
@@ -484,29 +484,9 @@ export default function AIAssessment() {
                 </div>
               </div>
 
-              {/* Assessment Overview */}
+              {/* Assessment Overview Cards */}
               <div className="bg-muted/30 rounded-xl p-8">
-                <h2 className="text-2xl font-bold mb-6">Assessment Domains</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                  {assessmentData.map((domain, index) => {
-                    const Icon = domain.icon;
-                    return (
-                      <div key={index} className="bg-background/50 rounded-lg p-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Icon className="h-5 w-5 text-primary" />
-                          <span className="font-medium text-sm">{domain.domain}</span>
-                        </div>
-                        <div className="text-xs text-muted-foreground mb-1">
-                          {domain.questions} questions • {domain.weight}% weight
-                        </div>
-                        <p className="text-xs text-muted-foreground">
-                          {domain.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-                
+                <h2 className="text-2xl font-bold mb-6">What You'll Get</h2>
                 <div className="grid md:grid-cols-2 gap-6 text-left">
                   <div>
                     <h3 className="font-semibold mb-2">📊 Comprehensive Score</h3>
