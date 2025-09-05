@@ -14,12 +14,39 @@ const About = () => {
       
       <main className="container py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6">
-              My Experience
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground">20+ Years of Implementing Digital Innovation & Automation Solutions.</p>
-          </header>
+          {/* A Smarter Consulting Model Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20">
+            <div className="text-center mb-8 sm:mb-10">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6">
+                A Smarter Consulting Model
+              </h1>
+            </div>
+            
+            <div className="bg-card border rounded-xl p-6 sm:p-8 md:p-10 shadow-sm">
+              <div className="prose prose-lg max-w-none text-foreground">
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  At Automate to Sell, I've built a leaner, more effective way to deliver results. Instead of a big in-house team with high overheads, I collaborate with proven specialists across the digital economy, from AI and automation to advertising, marketing and operations.
+                </p>
+                
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  You always work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the job, I bring in the best expert I know and trust to implement the work.
+                </p>
+                
+                <p className="text-base sm:text-lg leading-relaxed">
+                  The result? You avoid paying premium agency fees, but still get access to top-level expertise in every area. It's a business model designed to be flexible, cost-effective, and laser-focused on delivering the right outcome for you.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* My Experience Section */}
+          <section>
+            <header className="text-center mb-8 sm:mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6">
+                My Experience
+              </h2>
+              <p className="text-lg sm:text-xl text-muted-foreground">20+ Years of Implementing Digital Innovation & Automation Solutions.</p>
+            </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 items-start mb-8 sm:mb-12">
             <div className="md:col-span-1 text-center md:text-left">
@@ -81,7 +108,7 @@ For the last eight years, I've also focused on building turn key global eComme
               </div>
             </div>
           </div>
-
+          </section>
 
           <div className="text-center mt-8 sm:mt-12">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noopener noreferrer">
