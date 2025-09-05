@@ -56,7 +56,8 @@ export default function Training() {
           features: ["AI fundamentals", "Immediate-use tools", "Practical exercises", "Take-home resources"],
           audience: "Business owners new to AI, administrative staff, small teams",
           platform: "Google Meet",
-          dates: "Sep 1, Sep 15, Oct 6..."
+          dates: "Sep 1, Sep 15, Oct 6...",
+          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-quick-start-essentials"
         },
         {
           title: "AI Tools & Platforms Mastery",
@@ -69,7 +70,8 @@ export default function Training() {
           features: ["ChatGPT mastery", "Canva AI training", "Automation tools", "Productivity platforms"],
           audience: "All staff levels, operational teams, administrative professionals",
           platform: "Google Meet",
-          dates: "Sep 2-16, Sep 30-Oct 14, Oct 27-Nov 10..."
+          dates: "Sep 2-16, Sep 30-Oct 14, Oct 27-Nov 10...",
+          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-tools-platforms-mastery"
         },
         {
           title: "AI Fundamentals for Small Business Leaders",
@@ -388,11 +390,11 @@ export default function Training() {
                              <div className="text-2xl font-bold text-primary">{course.price}</div>
                              <div className="text-xs text-muted-foreground">{course.format}</div>
                            </div>
-                            <Button asChild>
-                              <a href="https://epitome-ai-reboot.lovable.app/training/ai-tools-platforms-mastery" target="_blank" rel="noopener noreferrer">
-                                Book Now • {course.price}
-                              </a>
-                            </Button>
+                             <Button asChild>
+                               <a href={course.bookingLink || "#"} target="_blank" rel="noopener noreferrer">
+                                 Book Now • {course.price}
+                               </a>
+                             </Button>
                          </div>
                        </CardContent>
                     </Card>
