@@ -257,15 +257,9 @@ export default function Training() {
                 <p className="text-lg text-muted-foreground">
                   In partnership with
                 </p>
-                <img 
-                  src="/lovable-uploads/7329611d-78a2-481d-93dd-42c89c61ce95.png" 
-                  alt="Epitome Training Partner Logo" 
-                  className="h-8 object-contain"
-                />
+                <img src="/lovable-uploads/7329611d-78a2-481d-93dd-42c89c61ce95.png" alt="Epitome Training Partner Logo" className="h-8 object-contain" />
               </div>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                12 specialised courses from £150-800 per delegate • Foundation to Advanced Level
-              </p>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">12 specialised courses from £150-£800 per delegate. We utilise the experience & training skills of our partner Epitome to deliver the majority of these courses</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
