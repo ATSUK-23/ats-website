@@ -10,6 +10,21 @@ import Contact from "@/components/sections/Contact";
 import TrainingLeadForm from "@/components/forms/TrainingLeadForm";
 import { Clock, Users, Star, Award, BookOpen, Zap } from "lucide-react";
 
+interface Course {
+  title: string;
+  duration: string;
+  level: string;
+  format: string;
+  price: string;
+  maxParticipants: string;
+  description: string;
+  features: string[];
+  audience: string;
+  platform: string;
+  dates?: string;
+  bookingLink?: string;
+}
+
 const trainingHeroBackground = "/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png";
 
 export default function Training() {
