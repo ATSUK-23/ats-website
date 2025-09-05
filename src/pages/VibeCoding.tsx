@@ -124,7 +124,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         <section id="vibe-cta" className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-2 lg:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                   Let's Bring Your Idea to Life
                 </h2>
@@ -141,7 +141,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                 </div>
               </div>
               
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-1">
                 <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 max-w-lg mx-auto shadow-2xl">
                   <div className="flex items-start justify-between mb-6">
                     <h3 className="text-2xl font-bold text-white">AI Prototyping Workshop</h3>
