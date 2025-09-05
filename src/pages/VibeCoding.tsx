@@ -121,30 +121,97 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* CTA Bottom */}
-        <SplitSection id="vibe-cta" reverse title="AI Prototyping Workshop" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<>
-          <p>Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.</p>
-          <p>1-day intensive workshop available in-person or virtual. Max 12 participants for maximum results and personalized attention.</p>
-          <div className="mt-4">
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div><strong>Duration:</strong> 1-day intensive</div>
-              <div><strong>Format:</strong> In-person or Virtual</div>
-              <div><strong>Price:</strong> £397</div>
-              <div><strong>Max participants:</strong> 12</div>
-            </div>
-            <div className="mt-3">
-              <strong>What you'll get:</strong> Build AI prototypes, Test solutions, Implementation roadmap, Real business challenges
+        <section id="vibe-cta" className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Let's Bring Your Idea to Life
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8">
+                  Ready to turn your ideas into working prototypes? Join our intensive workshop and learn how to leverage AI tools for rapid business innovation.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a href="#vibe-coding-form">
+                    <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Get Started Today</Button>
+                  </a>
+                  <a href="#vibe-coding-form">
+                    <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
+                  </a>
+                </div>
+              </div>
+              
+              <div className="order-1 lg:order-2">
+                <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 max-w-lg mx-auto shadow-2xl">
+                  <div className="flex items-start justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-white">AI Prototyping Workshop</h3>
+                    <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Intermediate
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center gap-6 mb-6 text-slate-300">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12,6 12,12 16,14"></polyline>
+                      </svg>
+                      <span>1-day intensive</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <span>Max 12</span>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-200 mb-6 leading-relaxed">
+                    Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.
+                  </p>
+
+                  <div className="space-y-3 mb-6 text-sm">
+                    <div className="text-slate-300">
+                      <span className="font-medium text-slate-200">Target audience:</span> Business leaders, product managers, innovation teams
+                    </div>
+                    <div className="text-slate-300">
+                      <span className="font-medium text-slate-200">Platform:</span> Surbiton & Rugby locations available
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 mb-8">
+                    {[
+                      "Build AI prototypes",
+                      "Test solutions", 
+                      "Implementation roadmap",
+                      "Real business challenges"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-3 text-slate-200">
+                        <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <div className="text-4xl font-bold text-white">£397</div>
+                      <div className="text-slate-400">In-person or Virtual</div>
+                    </div>
+                    <a href="https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop" target="_blank" rel="noreferrer">
+                      <button className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
+                        Book Now • £397
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </>}>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a href="https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book AI Prototyping Workshop</Button>
-            </a>
-            <a href="#vibe-coding-form">
-              <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
-            </a>
-          </div>
-        </SplitSection>
+        </section>
 
         {/* Vibe Coding Lead Form */}
         <VibeCodingLeadForm />
