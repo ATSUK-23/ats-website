@@ -253,6 +253,16 @@ export default function Training() {
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our AI Training Programs</h2>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <p className="text-lg text-muted-foreground">
+                  In partnership with
+                </p>
+                <img 
+                  src="/lovable-uploads/7329611d-78a2-481d-93dd-42c89c61ce95.png" 
+                  alt="Epitome Training Partner Logo" 
+                  className="h-8 object-contain"
+                />
+              </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 12 specialised courses from £150-800 per delegate • Foundation to Advanced Level
               </p>
