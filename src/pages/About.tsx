@@ -18,9 +18,7 @@ const About = () => {
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6">
               My Experience
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground">
-              20+ Years of Digital Innovation & eCommerce Automation
-            </p>
+            <p className="text-lg sm:text-xl text-muted-foreground">20+ Years of Implementing Digital Innovation & Automation Solutions.</p>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 items-start mb-8 sm:mb-12">
@@ -54,15 +52,13 @@ const About = () => {
                   I've been deeply immersed in the digital world since the late 1990s, starting with building and selling websites when the internet was just beginning to take shape. It's been an exciting journey from those early days to now!
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">
-                  Over the past 20+ years, my career has followed a unique and dynamic path, blending leadership roles in large corporate environments (including mobile operators and media companies) with entrepreneurial ventures across mobile, e-commerce, and digital innovation.
-                </p>
+                <p className="text-lg leading-relaxed mb-6">Over the past 20+ years, my career has followed a unique and dynamic path, blending leadership roles in large corporate environments (including mobile operators and media companies) with entrepreneurial ventures across mobile, e-commerce, and digital transformation.</p>
 
                 <p className="text-lg leading-relaxed mb-6">
                   I've also launched three startups, each rooted in emerging technology and customer-centric digital strategies.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">For the last eight years, I've focused on eCommerce sales & marketing building automated global systems taking one of my clients from $40kpm to generate $1M months and 4 years revenue of over $40 Million.</p>
+                
 
                 
 
@@ -70,7 +66,10 @@ const About = () => {
                   I was an early adopter of ClickFunnels, joining the platform in October 2014 and completing their inaugural Certification Program the following year.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">In partnership with one client I was recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.</p>
+                <p className="text-lg leading-relaxed mb-6">In partnership with one client I was recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.
+
+
+For the last eight years, I've also focused on building turn key global eCommerce systems taking one of my clients from $40kpm to generate $1M months and 4 years revenue of over $40 Million.</p>
 
                 <p className="text-lg leading-relaxed mb-6">
                   In 2020, I expanded my expertise into Go High Level, launching my own digital agency to support clients with turn key scalable marketing systems and smart automation.
