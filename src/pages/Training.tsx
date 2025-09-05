@@ -388,7 +388,11 @@ export default function Training() {
                              <div className="text-2xl font-bold text-primary">{course.price}</div>
                              <div className="text-xs text-muted-foreground">{course.format}</div>
                            </div>
-                           <Button>Book Now • {course.price}</Button>
+                            <Button asChild>
+                              <a href="https://epitome-ai-reboot.lovable.app/training/ai-quick-start-essentials" target="_blank" rel="noopener noreferrer">
+                                Book Now • {course.price}
+                              </a>
+                            </Button>
                          </div>
                        </CardContent>
                     </Card>
