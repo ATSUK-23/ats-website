@@ -98,7 +98,8 @@ export default function Training() {
           description: "Essential foundation covering AI basics without technical jargon, opportunity identification specific to small businesses, strategic AI roadmap development, ROI assessment, and building an AI-ready culture. Full-day intensive for decision-makers.",
           features: ["AI basics without jargon", "Opportunity identification", "Strategic roadmap", "ROI assessment"],
           audience: "Business owners, senior managers, decision-makers, C-suite executives",
-          platform: "Surbiton & Rugby locations available"
+          platform: "Surbiton & Rugby locations available",
+          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-fundamentals-for-small-business-leaders"
         }
       ]
     },
