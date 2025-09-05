@@ -1,304 +1,53 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, Circle, Clock, ArrowLeft, ArrowRight, Brain, Shield, Users, Zap, Settings, TrendingUp, BarChart3, Target, Lightbulb, Download } from "lucide-react";
+import { CheckCircle2, Brain, Shield, Users, Zap, Settings, TrendingUp } from "lucide-react";
 
-// Assessment data structure with complete questions and weighted scoring
+// Assessment data structure for reference (minimal version for results display)
 const assessmentData = [
   {
     domain: "Strategic Foundation",
     description: "Leadership commitment, AI strategy alignment, and business case clarity",
-    questions: 4,
     weight: 20,
     icon: Brain,
-    questions_list: [
-      {
-        id: 1,
-        text: "How would you describe your organisation's current AI strategy and leadership commitment?",
-        options: [
-          "No formal AI strategy exists; leadership shows minimal interest",
-          "Informal discussions about AI, but no clear direction or commitment",
-          "Basic AI strategy drafted with moderate leadership buy-in",
-          "Comprehensive AI strategy with strong leadership commitment and clear goals"
-        ]
-      },
-      {
-        id: 2,
-        text: "How well does your AI initiative align with your overall business strategy?",
-        options: [
-          "No clear alignment; AI is seen as separate from business goals",
-          "Some alignment exists but lacks clear connection to business outcomes",
-          "Moderate alignment with some defined business use cases",
-          "Strong alignment with clear business outcomes and measurable value"
-        ]
-      },
-      {
-        id: 3,
-        text: "What is the current state of your business case for AI implementation?",
-        options: [
-          "No business case developed",
-          "Basic business case with limited ROI analysis",
-          "Solid business case with clear ROI projections",
-          "Comprehensive business case with detailed cost-benefit analysis and success metrics"
-        ]
-      },
-      {
-        id: 4,
-        text: "How would you rate your organization's understanding of AI risks and benefits?",
-        options: [
-          "Limited understanding of both risks and benefits",
-          "Basic understanding with some awareness of key considerations",
-          "Good understanding of main risks and benefits",
-          "Comprehensive understanding with detailed risk mitigation strategies"
-        ]
-      }
-    ]
   },
   {
-    domain: "Data & Infrastructure",
+    domain: "Data & Infrastructure", 
     description: "Data quality, accessibility, infrastructure scalability, and technical readiness",
-    questions: 5,
     weight: 25,
     icon: Settings,
-    questions_list: [
-      {
-        id: 5,
-        text: "How would you assess the quality and accessibility of your organisation's data?",
-        options: [
-          "Poor data quality with limited accessibility",
-          "Moderate data quality with some accessibility challenges",
-          "Good data quality with reasonable accessibility",
-          "Excellent data quality with high accessibility and governance"
-        ]
-      },
-      {
-        id: 6,
-        text: "What is the current state of your data infrastructure and storage capabilities?",
-        options: [
-          "Limited infrastructure with significant constraints",
-          "Basic infrastructure meeting current needs",
-          "Scalable infrastructure with room for growth",
-          "Advanced, cloud-native infrastructure optimized for AI workloads"
-        ]
-      },
-      {
-        id: 7,
-        text: "How mature are your data governance and security practices?",
-        options: [
-          "Basic or no data governance practices",
-          "Some governance policies but inconsistent implementation",
-          "Well-established governance with regular compliance",
-          "Advanced governance with automated compliance and security"
-        ]
-      },
-      {
-        id: 8,
-        text: "What is your organization's current technical infrastructure readiness for AI?",
-        options: [
-          "Minimal technical readiness requiring significant investment",
-          "Basic readiness with some infrastructure gaps",
-          "Good readiness with minor upgrades needed",
-          "Excellent readiness with AI-optimized infrastructure"
-        ]
-      },
-      {
-        id: 9,
-        text: "How effective are your current data integration and API capabilities?",
-        options: [
-          "Limited integration capabilities with manual processes",
-          "Basic integration with some automated workflows",
-          "Good integration capabilities with standardized APIs",
-          "Advanced integration with real-time data flows and microservices"
-        ]
-      }
-    ]
   },
   {
     domain: "Organisational Intelligence",
     description: "Team skills, AI literacy, culture of innovation, and talent development",
-    questions: 4,
     weight: 20,
     icon: Users,
-    questions_list: [
-      {
-        id: 10,
-        text: "What is the current level of AI literacy and skills within your organization?",
-        options: [
-          "Limited AI knowledge across the organization",
-          "Basic AI awareness with few skilled individuals",
-          "Moderate AI literacy with some specialized expertise",
-          "High AI literacy with strong technical capabilities"
-        ]
-      },
-      {
-        id: 11,
-        text: "How would you describe your organization's culture regarding innovation and change?",
-        options: [
-          "Resistant to change with traditional approaches",
-          "Open to change but cautious about new technologies",
-          "Embraces innovation with moderate risk tolerance",
-          "Highly innovative with strong appetite for cutting-edge solutions"
-        ]
-      },
-      {
-        id: 12,
-        text: "What is your current approach to AI talent development and training?",
-        options: [
-          "No formal AI training programs",
-          "Basic training with limited scope",
-          "Structured training programs for key personnel",
-          "Comprehensive AI education with ongoing development"
-        ]
-      },
-      {
-        id: 13,
-        text: "How effective is cross-functional collaboration in your organization?",
-        options: [
-          "Limited collaboration with siloed departments",
-          "Some collaboration but communication challenges remain",
-          "Good collaboration with regular cross-functional projects",
-          "Excellent collaboration with integrated teams and shared goals"
-        ]
-      }
-    ]
   },
   {
     domain: "Operational Excellence",
     description: "Process optimisation, automation readiness, and workflow integration potential",
-    questions: 4,
     weight: 15,
     icon: Zap,
-    questions_list: [
-      {
-        id: 14,
-        text: "How mature are your current business processes and workflow documentation?",
-        options: [
-          "Processes are largely undocumented and ad-hoc",
-          "Basic process documentation with some standardization",
-          "Well-documented processes with clear workflows",
-          "Highly optimized processes with continuous improvement"
-        ]
-      },
-      {
-        id: 15,
-        text: "What is your organization's current level of process automation?",
-        options: [
-          "Minimal automation with mostly manual processes",
-          "Basic automation for routine tasks",
-          "Moderate automation across key business areas",
-          "Advanced automation with intelligent process optimization"
-        ]
-      },
-      {
-        id: 16,
-        text: "How well are your systems integrated across different business functions?",
-        options: [
-          "Limited integration with disconnected systems",
-          "Basic integration between core systems",
-          "Good integration with standardized interfaces",
-          "Seamless integration with real-time data sharing"
-        ]
-      },
-      {
-        id: 17,
-        text: "What is your approach to measuring and monitoring operational performance?",
-        options: [
-          "Limited performance tracking and metrics",
-          "Basic KPIs with manual reporting",
-          "Comprehensive metrics with automated dashboards",
-          "Advanced analytics with predictive performance insights"
-        ]
-      }
-    ]
   },
   {
     domain: "Risk & Governance",
     description: "AI ethics, compliance readiness, security frameworks, and risk management",
-    questions: 3,
     weight: 10,
     icon: Shield,
-    questions_list: [
-      {
-        id: 18,
-        text: "How developed are your AI ethics and governance frameworks?",
-        options: [
-          "No formal AI ethics or governance policies",
-          "Basic ethical guidelines under development",
-          "Established ethics framework with governance oversight",
-          "Comprehensive AI governance with ethical AI practices embedded"
-        ]
-      },
-      {
-        id: 19,
-        text: "What is your organization's readiness for AI-related compliance and regulations?",
-        options: [
-          "Limited awareness of compliance requirements",
-          "Basic understanding with some compliance measures",
-          "Good compliance readiness with documented procedures",
-          "Comprehensive compliance framework with proactive monitoring"
-        ]
-      },
-      {
-        id: 20,
-        text: "How robust are your cybersecurity measures for AI systems?",
-        options: [
-          "Basic security measures with potential vulnerabilities",
-          "Standard security practices with some AI considerations",
-          "Strong security framework with AI-specific protections",
-          "Advanced security with AI-powered threat detection and response"
-        ]
-      }
-    ]
   },
   {
     domain: "Innovation Velocity",
     description: "Speed of adoption, experimentation culture, and market responsiveness",
-    questions: 3,
     weight: 10,
     icon: TrendingUp,
-    questions_list: [
-      {
-        id: 21,
-        text: "How quickly does your organization typically adopt new technologies?",
-        options: [
-          "Slow to adopt with extensive evaluation periods",
-          "Cautious adoption after proven market success",
-          "Moderate adoption speed with calculated risks",
-          "Fast adoption with agile implementation approaches"
-        ]
-      },
-      {
-        id: 22,
-        text: "What is your organization's approach to experimentation and pilot projects?",
-        options: [
-          "Limited experimentation with risk-averse culture",
-          "Occasional pilots with careful oversight",
-          "Regular experimentation with structured pilot programs",
-          "Continuous experimentation with fail-fast mentality"
-        ]
-      },
-      {
-        id: 23,
-        text: "How responsive is your organization to market changes and customer needs?",
-        options: [
-          "Slow response with traditional planning cycles",
-          "Moderate responsiveness with quarterly adjustments",
-          "Good responsiveness with agile planning",
-          "Highly responsive with real-time market adaptation"
-        ]
-      }
-    ]
   }
 ];
 
-// Maturity level definitions
 const maturityLevels = {
   "AI Unaware": { min: 0, max: 25, color: "text-red-500", bgColor: "bg-red-100 dark:bg-red-950/20" },
   "AI Curious": { min: 26, max: 50, color: "text-orange-500", bgColor: "bg-orange-100 dark:bg-orange-950/20" },
@@ -317,118 +66,35 @@ const getMaturityLevel = (score: number) => {
 
 export default function AIAssessment() {
   const navigate = useNavigate();
-  const [currentView, setCurrentView] = useState<'intro' | 'domains' | 'assessment' | 'results'>('intro');
-  const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, number>>({});
+  const location = useLocation();
+  const [currentView, setCurrentView] = useState<'intro' | 'results'>('intro');
+  const [assessmentResults, setAssessmentResults] = useState<any>(null);
 
-  // Calculate comprehensive scoring
-  const totalQuestions = 23;
-  const answeredQuestions = Object.keys(answers).length;
-  const overallProgress = (answeredQuestions / totalQuestions) * 100;
-
-  // Calculate domain scores and overall weighted score
-  const calculateDomainScore = (domainIndex: number) => {
-    const domain = assessmentData[domainIndex];
-    const domainAnswers = domain.questions_list.filter(q => answers[q.id] !== undefined);
-    if (domainAnswers.length === 0) return 0;
-    
-    const totalScore = domain.questions_list.reduce((sum, q) => {
-      const answer = answers[q.id];
-      return sum + (answer !== undefined ? answer + 1 : 0); // Convert 0-3 to 1-4
-    }, 0);
-    
-    const maxScore = domain.questions_list.length * 4;
-    return (totalScore / maxScore) * 100;
-  };
-
-  const calculateOverallScore = () => {
-    let weightedSum = 0;
-    let totalWeight = 0;
-    
-    assessmentData.forEach((domain, index) => {
-      const domainScore = calculateDomainScore(index);
-      const domainQuestions = domain.questions_list.filter(q => answers[q.id] !== undefined);
-      
-      if (domainQuestions.length > 0) {
-        weightedSum += domainScore * domain.weight;
-        totalWeight += domain.weight;
-      }
-    });
-    
-    return totalWeight > 0 ? weightedSum / totalWeight : 0;
-  };
-
-  // Get current question
-  const currentDomain = assessmentData[currentDomainIndex];
-  const currentQuestion = currentDomain?.questions_list[currentQuestionIndex];
-  const questionNumber = assessmentData.slice(0, currentDomainIndex).reduce((sum, domain) => sum + domain.questions, 0) + currentQuestionIndex + 1;
-
-  // Calculate domain completion status
-  const getDomainStatus = (domainIndex: number) => {
-    const domain = assessmentData[domainIndex];
-    const domainQuestionIds = domain.questions_list.map(q => q.id);
-    const answeredInDomain = domainQuestionIds.filter(id => answers[id] !== undefined).length;
-    
-    if (answeredInDomain === domain.questions) return 'completed';
-    if (answeredInDomain > 0) return 'in-progress';
-    if (domainIndex === currentDomainIndex && currentView === 'assessment') return 'current';
-    return 'not-started';
-  };
-
-  const handleAnswer = (optionIndex: number) => {
-    if (currentQuestion) {
-      setAnswers(prev => ({
-        ...prev,
-        [currentQuestion.id]: optionIndex
-      }));
-    }
-  };
-
-  const handleNext = () => {
-    if (currentQuestionIndex < currentDomain.questions_list.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else if (currentDomainIndex < assessmentData.length - 1) {
-      setCurrentDomainIndex(currentDomainIndex + 1);
-      setCurrentQuestionIndex(0);
-    } else {
+  // Check if results were passed from the questions page
+  useEffect(() => {
+    if (location.state?.assessmentResults) {
+      setAssessmentResults(location.state.assessmentResults);
       setCurrentView('results');
     }
-  };
-
-  const handlePrevious = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-    } else if (currentDomainIndex > 0) {
-      setCurrentDomainIndex(currentDomainIndex - 1);
-      setCurrentQuestionIndex(assessmentData[currentDomainIndex - 1].questions_list.length - 1);
-    }
-  };
-
-  const overallScore = calculateOverallScore();
-  const maturity = getMaturityLevel(overallScore);
+  }, [location.state]);
 
   const handleScheduleConsultation = () => {
-    // Calculate domain scores for the consultation page
-    const domainScores = assessmentData.map((domain, index) => ({
-      domain: domain.domain,
-      score: calculateDomainScore(index),
-      weight: domain.weight,
-      description: domain.description
-    }));
-
+    if (!assessmentResults) return;
+    
     navigate('/ai-consultation', {
       state: {
-        assessmentResults: {
-          overallScore,
-          domainScores,
-          maturity: maturity.level,
-          answeredQuestions: Object.keys(answers).length,
-          totalQuestions: 23
-        }
+        assessmentResults
       }
     });
   };
+
+  const handleStartAssessment = () => {
+    navigate('/assessment-questions');
+  };
+
+  // Use results if available, otherwise show default values
+  const overallScore = assessmentResults?.overallScore || 0;
+  const maturity = getMaturityLevel(overallScore);
 
   return (
     <>
@@ -451,7 +117,7 @@ export default function AIAssessment() {
                 Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
               </p>
               
-              <Button size="lg" onClick={() => setCurrentView('assessment')} className="mb-4 bg-primary hover:bg-primary/90">
+              <Button size="lg" onClick={handleStartAssessment} className="mb-4 bg-primary hover:bg-primary/90">
                 Start Your Assessment
               </Button>
               
@@ -466,262 +132,87 @@ export default function AIAssessment() {
                 </div>
                 <div className="flex items-center gap-1">
                   <CheckCircle2 className="h-4 w-4 text-green-500" />
-                  <span>No email required</span>
+                  <span>23 comprehensive questions</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="h-4 w-4 text-green-500" />
+                  <span>Personalised recommendations</span>
                 </div>
               </div>
 
-              {/* Domain Overview Section */}
-              <div className="mb-16">
-                <h2 className="text-3xl font-bold mb-8">We'll Assess Your Organisation Across 6 Key Domains</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {assessmentData.map((domain, index) => {
-                    const IconComponent = domain.icon;
-                    return (
-                      <Card key={index} className="relative bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 group cursor-pointer">
-                        <CardContent className="p-6">
-                          <div className="flex items-start gap-3 mb-3">
-                            <div className="p-2 rounded-lg bg-white/10 group-hover:bg-white/20 transition-colors duration-300 flex-shrink-0">
-                              <IconComponent className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" />
-                            </div>
-                            <h3 className="font-semibold text-white group-hover:text-white/90 transition-colors duration-300 text-left leading-tight">{domain.domain}</h3>
-                          </div>
-                          <p className="text-sm text-white/80 mb-3 group-hover:text-white/70 transition-colors duration-300">
-                            {domain.description}
-                          </p>
-                          <div className="text-xs space-y-1 border-t border-white/20 pt-3 group-hover:border-white/30 transition-colors duration-300">
-                            <div className="text-green-400 font-medium">{domain.questions} questions</div>
-                            <div className="text-red-400 font-medium">{domain.weight}% weight</div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Benefits Section */}
-              <div className="mb-16">
-                <h2 className="text-3xl font-bold mb-8">What You'll Get From This Assessment</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    { icon: Target, title: "Get a clear picture of your AI integration gaps" },
-                    { icon: BarChart3, title: "Receive a personalised roadmap for AI adoption" },
-                    { icon: Lightbulb, title: "Understand your organisational AI maturity level" },
-                    { icon: Zap, title: "Identify high-impact opportunities for automation" },
-                    { icon: CheckCircle2, title: "Access expert recommendations tailored to your business" },
-                    { icon: Users, title: "Schedule a free 30-minute consultation to discuss results" }
-                  ].map((benefit, index) => {
-                    const IconComponent = benefit.icon;
-                    return (
-                      <div key={index} className="flex items-center gap-3 text-left">
-                        <IconComponent className="h-5 w-5 text-primary flex-shrink-0" />
-                        <span className="text-muted-foreground">{benefit.title}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4">Ready to Discover Your AI Potential?</h3>
-                <p className="text-muted-foreground mb-6">Join hundreds of business leaders who've already taken this assessment</p>
-                <Button size="lg" onClick={() => setCurrentView('domains')} className="bg-primary hover:bg-primary/90">
-                  Begin Assessment Now
-                </Button>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Domains Overview */}
-        {currentView === 'domains' && (
-          <section className="py-8 bg-background min-h-screen">
-            <div className="container px-4 max-w-4xl mx-auto">
-              <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2">Assessment Domains</h1>
-                <p className="text-muted-foreground">Complete all domains to receive your comprehensive AI readiness report</p>
-              </div>
-
-              <div className="space-y-4 mb-8">
+              {/* Assessment Overview */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {assessmentData.map((domain, index) => {
-                  const status = getDomainStatus(index);
                   const Icon = domain.icon;
-                  const domainScore = calculateDomainScore(index);
                   
                   return (
-                    <Card key={index} className={`transition-all duration-200 ${
-                      status === 'current' ? 'border-primary bg-primary/5' : 
-                      status === 'completed' ? 'border-green-500 bg-green-50 dark:bg-green-950/20' : 
-                      'border-border'
-                    }`}>
+                    <Card key={index} className="hover:shadow-md transition-all duration-200">
                       <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            {status === 'completed' ? (
-                              <CheckCircle2 className="h-6 w-6 text-green-500" />
-                            ) : status === 'current' ? (
-                              <Clock className="h-6 w-6 text-primary" />
-                            ) : (
-                              <Circle className="h-6 w-6 text-muted-foreground" />
-                            )}
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="p-2 rounded-lg bg-muted/50">
+                            <Icon className="h-6 w-6 text-primary" />
                           </div>
-                          
-                          <div className="flex-grow">
-                            <div className="flex items-center gap-2 mb-2">
-                              <Icon className="h-5 w-5 text-primary" />
-                              <h3 className="text-lg font-semibold">{domain.domain}</h3>
+                          <div className="flex-1">
+                            <h3 className="font-semibold">{domain.domain}</h3>
+                            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <span>{domain.weight}% weight</span>
                             </div>
-                            <p className="text-muted-foreground text-sm mb-3">{domain.description}</p>
-                            
-                            {status === 'completed' && (
-                              <div className="mb-2">
-                                <div className="flex justify-between text-sm mb-1">
-                                  <span>Domain Score</span>
-                                  <span className="font-medium">{Math.round(domainScore)}%</span>
-                                </div>
-                                <Progress value={domainScore} className="h-2" />
-                              </div>
-                            )}
-                            
-                            {status === 'current' && (
-                              <div className="text-sm text-primary font-medium">
-                                → Currently answering questions in this domain
-                              </div>
-                            )}
-                          </div>
-                          
-                          <div className="text-right text-sm text-muted-foreground">
-                            <div>{domain.questions} questions</div>
-                            <div>{domain.weight}% weight</div>
                           </div>
                         </div>
+                        
+                        <p className="text-sm text-muted-foreground">
+                          {domain.description}
+                        </p>
                       </CardContent>
                     </Card>
                   );
                 })}
               </div>
 
-              <div className="flex justify-between items-center">
-                <Button variant="outline" onClick={() => setCurrentView('intro')}>
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Introduction
-                </Button>
-                
-                <div className="text-center">
-                  <div className="text-sm text-muted-foreground mb-1">Overall Progress</div>
-                  <div className="text-lg font-semibold">{answeredQuestions} of {totalQuestions} questions</div>
-                  {answeredQuestions > 0 && (
-                    <div className="text-sm text-muted-foreground">
-                      Current Score: {Math.round(overallScore)}% ({maturity.level})
-                    </div>
-                  )}
-                </div>
-                
-                <Button onClick={() => setCurrentView('assessment')} className="bg-primary hover:bg-primary/90">
-                  {answeredQuestions > 0 ? 'Continue Assessment' : 'Start Assessment'}
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Assessment Questions */}
-        {currentView === 'assessment' && currentQuestion && (
-          <section className="py-8 bg-background min-h-screen">
-            <div className="container px-4 max-w-4xl mx-auto">
-              {/* Progress Header */}
-              <div className="mb-8">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-lg font-medium">Question {questionNumber} of {totalQuestions}</span>
-                  <span className="text-lg font-medium text-primary">{currentDomain.domain}</span>
-                </div>
-                
-                <div className="w-full bg-muted rounded-full h-3 mb-2">
-                  <div 
-                    className="bg-primary h-3 rounded-full transition-all duration-300" 
-                    style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
-                  />
-                </div>
-                
-                <div className="text-sm text-muted-foreground text-center">
-                  {Math.round((questionNumber / totalQuestions) * 100)}% Complete
-                </div>
-              </div>
-
-              <Card className="bg-card">
-                <CardContent className="p-8">
-                  <h1 className="text-2xl font-bold mb-8">{currentQuestion.text}</h1>
-
-                  <RadioGroup 
-                    value={answers[currentQuestion.id]?.toString()} 
-                    onValueChange={(value) => handleAnswer(parseInt(value))}
-                    className="space-y-4"
-                  >
-                    {currentQuestion.options.map((option, index) => (
-                      <div key={index} className="flex items-start space-x-3 p-4 rounded-lg border border-muted hover:bg-muted/30 transition-colors">
-                        <RadioGroupItem value={index.toString()} id={`option-${index}`} className="mt-1" />
-                        <Label htmlFor={`option-${index}`} className="text-base leading-relaxed cursor-pointer flex-1">
-                          {option}
-                        </Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
-
-                  {/* Navigation */}
-                  <div className="flex justify-between items-center mt-8">
-                    <Button 
-                      variant="outline" 
-                      onClick={handlePrevious}
-                      disabled={questionNumber === 1}
-                      className="px-6"
-                    >
-                      <ArrowLeft className="h-4 w-4 mr-2" />
-                      Previous
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      onClick={() => setCurrentView('domains')}
-                      className="px-6"
-                    >
-                      View Progress
-                    </Button>
-                    
-                    <Button 
-                      onClick={handleNext}
-                      disabled={answers[currentQuestion.id] === undefined}
-                      className="px-6"
-                    >
-                      {questionNumber === totalQuestions ? 'View Results' : 'Next'}
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Button>
+              <div className="bg-muted/30 rounded-xl p-8">
+                <h2 className="text-2xl font-bold mb-4">What You'll Get</h2>
+                <div className="grid md:grid-cols-2 gap-6 text-left">
+                  <div>
+                    <h3 className="font-semibold mb-2">📊 Comprehensive Score</h3>
+                    <p className="text-sm text-muted-foreground">Get your overall AI readiness percentage across all critical domains</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <div>
+                    <h3 className="font-semibold mb-2">🎯 Domain Breakdown</h3>
+                    <p className="text-sm text-muted-foreground">See exactly where you excel and where improvement is needed</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">🚀 Actionable Recommendations</h3>
+                    <p className="text-sm text-muted-foreground">Receive personalised next steps based on your maturity level</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">💬 Free Consultation</h3>
+                    <p className="text-sm text-muted-foreground">Book a strategy session to discuss your results with our experts</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         )}
 
         {/* Results View */}
-        {currentView === 'results' && (
-          <section className="py-8 bg-background min-h-screen">
+        {currentView === 'results' && assessmentResults && (
+          <section className="py-16">
             <div className="container px-4 max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-4">Your AI Readiness Assessment Results</h1>
-                <p className="text-xl text-muted-foreground">
-                  Based on your responses across {totalQuestions} questions in 6 key domains
+                <h1 className="text-3xl md:text-4xl font-bold mb-4">Your AI Readiness Results</h1>
+                <p className="text-lg text-muted-foreground">
+                  Based on your responses to {assessmentResults.answeredQuestions} questions
                 </p>
               </div>
 
               {/* Overall Score */}
-              <Card className={`mb-8 ${maturity.bgColor} border-2`}>
+              <Card className="mb-8">
                 <CardContent className="p-8 text-center">
-                  <div className="mb-4">
-                    <div className="text-6xl font-bold mb-2 ${maturity.color}">
+                  <div className="mb-6">
+                    <div className={`text-5xl md:text-6xl font-bold mb-2 ${maturity.color}`}>
                       {Math.round(overallScore)}%
                     </div>
-                    <div className="text-2xl font-semibold mb-2 ${maturity.color}">
+                    <div className={`text-2xl font-semibold mb-2 ${maturity.color}`}>
                       {maturity.level}
                     </div>
                     <p className="text-muted-foreground">
@@ -737,9 +228,10 @@ export default function AIAssessment() {
 
               {/* Domain Breakdown */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {assessmentData.map((domain, index) => {
+                {assessmentResults.domainScores.map((domainResult: any, index: number) => {
+                  const domain = assessmentData[index];
                   const Icon = domain.icon;
-                  const domainScore = calculateDomainScore(index);
+                  const domainScore = domainResult.score;
                   const domainMaturity = getMaturityLevel(domainScore);
                   
                   return (
@@ -844,9 +336,7 @@ export default function AIAssessment() {
                       Schedule Free Consultation
                     </Button>
                     <Button size="lg" variant="outline" onClick={() => {
-                      setAnswers({});
-                      setCurrentDomainIndex(0);
-                      setCurrentQuestionIndex(0);
+                      setAssessmentResults(null);
                       setCurrentView('intro');
                     }}>
                       Retake Assessment
