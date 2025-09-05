@@ -389,7 +389,7 @@ export default function Training() {
                              <div className="text-xs text-muted-foreground">{course.format}</div>
                            </div>
                             <Button asChild>
-                              <a href="https://epitome-ai-reboot.lovable.app/training/ai-quick-start-essentials" target="_blank" rel="noopener noreferrer">
+                              <a href="https://epitome-ai-reboot.lovable.app/training/ai-tools-platforms-mastery" target="_blank" rel="noopener noreferrer">
                                 Book Now • {course.price}
                               </a>
                             </Button>
