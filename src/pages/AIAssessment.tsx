@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -315,6 +316,7 @@ const getMaturityLevel = (score: number) => {
 };
 
 export default function AIAssessment() {
+  const navigate = useNavigate();
   const [currentView, setCurrentView] = useState<'intro' | 'domains' | 'assessment' | 'results'>('intro');
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -405,6 +407,28 @@ export default function AIAssessment() {
 
   const overallScore = calculateOverallScore();
   const maturity = getMaturityLevel(overallScore);
+
+  const handleScheduleConsultation = () => {
+    // Calculate domain scores for the consultation page
+    const domainScores = assessmentData.map((domain, index) => ({
+      domain: domain.domain,
+      score: calculateDomainScore(index),
+      weight: domain.weight,
+      description: domain.description
+    }));
+
+    navigate('/ai-consultation', {
+      state: {
+        assessmentResults: {
+          overallScore,
+          domainScores,
+          maturity: maturity.level,
+          answeredQuestions: Object.keys(answers).length,
+          totalQuestions: 23
+        }
+      }
+    });
+  };
 
   return (
     <>
@@ -816,12 +840,8 @@ export default function AIAssessment() {
                   </p>
                   
                   <div className="flex flex-wrap justify-center gap-4">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={handleScheduleConsultation}>
                       Schedule Free Consultation
-                    </Button>
-                    <Button size="lg" variant="outline">
-                      <Download className="h-4 w-4 mr-2" />
-                      Download Report
                     </Button>
                     <Button size="lg" variant="outline" onClick={() => {
                       setAnswers({});
