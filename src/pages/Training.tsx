@@ -102,7 +102,8 @@ export default function Training() {
       description: "Focus on customer acquisition, lead generation, and sales process optimisation using AI technologies. Covers AI-driven customer segmentation, automated content creation, predictive sales analytics, and CRM optimisation.",
       features: ["Customer acquisition", "Lead generation", "Sales optimisation", "CRM enhancement"],
       audience: "Marketing teams, sales professionals, business development managers",
-      platform: "Surbiton & Rugby locations available"
+      platform: "Surbiton & Rugby locations available",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-marketing-sales-acceleration"
     }, {
       title: "AI Process Automation Clinic",
       duration: "3-hour workshop",
@@ -114,7 +115,8 @@ export default function Training() {
       features: ["Workflow automation", "Hands-on optimisation", "Templates included", "Follow-up resources"],
       audience: "Operations managers, process owners, administrative staff",
       platform: "Google Meet",
-      dates: "Sep 5, Sep 19, Oct 3..."
+      dates: "Sep 5, Sep 19, Oct 3...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-process-automation-clinic"
     }]
   }, {
     category: "Advanced AI Applications",
@@ -129,7 +131,8 @@ export default function Training() {
       description: "Transform data into actionable business insights using AI-powered analytics. Covers predictive modelling, automated reporting, customer behaviour analysis, and performance optimisation. Full-day workshop with hands-on exercises.",
       features: ["Predictive modelling", "Automated reporting", "Behaviour analysis", "Performance optimisation"],
       audience: "Data analysts, financial controllers, strategic planners, business intelligence teams",
-      platform: "Surbiton & Rugby locations available"
+      platform: "Surbiton & Rugby locations available",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-data-analytics-for-business-intelligence"
     }, {
       title: "AI Risk Management & Governance",
       duration: "3 x 90-minute sessions",
@@ -141,7 +144,8 @@ export default function Training() {
       features: ["AI ethics", "GDPR compliance", "Risk assessment", "Governance policies"],
       audience: "Compliance officers, senior management, legal teams, risk managers",
       platform: "Google Meet",
-      dates: "Sep 3-17, Oct 1-15, Oct 29-Nov 12..."
+      dates: "Sep 3-17, Oct 1-15, Oct 29-Nov 12...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-risk-management-governance"
     }]
   }, {
     category: "Strategic AI Leadership",
@@ -157,7 +161,8 @@ export default function Training() {
       features: ["Sector-specific solutions", "Industry tracks", "Targeted learning", "Practical applications"],
       audience: "Industry-specific business owners, sector managers, specialised teams",
       platform: "Surbiton & Rugby locations available",
-      tracks: "Retail & E-commerce, Professional Services..."
+      tracks: "Retail & E-commerce, Professional Services...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/industry-specific-ai-applications"
     }, {
       title: "AI Implementation Strategy & Change Management",
       duration: "Full day workshop",
@@ -168,7 +173,8 @@ export default function Training() {
       description: "Comprehensive strategic planning for AI adoption covering roadmap development, change management, team training, success measurement, and scaling initiatives. Executive-level workshop for transformation leaders.",
       features: ["Roadmap development", "Change management", "Success measurement", "Scaling initiatives"],
       audience: "Senior executives, transformation leaders, department heads, C-suite",
-      platform: "Surbiton & Rugby locations available"
+      platform: "Surbiton & Rugby locations available",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-implementation-strategy-change-management"
     }]
   }, {
     category: "Comprehensive Programs",
@@ -184,7 +190,8 @@ export default function Training() {
       features: ["6-week comprehensive program", "Weekly sessions", "Practical assignments", "Implementation planning"],
       audience: "Complete beginners, small business owners, teams wanting comprehensive foundation",
       platform: "Google Meet",
-      dates: "Sep 4-Oct 9, Oct 16-Nov 20..."
+      dates: "Sep 4-Oct 9, Oct 16-Nov 20...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-essentials-express-series"
     }, {
       title: "Advanced AI Leadership Program",
       duration: "8-week program",
