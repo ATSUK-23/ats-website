@@ -121,13 +121,24 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         </SplitSection>
 
         {/* CTA Bottom */}
-        <SplitSection id="vibe-cta" reverse title="Let's Bring Your Idea to Life" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<>
-          <p>Whether you're starting from scratch or need to accelerate a stalled project, our Vibe Coding service can take you from concept to launch faster and with less stress than you imagined.</p>
-          <p>Once a month, we run a live 1-day workshop in London with our partners at Epitome. Only 12 spots available as its designed for maximum results.</p>
+        <SplitSection id="vibe-cta" reverse title="AI Prototyping Workshop" image={vibeCta} imageAlt="Founder at desk with analytics dashboard in the background" description={<>
+          <p>Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.</p>
+          <p>1-day intensive workshop available in-person or virtual. Max 12 participants for maximum results and personalized attention.</p>
+          <div className="mt-4">
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div><strong>Duration:</strong> 1-day intensive</div>
+              <div><strong>Format:</strong> In-person or Virtual</div>
+              <div><strong>Price:</strong> £397</div>
+              <div><strong>Max participants:</strong> 12</div>
+            </div>
+            <div className="mt-3">
+              <strong>What you'll get:</strong> Build AI prototypes, Test solutions, Implementation roadmap, Real business challenges
+            </div>
+          </div>
         </>}>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="https://theepitome.co.uk/ai-prototyping-workshop" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Reserve Your Workshop Place</Button>
+            <a href="https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop" target="_blank" rel="noreferrer">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Book AI Prototyping Workshop</Button>
             </a>
             <a href="#vibe-coding-form">
               <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>

@@ -202,7 +202,8 @@ export default function Training() {
       description: "Strategic 8-week program combining online learning with intensive in-person workshop. Covers AI vision development, technology selection, implementation management, and organisational transformation for senior leaders.",
       features: ["8-week strategic program", "Hybrid delivery", "Vision development", "Organisational transformation"],
       audience: "Senior executives, C-suite, transformation leaders, strategic decision-makers",
-      platform: "Online sessions + Surbiton workshop"
+      platform: "Online sessions + Surbiton workshop",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/advanced-ai-leadership-program"
     }, {
       title: "AI Prototyping Workshop",
       duration: "1-day intensive",
@@ -213,7 +214,8 @@ export default function Training() {
       description: "Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.",
       features: ["Build AI prototypes", "Test solutions", "Implementation roadmap", "Real business challenges"],
       audience: "Business leaders, product managers, innovation teams",
-      platform: "Surbiton & Rugby locations available"
+      platform: "Surbiton & Rugby locations available",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop"
     }]
   }];
   return <div className="min-h-screen bg-background text-foreground">
