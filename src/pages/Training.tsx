@@ -9,7 +9,6 @@ import SplitSection from "@/components/sections/SplitSection";
 import Contact from "@/components/sections/Contact";
 import TrainingLeadForm from "@/components/forms/TrainingLeadForm";
 import { Clock, Users, Star, Award, BookOpen, Zap } from "lucide-react";
-
 interface Course {
   title: string;
   duration: string;
@@ -24,225 +23,193 @@ interface Course {
   dates?: string;
   bookingLink?: string;
 }
-
 const trainingHeroBackground = "/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png";
-
 export default function Training() {
-  const packages = [
-    {
-      title: "Small Business Package",
-      description: "Any 3 workshops",
-      discount: "20% off",
-      price: "From £1,200",
-      savings: "Save up to £390",
-      features: ["Choose any 3 workshops", "Flexible scheduling", "Priority booking"]
-    },
-    {
-      title: "Team Discount",
-      description: "5+ participants",
-      discount: "10% off",
-      price: "Per person",
-      savings: "Group booking benefits",
-      features: ["Bulk booking discounts", "Group coordination", "Team certificates"]
-    },
-    {
-      title: "Early Bird Special",
-      description: "Bookings 6+ weeks in advance",
-      discount: "15% off",
-      price: "All courses",
-      savings: "Plan ahead and save",
-      features: ["Advanced booking discount", "Guaranteed scheduling", "Free rescheduling"]
-    }
-  ];
-
-  const trainingPrograms = [
-    {
-      category: "Foundation Courses",
-      description: "Essential AI knowledge for getting started",
-      courses: [
-        {
-          title: "AI Quick-Start Essentials",
-          duration: "90 minutes",
-          level: "Beginner",
-          format: "Online",
-          price: "£150",
-          maxParticipants: "25",
-          description: "90-minute introduction to AI fundamentals and immediate-use tools like ChatGPT, Claude, and basic automation. Perfect for businesses taking their first steps into AI. Includes practical exercises and take-home resources.",
-          features: ["AI fundamentals", "Immediate-use tools", "Practical exercises", "Take-home resources"],
-          audience: "Business owners new to AI, administrative staff, small teams",
-          platform: "Google Meet",
-          dates: "Sep 1, Sep 15, Oct 6...",
-          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-quick-start-essentials"
-        },
-        {
-          title: "AI Tools & Platforms Mastery",
-          duration: "3 x 90-minute sessions",
-          level: "Beginner",
-          format: "Online",
-          price: "£350",
-          maxParticipants: "15",
-          description: "Hands-on training with ChatGPT, Canva AI, automation tools, and productivity platforms. Three 90-minute sessions covering essential AI tools for daily operations, workflow creation, and productivity enhancement.",
-          features: ["ChatGPT mastery", "Canva AI training", "Automation tools", "Productivity platforms"],
-          audience: "All staff levels, operational teams, administrative professionals",
-          platform: "Google Meet",
-          dates: "Sep 2-16, Sep 30-Oct 14, Oct 27-Nov 10...",
-          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-tools-platforms-mastery"
-        },
-        {
-          title: "AI Fundamentals for Small Business Leaders",
-          duration: "Full day intensive",
-          level: "Beginner",
-          format: "In-person",
-          price: "£450",
-          maxParticipants: "12",
-          description: "Essential foundation covering AI basics without technical jargon, opportunity identification specific to small businesses, strategic AI roadmap development, ROI assessment, and building an AI-ready culture. Full-day intensive for decision-makers.",
-          features: ["AI basics without jargon", "Opportunity identification", "Strategic roadmap", "ROI assessment"],
-          audience: "Business owners, senior managers, decision-makers, C-suite executives",
-          platform: "Surbiton & Rugby locations available",
-          bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-fundamentals-for-small-business-leaders"
-        }
-      ]
-    },
-    {
-      category: "Applied AI Training",
-      description: "Practical implementation for specific business functions",
-      courses: [
-        {
-          title: "AI Marketing & Sales Acceleration",
-          duration: "Full day workshop",
-          level: "Intermediate",
-          format: "In-person",
-          price: "£500",
-          maxParticipants: "12",
-          description: "Focus on customer acquisition, lead generation, and sales process optimisation using AI technologies. Covers AI-driven customer segmentation, automated content creation, predictive sales analytics, and CRM optimisation.",
-          features: ["Customer acquisition", "Lead generation", "Sales optimisation", "CRM enhancement"],
-          audience: "Marketing teams, sales professionals, business development managers",
-          platform: "Surbiton & Rugby locations available"
-        },
-        {
-          title: "AI Process Automation Clinic",
-          duration: "3-hour workshop",
-          level: "Intermediate",
-          format: "Online",
-          price: "£250",
-          maxParticipants: "12",
-          description: "Practical 3-hour workshop identifying and implementing workflow automation opportunities. Participants bring real business processes for hands-on optimisation using AI tools. Includes templates and follow-up resources.",
-          features: ["Workflow automation", "Hands-on optimisation", "Templates included", "Follow-up resources"],
-          audience: "Operations managers, process owners, administrative staff",
-          platform: "Google Meet",
-          dates: "Sep 5, Sep 19, Oct 3..."
-        }
-      ]
-    },
-    {
-      category: "Advanced AI Applications",
-      description: "Sophisticated AI solutions for experienced users",
-      courses: [
-        {
-          title: "AI Data & Analytics for Business Intelligence",
-          duration: "Full day workshop",
-          level: "Advanced",
-          format: "In-person",
-          price: "£650",
-          maxParticipants: "8",
-          description: "Transform data into actionable business insights using AI-powered analytics. Covers predictive modelling, automated reporting, customer behaviour analysis, and performance optimisation. Full-day workshop with hands-on exercises.",
-          features: ["Predictive modelling", "Automated reporting", "Behaviour analysis", "Performance optimisation"],
-          audience: "Data analysts, financial controllers, strategic planners, business intelligence teams",
-          platform: "Surbiton & Rugby locations available"
-        },
-        {
-          title: "AI Risk Management & Governance",
-          duration: "3 x 90-minute sessions",
-          level: "Advanced",
-          format: "Online",
-          price: "£400",
-          maxParticipants: "15",
-          description: "Essential framework for responsible AI implementation covering ethics, GDPR compliance, cybersecurity, risk assessment, and governance policies. Three 90-minute sessions for compliance officers and senior management.",
-          features: ["AI ethics", "GDPR compliance", "Risk assessment", "Governance policies"],
-          audience: "Compliance officers, senior management, legal teams, risk managers",
-          platform: "Google Meet",
-          dates: "Sep 3-17, Oct 1-15, Oct 29-Nov 12..."
-        }
-      ]
-    },
-    {
-      category: "Strategic AI Leadership",
-      description: "Executive-level AI transformation and leadership",
-      courses: [
-        {
-          title: "Industry-Specific AI Applications",
-          duration: "Full day workshop",
-          level: "Advanced",
-          format: "In-person",
-          price: "£600",
-          maxParticipants: "10",
-          description: "Tailored AI solutions for specific sectors including retail optimisation, professional services automation, manufacturing quality control, and healthcare management. Choose your industry track for targeted learning.",
-          features: ["Sector-specific solutions", "Industry tracks", "Targeted learning", "Practical applications"],
-          audience: "Industry-specific business owners, sector managers, specialised teams",
-          platform: "Surbiton & Rugby locations available",
-          tracks: "Retail & E-commerce, Professional Services..."
-        },
-        {
-          title: "AI Implementation Strategy & Change Management",
-          duration: "Full day workshop",
-          level: "Advanced",
-          format: "In-person",
-          price: "£650",
-          maxParticipants: "8",
-          description: "Comprehensive strategic planning for AI adoption covering roadmap development, change management, team training, success measurement, and scaling initiatives. Executive-level workshop for transformation leaders.",
-          features: ["Roadmap development", "Change management", "Success measurement", "Scaling initiatives"],
-          audience: "Senior executives, transformation leaders, department heads, C-suite",
-          platform: "Surbiton & Rugby locations available"
-        }
-      ]
-    },
-    {
-      category: "Comprehensive Programs",
-      description: "Multi-week programs for complete AI transformation",
-      courses: [
-        {
-          title: "AI Essentials Express Series",
-          duration: "6-week program",
-          level: "Beginner to Intermediate",
-          format: "Online",
-          price: "£400",
-          maxParticipants: "20",
-          description: "Complete 6-week AI introduction covering fundamentals, tools mastery, marketing applications, automation, analytics, and implementation planning. Weekly 90-minute sessions with assignments and practical exercises.",
-          features: ["6-week comprehensive program", "Weekly sessions", "Practical assignments", "Implementation planning"],
-          audience: "Complete beginners, small business owners, teams wanting comprehensive foundation",
-          platform: "Google Meet",
-          dates: "Sep 4-Oct 9, Oct 16-Nov 20..."
-        },
-        {
-          title: "Advanced AI Leadership Program",
-          duration: "8-week program",
-          level: "Advanced",
-          format: "Hybrid (Online + In-person)",
-          price: "£800",
-          maxParticipants: "15",
-          description: "Strategic 8-week program combining online learning with intensive in-person workshop. Covers AI vision development, technology selection, implementation management, and organisational transformation for senior leaders.",
-          features: ["8-week strategic program", "Hybrid delivery", "Vision development", "Organisational transformation"],
-          audience: "Senior executives, C-suite, transformation leaders, strategic decision-makers",
-          platform: "Online sessions + Surbiton workshop"
-        },
-        {
-          title: "AI Prototyping Workshop",
-          duration: "1-day intensive",
-          level: "Intermediate",
-          format: "In-person or Virtual",
-          price: "£397",
-          maxParticipants: "12",
-          description: "Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.",
-          features: ["Build AI prototypes", "Test solutions", "Implementation roadmap", "Real business challenges"],
-          audience: "Business leaders, product managers, innovation teams",
-          platform: "Surbiton & Rugby locations available"
-        }
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  const packages = [{
+    title: "Small Business Package",
+    description: "Any 3 workshops",
+    discount: "20% off",
+    price: "From £1,200",
+    savings: "Save up to £390",
+    features: ["Choose any 3 workshops", "Flexible scheduling", "Priority booking"]
+  }, {
+    title: "Team Discount",
+    description: "5+ participants",
+    discount: "10% off",
+    price: "Per person",
+    savings: "Group booking benefits",
+    features: ["Bulk booking discounts", "Group coordination", "Team certificates"]
+  }, {
+    title: "Early Bird Special",
+    description: "Bookings 6+ weeks in advance",
+    discount: "15% off",
+    price: "All courses",
+    savings: "Plan ahead and save",
+    features: ["Advanced booking discount", "Guaranteed scheduling", "Free rescheduling"]
+  }];
+  const trainingPrograms = [{
+    category: "Foundation Courses",
+    description: "Essential AI knowledge for getting started",
+    courses: [{
+      title: "AI Quick-Start Essentials",
+      duration: "90 minutes",
+      level: "Beginner",
+      format: "Online",
+      price: "£150",
+      maxParticipants: "25",
+      description: "90-minute introduction to AI fundamentals and immediate-use tools like ChatGPT, Claude, and basic automation. Perfect for businesses taking their first steps into AI. Includes practical exercises and take-home resources.",
+      features: ["AI fundamentals", "Immediate-use tools", "Practical exercises", "Take-home resources"],
+      audience: "Business owners new to AI, administrative staff, small teams",
+      platform: "Google Meet",
+      dates: "Sep 1, Sep 15, Oct 6...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-quick-start-essentials"
+    }, {
+      title: "AI Tools & Platforms Mastery",
+      duration: "3 x 90-minute sessions",
+      level: "Beginner",
+      format: "Online",
+      price: "£350",
+      maxParticipants: "15",
+      description: "Hands-on training with ChatGPT, Canva AI, automation tools, and productivity platforms. Three 90-minute sessions covering essential AI tools for daily operations, workflow creation, and productivity enhancement.",
+      features: ["ChatGPT mastery", "Canva AI training", "Automation tools", "Productivity platforms"],
+      audience: "All staff levels, operational teams, administrative professionals",
+      platform: "Google Meet",
+      dates: "Sep 2-16, Sep 30-Oct 14, Oct 27-Nov 10...",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-tools-platforms-mastery"
+    }, {
+      title: "AI Fundamentals for Small Business Leaders",
+      duration: "Full day intensive",
+      level: "Beginner",
+      format: "In-person",
+      price: "£450",
+      maxParticipants: "12",
+      description: "Essential foundation covering AI basics without technical jargon, opportunity identification specific to small businesses, strategic AI roadmap development, ROI assessment, and building an AI-ready culture. Full-day intensive for decision-makers.",
+      features: ["AI basics without jargon", "Opportunity identification", "Strategic roadmap", "ROI assessment"],
+      audience: "Business owners, senior managers, decision-makers, C-suite executives",
+      platform: "Surbiton & Rugby locations available",
+      bookingLink: "https://epitome-ai-reboot.lovable.app/training/ai-fundamentals-for-small-business-leaders"
+    }]
+  }, {
+    category: "Applied AI Training",
+    description: "Practical implementation for specific business functions",
+    courses: [{
+      title: "AI Marketing & Sales Acceleration",
+      duration: "Full day workshop",
+      level: "Intermediate",
+      format: "In-person",
+      price: "£500",
+      maxParticipants: "12",
+      description: "Focus on customer acquisition, lead generation, and sales process optimisation using AI technologies. Covers AI-driven customer segmentation, automated content creation, predictive sales analytics, and CRM optimisation.",
+      features: ["Customer acquisition", "Lead generation", "Sales optimisation", "CRM enhancement"],
+      audience: "Marketing teams, sales professionals, business development managers",
+      platform: "Surbiton & Rugby locations available"
+    }, {
+      title: "AI Process Automation Clinic",
+      duration: "3-hour workshop",
+      level: "Intermediate",
+      format: "Online",
+      price: "£250",
+      maxParticipants: "12",
+      description: "Practical 3-hour workshop identifying and implementing workflow automation opportunities. Participants bring real business processes for hands-on optimisation using AI tools. Includes templates and follow-up resources.",
+      features: ["Workflow automation", "Hands-on optimisation", "Templates included", "Follow-up resources"],
+      audience: "Operations managers, process owners, administrative staff",
+      platform: "Google Meet",
+      dates: "Sep 5, Sep 19, Oct 3..."
+    }]
+  }, {
+    category: "Advanced AI Applications",
+    description: "Sophisticated AI solutions for experienced users",
+    courses: [{
+      title: "AI Data & Analytics for Business Intelligence",
+      duration: "Full day workshop",
+      level: "Advanced",
+      format: "In-person",
+      price: "£650",
+      maxParticipants: "8",
+      description: "Transform data into actionable business insights using AI-powered analytics. Covers predictive modelling, automated reporting, customer behaviour analysis, and performance optimisation. Full-day workshop with hands-on exercises.",
+      features: ["Predictive modelling", "Automated reporting", "Behaviour analysis", "Performance optimisation"],
+      audience: "Data analysts, financial controllers, strategic planners, business intelligence teams",
+      platform: "Surbiton & Rugby locations available"
+    }, {
+      title: "AI Risk Management & Governance",
+      duration: "3 x 90-minute sessions",
+      level: "Advanced",
+      format: "Online",
+      price: "£400",
+      maxParticipants: "15",
+      description: "Essential framework for responsible AI implementation covering ethics, GDPR compliance, cybersecurity, risk assessment, and governance policies. Three 90-minute sessions for compliance officers and senior management.",
+      features: ["AI ethics", "GDPR compliance", "Risk assessment", "Governance policies"],
+      audience: "Compliance officers, senior management, legal teams, risk managers",
+      platform: "Google Meet",
+      dates: "Sep 3-17, Oct 1-15, Oct 29-Nov 12..."
+    }]
+  }, {
+    category: "Strategic AI Leadership",
+    description: "Executive-level AI transformation and leadership",
+    courses: [{
+      title: "Industry-Specific AI Applications",
+      duration: "Full day workshop",
+      level: "Advanced",
+      format: "In-person",
+      price: "£600",
+      maxParticipants: "10",
+      description: "Tailored AI solutions for specific sectors including retail optimisation, professional services automation, manufacturing quality control, and healthcare management. Choose your industry track for targeted learning.",
+      features: ["Sector-specific solutions", "Industry tracks", "Targeted learning", "Practical applications"],
+      audience: "Industry-specific business owners, sector managers, specialised teams",
+      platform: "Surbiton & Rugby locations available",
+      tracks: "Retail & E-commerce, Professional Services..."
+    }, {
+      title: "AI Implementation Strategy & Change Management",
+      duration: "Full day workshop",
+      level: "Advanced",
+      format: "In-person",
+      price: "£650",
+      maxParticipants: "8",
+      description: "Comprehensive strategic planning for AI adoption covering roadmap development, change management, team training, success measurement, and scaling initiatives. Executive-level workshop for transformation leaders.",
+      features: ["Roadmap development", "Change management", "Success measurement", "Scaling initiatives"],
+      audience: "Senior executives, transformation leaders, department heads, C-suite",
+      platform: "Surbiton & Rugby locations available"
+    }]
+  }, {
+    category: "Comprehensive Programs",
+    description: "Multi-week programs for complete AI transformation",
+    courses: [{
+      title: "AI Essentials Express Series",
+      duration: "6-week program",
+      level: "Beginner to Intermediate",
+      format: "Online",
+      price: "£400",
+      maxParticipants: "20",
+      description: "Complete 6-week AI introduction covering fundamentals, tools mastery, marketing applications, automation, analytics, and implementation planning. Weekly 90-minute sessions with assignments and practical exercises.",
+      features: ["6-week comprehensive program", "Weekly sessions", "Practical assignments", "Implementation planning"],
+      audience: "Complete beginners, small business owners, teams wanting comprehensive foundation",
+      platform: "Google Meet",
+      dates: "Sep 4-Oct 9, Oct 16-Nov 20..."
+    }, {
+      title: "Advanced AI Leadership Program",
+      duration: "8-week program",
+      level: "Advanced",
+      format: "Hybrid (Online + In-person)",
+      price: "£800",
+      maxParticipants: "15",
+      description: "Strategic 8-week program combining online learning with intensive in-person workshop. Covers AI vision development, technology selection, implementation management, and organisational transformation for senior leaders.",
+      features: ["8-week strategic program", "Hybrid delivery", "Vision development", "Organisational transformation"],
+      audience: "Senior executives, C-suite, transformation leaders, strategic decision-makers",
+      platform: "Online sessions + Surbiton workshop"
+    }, {
+      title: "AI Prototyping Workshop",
+      duration: "1-day intensive",
+      level: "Intermediate",
+      format: "In-person or Virtual",
+      price: "£397",
+      maxParticipants: "12",
+      description: "Hands-on workshop where you'll build and test AI prototypes for your specific business challenges. Leave with working prototypes and implementation roadmap.",
+      features: ["Build AI prototypes", "Test solutions", "Implementation roadmap", "Real business challenges"],
+      audience: "Business leaders, product managers, innovation teams",
+      platform: "Surbiton & Rugby locations available"
+    }]
+  }];
+  return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>AI Training & Upskilling Programs | Automate to Sell</title>
         <meta name="description" content="Transform your team from AI curious to AI competent with our comprehensive training programs. Foundation to advanced level courses available." />
@@ -252,15 +219,7 @@ export default function Training() {
 
       <main>
         {/* Hero Section */}
-        <HeroSection 
-          title="Transform Your Team From AI Curious To AI Competent"
-          subtitle="Comprehensive training programs that build AI literacy, practical skills, and strategic understanding across your organisation."
-          ctaText="Speak to a Training Specialist"
-          ctaLink="#training-form"
-          backgroundImage={trainingHeroBackground}
-          className="py-8 md:py-12"
-          hideSecondaryButton={true}
-        >
+        <HeroSection title="Transform Your Team From AI Curious To AI Competent" subtitle="Comprehensive training programs that build AI literacy, practical skills, and strategic understanding across your organisation." ctaText="Speak to a Training Specialist" ctaLink="#training-form" backgroundImage={trainingHeroBackground} className="py-8 md:py-12" hideSecondaryButton={true}>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
               <BookOpen className="w-8 h-8 mx-auto mb-2 text-white" />
@@ -291,8 +250,7 @@ export default function Training() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {packages.map((pkg, index) => (
-                <Card key={index} className="relative bg-white/10 backdrop-blur-sm border-white/20">
+              {packages.map((pkg, index) => <Card key={index} className="relative bg-white/10 backdrop-blur-sm border-white/20">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <CardTitle className="text-xl">{pkg.title}</CardTitle>
@@ -306,17 +264,14 @@ export default function Training() {
                       <div className="text-sm text-green-600">{pkg.savings}</div>
                     </div>
                     <ul className="space-y-2 mb-6">
-                      {pkg.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm">
+                      {pkg.features.map((feature, idx) => <li key={idx} className="flex items-center text-sm">
                           <Zap className="w-4 h-4 mr-2 text-primary" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
-                    <Button className="w-full" variant="outline">Learn More</Button>
+                    
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -331,29 +286,18 @@ export default function Training() {
               </p>
             </div>
 
-            {trainingPrograms.map((program, programIndex) => (
-              <div key={programIndex} className="mb-12">
+            {trainingPrograms.map((program, programIndex) => <div key={programIndex} className="mb-12">
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold mb-2">{program.category}</h3>
                   <p className="text-muted-foreground">{program.description}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {program.courses.map((course, courseIndex) => (
-                    <Card key={courseIndex} className="hover:shadow-lg transition-shadow bg-white/10 backdrop-blur-sm border-white/20">
+                  {program.courses.map((course, courseIndex) => <Card key={courseIndex} className="hover:shadow-lg transition-shadow bg-white/10 backdrop-blur-sm border-white/20">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-xl">{course.title}</CardTitle>
-                          <Badge 
-                            variant="outline" 
-                            className={
-                              course.level === 'Beginner' ? 'bg-green-500 border-white text-white' :
-                              course.level === 'Intermediate' ? 'bg-orange-500 border-white text-white' :
-                              course.level === 'Advanced' ? 'bg-blue-500 border-white text-white' :
-                              course.level === 'Beginner to Intermediate' ? 'bg-gradient-to-r from-green-500 to-orange-500 border-white text-white' :
-                              ''
-                            }
-                          >
+                          <Badge variant="outline" className={course.level === 'Beginner' ? 'bg-green-500 border-white text-white' : course.level === 'Intermediate' ? 'bg-orange-500 border-white text-white' : course.level === 'Advanced' ? 'bg-blue-500 border-white text-white' : course.level === 'Beginner to Intermediate' ? 'bg-gradient-to-r from-green-500 to-orange-500 border-white text-white' : ''}>
                             {course.level}
                           </Badge>
                         </div>
@@ -371,34 +315,26 @@ export default function Training() {
                        <CardContent>
                          <p className="text-sm mb-4">{course.description}</p>
                          
-                         {course.audience && (
-                           <div className="mb-3">
+                         {course.audience && <div className="mb-3">
                              <span className="text-xs font-semibold text-muted-foreground">Target audience: </span>
                              <span className="text-xs">{course.audience}</span>
-                           </div>
-                         )}
+                           </div>}
                          
-                         {course.platform && (
-                           <div className="mb-3">
+                         {course.platform && <div className="mb-3">
                              <span className="text-xs font-semibold text-muted-foreground">Platform: </span>
                              <span className="text-xs">{course.platform}</span>
-                           </div>
-                         )}
+                           </div>}
                          
-                         {course.dates && (
-                           <div className="mb-4">
+                         {course.dates && <div className="mb-4">
                              <span className="text-xs font-semibold text-muted-foreground">Available dates: </span>
                              <span className="text-xs">{course.dates}</span>
-                           </div>
-                         )}
+                           </div>}
                          
                          <div className="space-y-2 mb-4">
-                           {course.features.map((feature, idx) => (
-                             <div key={idx} className="flex items-center text-sm">
+                           {course.features.map((feature, idx) => <div key={idx} className="flex items-center text-sm">
                                <Award className="w-4 h-4 mr-2 text-primary" />
                                {feature}
-                             </div>
-                           ))}
+                             </div>)}
                          </div>
 
                          <div className="flex items-center justify-between">
@@ -413,11 +349,9 @@ export default function Training() {
                              </Button>
                          </div>
                        </CardContent>
-                    </Card>
-                  ))}
+                    </Card>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </section>
 
@@ -628,6 +562,5 @@ export default function Training() {
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>;
 }
