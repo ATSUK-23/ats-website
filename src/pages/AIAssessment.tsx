@@ -439,10 +439,6 @@ export default function AIAssessment() {
     });
   };
 
-  // CHANGED: Navigate to separate questions page instead of local assessment
-  const handleStartAssessment = () => {
-    navigate('/assessment-questions');
-  };
 
   return (
     <>
@@ -465,8 +461,7 @@ export default function AIAssessment() {
                 Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
               </p>
               
-              {/* CHANGED: Use handleStartAssessment instead of setCurrentView('assessment') */}
-              <Button size="lg" onClick={handleStartAssessment} className="mb-4 bg-primary hover:bg-primary/90">
+              <Button size="lg" onClick={() => setCurrentView('assessment')} className="mb-4 bg-primary hover:bg-primary/90">
                 Start Your Assessment
               </Button>
               
