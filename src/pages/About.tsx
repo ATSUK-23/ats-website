@@ -25,11 +25,7 @@ const About = () => {
             <div className="bg-card rounded-xl p-6 sm:p-8 md:p-10 shadow-sm">
               <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
                 <div className="w-full md:w-1/3 flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/58c466af-1a0a-4930-a75c-aac6312ab1d4.png" 
-                    alt="Automate to Sell business model diagram showing AI, advertising, marketing, operations, and customer support connected to central hub"
-                    className="w-full rounded-lg"
-                  />
+                  <img src="/lovable-uploads/58c466af-1a0a-4930-a75c-aac6312ab1d4.png" alt="Automate to Sell business model diagram showing AI, advertising, marketing, operations, and customer support connected to central hub" className="w-full rounded-lg" />
                 </div>
                 <div className="w-full md:w-2/3">
                   <div className="prose prose-lg max-w-none text-foreground">
@@ -121,16 +117,7 @@ For the last eight years, I've also focused on building turn key global eComme
           </div>
           </section>
 
-          <div className="text-center mt-8 sm:mt-12">
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="gap-2 w-full sm:w-auto text-sm sm:text-base">
-                Book a Strategy Call
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </Button>
-            </a>
-          </div>
+          
         </div>
       </main>
 
