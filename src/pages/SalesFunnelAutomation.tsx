@@ -78,9 +78,10 @@ Without automation, that's impossible to deliver at scale.</p>
                       </div>
                       <h3 className="font-semibold text-white text-lg mb-3">Platform Selection</h3>
                     </div>
-                    <p className="text-white/90 text-sm">
-                      As a GoHighLevel (GHL) Agency Owner, we have access to one of the most powerful all-in-one CRM and marketing automation platforms available but we only recommend the tools you actually need.
-                    </p>
+                    <p className="text-white/90 text-sm">As a GoHighLevel (GHL) Agency Owner, this provides us with access to one of the most powerful all-in-one CRM and marketing automation platforms available. 
+
+
+However, we only recommend and switch on the tools you actually need at the right time</p>
                   </div>
 
                   {/* Step 3 */}
