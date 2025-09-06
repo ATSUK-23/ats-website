@@ -41,7 +41,7 @@ export const HeroSection = ({
         </p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href={ctaLink}>
+          <a href="#vibe-cta">
             <Button 
               variant={customButtonClasses?.primary ? "default" : "hero"}
               size="lg" 
