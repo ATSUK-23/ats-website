@@ -22,16 +22,16 @@ const About = () => {
               </h1>
             </div>
             
-            <div className="bg-card border rounded-xl p-6 sm:p-8 md:p-10 shadow-sm">
+            <div className="bg-card rounded-xl p-6 sm:p-8 md:p-10 shadow-sm">
               <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
-                <div className="w-full md:w-1/4 flex-shrink-0">
+                <div className="w-full md:w-1/3 flex-shrink-0">
                   <img 
                     src="/lovable-uploads/58c466af-1a0a-4930-a75c-aac6312ab1d4.png" 
                     alt="Automate to Sell business model diagram showing AI, advertising, marketing, operations, and customer support connected to central hub"
                     className="w-full rounded-lg"
                   />
                 </div>
-                <div className="w-full md:w-3/4">
+                <div className="w-full md:w-2/3">
                   <div className="prose prose-lg max-w-none text-foreground">
                     <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                       At Automate to Sell, I've built a leaner, more effective way to deliver results. Instead of a big in-house team with high overheads, I collaborate with proven specialists across the digital economy, from AI and automation to advertising, marketing and operations.
