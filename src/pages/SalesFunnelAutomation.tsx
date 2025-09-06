@@ -144,7 +144,7 @@ However, we only recommend and switch on the tools you actually need at the righ
               <p>With the right sales and marketing automation system, you can:</p>
               <ul className="space-y-2 list-disc list-inside">
                 <li>Capture more leads without spending more on ads</li>
-                <li>Nurture relationships automatically</li>
+                <li>Capture more leads without spending more on ads</li>
                 <li>Nurture relationships automatically on 1:1 basis</li>
                 <li>Increase revenue while reducing manual work</li>
               </ul>
