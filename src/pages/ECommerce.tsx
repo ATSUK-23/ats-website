@@ -14,11 +14,8 @@ import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
 import ECommerceLeadForm from "@/components/forms/ECommerceLeadForm";
 import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
-
-
 const ECommerce = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>E-Commerce Solutions - Scale Your Online Sales | Automate To Sell</title>
         <meta name="description" content="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." />
@@ -44,24 +41,11 @@ const ECommerce = () => {
 
       <main>
         {/* Hero Section */}
-        <HeroSection 
-          title="Take Your Winning Products Global Without Growing Your Team" 
-          subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." 
-          ctaText="Book Your Global Strategy Call" 
-          ctaLink="#ecommerce-form" 
-          backgroundImage={globalEcommerceHero} 
-          className="text-white" 
-          hideSecondaryButton
-        />
+        <HeroSection title="Take Your Winning Products Global Without Growing Your Team" subtitle="Expand into multiple countries with a fully automated & localised e-commerce system that runs 24/7." ctaText="Book Your Global Strategy Call" ctaLink="#ecommerce-form" backgroundImage={globalEcommerceHero} className="text-white" hideSecondaryButton />
 
         {/* Original Split Section */}
-        <SplitSection 
-          title="Scale Your Online Sales With A Global E-Commerce Systems"
-          description={
-            <>
-              <p className="text-lg mb-4">
-                We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms and markets.
-              </p>
+        <SplitSection title="Scale Your Online Sales with Smart E-Commerce Systems" description={<>
+              <p className="text-lg mb-4">We help businesses design, integrate, and automate their e-commerce operations so you can sell more, reach more customers, and manage everything seamlessly across platforms, markets and countries</p>
               <p className="text-xl font-bold mb-4">Your Product. Every Market. Fully Managed.</p>
               <p>We expand your winning product into new countries with a complete, done-for-you system utilising Shopify, WP and marketplaces to localise fulfilment, order automation and customer support so you grow faster without extra staff or complexity.</p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -69,11 +53,7 @@ const ECommerce = () => {
                   <a href="#ecommerce-form">Book an E-Commerce Consultation</a>
                 </Button>
               </div>
-            </>
-          } 
-          image="/lovable-uploads/601d3277-bc1d-48ce-9652-1ba452af8b6b.png" 
-          imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" 
-        />
+            </>} image="/lovable-uploads/601d3277-bc1d-48ce-9652-1ba452af8b6b.png" imageAlt="E-commerce dashboard showing global sales analytics and multi-platform management" />
 
         {/* Customer Results Section */}
         <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-primary/10 relative overflow-hidden">
@@ -99,13 +79,10 @@ const ECommerce = () => {
                 <div className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg sm:rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
                   <div className="relative rounded-lg sm:rounded-xl overflow-hidden border bg-card shadow-lg hover-scale">
-                    <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
-                      <iframe
-                        src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                        title="Fraser Importing Success Story"
-                        className="absolute top-0 left-0 w-full h-full"
-                      />
+                    <div className="relative w-full" style={{
+                    paddingBottom: '177.78%'
+                  }}>
+                      <iframe src="https://player.vimeo.com/video/1112524642?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Fraser Importing Success Story" className="absolute top-0 left-0 w-full h-full" />
                     </div>
                   </div>
                 </div>
@@ -318,10 +295,7 @@ const ECommerce = () => {
         </section>
 
         {/* Marketplaces */}
-        <SplitSection 
-          title="Win on Amazon, eBay and numerous other Marketplaces" 
-          description={
-            <>
+        <SplitSection title="Win on Amazon, eBay and numerous other Marketplaces" description={<>
               <p className="mb-6">
                 Marketplaces are powerful growth channels if you know how to manage them. We set up, optimise, and automate your presence on major marketplaces so you can sell more with less manual effort.
               </p>
@@ -338,18 +312,10 @@ const ECommerce = () => {
               <p className="font-medium">
                 Maximise visibility, stay competitive, and keep your marketplace operations running smoothly without burning hours on repetitive tasks.
               </p>
-            </>
-          } 
-          image={marketplacesImage} 
-          imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" 
-          reverse 
-        />
+            </>} image={marketplacesImage} imageAlt="Multiple marketplace platforms showing automated product listings and inventory sync" reverse />
 
         {/* Shopify */}
-        <SplitSection 
-          title="Shopify Stores Built to Sell and Scale" 
-          description={
-            <>
+        <SplitSection title="Shopify Stores Built to Sell and Scale" description={<>
               <p className="mb-6">
                 Whether you're launching a new Shopify store, migrating from another platform, or levelling up your existing setup we can design, build, and optimise your store to convert more visitors into buyers.
               </p>
@@ -366,18 +332,11 @@ const ECommerce = () => {
               <p className="font-medium">
                 We don't just build a store we create a sales engine that's easy to manage and built for future growth.
               </p>
-            </>
-          } 
-          image="/lovable-uploads/ad2c5a27-bfef-4380-8186-bbf7da1628bb.png" 
-          imageAlt="Shopify ecosystem integration diagram showing connected services and platforms"
-        />
+            </>} image="/lovable-uploads/ad2c5a27-bfef-4380-8186-bbf7da1628bb.png" imageAlt="Shopify ecosystem integration diagram showing connected services and platforms" />
 
 
         {/* Ad Management */}
-        <SplitSection 
-          title="Performance Ads That Drive Sales" 
-          description={
-            <>
+        <SplitSection title="Performance Ads That Drive Sales" description={<>
               <p className="mb-6">
                 We run e-commerce ad campaigns that combine creativity with automation to drive traffic, increase conversions, and deliver measurable ROI.
               </p>
@@ -399,18 +358,10 @@ const ECommerce = () => {
                   <a href="#ecommerce-form">Book Your Global Strategy Call</a>
                 </Button>
               </div>
-            </>
-          } 
-          image="/lovable-uploads/be7b54d5-3430-46e2-b634-55880cea311c.png" 
-          imageAlt="Multi-platform advertising ecosystem showing Google, Meta, TikTok, and Amazon ads integration"
-          reverse 
-        />
+            </>} image="/lovable-uploads/be7b54d5-3430-46e2-b634-55880cea311c.png" imageAlt="Multi-platform advertising ecosystem showing Google, Meta, TikTok, and Amazon ads integration" reverse />
 
         {/* Crowdfunding */}
-        <SplitSection 
-          title="Launch Your Product to the World and Get Funded Fast" 
-          description={
-            <>
+        <SplitSection title="Launch Your Product to the World and Get Funded Fast" description={<>
               <p className="mb-4">
                 Crowdfunding is one of the most powerful ways to launch a new product, test the market, and build a loyal customer base before you've even shipped.
               </p>
@@ -426,12 +377,7 @@ const ECommerce = () => {
               <Button variant="hero" size="lg" asChild>
                 <a href="#ecommerce-form">Book a Crowdfunding Strategy Call</a>
               </Button>
-            </>
-          } 
-          image="/lovable-uploads/ee4cdcd5-6188-4808-b6a2-7339d263f6b5.png" 
-          imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" 
-          reverse 
-        />
+            </>} image="/lovable-uploads/ee4cdcd5-6188-4808-b6a2-7339d263f6b5.png" imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" reverse />
 
         {/* LaunchBoom 4-Step Process - Full Width */}
         <section className="py-8 md:py-12 bg-muted/30">
@@ -486,8 +432,6 @@ const ECommerce = () => {
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default ECommerce;
