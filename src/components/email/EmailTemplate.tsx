@@ -102,6 +102,11 @@ const EmailTemplate: React.FC<EmailTemplateProps> = ({
     <div style={emailStyles.container}>
       {/* Header */}
       <header style={emailStyles.header}>
+        <img 
+          src="https://automatetosell.com/src/assets/ats-logo.png" 
+          alt="Automate To Sell Logo" 
+          style={{ height: '40px', width: 'auto', marginBottom: '8px' }}
+        />
         <h1 style={emailStyles.logo}>Automate To Sell</h1>
       </header>
 

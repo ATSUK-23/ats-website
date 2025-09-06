@@ -37,6 +37,7 @@ export const generateEmailHTML = ({
                 <table width="100%" cellpadding="0" cellspacing="0" style="background-color: hsl(222.2, 47.4%, 11.2%); border-radius: 8px 8px 0 0;">
                     <tr>
                         <td style="padding: 32px 24px; text-align: center;">
+                            <img src="https://automatetosell.com/src/assets/ats-logo.png" alt="Automate To Sell Logo" style="height: 40px; width: auto; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto;" />
                             <h1 style="color: hsl(210, 40%, 98%); font-size: 24px; font-weight: 700; margin: 0;">
                                 Automate To Sell
                             </h1>
