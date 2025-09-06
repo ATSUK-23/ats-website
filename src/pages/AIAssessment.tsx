@@ -588,9 +588,8 @@ export default function AIAssessment() {
               </div>
 
               <div className="text-center">
-                <div className="max-w-md mx-auto mb-8">
-                  <h3 className="text-xl font-semibold mb-6">Ready to Begin Your Assessment?</h3>
-                  <div className="space-y-4">
+                <div className="max-w-2xl mx-auto mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <div>
                       <label htmlFor="assessment-name" className="block text-sm font-medium text-left mb-2">
                         Full Name *
@@ -618,10 +617,10 @@ export default function AIAssessment() {
                       />
                     </div>
                   </div>
+                  <Button size="lg" onClick={() => navigate('/assessment-questions')} className="bg-primary hover:bg-primary/90">
+                    Enter Your Details & Start Your Assessment
+                  </Button>
                 </div>
-                <Button size="lg" onClick={() => navigate('/assessment-questions')} className="bg-primary hover:bg-primary/90">
-                  Begin Assessment
-                </Button>
               </div>
             </div>
           </section>
