@@ -175,7 +175,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
 
                   <div className="space-y-3 mb-6 text-sm">
                     <div className="text-slate-300">
-                      <span className="font-medium text-slate-200">Target audience:</span> Business leaders, product managers, innovation teams
+                      <span className="font-medium text-slate-200">Target audience:</span> Business leaders, product managers, innovation teams and entrepreneurs
                     </div>
                     <div className="text-slate-300">
                       <span className="font-medium text-slate-200">Platform:</span> Surbiton & Rugby locations available
