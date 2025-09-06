@@ -127,7 +127,7 @@ const ECommerce = () => {
                       </div>
                       <div className="flex-1 bg-card/50 p-6 rounded-xl border">
                         <h5 className="text-lg font-bold mb-2">Starting Point (2020)</h5>
-                        <p className="text-muted-foreground">Single Amazon store, $40K revenue, manual operations</p>
+                        <p className="text-muted-foreground">Single Amazon store, $40Kpm revenue, manual operations</p>
                       </div>
                     </div>
 
