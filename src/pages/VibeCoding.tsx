@@ -48,7 +48,7 @@ const VibeCoding = () => {
       <SiteHeader />
       <main>
         {/* Hero */}
-        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="LIVE 1 Day Workshop" ctaLink="#vibe-coding-form" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
+        <HeroSection title="From Idea to Prototype in Days, Not Months" subtitle="Build your website, widgets or apps faster with AI-powered Vibe Coding" ctaText="Schedule Consultation" ctaLink="#vibe-coding-form" backgroundImage="/lovable-uploads/c4d72d9f-395b-418d-89c3-09bac2b64fe5.png" />
 
         {/* What is Vibe Coding */}
         <SplitSection id="vibe-hero" title="Build It, Show It, Sell It!" image={vibeHero} imageAlt="Team collaborating with automation overlays and dashboards in a modern office" description={<p>We help businesses unlock the power of Vibe Coding, a fast, collaborative way to create websites and apps using AI and low-code tools. 
@@ -133,7 +133,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="#vibe-coding-form">
-                    <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Get Started Today</Button>
+                    
                   </a>
                   <a href="#vibe-coding-form">
                     <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto text-sm sm:text-base">Talk to a Vibe Coding Expert</Button>
@@ -183,17 +183,10 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                   </div>
 
                   <div className="space-y-3 mb-8">
-                    {[
-                      "Build AI prototypes",
-                      "Test solutions", 
-                      "Implementation roadmap",
-                      "Real business challenges"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-3 text-slate-200">
+                    {["Build AI prototypes", "Test solutions", "Implementation roadmap", "Real business challenges"].map((item, index) => <div key={index} className="flex items-center gap-3 text-slate-200">
                         <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
                         <span>{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <div className="flex items-end justify-between">
