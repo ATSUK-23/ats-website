@@ -225,20 +225,6 @@ const ECommerceLeadForm = () => {
           </div>
         </div>
 
-        {/* Additional Resources */}
-        <div className="space-y-4">
-          <p className="text-muted-foreground">
-            In the meantime, check out some of our success stories and resources
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg" asChild>
-              <a href="/about">Our Success Stories</a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="/training">Free Resources</a>
-            </Button>
-          </div>
-        </div>
       </div>
     </CardContent>
   );
