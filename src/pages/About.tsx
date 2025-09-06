@@ -23,18 +23,29 @@ const About = () => {
             </div>
             
             <div className="bg-card border rounded-xl p-6 sm:p-8 md:p-10 shadow-sm">
-              <div className="prose prose-lg max-w-none text-foreground">
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  At Automate to Sell, I've built a leaner, more effective way to deliver results. Instead of a big in-house team with high overheads, I collaborate with proven specialists across the digital economy, from AI and automation to advertising, marketing and operations.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  You will typically work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the project or training, I bring in the best expert I know and trust to implement the work.
-                </p>
-                
-                <p className="text-base sm:text-lg leading-relaxed">
-                  The result? You avoid paying premium agency fees, but still get access to top-level expertise in every area. It's a business model designed to be flexible, cost-effective, and laser-focused on delivering the right outcome for you.
-                </p>
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
+                <div className="w-full md:w-1/4 flex-shrink-0">
+                  <img 
+                    src="/lovable-uploads/58c466af-1a0a-4930-a75c-aac6312ab1d4.png" 
+                    alt="Automate to Sell business model diagram showing AI, advertising, marketing, operations, and customer support connected to central hub"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                <div className="w-full md:w-3/4">
+                  <div className="prose prose-lg max-w-none text-foreground">
+                    <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                      At Automate to Sell, I've built a leaner, more effective way to deliver results. Instead of a big in-house team with high overheads, I collaborate with proven specialists across the digital economy, from AI and automation to advertising, marketing and operations.
+                    </p>
+                    
+                    <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                      You will typically work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the project or training, I bring in the best expert I know and trust to implement the work.
+                    </p>
+                    
+                    <p className="text-base sm:text-lg leading-relaxed">
+                      The result? You avoid paying premium agency fees, but still get access to top-level expertise in every area. It's a business model designed to be flexible, cost-effective, and laser-focused on delivering the right outcome for you.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
