@@ -551,9 +551,9 @@ export default function AIAssessment() {
                           <div className="flex-1">
                             <h3 className="font-semibold">{domain.domain}</h3>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                              <span>{domain.questions} questions</span>
+                              <span><span className="text-green-600">{domain.questions} questions</span></span>
                               <span>•</span>
-                              <span>{domain.weight}% weight</span>
+                              <span><span className="text-red-600">{domain.weight}% weight</span></span>
                             </div>
                           </div>
                           {status === 'completed' && (
