@@ -145,7 +145,7 @@ However, we only recommend and switch on the tools you actually need at the righ
               <ul className="space-y-2 list-disc list-inside">
                 <li>Capture more leads without spending more on ads</li>
                 <li>Nurture relationships automatically</li>
-                <li>Shorten your sales cycle</li>
+                <li>Nurture relationships automatically on 1:1 basis</li>
                 <li>Increase revenue while reducing manual work</li>
               </ul>
               <p className="font-medium">The result: More time for you and your team to focus on high-value tasks while your system keeps working in the background.</p>
