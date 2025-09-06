@@ -56,7 +56,7 @@ const ECommerce = () => {
 
         {/* Original Split Section */}
         <SplitSection 
-          title="Scale Your Online Sales with Smart E-Commerce Systems" 
+          title="Scale Your Online Sales With A Global E-Commerce Systems"
           description={
             <>
               <p className="text-lg mb-4">
