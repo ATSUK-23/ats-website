@@ -149,6 +149,54 @@ export type Database = {
         }
         Relationships: []
       }
+      "e-commerce": {
+        Row: {
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          mobile: string | null
+          monthly_sales: string | null
+          patent_status: string | null
+          product_niche: string
+          sales_channels: string[] | null
+          sku_count: string | null
+          submitted_at: string
+          unique_features: string | null
+          updated_at: string
+        }
+        Insert: {
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          mobile?: string | null
+          monthly_sales?: string | null
+          patent_status?: string | null
+          product_niche: string
+          sales_channels?: string[] | null
+          sku_count?: string | null
+          submitted_at?: string
+          unique_features?: string | null
+          updated_at?: string
+        }
+        Update: {
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          mobile?: string | null
+          monthly_sales?: string | null
+          patent_status?: string | null
+          product_niche?: string
+          sales_channels?: string[] | null
+          sku_count?: string | null
+          submitted_at?: string
+          unique_features?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       ecommerce_leads: {
         Row: {
           additional_info: string | null

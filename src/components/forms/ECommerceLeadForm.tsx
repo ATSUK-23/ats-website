@@ -84,16 +84,18 @@ const ECommerceLeadForm = () => {
     try {
       // Insert data into Supabase
       const { error } = await supabase
-        .from('ecommerce_leads')
+        .from('e-commerce')
         .insert({
           first_name: formData.firstName,
           last_name: formData.lastName,
           email: formData.email,
-          phone: formData.mobile,
+          mobile: formData.mobile,
           product_niche: formData.productNiche,
+          patent_status: formData.hasPatent,
+          unique_features: formData.productUnique,
           sales_channels: formData.salesChannels,
-          sales_volume: formData.monthlySales,
-          additional_info: `Patent: ${formData.hasPatent}, SKUs: ${formData.skuCount}, Unique features: ${formData.productUnique}`
+          sku_count: formData.skuCount,
+          monthly_sales: formData.monthlySales
         });
 
       if (error) {
@@ -104,6 +106,34 @@ const ECommerceLeadForm = () => {
           variant: "destructive"
         });
         return;
+      }
+
+      // Submit to Zapier webhook
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/ud1034x/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            mobile: formData.mobile,
+            productNiche: formData.productNiche,
+            patentStatus: formData.hasPatent,
+            uniqueFeatures: formData.productUnique,
+            salesChannels: formData.salesChannels,
+            skuCount: formData.skuCount,
+            monthlySales: formData.monthlySales,
+            timestamp: new Date().toISOString(),
+            source: 'e-commerce-page'
+          }),
+        });
+      } catch (webhookError) {
+        console.error('Zapier webhook error:', webhookError);
+        // Don't fail the submission if webhook fails
       }
       
       toast({
