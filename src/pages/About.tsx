@@ -29,7 +29,7 @@ const About = () => {
                 </p>
                 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  You always work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the job, I bring in the best expert I know and trust to implement the work.
+                  You will typically work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the project or training, I bring in the best expert I know and trust to implement the work.
                 </p>
                 
                 <p className="text-base sm:text-lg leading-relaxed">
