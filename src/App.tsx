@@ -17,6 +17,7 @@ import VoiceAI from "./pages/VoiceAI";
 import AIAssessment from "./pages/AIAssessment";
 import AssessmentQuestions from "./pages/AssessmentQuestions";
 import AIConsultation from "./pages/AIConsultation";
+import EmailTemplatePreview from "./pages/EmailTemplatePreview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
+            <Route path="/email-template" element={<EmailTemplatePreview />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
