@@ -588,6 +588,37 @@ export default function AIAssessment() {
               </div>
 
               <div className="text-center">
+                <div className="max-w-md mx-auto mb-8">
+                  <h3 className="text-xl font-semibold mb-6">Ready to Begin Your Assessment?</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="assessment-name" className="block text-sm font-medium text-left mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="assessment-name"
+                        name="name"
+                        required
+                        className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="assessment-email" className="block text-sm font-medium text-left mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="assessment-email"
+                        name="email"
+                        required
+                        className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+                  </div>
+                </div>
                 <Button size="lg" onClick={() => navigate('/assessment-questions')} className="bg-primary hover:bg-primary/90">
                   Begin Assessment
                 </Button>
