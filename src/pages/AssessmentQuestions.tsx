@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -9,6 +9,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, ArrowLeft, ArrowRight, Brain, Shield, Users, Zap, Settings, TrendingUp } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 // Assessment data structure with complete questions and weighted scoring
 const assessmentData = [
@@ -317,9 +318,21 @@ const getMaturityLevel = (score: number) => {
 
 export default function AssessmentQuestions() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [userInfo, setUserInfo] = useState<{name: string; email: string} | null>(null);
+
+  useEffect(() => {
+    // Check if user info was passed from assessment start
+    if (location.state?.name && location.state?.email) {
+      setUserInfo({ name: location.state.name, email: location.state.email });
+    } else {
+      // Redirect back to assessment if no user info
+      navigate('/ai-assessment');
+    }
+  }, [location.state, navigate]);
 
   // Calculate comprehensive scoring
   const totalQuestions = 23;
@@ -384,14 +397,14 @@ export default function AssessmentQuestions() {
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentQuestionIndex < currentDomain.questions_list.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else if (currentDomainIndex < assessmentData.length - 1) {
       setCurrentDomainIndex(currentDomainIndex + 1);
       setCurrentQuestionIndex(0);
     } else {
-      // Assessment completed, navigate to results
+      // Assessment completed, send email and navigate to results
       const overallScore = calculateOverallScore();
       const domainScores = assessmentData.map((domain, index) => ({
         domain: domain.domain,
@@ -399,6 +412,23 @@ export default function AssessmentQuestions() {
         weight: domain.weight,
         description: domain.description
       }));
+
+      if (userInfo) {
+        try {
+          await supabase.functions.invoke('send-assessment-email', {
+            body: {
+              name: userInfo.name,
+              email: userInfo.email,
+              answers,
+              overallScore,
+              domainScores,
+              maturity: getMaturityLevel(overallScore).level
+            }
+          });
+        } catch (error) {
+          console.error('Failed to send assessment email:', error);
+        }
+      }
 
       navigate('/ai-assessment', {
         state: {
