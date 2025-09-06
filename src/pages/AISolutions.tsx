@@ -163,7 +163,7 @@ export default function AISolutions() {
               </div>
               
               <div className="text-center">
-                <h4 className="text-lg font-semibold mb-2 text-green-400">Personalised Report</h4>
+                <h4 className="text-lg font-semibold mb-2 text-green-400">Personalised Insights</h4>
                 <p className="text-sm text-muted-foreground">Detailed insights tailored to your business needs</p>
               </div>
               
