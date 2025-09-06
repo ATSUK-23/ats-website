@@ -140,7 +140,7 @@ However, we only recommend and switch on the tools you actually need at the righ
           </div>
         </section>
 
-        <SplitSection title="Your Business, Automated" image={businessAutomatedImage} imageAlt="Business growth through automation and increased revenue" reverse description={<div className="space-y-4">
+        <SplitSection title="Digitally Transform & Automate Your Business" image={businessAutomatedImage} imageAlt="Business growth through automation and increased revenue" reverse description={<div className="space-y-4">
               <p>With the right sales and marketing automation system, you can:</p>
               <ul className="space-y-2 list-disc list-inside">
                 <li>Capture more leads without spending more on ads</li>
