@@ -455,7 +455,7 @@ export default function AIAssessment() {
           <section className="py-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
             <div className="container px-4 max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                AI Integration Audit
+                AI Assessment
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Discover exactly where your business stands with AI and get a personalised roadmap for successful integration. Take our short curated unique AI Integration Assessment to get started.
