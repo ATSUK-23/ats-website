@@ -9,7 +9,7 @@ import salesHeroImage from "@/assets/sales-automation-hero.jpg";
 import automationBenefitsImage from "@/assets/automation-benefits.jpg";
 import ghlPlatformImage from "@/assets/ghl-platform.jpg";
 import systemIntegrationImage from "@/assets/system-integration.jpg";
-import businessAutomatedImage from "@/assets/business-automated.jpg";
+const businessTransformationImage = "/lovable-uploads/e22b0f2d-1042-45c9-af98-266a311f1fc5.png";
 const SalesFunnelAutomation = () => {
   return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 text-foreground">
       <Helmet>
@@ -140,7 +140,7 @@ However, we only recommend and switch on the tools you actually need at the righ
           </div>
         </section>
 
-        <SplitSection title="Digitally Transform & Automate Your Business" image={businessAutomatedImage} imageAlt="Business growth through automation and increased revenue" reverse description={<div className="space-y-4">
+        <SplitSection title="Digitally Transform & Automate Your Business" image={businessTransformationImage} imageAlt="Strategic business transformation with AI, marketing and operations automation" reverse description={<div className="space-y-4">
               <p>With the right sales and marketing automation system, you can:</p>
               <ul className="space-y-2 list-disc list-inside">
                 <li>Capture more leads without spending more on ads</li>
