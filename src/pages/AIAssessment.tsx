@@ -15,31 +15,24 @@ const AssessmentStartForm = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState<{name?: string; email?: string}>({});
-
-  const validateForm = () => {
-    const newErrors: {name?: string; email?: string} = {};
-    
-    if (!name.trim()) {
-      newErrors.name = "Name is required";
-    }
-    
-    if (!email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-    
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  const [showError, setShowError] = useState(false);
 
   const handleSubmit = () => {
-    if (validateForm()) {
-      navigate('/assessment-questions', {
-        state: { name, email }
-      });
+    if (!name.trim() || !email.trim()) {
+      setShowError(true);
+      return;
     }
+    
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setShowError(true);
+      return;
+    }
+    
+    setShowError(false);
+    navigate('/assessment-questions', {
+      state: { name, email }
+    });
   };
 
   return (
@@ -52,15 +45,13 @@ const AssessmentStartForm = () => {
               id="name"
               type="text"
               value={name}
-              onChange={(e) => setName(e.target.value)}
-              className={`w-full px-3 py-2 border rounded-md bg-background ${
-                errors.name ? 'border-destructive' : 'border-input'
-              }`}
+              onChange={(e) => {
+                setName(e.target.value);
+                setShowError(false);
+              }}
+              className="w-full px-3 py-2 border rounded-md bg-background border-input"
               placeholder="Enter your full name"
             />
-            {errors.name && (
-              <p className="text-sm text-destructive">{errors.name}</p>
-            )}
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email Address *</Label>
@@ -68,15 +59,13 @@ const AssessmentStartForm = () => {
               id="email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-3 py-2 border rounded-md bg-background ${
-                errors.email ? 'border-destructive' : 'border-input'
-              }`}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setShowError(false);
+              }}
+              className="w-full px-3 py-2 border rounded-md bg-background border-input"
               placeholder="Enter your email address"
             />
-            {errors.email && (
-              <p className="text-sm text-destructive">{errors.email}</p>
-            )}
           </div>
         </div>
         <Button 
@@ -86,6 +75,11 @@ const AssessmentStartForm = () => {
         >
           Enter Your Details & Start Your Assessment
         </Button>
+        {showError && (
+          <p className="text-sm text-red-500 mt-2 text-center">
+            Please add your details above before starting the assessment
+          </p>
+        )}
       </div>
     </div>
   );
