@@ -692,7 +692,46 @@ export default function AIAssessment() {
                       />
                     </div>
                   </div>
-                  <Button size="lg" onClick={() => navigate('/assessment-questions')} className="bg-primary hover:bg-primary/90">
+                  <Button size="lg" onClick={() => {
+                    const nameInput = document.getElementById('assessment-name') as HTMLInputElement;
+                    const emailInput = document.getElementById('assessment-email') as HTMLInputElement;
+                    
+                    if (!nameInput?.value.trim() || !emailInput?.value.trim()) {
+                      // Show error message
+                      let errorDiv = document.getElementById('assessment-error');
+                      if (!errorDiv) {
+                        errorDiv = document.createElement('div');
+                        errorDiv.id = 'assessment-error';
+                        errorDiv.className = 'text-sm text-red-500 mt-2 text-center';
+                        nameInput.parentNode?.parentNode?.appendChild(errorDiv);
+                      }
+                      errorDiv.textContent = 'You need to enter your Name and E-mail to start Assessment';
+                      return;
+                    }
+                    
+                    // Basic email validation
+                    if (emailInput && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+                      let errorDiv = document.getElementById('assessment-error');
+                      if (!errorDiv) {
+                        errorDiv = document.createElement('div');
+                        errorDiv.id = 'assessment-error';
+                        errorDiv.className = 'text-sm text-red-500 mt-2 text-center';
+                        nameInput.parentNode?.parentNode?.appendChild(errorDiv);
+                      }
+                      errorDiv.textContent = 'You need to enter your Name and E-mail to start Assessment';
+                      return;
+                    }
+                    
+                    // Clear any existing error
+                    const errorDiv = document.getElementById('assessment-error');
+                    if (errorDiv) {
+                      errorDiv.remove();
+                    }
+                    
+                    navigate('/assessment-questions', {
+                      state: { name: nameInput?.value, email: emailInput?.value }
+                    });
+                  }} className="bg-primary hover:bg-primary/90">
                     Enter Your Details & Start Your Assessment
                   </Button>
                 </div>
