@@ -46,7 +46,7 @@ const Index = () => {
             </article>
             <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
+              <p className="mt-2 text-sm text-muted-foreground">We help you cut through the noise with authentic, done-for-you content that builds a powerful personal brand. Grow your influence, open doors to new opportunities, and scale your business while we handle the heavy lifting.</p>
             </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
