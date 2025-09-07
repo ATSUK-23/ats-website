@@ -29,15 +29,15 @@ const Index = () => {
           
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Vibe Coding </h3>
+              <h3 className="text-xl font-semibold">Global e-Commerce System </h3>
               <p className="mt-2 text-sm text-muted-foreground">Go global the easy way. We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
             </article>
             <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Vibe Coding AI Solutions</h3>
+              <h3 className="text-xl font-semibold">AI Solutions</h3>
               <p className="mt-2 text-sm text-muted-foreground">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain, streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
             </article>
             <article id="e-commerce" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">AI Solutions</h3>
+              <h3 className="text-xl font-semibold">Vibe Coding</h3>
               <p className="mt-2 text-sm text-muted-foreground">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
             </article>
             <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
