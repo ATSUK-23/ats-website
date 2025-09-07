@@ -77,7 +77,7 @@ const AssessmentStartForm = () => {
         </Button>
         {showError && (
           <p className="text-sm text-red-500 mt-2 text-center">
-            Please add your details above before starting the assessment
+            You need to enter your Name and E-mail to start Assessment
           </p>
         )}
       </div>
