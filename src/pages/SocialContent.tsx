@@ -43,7 +43,7 @@ const SocialContent = () => {
           title="If You're Not Building Your Personal Brand, You're Being Forgotten"
           subtitle="Stand out in a noisy world with a content system that turns your ideas into consistent, high-impact social presence."
           ctaText="Book Your Social Content Strategy Call"
-          ctaLink="https://calendly.com/automatetosell"
+          ctaLink="#social-form"
           backgroundImage="/lovable-uploads/09efc9f0-7701-4022-a165-746abba2ea45.png"
           hideSecondaryButton
         />
@@ -57,9 +57,11 @@ const SocialContent = () => {
                 Your personal brand is your most valuable business asset. We help you create, curate, publish, and distribute authentic content so you can grow your influence, attract opportunities, and scale your company without losing focus on running it.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
-                  Book Your Social Content Strategy Call
-                </Button>
+                <a href="#social-form">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
+                    Book Your Social Content Strategy Call
+                  </Button>
+                </a>
               </div>
             </>
           }
@@ -160,7 +162,9 @@ const SocialContent = () => {
       </main>
 
       {/* Social Content Lead Form */}
-      <SocialContentLeadForm />
+      <div id="social-form">
+        <SocialContentLeadForm />
+      </div>
 
       <SiteFooter />
     </div>

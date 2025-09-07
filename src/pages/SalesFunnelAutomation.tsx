@@ -22,7 +22,7 @@ const SalesFunnelAutomation = () => {
       <SiteHeader />
       
       <main>
-        <HeroSection title="Automated Sales & Marketing Systems, Built for Your Business" subtitle="We design and implement smart automation strategies using the right Martech tools utilising our GoHighLevel agency to streamline your sales, nurture leads, and grow revenue without increasing your workload." ctaText="Book a Sales & Marketing Automation Consultation" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage={salesHeroImage} hideSecondaryButton />
+        <HeroSection title="Automated Sales & Marketing Systems, Built for Your Business" subtitle="We design and implement smart automation strategies using the right Martech tools utilising our GoHighLevel agency to streamline your sales, nurture leads, and grow revenue without increasing your workload." ctaText="Book a Sales & Marketing Automation Consultation" ctaLink="#sfa-form" backgroundImage={salesHeroImage} hideSecondaryButton />
 
         <SplitSection title="Why Automation Matters" image={automationBenefitsImage} imageAlt="Business automation benefits and 24/7 lead response" description={<div className="space-y-4">
               <p>Today's customers expect instant responses, personalised experiences, and consistent follow-up.
@@ -151,7 +151,9 @@ However, we only recommend and switch on the tools you actually need at the righ
               <p className="font-medium">The result: More time for you and your team to focus on high-value tasks while your system keeps working in the background.</p>
             </div>} />
 
-        <SFALeadForm />
+        <div id="sfa-form">
+          <SFALeadForm />
+        </div>
       </main>
 
       <SiteFooter />
