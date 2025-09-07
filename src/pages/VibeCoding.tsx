@@ -129,7 +129,9 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                   Let's Bring Your Idea to Life
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Ready to turn your ideas into working prototypes? Join our intensive workshop and learn how to leverage AI tools for rapid business innovation. We have collaborated with The Epitome Group and Neil Cocker to bring these Workshops to participants in London (Surbiton).
+                  Ready to turn your ideas into working prototypes? Join our intensive workshop and learn how to leverage AI tools for rapid business innovation. 
+                  <br /><br />
+                  We have collaborated with The Epitome Group and Neil Cocker to bring these Workshops to participants in London (Surbiton).
                 </p>
                 <p className="text-lg text-muted-foreground mb-8">
                   We only have a maximum of 12 attendees, so to reserve your place, click on the "Book Now" button and complete the booking form.
