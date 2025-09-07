@@ -201,7 +201,7 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
                     </div>
                     <a href="https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop" target="_blank" rel="noreferrer">
                       <button className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
-                        Book Now • £397
+                        BOOK NOW
                       </button>
                     </a>
                   </div>
