@@ -41,17 +41,16 @@ const Index = () => {
               <p className="mt-2 text-sm text-muted-foreground">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
             </article>
             <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
-            </article>
-            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
               <p className="mt-2 text-sm text-muted-foreground">Close more deals with less effort. We design and implement smart automation systems. From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
             </article>
+            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
+              <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence.</p>
+            </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Ai curious to Ai Competent. 
-15 Specialised courses for beginner to advanced. </p>
+              <p className="mt-2 text-sm text-muted-foreground">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
             </article>
           </div>
         </section>
