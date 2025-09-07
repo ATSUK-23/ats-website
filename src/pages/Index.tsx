@@ -121,7 +121,7 @@ const Index = () => {
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Let’s design a strategy, choose the right tools, and build automation systems that deliver results so you can focus on growing your business.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Work Smarter. Grow Faster.</h2>
             <p className="mt-4 max-w-2xl mx-auto">
               Let’s design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
