@@ -531,10 +531,15 @@ export default function AssessmentQuestions() {
                   </h2>
                 </div>
 
-                <RadioGroup value={selectedAnswer?.toString()} onValueChange={(value) => handleAnswer(parseInt(value))}>
+                <RadioGroup 
+                  value={selectedAnswer !== undefined ? selectedAnswer.toString() : undefined} 
+                  onValueChange={(value) => handleAnswer(parseInt(value))}
+                  key={currentQuestion?.id} // Force re-render for each question
+                >
                   <div className="space-y-4">
                     {currentQuestion?.options.map((option, index) => {
                       const isSelected = selectedAnswer === index;
+                      const optionId = `q${currentQuestion?.id}-option-${index}`;
                       return (
                         <div 
                           key={index} 
@@ -544,9 +549,9 @@ export default function AssessmentQuestions() {
                               : 'border hover:bg-muted/50'
                           }`}
                         >
-                          <RadioGroupItem value={index.toString()} id={`option-${index}`} className="mt-1" />
+                          <RadioGroupItem value={index.toString()} id={optionId} className="mt-1" />
                           <Label 
-                            htmlFor={`option-${index}`} 
+                            htmlFor={optionId} 
                             className={`flex-1 text-sm leading-relaxed cursor-pointer ${
                               isSelected ? 'text-green-700 dark:text-green-300' : ''
                             }`}
