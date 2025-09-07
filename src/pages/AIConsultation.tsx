@@ -161,16 +161,16 @@ export default function AIConsultation() {
                   <CardContent className="p-6">
                     <h2 className="text-xl font-bold mb-6">Schedule Your Session</h2>
                     
-                    {/* Calendar Embed Placeholder */}
-                    <div className="bg-muted/20 border-2 border-dashed border-muted-foreground/20 rounded-lg p-12 text-center">
-                      <Calendar className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                      <h3 className="text-lg font-semibold mb-2">Calendar Integration</h3>
-                      <p className="text-muted-foreground">
-                        Calendar booking widget will be embedded here
-                      </p>
-                      <div className="mt-4 text-sm text-muted-foreground/70">
-                        Placeholder for calendar embed code
-                      </div>
+                    {/* Calendar Booking Widget */}
+                    <div className="w-full">
+                      <iframe 
+                        src="https://api.leadconnectorhq.com/widget/booking/OaoPj8xpt5fQUVcafJVw" 
+                        style={{width: '100%', border: 'none', overflow: 'hidden'}} 
+                        scrolling="no" 
+                        id="OaoPj8xpt5fQUVcafJVw_1757258669442"
+                        className="min-h-[600px]"
+                      />
+                      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
                     </div>
                     
                     <div className="mt-6 text-center">
