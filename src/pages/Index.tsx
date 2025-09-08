@@ -24,7 +24,7 @@ const Index = () => {
 
         <section id="service-pillars" className="container py-8 sm:py-12 md:py-16 px-4">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">End-to-End Automation & AI Expertise</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Implement End-to-End Automation & AI In Your Business</h2>
           </div>
           
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
