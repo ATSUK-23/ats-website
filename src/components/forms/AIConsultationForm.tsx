@@ -67,6 +67,19 @@ export function AIConsultationForm() {
 
       if (error) throw error;
 
+      // Also submit to FormSubmit
+      const formSubmitData = new FormData();
+      formSubmitData.append('name', formData.fullName);
+      formSubmitData.append('email', formData.email);
+      formSubmitData.append('business', formData.companyName);
+      formSubmitData.append('phone', formData.phone);
+      formSubmitData.append('additional', formData.additionalInfo);
+
+      await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
+        method: 'POST',
+        body: formSubmitData
+      });
+
       toast({
         title: "Success!",
         description: "Your consultation request has been submitted successfully.",
@@ -80,6 +93,12 @@ export function AIConsultationForm() {
         phone: "",
         additionalInfo: "",
       });
+
+      // Redirect to Google Calendar after successful submission
+      setTimeout(() => {
+        window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ39ne1GRjOyM52AzZFovSI_Ye8wzmqZRFk9DVQ=', '_blank');
+      }, 2000);
+
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({

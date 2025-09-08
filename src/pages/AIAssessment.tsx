@@ -10,76 +10,24 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, Clock, ArrowLeft, ArrowRight, Brain, Shield, Users, Zap, Settings, TrendingUp, BarChart3, Target, Lightbulb } from "lucide-react";
 
-// Assessment Start Form Component
-const AssessmentStartForm = () => {
+// Assessment Start Component - Simplified without form
+const AssessmentStart = () => {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [showError, setShowError] = useState(false);
 
-  const handleSubmit = () => {
-    if (!name.trim() || !email.trim()) {
-      setShowError(true);
-      return;
-    }
-    
-    // Basic email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setShowError(true);
-      return;
-    }
-    
-    setShowError(false);
-    navigate('/assessment-questions', {
-      state: { name, email }
-    });
+  const handleStartAssessment = () => {
+    navigate('/assessment-questions');
   };
 
   return (
     <div className="space-y-6">
-      <div className="p-6 bg-card rounded-lg border">
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
-          <div className="space-y-2">
-            <Label htmlFor="name">Full Name *</Label>
-            <input
-              id="name"
-              type="text"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-                setShowError(false);
-              }}
-              className="w-full px-3 py-2 border rounded-md bg-background border-input"
-              placeholder="Enter your full name"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address *</Label>
-            <input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                setShowError(false);
-              }}
-              className="w-full px-3 py-2 border rounded-md bg-background border-input"
-              placeholder="Enter your email address"
-            />
-          </div>
-        </div>
+      <div className="p-6 bg-card rounded-lg border text-center">
         <Button 
-          onClick={handleSubmit}
+          onClick={handleStartAssessment}
           size="lg" 
           className="w-full"
         >
-          Enter Your Details & Start Your Assessment
+          Start Your Assessment
         </Button>
-        {showError && (
-          <p className="text-sm text-red-500 mt-2 text-center">
-            You need to enter your Name and E-mail to start Assessment
-          </p>
-        )}
       </div>
     </div>
   );
@@ -663,78 +611,11 @@ export default function AIAssessment() {
               </div>
 
               <div className="text-center">
-                <div className="max-w-2xl mx-auto mb-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <label htmlFor="assessment-name" className="block text-sm font-medium text-left mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="assessment-name"
-                        name="name"
-                        required
-                        className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="assessment-email" className="block text-sm font-medium text-left mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="assessment-email"
-                        name="email"
-                        required
-                        className="w-full px-3 py-2 border border-input bg-background rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                  </div>
-                  <Button size="lg" onClick={() => {
-                    const nameInput = document.getElementById('assessment-name') as HTMLInputElement;
-                    const emailInput = document.getElementById('assessment-email') as HTMLInputElement;
-                    
-                    if (!nameInput?.value.trim() || !emailInput?.value.trim()) {
-                      // Show error message
-                      let errorDiv = document.getElementById('assessment-error');
-                      if (!errorDiv) {
-                        errorDiv = document.createElement('div');
-                        errorDiv.id = 'assessment-error';
-                        errorDiv.className = 'text-sm text-red-500 mt-2 text-center';
-                        nameInput.parentNode?.parentNode?.appendChild(errorDiv);
-                      }
-                      errorDiv.textContent = 'You need to enter your Name and E-mail to start Assessment';
-                      return;
-                    }
-                    
-                    // Basic email validation
-                    if (emailInput && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
-                      let errorDiv = document.getElementById('assessment-error');
-                      if (!errorDiv) {
-                        errorDiv = document.createElement('div');
-                        errorDiv.id = 'assessment-error';
-                        errorDiv.className = 'text-sm text-red-500 mt-2 text-center';
-                        nameInput.parentNode?.parentNode?.appendChild(errorDiv);
-                      }
-                      errorDiv.textContent = 'You need to enter your Name and E-mail to start Assessment';
-                      return;
-                    }
-                    
-                    // Clear any existing error
-                    const errorDiv = document.getElementById('assessment-error');
-                    if (errorDiv) {
-                      errorDiv.remove();
-                    }
-                    
-                    navigate('/assessment-questions', {
-                      state: { name: nameInput?.value, email: emailInput?.value }
-                    });
+                <Button size="lg" onClick={() => {
+                    navigate('/assessment-questions');
                   }} className="bg-primary hover:bg-primary/90">
-                    Enter Your Details & Start Your Assessment
+                    Start Your Assessment
                   </Button>
-                </div>
               </div>
             </div>
           </section>

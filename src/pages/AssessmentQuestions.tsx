@@ -325,12 +325,9 @@ export default function AssessmentQuestions() {
   const [userInfo, setUserInfo] = useState<{name: string; email: string} | null>(null);
 
   useEffect(() => {
-    // Check if user info was passed from assessment start
+    // No longer require user info to start assessment
     if (location.state?.name && location.state?.email) {
       setUserInfo({ name: location.state.name, email: location.state.email });
-    } else {
-      // Redirect back to assessment if no user info
-      navigate('/ai-assessment');
     }
   }, [location.state, navigate]);
 
