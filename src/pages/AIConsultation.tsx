@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Clock, VideoIcon, Calendar, CheckCircle2 } from "lucide-react";
+import { AIConsultationForm } from "@/components/forms/AIConsultationForm";
 
 // Import assessment data for scoring calculation
 const assessmentData = [
@@ -155,31 +156,9 @@ export default function AIConsultation() {
                 </Card>
               </div>
 
-              {/* Right Side - Calendar Booking */}
+              {/* Right Side - Consultation Form */}
               <div>
-                <Card>
-                  <CardContent className="p-6">
-                    <h2 className="text-xl font-bold mb-6">Schedule Your Session</h2>
-                    
-                    {/* Calendar Booking Widget */}
-                    <div className="w-full">
-                      <iframe 
-                        src="https://api.leadconnectorhq.com/widget/booking/OaoPj8xpt5fQUVcafJVw" 
-                        style={{width: '100%', border: 'none', overflow: 'hidden'}} 
-                        scrolling="no" 
-                        id="OaoPj8xpt5fQUVcafJVw_1757258669442"
-                        className="min-h-[600px]"
-                      />
-                      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
-                    </div>
-                    
-                    <div className="mt-6 text-center">
-                      <p className="text-sm text-muted-foreground">
-                        By submitting this form, you agree to receive communication from The Epitome about your consultation. We respect your privacy and won't share your information.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <AIConsultationForm />
               </div>
             </div>
           </div>
