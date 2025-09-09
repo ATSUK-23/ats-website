@@ -400,7 +400,6 @@ export default function AssessmentQuestions() {
   };
 
   const handleNext = async () => {
-    alert('Assessment submission starting!'); // Immediate visible feedback
     console.log('=== HANDLE NEXT CLICKED ===');
     console.log('Current question index:', currentQuestionIndex);
     console.log('Current domain index:', currentDomainIndex);
@@ -420,21 +419,20 @@ export default function AssessmentQuestions() {
         weight: domain.weight,
         description: domain.description
       }));
+      
+      // Get user info or use defaults
+      const submissionData = userInfo || {
+        name: 'Anonymous User',
+        email: 'test@example.com',
+        business: '',
+        phone: ''
+      };
 
       try {
         console.log('=== ASSESSMENT SUBMISSION STARTED ===');
         console.log('Submitting assessment with userInfo:', userInfo);
         console.log('Current answers:', answers);
         console.log('Overall score:', overallScore);
-        
-        // If no user info, use default values for testing
-        const submissionData = userInfo || {
-          name: 'Anonymous User',
-          email: 'test@example.com',
-          business: '',
-          phone: ''
-        };
-        
         console.log('Using submission data:', submissionData);
 
         // Send via FormSubmit with comprehensive user details
@@ -514,16 +512,13 @@ ${answersText}
         console.error('Failed to send assessment data:', error);
       }
 
-      navigate('/ai-assessment', {
-        state: {
-          assessmentResults: {
-            overallScore,
-            domainScores,
-            maturity: getMaturityLevel(overallScore).level,
-            answeredQuestions: Object.keys(answers).length,
-            totalQuestions: 23,
-            answers
-          }
+      const maturity = getMaturityLevel(overallScore);
+      navigate('/ai-audit/results', { 
+        state: { 
+          overallScore, 
+          domainScores, 
+          maturity: maturity.level,
+          userInfo: submissionData
         }
       });
     }
