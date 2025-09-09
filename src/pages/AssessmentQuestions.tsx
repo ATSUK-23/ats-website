@@ -400,6 +400,7 @@ export default function AssessmentQuestions() {
   };
 
   const handleNext = async () => {
+    alert('Assessment submission starting!'); // Immediate visible feedback
     console.log('=== HANDLE NEXT CLICKED ===');
     console.log('Current question index:', currentQuestionIndex);
     console.log('Current domain index:', currentDomainIndex);
