@@ -325,11 +325,16 @@ export default function AssessmentQuestions() {
   const [userInfo, setUserInfo] = useState<{name: string; email: string; business?: string; phone?: string} | null>(null);
 
   useEffect(() => {
-    // No longer require user info to start assessment
+    // Get user info from location state
     if (location.state?.name && location.state?.email) {
-      setUserInfo({ name: location.state.name, email: location.state.email });
+      setUserInfo({ 
+        name: location.state.name, 
+        email: location.state.email,
+        business: location.state.business || '',
+        phone: location.state.phone || ''
+      });
     }
-  }, [location.state, navigate]);
+  }, [location.state]);
 
   // Calculate comprehensive scoring
   const totalQuestions = 23;
@@ -410,37 +415,46 @@ export default function AssessmentQuestions() {
         description: domain.description
       }));
 
-      if (userInfo) {
-        try {
-          // Send assessment email via Supabase
-          await supabase.functions.invoke('send-assessment-email', {
-            body: {
-              name: userInfo.name,
-              email: userInfo.email,
-              answers,
-              overallScore,
-              domainScores,
-              maturity: getMaturityLevel(overallScore).level
-            }
-          });
+      try {
+        console.log('Submitting assessment with userInfo:', userInfo);
+        
+        // If no user info, use default values for testing
+        const submissionData = userInfo || {
+          name: 'Anonymous User',
+          email: 'test@example.com',
+          business: '',
+          phone: ''
+        };
 
-          // Also send via FormSubmit
-          const formData = new FormData();
-          formData.append('name', userInfo.name);
-          formData.append('email', userInfo.email);
-          formData.append('business', userInfo.business || '');
-          formData.append('phone', userInfo.phone || '');
-          
-          // Format assessment answers for FormSubmit
-          const answersText = Object.entries(answers)
-            .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${answerIndex + 1}`)
-            .join('\n');
-          
-          const domainScoresText = domainScores
-            .map(domain => `${domain.domain}: ${Math.round(domain.score)}%`)
-            .join('\n');
-          
-          const assessmentSummary = `
+        // Send assessment email via Supabase
+        await supabase.functions.invoke('send-assessment-email', {
+          body: {
+            name: submissionData.name,
+            email: submissionData.email,
+            answers,
+            overallScore,
+            domainScores,
+            maturity: getMaturityLevel(overallScore).level
+          }
+        });
+
+        // Also send via FormSubmit
+        const formData = new FormData();
+        formData.append('name', submissionData.name);
+        formData.append('email', submissionData.email);
+        formData.append('business', submissionData.business || '');
+        formData.append('phone', submissionData.phone || '');
+        
+        // Format assessment answers for FormSubmit
+        const answersText = Object.entries(answers)
+          .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${answerIndex + 1}`)
+          .join('\n');
+        
+        const domainScoresText = domainScores
+          .map(domain => `${domain.domain}: ${Math.round(domain.score)}%`)
+          .join('\n');
+        
+        const assessmentSummary = `
 AI Assessment Results:
 Overall Score: ${Math.round(overallScore)}%
 Maturity Level: ${getMaturityLevel(overallScore).level}
@@ -450,25 +464,28 @@ ${domainScoresText}
 
 Detailed Answers:
 ${answersText}
-          `;
-          
-          formData.append('additional', assessmentSummary);
+        `;
+        
+        formData.append('additional', assessmentSummary);
 
-          // Send to both email addresses via FormSubmit
-          const emailAddresses = [
-            'richard.padun@theepitome.co.uk',
-            'martin@automatetosell.com'
-          ];
+        // Send to both email addresses via FormSubmit
+        const emailAddresses = [
+          'richard.padun@theepitome.co.uk',
+          'martin@automatetosell.com'
+        ];
 
-          for (const emailAddress of emailAddresses) {
-            await fetch(`https://formsubmit.co/${emailAddress}`, {
-              method: 'POST',
-              body: formData
-            });
-          }
-        } catch (error) {
-          console.error('Failed to send assessment data:', error);
+        for (const emailAddress of emailAddresses) {
+          console.log(`Sending FormSubmit to: ${emailAddress}`);
+          const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
+            method: 'POST',
+            body: formData
+          });
+          console.log(`FormSubmit response for ${emailAddress}:`, response.status);
         }
+        
+        console.log('Assessment submission completed successfully');
+      } catch (error) {
+        console.error('Failed to send assessment data:', error);
       }
 
       navigate('/ai-assessment', {
