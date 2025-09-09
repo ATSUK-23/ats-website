@@ -97,11 +97,13 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       formSubmitData.append('additional', formData.additionalInfo);
       
       // Include assessment results if available
-      if (assessmentResults) {
+      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
         formSubmitData.append('ai_readiness_score', `${Math.round(assessmentResults.overallScore)}%`);
         formSubmitData.append('growth_potential', `${Math.round(100 - assessmentResults.overallScore)}%`);
         formSubmitData.append('domain_scores', assessmentResults.domainScores.map(d => `${d.domain}: ${Math.round(d.score)}%`).join(', '));
-        formSubmitData.append('assessment_answers', Object.entries(assessmentResults.answers).map(([q, a]) => `Q${q}: Option ${parseInt(a.toString()) + 1}`).join(', '));
+        if (assessmentResults.answers && typeof assessmentResults.answers === 'object') {
+          formSubmitData.append('assessment_answers', Object.entries(assessmentResults.answers).map(([q, a]) => `Q${q}: Option ${parseInt(a.toString()) + 1}`).join(', '));
+        }
       }
 
       const formSubmitResponse = await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
@@ -115,35 +117,37 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       }
       console.log("FormSubmit successful");
 
-      // Also send assessment email if assessment results are available
-      if (assessmentResults) {
-        console.log("Sending assessment email...");
-        // Calculate maturity level
-        const getMaturityLevel = (score: number) => {
-          if (score >= 76) return "AI Advanced";
-          if (score >= 51) return "AI Capable"; 
-          if (score >= 26) return "AI Curious";
-          return "AI Unaware";
-        };
+      // Skip assessment email for now to isolate the issue
+      // if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+      //   console.log("Sending assessment email...");
+      //   try {
+      //     const getMaturityLevel = (score: number) => {
+      //       if (score >= 76) return "AI Advanced";
+      //       if (score >= 51) return "AI Capable"; 
+      //       if (score >= 26) return "AI Curious";
+      //       return "AI Unaware";
+      //     };
 
-        const emailResponse = await supabase.functions.invoke('send-assessment-email', {
-          body: {
-            name: formData.fullName,
-            email: formData.email,
-            answers: assessmentResults.answers,
-            overallScore: assessmentResults.overallScore,
-            domainScores: assessmentResults.domainScores,
-            maturity: getMaturityLevel(assessmentResults.overallScore)
-          }
-        });
+      //     const emailResponse = await supabase.functions.invoke('send-assessment-email', {
+      //       body: {
+      //         name: formData.fullName,
+      //         email: formData.email,
+      //         answers: assessmentResults.answers,
+      //         overallScore: assessmentResults.overallScore,
+      //         domainScores: assessmentResults.domainScores,
+      //         maturity: getMaturityLevel(assessmentResults.overallScore)
+      //       }
+      //     });
 
-        if (emailResponse.error) {
-          console.error("Assessment email error:", emailResponse.error);
-          // Don't throw here - the main form submission was successful
-        } else {
-          console.log("Assessment email sent successfully");
-        }
-      }
+      //     if (emailResponse.error) {
+      //       console.error("Assessment email error:", emailResponse.error);
+      //     } else {
+      //       console.log("Assessment email sent successfully");
+      //     }
+      //   } catch (emailError) {
+      //     console.error("Assessment email exception:", emailError);
+      //   }
+      // }
 
       toast({
         title: "Success!",
