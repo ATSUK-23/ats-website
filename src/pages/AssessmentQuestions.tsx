@@ -333,8 +333,11 @@ export default function AssessmentQuestions() {
         business: location.state.business || '',
         phone: location.state.phone || ''
       });
+    } else {
+      // If no user info, redirect to data collection
+      navigate('/ai-assessment');
     }
-  }, [location.state]);
+  }, [location.state, navigate]);
 
   // Calculate comprehensive scoring
   const totalQuestions = 23;
