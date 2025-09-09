@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -68,27 +68,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
     try {
       console.log("Form submission started", { formData, assessmentResults });
       
-      // Submit to Supabase using ai_leads table
-      const { error } = await supabase
-        .from("ai_leads")
-        .insert([{
-          first_name: formData.fullName.split(' ')[0] || formData.fullName,
-          last_name: formData.fullName.split(' ').slice(1).join(' ') || '',
-          email: formData.email,
-          company_name: formData.companyName,
-          phone: formData.phone,
-          additional_info: formData.additionalInfo,
-          comments: `AI Consultation booking request. ${assessmentResults ? `AI Readiness: ${Math.round(assessmentResults.overallScore)}%. ` : ''}Additional info: ${formData.additionalInfo}`,
-          form_tag: "ai_consultation_booking"
-        }]);
-
-      if (error) {
-        console.error("Supabase error:", error);
-        throw error;
-      }
-      console.log("Supabase insertion successful");
-
-      // Also submit to FormSubmit with assessment data
+      // Submit to FormSubmit with assessment data
       const formSubmitData = new FormData();
       formSubmitData.append('name', formData.fullName);
       formSubmitData.append('email', formData.email);
@@ -111,11 +91,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         body: formSubmitData
       });
       
-      if (!formSubmitResponse.ok) {
-        console.error("FormSubmit error:", formSubmitResponse.status, formSubmitResponse.statusText);
-        throw new Error(`FormSubmit failed: ${formSubmitResponse.status}`);
-      }
-      console.log("FormSubmit successful");
+      console.log("FormSubmit response:", formSubmitResponse.status, formSubmitResponse.statusText);
 
       // Skip assessment email for now to isolate the issue
       // if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
