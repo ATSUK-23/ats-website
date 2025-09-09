@@ -55,6 +55,14 @@ export const HeroSection = ({
               variant="outline" 
               size="lg" 
               className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
+              onClick={() => {
+                const element = document.getElementById('ai-lead-form');
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              }}
             >
               Schedule Consultation
             </Button>
