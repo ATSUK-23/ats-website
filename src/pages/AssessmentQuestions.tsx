@@ -322,20 +322,12 @@ export default function AssessmentQuestions() {
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [userInfo, setUserInfo] = useState<{name: string; email: string; business?: string; phone?: string} | null>(null);
+  const [userInfo, setUserInfo] = useState<{name: string; email: string} | null>(null);
 
   useEffect(() => {
-    // Get user info from location state
+    // No longer require user info to start assessment
     if (location.state?.name && location.state?.email) {
-      setUserInfo({ 
-        name: location.state.name, 
-        email: location.state.email,
-        business: location.state.business || '',
-        phone: location.state.phone || ''
-      });
-    } else {
-      // If no user info, redirect to data collection
-      navigate('/ai-assessment');
+      setUserInfo({ name: location.state.name, email: location.state.email });
     }
   }, [location.state, navigate]);
 
@@ -403,11 +395,6 @@ export default function AssessmentQuestions() {
   };
 
   const handleNext = async () => {
-    console.log('=== HANDLE NEXT CLICKED ===');
-    console.log('Current question index:', currentQuestionIndex);
-    console.log('Current domain index:', currentDomainIndex);
-    console.log('Total domains:', assessmentData.length);
-    console.log('Current domain questions:', currentDomain.questions_list.length);
     if (currentQuestionIndex < currentDomain.questions_list.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else if (currentDomainIndex < assessmentData.length - 1) {
@@ -422,97 +409,22 @@ export default function AssessmentQuestions() {
         weight: domain.weight,
         description: domain.description
       }));
-      
-      // Get user info or use defaults
-      const submissionData = userInfo || {
-        name: 'Anonymous User',
-        email: 'test@example.com',
-        business: '',
-        phone: ''
-      };
 
-      try {
-        console.log('=== ASSESSMENT SUBMISSION STARTED ===');
-        console.log('Submitting assessment with userInfo:', userInfo);
-        console.log('Current answers:', answers);
-        console.log('Overall score:', overallScore);
-        console.log('Using submission data:', submissionData);
-
-        // Send via FormSubmit with comprehensive user details
-        // Format assessment data for FormSubmit
-        const answersText = Object.entries(answers)
-          .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${answerIndex + 1}`)
-          .join('\n');
-        
-        const domainScoresText = domainScores
-          .map(domain => `${domain.domain}: ${Math.round(domain.score)}%`)
-          .join('\n');
-        
-        const assessmentResults = `
-AI ASSESSMENT RESULTS
-
-Personal Details:
-- Name: ${submissionData.name}
-- Email: ${submissionData.email}
-- Business: ${submissionData.business || 'Not provided'}
-- Phone: ${submissionData.phone || 'Not provided'}
-
-Assessment Summary:
-- Overall Score: ${Math.round(overallScore)}%
-- Maturity Level: ${getMaturityLevel(overallScore).level}
-
-Domain Breakdown:
-${domainScoresText}
-
-Detailed Question Responses:
-${answersText}
-        `;
-
-        // Send to both email addresses via FormSubmit
-        const emailAddresses = [
-          'richard.padun@theepitome.co.uk',
-          'martin@automatetosell.com'
-        ];
-
-        for (const emailAddress of emailAddresses) {
-          console.log(`=== SENDING TO ${emailAddress} ===`);
-          console.log('User data:', submissionData);
-          console.log('Assessment results length:', assessmentResults.length);
-          
-          try {
-            // Create a proper form data object for each submission
-            const formData = new FormData();
-            formData.append('name', submissionData.name);
-            formData.append('email', submissionData.email);
-            formData.append('business', submissionData.business || 'Not provided');
-            formData.append('phone', submissionData.phone || 'Not provided');
-            formData.append('message', assessmentResults);
-            formData.append('_subject', `AI Assessment Completed - ${submissionData.name}`);
-            formData.append('_autoresponse', 'Thank you for completing the AI assessment. We will review your results and get back to you soon.');
-            
-            console.log('FormData contents:', Array.from(formData.entries()));
-            
-            const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
-              method: 'POST',
-              body: formData
-            });
-            
-            console.log(`FormSubmit response for ${emailAddress}:`, response.status, response.statusText);
-            
-            if (!response.ok) {
-              const responseText = await response.text();
-              console.error(`FormSubmit failed for ${emailAddress}:`, responseText);
-            } else {
-              console.log(`FormSubmit successful for ${emailAddress}`);
+      if (userInfo) {
+        try {
+          await supabase.functions.invoke('send-assessment-email', {
+            body: {
+              name: userInfo.name,
+              email: userInfo.email,
+              answers,
+              overallScore,
+              domainScores,
+              maturity: getMaturityLevel(overallScore).level
             }
-          } catch (error) {
-            console.error(`FormSubmit error for ${emailAddress}:`, error);
-          }
+          });
+        } catch (error) {
+          console.error('Failed to send assessment email:', error);
         }
-        
-        console.log('Assessment submission completed successfully');
-      } catch (error) {
-        console.error('Failed to send assessment data:', error);
       }
 
       navigate('/ai-assessment', {

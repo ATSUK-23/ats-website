@@ -9,139 +9,26 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, Clock, ArrowLeft, ArrowRight, Brain, Shield, Users, Zap, Settings, TrendingUp, BarChart3, Target, Lightbulb } from "lucide-react";
-import AILeadForm from "@/components/forms/AILeadForm";
 
-// Assessment Start Component - With user info collection
+// Assessment Start Component - Simplified without form
 const AssessmentStart = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    business: '',
-    phone: ''
-  });
-  const [showForm, setShowForm] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
 
   const handleStartAssessment = () => {
-    if (!showForm) {
-      setShowForm(true);
-      return;
-    }
-
-    if (!formData.name.trim() || !formData.email.trim()) {
-      alert('Please fill in your name and email to continue.');
-      return;
-    }
-
-    // Navigate to assessment with user data
-    navigate('/assessment-questions', {
-      state: {
-        name: formData.name,
-        email: formData.email,
-        business: formData.business,
-        phone: formData.phone
-      }
-    });
+    navigate('/assessment-questions');
   };
-
-  if (!showForm) {
-    return (
-      <div className="space-y-6">
-        <div className="p-6 bg-card rounded-lg border text-center space-y-4">
-          <h2 className="text-xl font-semibold">Ready to Discover Your AI Potential?</h2>
-          <p className="text-muted-foreground">Take our comprehensive 23-question assessment to get your personalized AI readiness score.</p>
-          <Button 
-            onClick={handleStartAssessment}
-            size="lg" 
-            className="w-full"
-          >
-            Start Your Assessment
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardContent className="p-6">
-          <h2 className="text-xl font-semibold mb-4">Let's Get Started</h2>
-          <p className="text-muted-foreground mb-6">Please provide your details to begin the assessment. This helps us personalize your results and send you the comprehensive report.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div>
-              <Label htmlFor="name">Full Name *</Label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full mt-1 px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="Enter your full name"
-                required
-              />
-            </div>
-            
-            <div>
-              <Label htmlFor="email">Email Address *</Label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="w-full mt-1 px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="Enter your email address"
-                required
-              />
-            </div>
-            
-            <div>
-              <Label htmlFor="business">Company/Business</Label>
-              <input
-                id="business"
-                name="business"
-                type="text"
-                value={formData.business}
-                onChange={handleInputChange}
-                className="w-full mt-1 px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="Enter your company name"
-              />
-            </div>
-            
-            <div>
-              <Label htmlFor="phone">Phone Number</Label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="w-full mt-1 px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="Enter your phone number"
-              />
-            </div>
-          </div>
-
-          <Button 
-            onClick={handleStartAssessment}
-            size="lg" 
-            className="w-full"
-          >
-            Begin Assessment
-          </Button>
-        </CardContent>
-      </Card>
+      <div className="p-6 bg-card rounded-lg border text-center">
+        <Button 
+          onClick={handleStartAssessment}
+          size="lg" 
+          className="w-full"
+        >
+          Start Your Assessment
+        </Button>
+      </div>
     </div>
   );
 };
@@ -725,10 +612,10 @@ export default function AIAssessment() {
 
               <div className="text-center">
                 <Button size="lg" onClick={() => {
-                    setCurrentView('assessment');
+                    navigate('/assessment-questions');
                   }} className="bg-primary hover:bg-primary/90">
-                  Start Your Assessment
-                </Button>
+                    Start Your Assessment
+                  </Button>
               </div>
             </div>
           </section>
@@ -973,19 +860,7 @@ export default function AIAssessment() {
                 </CardContent>
               </Card>
 
-
-              {/* Lead Collection Form */}
-              <Card className="mb-8">
-                <CardContent className="p-8">
-                  <AILeadForm 
-                    formTag="Ai-Audit"
-                    title="Get Your Detailed Assessment Report"
-                    subtitle="Enter your details below to receive your comprehensive AI readiness report and next steps via email."
-                  />
-                </CardContent>
-              </Card>
-
-              {/* CTA Section */}
+              {/* CTA Section - CHANGED: Removed Download Report button */}
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
@@ -994,6 +869,9 @@ export default function AIAssessment() {
                   </p>
                   
                   <div className="flex flex-wrap justify-center gap-4">
+                    <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={handleScheduleConsultation}>
+                      Schedule Free Consultation
+                    </Button>
                     <Button size="lg" variant="outline" onClick={() => {
                       setAnswers({});
                       setCurrentDomainIndex(0);

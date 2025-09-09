@@ -130,7 +130,7 @@ export const SiteHeader = () => {
         </div>
 
         <div className="flex items-center gap-3 flex-shrink-0 ml-auto md:ml-0">
-          <a href="https://preview--ats-website.lovable.app/ai-audit" target="_blank" rel="noreferrer">
+          <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
             <Button variant="hero" size="sm">Book Audit</Button>
           </a>
         </div>

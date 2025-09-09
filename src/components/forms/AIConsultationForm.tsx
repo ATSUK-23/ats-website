@@ -94,6 +94,11 @@ export function AIConsultationForm() {
         additionalInfo: "",
       });
 
+      // Redirect to Google Calendar after successful submission
+      setTimeout(() => {
+        window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ39ne1GRjOyM52AzZFovSI_Ye8wzmqZRFk9DVQ=', '_blank');
+      }, 2000);
+
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
@@ -110,16 +115,12 @@ export function AIConsultationForm() {
     <div className="text-center py-8">
       <CheckCircle2 className="mx-auto h-16 w-16 text-green-500 mb-4" />
       <h3 className="text-xl font-semibold mb-2">Consultation Request Received!</h3>
-      <p className="text-muted-foreground mb-6">
-        Thank you for your interest in our AI consultation services. 
-        Please click button below to book a time in Richard's Diary
+      <p className="text-muted-foreground mb-4">
+        Thank you for your interest in our AI consultation services. We'll contact you within 24 hours to schedule your free consultation.
       </p>
-      <Button 
-        onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ39ne1GRjOyM52AzZFovSI_Ye8wzmqZRFk9DVQ=', '_blank')}
-        className="bg-primary hover:bg-primary/90"
-      >
-        Book Your Consultation Meeting
-      </Button>
+      <p className="text-sm text-muted-foreground">
+        Check your email for confirmation details and next steps.
+      </p>
     </div>
   );
 
