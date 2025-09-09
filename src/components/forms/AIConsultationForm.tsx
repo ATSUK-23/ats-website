@@ -66,6 +66,8 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
     setIsSubmitting(true);
 
     try {
+      console.log("Form submission started", { formData, assessmentResults });
+      
       // Submit to Supabase using ai_leads table
       const { error } = await supabase
         .from("ai_leads")
@@ -80,7 +82,11 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
           form_tag: "ai_consultation_booking"
         }]);
 
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase error:", error);
+        throw error;
+      }
+      console.log("Supabase insertion successful");
 
       // Also submit to FormSubmit with assessment data
       const formSubmitData = new FormData();
@@ -98,13 +104,20 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         formSubmitData.append('assessment_answers', Object.entries(assessmentResults.answers).map(([q, a]) => `Q${q}: Option ${parseInt(a.toString()) + 1}`).join(', '));
       }
 
-      await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
+      const formSubmitResponse = await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
         method: 'POST',
         body: formSubmitData
       });
+      
+      if (!formSubmitResponse.ok) {
+        console.error("FormSubmit error:", formSubmitResponse.status, formSubmitResponse.statusText);
+        throw new Error(`FormSubmit failed: ${formSubmitResponse.status}`);
+      }
+      console.log("FormSubmit successful");
 
       // Also send assessment email if assessment results are available
       if (assessmentResults) {
+        console.log("Sending assessment email...");
         // Calculate maturity level
         const getMaturityLevel = (score: number) => {
           if (score >= 76) return "AI Advanced";
@@ -113,7 +126,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
           return "AI Unaware";
         };
 
-        await supabase.functions.invoke('send-assessment-email', {
+        const emailResponse = await supabase.functions.invoke('send-assessment-email', {
           body: {
             name: formData.fullName,
             email: formData.email,
@@ -123,6 +136,13 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
             maturity: getMaturityLevel(assessmentResults.overallScore)
           }
         });
+
+        if (emailResponse.error) {
+          console.error("Assessment email error:", emailResponse.error);
+          // Don't throw here - the main form submission was successful
+        } else {
+          console.log("Assessment email sent successfully");
+        }
       }
 
       toast({
