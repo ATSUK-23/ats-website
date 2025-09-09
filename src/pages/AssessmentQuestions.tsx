@@ -431,19 +431,7 @@ export default function AssessmentQuestions() {
         
         console.log('Using submission data:', submissionData);
 
-        // Send assessment email via Supabase
-        await supabase.functions.invoke('send-assessment-email', {
-          body: {
-            name: submissionData.name,
-            email: submissionData.email,
-            answers,
-            overallScore,
-            domainScores,
-            maturity: getMaturityLevel(overallScore).level
-          }
-        });
-
-        // Also send via FormSubmit with comprehensive user details
+        // Send via FormSubmit with comprehensive user details
         // Format assessment data for FormSubmit
         const answersText = Object.entries(answers)
           .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${answerIndex + 1}`)
