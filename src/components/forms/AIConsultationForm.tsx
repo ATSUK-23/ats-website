@@ -139,10 +139,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         additionalInfo: "",
       });
 
-      // Redirect to Google Calendar after successful submission
-      setTimeout(() => {
-        window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ39ne1GRjOyM52AzZFovSI_Ye8wzmqZRFk9DVQ=', '_blank');
-      }, 2000);
+      // Remove automatic redirect - user will click button instead
 
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -160,12 +157,15 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
     <div className="text-center py-8">
       <CheckCircle2 className="mx-auto h-16 w-16 text-green-500 mb-4" />
       <h3 className="text-xl font-semibold mb-2">Consultation Request Received!</h3>
-      <p className="text-muted-foreground mb-4">
-        Thank you for your interest in our AI consultation services. We'll contact you within 24 hours to schedule your free consultation.
+      <p className="text-muted-foreground mb-6">
+        Thank you for your interest in our AI consultation services. Click the button below to book your call time
       </p>
-      <p className="text-sm text-muted-foreground">
-        Check your email for confirmation details and next steps.
-      </p>
+      <Button 
+        onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/AcZssZ39ne1GRjOyM52AzZFovSI_Ye8wzmqZRFk9DVQ=', '_blank')}
+        className="w-full max-w-md"
+      >
+        Book Your Call Now
+      </Button>
     </div>
   );
 
