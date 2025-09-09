@@ -458,6 +458,7 @@ export default function AIAssessment() {
   const [currentDomainIndex, setCurrentDomainIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
   // Check if results were passed from the questions page
   useEffect(() => {
@@ -523,6 +524,7 @@ export default function AIAssessment() {
 
   const handleAnswer = (optionIndex: number) => {
     if (currentQuestion) {
+      setSelectedAnswer(optionIndex);
       setAnswers(prev => ({
         ...prev,
         [currentQuestion.id]: optionIndex
@@ -533,9 +535,11 @@ export default function AIAssessment() {
   const handleNext = () => {
     if (currentQuestionIndex < currentDomain.questions_list.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedAnswer(null);
     } else if (currentDomainIndex < assessmentData.length - 1) {
       setCurrentDomainIndex(currentDomainIndex + 1);
       setCurrentQuestionIndex(0);
+      setSelectedAnswer(null);
     } else {
       setCurrentView('results');
     }
@@ -544,9 +548,13 @@ export default function AIAssessment() {
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
+      const prevQuestion = currentDomain.questions_list[currentQuestionIndex - 1];
+      setSelectedAnswer(answers[prevQuestion.id] ?? null);
     } else if (currentDomainIndex > 0) {
       setCurrentDomainIndex(currentDomainIndex - 1);
       setCurrentQuestionIndex(assessmentData[currentDomainIndex - 1].questions_list.length - 1);
+      const prevDomainLastQuestion = assessmentData[currentDomainIndex - 1].questions_list[assessmentData[currentDomainIndex - 1].questions_list.length - 1];
+      setSelectedAnswer(answers[prevDomainLastQuestion.id] ?? null);
     }
   };
 
@@ -725,6 +733,11 @@ export default function AIAssessment() {
 
               <div className="text-center">
                 <Button size="lg" onClick={() => {
+                    setCurrentDomainIndex(0);
+                    setCurrentQuestionIndex(0);
+                    // Set selectedAnswer to existing answer if available, null otherwise
+                    const firstQuestion = assessmentData[0].questions_list[0];
+                    setSelectedAnswer(answers[firstQuestion.id] ?? null);
                     setCurrentView('assessment');
                   }} className="bg-primary hover:bg-primary/90">
                   Start Your Assessment
@@ -789,6 +802,29 @@ export default function AIAssessment() {
                 })}
               </div>
 
+              {/* Question-level progress indicators */}
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {assessmentData.flatMap(domain => domain.questions_list).map((question, index) => {
+                  const isAnswered = answers[question.id] !== undefined;
+                  const isCurrent = currentQuestion?.id === question.id;
+                  
+                  return (
+                    <div
+                      key={question.id}
+                      className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium transition-colors ${
+                        isCurrent 
+                          ? 'bg-primary text-primary-foreground ring-2 ring-primary/20' 
+                          : isAnswered 
+                            ? 'bg-green-500 text-white' 
+                            : 'bg-muted text-muted-foreground'
+                      }`}
+                    >
+                      {index + 1}
+                    </div>
+                  );
+                })}
+              </div>
+
               {/* Current Question */}
               <Card className="mb-8">
                 <CardContent className="p-8">
@@ -801,7 +837,7 @@ export default function AIAssessment() {
                     </h2>
                   </div>
 
-                  <RadioGroup value={answers[currentQuestion?.id]?.toString()} onValueChange={(value) => handleAnswer(parseInt(value))}>
+                  <RadioGroup value={selectedAnswer?.toString() || ""} onValueChange={(value) => handleAnswer(parseInt(value))}>
                     <div className="space-y-4">
                       {currentQuestion?.options.map((option, index) => (
                         <div key={index} className="flex items-start space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
@@ -832,7 +868,7 @@ export default function AIAssessment() {
 
                 <Button
                   onClick={handleNext}
-                  disabled={!currentQuestion || answers[currentQuestion.id] === undefined}
+                  disabled={selectedAnswer === null}
                   className="bg-primary hover:bg-primary/90"
                 >
                   {currentDomainIndex === assessmentData.length - 1 && 
@@ -973,16 +1009,6 @@ export default function AIAssessment() {
                 </CardContent>
               </Card>
 
-              {/* Lead Collection Form */}
-              <Card className="mb-8">
-                <CardContent className="p-8">
-                  <AILeadForm 
-                    formTag="Ai-Audit"
-                    title="Get Your Detailed Assessment Report"
-                    subtitle="Enter your details below to receive your comprehensive AI readiness report and next steps via email."
-                  />
-                </CardContent>
-              </Card>
 
               {/* CTA Section */}
               <Card className="bg-primary/5 border-primary/20">
