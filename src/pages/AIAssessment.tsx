@@ -9,6 +9,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, Clock, ArrowLeft, ArrowRight, Brain, Shield, Users, Zap, Settings, TrendingUp, BarChart3, Target, Lightbulb } from "lucide-react";
+import AILeadForm from "@/components/forms/AILeadForm";
 
 // Assessment Start Component - With user info collection
 const AssessmentStart = () => {
@@ -972,7 +973,18 @@ export default function AIAssessment() {
                 </CardContent>
               </Card>
 
-              {/* CTA Section - CHANGED: Removed Download Report button */}
+              {/* Lead Collection Form */}
+              <Card className="mb-8">
+                <CardContent className="p-8">
+                  <AILeadForm 
+                    formTag="Ai-Audit"
+                    title="Get Your Detailed Assessment Report"
+                    subtitle="Enter your details below to receive your comprehensive AI readiness report and next steps via email."
+                  />
+                </CardContent>
+              </Card>
+
+              {/* CTA Section */}
               <Card className="bg-primary/5 border-primary/20">
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
