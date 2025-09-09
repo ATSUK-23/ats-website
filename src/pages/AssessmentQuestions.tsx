@@ -512,13 +512,16 @@ ${answersText}
         console.error('Failed to send assessment data:', error);
       }
 
-      const maturity = getMaturityLevel(overallScore);
-      navigate('/ai-audit/results', { 
-        state: { 
-          overallScore, 
-          domainScores, 
-          maturity: maturity.level,
-          userInfo: submissionData
+      navigate('/ai-assessment', {
+        state: {
+          assessmentResults: {
+            overallScore,
+            domainScores,
+            maturity: getMaturityLevel(overallScore).level,
+            answeredQuestions: Object.keys(answers).length,
+            totalQuestions: 23,
+            answers
+          }
         }
       });
     }
