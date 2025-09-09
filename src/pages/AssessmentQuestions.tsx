@@ -454,10 +454,18 @@ ${answersText}
           
           formData.append('additional', assessmentSummary);
 
-          await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
-            method: 'POST',
-            body: formData
-          });
+          // Send to both email addresses via FormSubmit
+          const emailAddresses = [
+            'richard.padun@theepitome.co.uk',
+            'martin@automatetosell.com'
+          ];
+
+          for (const emailAddress of emailAddresses) {
+            await fetch(`https://formsubmit.co/${emailAddress}`, {
+              method: 'POST',
+              body: formData
+            });
+          }
         } catch (error) {
           console.error('Failed to send assessment data:', error);
         }
