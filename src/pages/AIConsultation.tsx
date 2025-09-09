@@ -158,7 +158,7 @@ export default function AIConsultation() {
 
               {/* Right Side - Consultation Form */}
               <div>
-                <AIConsultationForm />
+                <AIConsultationForm assessmentResults={assessmentResults} />
               </div>
             </div>
           </div>

@@ -16,7 +16,22 @@ interface FormData {
   additionalInfo: string;
 }
 
-export function AIConsultationForm() {
+interface AssessmentResults {
+  answers: Record<number, number>;
+  overallScore: number;
+  domainScores: Array<{
+    domain: string;
+    score: number;
+    weight: number;
+    description: string;
+  }>;
+}
+
+interface AIConsultationFormProps {
+  assessmentResults?: AssessmentResults;
+}
+
+export function AIConsultationForm({ assessmentResults }: AIConsultationFormProps) {
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -61,24 +76,54 @@ export function AIConsultationForm() {
           company_name: formData.companyName,
           phone: formData.phone,
           additional_info: formData.additionalInfo,
-          comments: `AI Consultation booking request. Additional info: ${formData.additionalInfo}`,
+          comments: `AI Consultation booking request. ${assessmentResults ? `AI Readiness: ${Math.round(assessmentResults.overallScore)}%. ` : ''}Additional info: ${formData.additionalInfo}`,
           form_tag: "ai_consultation_booking"
         }]);
 
       if (error) throw error;
 
-      // Also submit to FormSubmit
+      // Also submit to FormSubmit with assessment data
       const formSubmitData = new FormData();
       formSubmitData.append('name', formData.fullName);
       formSubmitData.append('email', formData.email);
       formSubmitData.append('business', formData.companyName);
       formSubmitData.append('phone', formData.phone);
       formSubmitData.append('additional', formData.additionalInfo);
+      
+      // Include assessment results if available
+      if (assessmentResults) {
+        formSubmitData.append('ai_readiness_score', `${Math.round(assessmentResults.overallScore)}%`);
+        formSubmitData.append('growth_potential', `${Math.round(100 - assessmentResults.overallScore)}%`);
+        formSubmitData.append('domain_scores', assessmentResults.domainScores.map(d => `${d.domain}: ${Math.round(d.score)}%`).join(', '));
+        formSubmitData.append('assessment_answers', Object.entries(assessmentResults.answers).map(([q, a]) => `Q${q}: Option ${parseInt(a.toString()) + 1}`).join(', '));
+      }
 
       await fetch('https://formsubmit.co/richard.padun@theepitome.co.uk', {
         method: 'POST',
         body: formSubmitData
       });
+
+      // Also send assessment email if assessment results are available
+      if (assessmentResults) {
+        // Calculate maturity level
+        const getMaturityLevel = (score: number) => {
+          if (score >= 76) return "AI Advanced";
+          if (score >= 51) return "AI Capable"; 
+          if (score >= 26) return "AI Curious";
+          return "AI Unaware";
+        };
+
+        await supabase.functions.invoke('send-assessment-email', {
+          body: {
+            name: formData.fullName,
+            email: formData.email,
+            answers: assessmentResults.answers,
+            overallScore: assessmentResults.overallScore,
+            domainScores: assessmentResults.domainScores,
+            maturity: getMaturityLevel(assessmentResults.overallScore)
+          }
+        });
+      }
 
       toast({
         title: "Success!",
