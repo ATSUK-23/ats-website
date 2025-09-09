@@ -400,6 +400,11 @@ export default function AssessmentQuestions() {
   };
 
   const handleNext = async () => {
+    console.log('=== HANDLE NEXT CLICKED ===');
+    console.log('Current question index:', currentQuestionIndex);
+    console.log('Current domain index:', currentDomainIndex);
+    console.log('Total domains:', assessmentData.length);
+    console.log('Current domain questions:', currentDomain.questions_list.length);
     if (currentQuestionIndex < currentDomain.questions_list.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else if (currentDomainIndex < assessmentData.length - 1) {
