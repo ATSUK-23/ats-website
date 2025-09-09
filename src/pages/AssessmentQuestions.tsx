@@ -439,13 +439,7 @@ export default function AssessmentQuestions() {
         });
 
         // Also send via FormSubmit with comprehensive user details
-        const formData = new FormData();
-        formData.append('Name', submissionData.name);
-        formData.append('Email', submissionData.email);
-        formData.append('Business Name', submissionData.business || 'Not provided');
-        formData.append('Phone Number', submissionData.phone || 'Not provided');
-        
-        // Format assessment answers for FormSubmit
+        // Format assessment data for FormSubmit
         const answersText = Object.entries(answers)
           .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${answerIndex + 1}`)
           .join('\n');
@@ -473,9 +467,6 @@ ${domainScoresText}
 Detailed Question Responses:
 ${answersText}
         `;
-        
-        formData.append('Assessment Results', assessmentResults);
-        formData.append('_subject', `AI Assessment Completed - ${submissionData.name}`);
 
         // Send to both email addresses via FormSubmit
         const emailAddresses = [
@@ -484,22 +475,31 @@ ${answersText}
         ];
 
         for (const emailAddress of emailAddresses) {
-          console.log(`Sending FormSubmit to: ${emailAddress} with data:`, {
-            name: submissionData.name,
-            email: submissionData.email,
-            business: submissionData.business,
-            phone: submissionData.phone
-          });
+          console.log(`Sending FormSubmit to: ${emailAddress} with user data:`, submissionData);
           
           try {
+            // Create a proper form data object for each submission
+            const formData = new FormData();
+            formData.append('name', submissionData.name);
+            formData.append('email', submissionData.email);
+            formData.append('business', submissionData.business || 'Not provided');
+            formData.append('phone', submissionData.phone || 'Not provided');
+            formData.append('message', assessmentResults);
+            formData.append('_subject', `AI Assessment Completed - ${submissionData.name}`);
+            formData.append('_autoresponse', 'Thank you for completing the AI assessment. We will review your results and get back to you soon.');
+            
             const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
               method: 'POST',
               body: formData
             });
+            
             console.log(`FormSubmit response for ${emailAddress}:`, response.status, response.statusText);
             
             if (!response.ok) {
-              console.error(`FormSubmit failed for ${emailAddress}:`, await response.text());
+              const responseText = await response.text();
+              console.error(`FormSubmit failed for ${emailAddress}:`, responseText);
+            } else {
+              console.log(`FormSubmit successful for ${emailAddress}`);
             }
           } catch (error) {
             console.error(`FormSubmit error for ${emailAddress}:`, error);
