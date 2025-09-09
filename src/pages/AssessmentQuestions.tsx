@@ -416,7 +416,10 @@ export default function AssessmentQuestions() {
       }));
 
       try {
+        console.log('=== ASSESSMENT SUBMISSION STARTED ===');
         console.log('Submitting assessment with userInfo:', userInfo);
+        console.log('Current answers:', answers);
+        console.log('Overall score:', overallScore);
         
         // If no user info, use default values for testing
         const submissionData = userInfo || {
@@ -425,6 +428,8 @@ export default function AssessmentQuestions() {
           business: '',
           phone: ''
         };
+        
+        console.log('Using submission data:', submissionData);
 
         // Send assessment email via Supabase
         await supabase.functions.invoke('send-assessment-email', {
@@ -475,7 +480,9 @@ ${answersText}
         ];
 
         for (const emailAddress of emailAddresses) {
-          console.log(`Sending FormSubmit to: ${emailAddress} with user data:`, submissionData);
+          console.log(`=== SENDING TO ${emailAddress} ===`);
+          console.log('User data:', submissionData);
+          console.log('Assessment results length:', assessmentResults.length);
           
           try {
             // Create a proper form data object for each submission
@@ -487,6 +494,8 @@ ${answersText}
             formData.append('message', assessmentResults);
             formData.append('_subject', `AI Assessment Completed - ${submissionData.name}`);
             formData.append('_autoresponse', 'Thank you for completing the AI assessment. We will review your results and get back to you soon.');
+            
+            console.log('FormData contents:', Array.from(formData.entries()));
             
             const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
               method: 'POST',
