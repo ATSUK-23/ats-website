@@ -725,10 +725,10 @@ export default function AIAssessment() {
 
               <div className="text-center">
                 <Button size="lg" onClick={() => {
-                    setCurrentView('intro');
+                    setCurrentView('assessment');
                   }} className="bg-primary hover:bg-primary/90">
-                    Start Your Assessment
-                  </Button>
+                  Start Your Assessment
+                </Button>
               </div>
             </div>
           </section>
