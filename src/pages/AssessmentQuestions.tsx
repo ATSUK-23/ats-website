@@ -438,12 +438,12 @@ export default function AssessmentQuestions() {
           }
         });
 
-        // Also send via FormSubmit
+        // Also send via FormSubmit with comprehensive user details
         const formData = new FormData();
-        formData.append('name', submissionData.name);
-        formData.append('email', submissionData.email);
-        formData.append('business', submissionData.business || '');
-        formData.append('phone', submissionData.phone || '');
+        formData.append('Name', submissionData.name);
+        formData.append('Email', submissionData.email);
+        formData.append('Business Name', submissionData.business || 'Not provided');
+        formData.append('Phone Number', submissionData.phone || 'Not provided');
         
         // Format assessment answers for FormSubmit
         const answersText = Object.entries(answers)
@@ -454,19 +454,28 @@ export default function AssessmentQuestions() {
           .map(domain => `${domain.domain}: ${Math.round(domain.score)}%`)
           .join('\n');
         
-        const assessmentSummary = `
-AI Assessment Results:
-Overall Score: ${Math.round(overallScore)}%
-Maturity Level: ${getMaturityLevel(overallScore).level}
+        const assessmentResults = `
+AI ASSESSMENT RESULTS
 
-Domain Scores:
+Personal Details:
+- Name: ${submissionData.name}
+- Email: ${submissionData.email}
+- Business: ${submissionData.business || 'Not provided'}
+- Phone: ${submissionData.phone || 'Not provided'}
+
+Assessment Summary:
+- Overall Score: ${Math.round(overallScore)}%
+- Maturity Level: ${getMaturityLevel(overallScore).level}
+
+Domain Breakdown:
 ${domainScoresText}
 
-Detailed Answers:
+Detailed Question Responses:
 ${answersText}
         `;
         
-        formData.append('additional', assessmentSummary);
+        formData.append('Assessment Results', assessmentResults);
+        formData.append('_subject', `AI Assessment Completed - ${submissionData.name}`);
 
         // Send to both email addresses via FormSubmit
         const emailAddresses = [
@@ -475,12 +484,26 @@ ${answersText}
         ];
 
         for (const emailAddress of emailAddresses) {
-          console.log(`Sending FormSubmit to: ${emailAddress}`);
-          const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
-            method: 'POST',
-            body: formData
+          console.log(`Sending FormSubmit to: ${emailAddress} with data:`, {
+            name: submissionData.name,
+            email: submissionData.email,
+            business: submissionData.business,
+            phone: submissionData.phone
           });
-          console.log(`FormSubmit response for ${emailAddress}:`, response.status);
+          
+          try {
+            const response = await fetch(`https://formsubmit.co/${emailAddress}`, {
+              method: 'POST',
+              body: formData
+            });
+            console.log(`FormSubmit response for ${emailAddress}:`, response.status, response.statusText);
+            
+            if (!response.ok) {
+              console.error(`FormSubmit failed for ${emailAddress}:`, await response.text());
+            }
+          } catch (error) {
+            console.error(`FormSubmit error for ${emailAddress}:`, error);
+          }
         }
         
         console.log('Assessment submission completed successfully');
