@@ -85,7 +85,19 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
           return "AI Unaware";
         };
 
-        const { error: supabaseError } = await supabase
+        console.log("Attempting Supabase insert with data:", {
+          user_name: formData.fullName,
+          user_email: formData.email,
+          company_name: formData.companyName,
+          phone: formData.phone,
+          additional_info: formData.additionalInfo,
+          assessment_answers: assessmentResults.answers,
+          overall_score: assessmentResults.overallScore,
+          domain_scores: assessmentResults.domainScores,
+          maturity_level: getMaturityLevel(assessmentResults.overallScore)
+        });
+
+        const { data, error: supabaseError } = await supabase
           .from('assessment_results')
           .insert({
             user_name: formData.fullName,
@@ -97,12 +109,15 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
             overall_score: assessmentResults.overallScore,
             domain_scores: assessmentResults.domainScores,
             maturity_level: getMaturityLevel(assessmentResults.overallScore)
-          });
+          })
+          .select();
 
         if (supabaseError) {
           console.error("Error saving to Supabase:", supabaseError);
+          console.error("Full Supabase error details:", JSON.stringify(supabaseError, null, 2));
         } else {
           console.log("Assessment results saved to Supabase successfully");
+          console.log("Inserted data:", data);
         }
       } else {
         console.log("No assessment results to save - this is likely a direct form submission");
