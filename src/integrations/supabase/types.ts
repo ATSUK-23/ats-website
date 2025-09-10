@@ -149,6 +149,51 @@ export type Database = {
         }
         Relationships: []
       }
+      assessment_results: {
+        Row: {
+          additional_info: string | null
+          assessment_answers: Json
+          company_name: string | null
+          domain_scores: Json
+          id: string
+          maturity_level: string | null
+          overall_score: number
+          phone: string | null
+          submitted_at: string
+          updated_at: string
+          user_email: string
+          user_name: string
+        }
+        Insert: {
+          additional_info?: string | null
+          assessment_answers: Json
+          company_name?: string | null
+          domain_scores: Json
+          id?: string
+          maturity_level?: string | null
+          overall_score: number
+          phone?: string | null
+          submitted_at?: string
+          updated_at?: string
+          user_email: string
+          user_name: string
+        }
+        Update: {
+          additional_info?: string | null
+          assessment_answers?: Json
+          company_name?: string | null
+          domain_scores?: Json
+          id?: string
+          maturity_level?: string | null
+          overall_score?: number
+          phone?: string | null
+          submitted_at?: string
+          updated_at?: string
+          user_email?: string
+          user_name?: string
+        }
+        Relationships: []
+      }
       "e-commerce": {
         Row: {
           email: string

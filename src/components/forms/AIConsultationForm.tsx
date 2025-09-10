@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 import { useToast } from "@/hooks/use-toast";
 
@@ -67,6 +68,36 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
 
     try {
       console.log("Form submission started", { formData, assessmentResults });
+      
+      // Save assessment results to Supabase if available
+      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+        const getMaturityLevel = (score: number) => {
+          if (score >= 76) return "AI Advanced";
+          if (score >= 51) return "AI Capable"; 
+          if (score >= 26) return "AI Curious";
+          return "AI Unaware";
+        };
+
+        const { error: supabaseError } = await supabase
+          .from('assessment_results')
+          .insert({
+            user_name: formData.fullName,
+            user_email: formData.email,
+            company_name: formData.companyName,
+            phone: formData.phone,
+            additional_info: formData.additionalInfo,
+            assessment_answers: assessmentResults.answers,
+            overall_score: assessmentResults.overallScore,
+            domain_scores: assessmentResults.domainScores,
+            maturity_level: getMaturityLevel(assessmentResults.overallScore)
+          });
+
+        if (supabaseError) {
+          console.error("Error saving to Supabase:", supabaseError);
+        } else {
+          console.log("Assessment results saved to Supabase successfully");
+        }
+      }
       
       // Submit to FormSubmit with assessment data
       const formSubmitData = new FormData();
