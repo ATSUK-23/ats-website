@@ -155,7 +155,10 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
 
       const formSubmitResponse = await fetch('https://formsubmit.co/martin@automatetosell.com', {
         method: 'POST',
-        body: formSubmitData
+        body: formSubmitData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
       
       console.log("FormSubmit response:", formSubmitResponse.status, formSubmitResponse.statusText);

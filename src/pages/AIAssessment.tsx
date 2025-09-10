@@ -452,6 +452,7 @@ export default function AIAssessment() {
     navigate('/ai-audit', {
       state: {
         assessmentResults: {
+          answers, // Include the individual question answers
           overallScore,
           domainScores,
           maturity: maturity.level,
