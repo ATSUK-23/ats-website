@@ -449,7 +449,7 @@ export default function AIAssessment() {
       description: domain.description
     }));
 
-    navigate('/ai-consultation', {
+    navigate('/ai-audit', {
       state: {
         assessmentResults: {
           overallScore,

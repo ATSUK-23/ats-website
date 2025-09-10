@@ -40,7 +40,7 @@ const App = () => (
             <Route path="/ai-audit" element={<AISolutions />} />
             <Route path="/ai-assessment" element={<AIAssessment />} />
             <Route path="/assessment-questions" element={<AssessmentQuestions />} />
-            <Route path="/ai-consultation" element={<AIConsultation />} />
+            
             <Route path="/agents" element={<Agents />} />
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />

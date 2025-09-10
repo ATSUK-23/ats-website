@@ -5,7 +5,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
-import AILeadForm from "@/components/forms/AILeadForm";
+import { AIConsultationForm } from "@/components/forms/AIConsultationForm";
 const aiBrainBackground = "/lovable-uploads/924a7d77-7fc5-4519-858c-c9f930246863.png";
 import aiKnowledgeComparison from "@/assets/ai-knowledge-comparison.jpg";
 import aiProcessSteps from "@/assets/ai-process-steps.jpg";
@@ -352,7 +352,7 @@ export default function AISolutions() {
 
         {/* Lead Form */}
         <div id="ai-lead-form">
-          <AILeadForm formTag="Ai-Audit" title="Ready to Unlock Your AI Brain?" subtitle="Book your AI Audit today and discover how to transform your business with AI solutions that drive real results." />
+          <AIConsultationForm />
         </div>
 
       </main>
