@@ -81,7 +81,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       });
       
       // Save assessment results to Supabase if available
-      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+      if (assessmentResults && assessmentResults.domainScores) {
         const getMaturityLevel = (score: number) => {
           if (score >= 76) return "AI Advanced";
           if (score >= 51) return "AI Capable"; 
@@ -95,7 +95,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
           company_name: formData.companyName,
           phone: formData.phone,
           additional_info: formData.additionalInfo,
-          assessment_answers: assessmentResults.answers,
+          assessment_answers: assessmentResults.answers || {}, // Use empty object if no answers
           overall_score: assessmentResults.overallScore,
           domain_scores: assessmentResults.domainScores,
           maturity_level: getMaturityLevel(assessmentResults.overallScore)
@@ -109,7 +109,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
             company_name: formData.companyName,
             phone: formData.phone,
             additional_info: formData.additionalInfo,
-            assessment_answers: assessmentResults.answers,
+            assessment_answers: assessmentResults.answers || {}, // Use empty object if no answers
             overall_score: assessmentResults.overallScore,
             domain_scores: assessmentResults.domainScores,
             maturity_level: getMaturityLevel(assessmentResults.overallScore)
@@ -125,8 +125,6 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         }
       } else {
         console.log("No assessment results to save - this is likely a direct form submission");
-        // For direct form submissions without assessment, we could save to a different table
-        // or modify the assessment_results table to make assessment fields optional
       }
       
       // Submit to FormSubmit with assessment data
@@ -138,10 +136,18 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       formSubmitData.append('additional', formData.additionalInfo);
       
       // Include assessment results if available
-      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+      if (assessmentResults && assessmentResults.domainScores) {
+        const getMaturityLevel = (score: number) => {
+          if (score >= 76) return "AI Advanced";
+          if (score >= 51) return "AI Capable"; 
+          if (score >= 26) return "AI Curious";
+          return "AI Unaware";
+        };
+        
         formSubmitData.append('ai_readiness_score', `${Math.round(assessmentResults.overallScore)}%`);
         formSubmitData.append('growth_potential', `${Math.round(100 - assessmentResults.overallScore)}%`);
         formSubmitData.append('domain_scores', assessmentResults.domainScores.map(d => `${d.domain}: ${Math.round(d.score)}%`).join(', '));
+        formSubmitData.append('maturity_level', getMaturityLevel(assessmentResults.overallScore));
         if (assessmentResults.answers && typeof assessmentResults.answers === 'object') {
           formSubmitData.append('assessment_answers', Object.entries(assessmentResults.answers).map(([q, a]) => `Q${q}: Option ${parseInt(a.toString()) + 1}`).join(', '));
         }
