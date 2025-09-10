@@ -33,6 +33,8 @@ interface AIConsultationFormProps {
 }
 
 export function AIConsultationForm({ assessmentResults }: AIConsultationFormProps) {
+  console.log("🚀 AIConsultationForm component rendered with assessmentResults:", assessmentResults);
+  
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -54,6 +56,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
 
   const handleSubmit = async (e: React.FormEvent) => {
     console.log("🚀 FORM SUBMIT TRIGGERED - TOP OF FUNCTION");
+    console.log("🚀 BUTTON CLICKED - SUBMIT HANDLER TRIGGERED");
     e.preventDefault();
     
     if (!formData.fullName || !formData.email || !formData.companyName) {
@@ -308,6 +311,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
               type="submit" 
               className="w-full" 
               disabled={isSubmitting}
+              onClick={() => console.log("🚀 BUTTON CLICKED - onClick handler")}
             >
               {isSubmitting ? "Submitting..." : "Schedule Free AI Consultation"}
             </Button>
