@@ -68,6 +68,13 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
 
     try {
       console.log("Form submission started", { formData, assessmentResults });
+      console.log("Assessment results check:", {
+        hasAssessmentResults: !!assessmentResults,
+        hasAnswers: !!(assessmentResults?.answers),
+        hasDomainScores: !!(assessmentResults?.domainScores),
+        answersType: typeof assessmentResults?.answers,
+        domainScoresType: typeof assessmentResults?.domainScores
+      });
       
       // Save assessment results to Supabase if available
       if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
@@ -97,6 +104,10 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         } else {
           console.log("Assessment results saved to Supabase successfully");
         }
+      } else {
+        console.log("No assessment results to save - this is likely a direct form submission");
+        // For direct form submissions without assessment, we could save to a different table
+        // or modify the assessment_results table to make assessment fields optional
       }
       
       // Submit to FormSubmit with assessment data
