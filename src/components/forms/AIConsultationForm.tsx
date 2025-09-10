@@ -53,6 +53,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log("🚀 FORM SUBMIT TRIGGERED - TOP OF FUNCTION");
     e.preventDefault();
     
     if (!formData.fullName || !formData.email || !formData.companyName) {
