@@ -434,6 +434,13 @@ export default function AssessmentQuestions() {
           }
 
           // Post to GHL API immediately
+          console.log("🚀 Calling GHL API with data:", {
+            name: userInfo.name,
+            email: userInfo.email,
+            overallScore,
+            maturity: getMaturityLevel(overallScore).level
+          });
+          
           const { data: ghlData, error: ghlError } = await supabase.functions.invoke('post-to-ghl', {
             body: {
               name: userInfo.name,
@@ -447,13 +454,15 @@ export default function AssessmentQuestions() {
           });
 
           if (ghlError) {
-            console.error("GHL posting error:", ghlError);
+            console.error("❌ GHL posting error:", ghlError);
           } else {
-            console.log("GHL posting successful:", ghlData);
+            console.log("✅ GHL posting successful:", ghlData);
           }
 
           // Send email notification
-          const { error: emailError } = await supabase.functions.invoke('send-assessment-email', {
+          console.log("📧 Calling email function for:", userInfo.email);
+          
+          const { data: emailData, error: emailError } = await supabase.functions.invoke('send-assessment-email', {
             body: {
               name: userInfo.name,
               email: userInfo.email,
@@ -465,9 +474,9 @@ export default function AssessmentQuestions() {
           });
 
           if (emailError) {
-            console.error("Email sending error:", emailError);
+            console.error("❌ Email sending error:", emailError);
           } else {
-            console.log("Assessment email sent successfully");
+            console.log("✅ Assessment email sent successfully:", emailData);
           }
         } catch (error) {
           console.error('Failed to send assessment email:', error);
