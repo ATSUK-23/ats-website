@@ -410,77 +410,79 @@ export default function AssessmentQuestions() {
         description: domain.description
       }));
 
-      if (userInfo) {
-        try {
-          // Save to Supabase assessment_results table
-          const { error: dbError } = await supabase
-            .from('assessment_results')
-            .insert({
-              user_name: userInfo.name,
-              user_email: userInfo.email,
-              company_name: null,
-              phone: null,
-              assessment_answers: answers,
-              overall_score: overallScore,
-              domain_scores: domainScores,
-              maturity_level: getMaturityLevel(overallScore).level,
-              additional_info: null,
-              tags: ['ai-assessment-done']
-            });
-
-          if (dbError) {
-            console.error("Database error:", dbError);
-            throw dbError;
-          }
-
-          // Post to GHL API immediately
-          console.log("🚀 Calling GHL API with data:", {
-            name: userInfo.name,
-            email: userInfo.email,
-            overallScore,
-            maturity: getMaturityLevel(overallScore).level
-          });
-          
-          const { data: ghlData, error: ghlError } = await supabase.functions.invoke('post-to-ghl', {
-            body: {
-              name: userInfo.name,
-              email: userInfo.email,
-              phone: null,
-              company_name: null,
-              overallScore,
-              domainScores,
-              maturity: getMaturityLevel(overallScore).level
-            }
+      // Save to Supabase and send notifications regardless of user info
+      try {
+        // Always save to Supabase assessment_results table
+        const { error: dbError } = await supabase
+          .from('assessment_results')
+          .insert({
+            user_name: userInfo?.name || 'Anonymous User',
+            user_email: userInfo?.email || 'anonymous@test.com',
+            company_name: null,
+            phone: null,
+            assessment_answers: answers,
+            overall_score: overallScore,
+            domain_scores: domainScores,
+            maturity_level: getMaturityLevel(overallScore).level,
+            additional_info: null,
+            tags: ['ai-assessment-done']
           });
 
-          if (ghlError) {
-            console.error("❌ GHL posting error:", ghlError);
-          } else {
-            console.log("✅ GHL posting successful:", ghlData);
-          }
-
-          // Send email notification
-          console.log("📧 Calling email function for:", userInfo.email);
-          
-          const { data: emailData, error: emailError } = await supabase.functions.invoke('send-assessment-email', {
-            body: {
-              name: userInfo.name,
-              email: userInfo.email,
-              answers,
-              overallScore,
-              domainScores,
-              maturity: getMaturityLevel(overallScore).level
-            }
-          });
-
-          if (emailError) {
-            console.error("❌ Email sending error:", emailError);
-          } else {
-            console.log("✅ Assessment email sent successfully:", emailData);
-          }
-        } catch (error) {
-          console.error('Failed to send assessment email:', error);
+        if (dbError) {
+          console.error("Database error:", dbError);
+          throw dbError;
         }
+
+        // Always post to GHL API and send emails with fallback data
+        const userName = userInfo?.name || 'Anonymous User';
+        const userEmail = userInfo?.email || 'test@example.com';
+
+        console.log("🚀 Calling GHL API with data:", {
+          name: userName,
+          email: userEmail,
+          overallScore,
+          maturity: getMaturityLevel(overallScore).level
+        });
+        
+        const { data: ghlData, error: ghlError } = await supabase.functions.invoke('post-to-ghl', {
+          body: {
+            name: userName,
+            email: userEmail,
+            phone: null,
+            company_name: null,
+            overallScore,
+            domainScores,
+            maturity: getMaturityLevel(overallScore).level
+          }
+        });
+
+        if (ghlError) {
+          console.error("❌ GHL posting error:", ghlError);
+        } else {
+          console.log("✅ GHL posting successful:", ghlData);
+        }
+
+        // Always send email notification  
+        console.log("📧 Calling email function for:", userEmail);
+        
+        const { data: emailData, error: emailError } = await supabase.functions.invoke('send-assessment-email', {
+          body: {
+            name: userName,
+            email: userEmail,
+            answers,
+            overallScore,
+            domainScores,
+            maturity: getMaturityLevel(overallScore).level
+          }
+        });
+
+        if (emailError) {
+          console.error("❌ Email sending error:", emailError);
+        } else {
+          console.log("✅ Assessment email sent successfully:", emailData);
+        }
+      } catch (error) {
+        console.error('Failed to process assessment completion:', error);
       }
 
       navigate('/ai-assessment', {
