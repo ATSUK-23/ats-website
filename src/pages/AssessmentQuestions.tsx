@@ -412,11 +412,33 @@ export default function AssessmentQuestions() {
 
       if (userInfo) {
         try {
-          await supabase.functions.invoke('send-assessment-email', {
+          // Save to Supabase assessment_results table
+          const { error: dbError } = await supabase
+            .from('assessment_results')
+            .insert({
+              user_name: userInfo.name,
+              user_email: userInfo.email,
+              company_name: null,
+              phone: null,
+              assessment_answers: answers,
+              overall_score: overallScore,
+              domain_scores: domainScores,
+              maturity_level: getMaturityLevel(overallScore).level,
+              additional_info: null
+            });
+
+          if (dbError) {
+            console.error("Database error:", dbError);
+            throw dbError;
+          }
+
+          // Post to GHL API immediately
+          await supabase.functions.invoke('post-to-ghl', {
             body: {
               name: userInfo.name,
               email: userInfo.email,
-              answers,
+              phone: null,
+              company_name: null,
               overallScore,
               domainScores,
               maturity: getMaturityLevel(overallScore).level
