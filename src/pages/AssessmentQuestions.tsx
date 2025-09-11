@@ -424,7 +424,8 @@ export default function AssessmentQuestions() {
               overall_score: overallScore,
               domain_scores: domainScores,
               maturity_level: getMaturityLevel(overallScore).level,
-              additional_info: null
+              additional_info: null,
+              tags: ['ai-assessment-done']
             });
 
           if (dbError) {

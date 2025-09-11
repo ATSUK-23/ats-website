@@ -160,6 +160,7 @@ export type Database = {
           overall_score: number
           phone: string | null
           submitted_at: string
+          tags: string[] | null
           updated_at: string
           user_email: string
           user_name: string
@@ -174,6 +175,7 @@ export type Database = {
           overall_score: number
           phone?: string | null
           submitted_at?: string
+          tags?: string[] | null
           updated_at?: string
           user_email: string
           user_name: string
@@ -188,6 +190,7 @@ export type Database = {
           overall_score?: number
           phone?: string | null
           submitted_at?: string
+          tags?: string[] | null
           updated_at?: string
           user_email?: string
           user_name?: string
