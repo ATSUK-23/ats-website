@@ -30,6 +30,8 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, answers, overallScore, domainScores, maturity }: AssessmentEmailRequest = await req.json();
 
+    console.log("📧 Starting email send for:", email);
+
     // Format answers for email
     const answersText = Object.entries(answers)
       .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${parseInt(answerIndex) + 1}`)
@@ -60,16 +62,20 @@ const handler = async (req: Request): Promise<Response> => {
       "richard.padun@theepitome.co.uk"
     ];
 
+    console.log("📤 Sending emails to:", recipients);
+
     for (const recipient of recipients) {
-      await resend.emails.send({
+      const emailResult = await resend.emails.send({
         from: "AI Assessment <onboarding@resend.dev>",
         to: [recipient],
         subject: `New AI Assessment Completed - ${name}`,
         html: emailContent,
       });
+
+      console.log(`✅ Email sent to ${recipient}:`, emailResult);
     }
 
-    console.log("Assessment emails sent successfully");
+    console.log("🎉 All assessment emails sent successfully");
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
@@ -79,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
-    console.error("Error in send-assessment-email function:", error);
+    console.error("❌ Error in send-assessment-email function:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
       {
