@@ -31,9 +31,13 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, companyName, phone, additionalInfo, answers, overallScore, domainScores, maturity }: AssessmentEmailRequest = await req.json();
+    const requestData = await req.json();
+    console.log("📧 Full request data received:", JSON.stringify(requestData, null, 2));
+    
+    const { name, email, companyName, phone, additionalInfo, answers, overallScore, domainScores, maturity }: AssessmentEmailRequest = requestData;
 
     console.log("📧 Starting email send for:", email);
+    console.log("📧 Consultation details:", { name, companyName, phone, additionalInfo });
 
     // Format answers for email (if available)
     const answersText = answers ? Object.entries(answers)
