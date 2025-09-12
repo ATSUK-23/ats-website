@@ -163,37 +163,40 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       
       console.log("FormSubmit response:", formSubmitResponse.status, formSubmitResponse.statusText);
 
-      // Skip assessment email for now to isolate the issue
-      // if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
-      //   console.log("Sending assessment email...");
-      //   try {
-      //     const getMaturityLevel = (score: number) => {
-      //       if (score >= 76) return "AI Advanced";
-      //       if (score >= 51) return "AI Capable"; 
-      //       if (score >= 26) return "AI Curious";
-      //       return "AI Unaware";
-      //     };
+      // Send assessment email with consultation details
+      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+        console.log("Sending assessment email with consultation details...");
+        try {
+          const getMaturityLevel = (score: number) => {
+            if (score >= 76) return "AI Advanced";
+            if (score >= 51) return "AI Capable"; 
+            if (score >= 26) return "AI Curious";
+            return "AI Unaware";
+          };
 
-      //     const emailResponse = await supabase.functions.invoke('send-assessment-email', {
-      //       body: {
-      //         name: formData.fullName,
-      //         email: formData.email,
-      //         answers: assessmentResults.answers,
-      //         overallScore: assessmentResults.overallScore,
-      //         domainScores: assessmentResults.domainScores,
-      //         maturity: getMaturityLevel(assessmentResults.overallScore)
-      //       }
-      //     });
+          const emailResponse = await supabase.functions.invoke('send-assessment-email', {
+            body: {
+              name: formData.fullName,
+              email: formData.email,
+              companyName: formData.companyName,
+              phone: formData.phone,
+              additionalInfo: formData.additionalInfo,
+              answers: assessmentResults.answers,
+              overallScore: assessmentResults.overallScore,
+              domainScores: assessmentResults.domainScores,
+              maturity: getMaturityLevel(assessmentResults.overallScore)
+            }
+          });
 
-      //     if (emailResponse.error) {
-      //       console.error("Assessment email error:", emailResponse.error);
-      //     } else {
-      //       console.log("Assessment email sent successfully");
-      //     }
-      //   } catch (emailError) {
-      //     console.error("Assessment email exception:", emailError);
-      //   }
-      // }
+          if (emailResponse.error) {
+            console.error("Assessment email error:", emailResponse.error);
+          } else {
+            console.log("Assessment email sent successfully");
+          }
+        } catch (emailError) {
+          console.error("Assessment email exception:", emailError);
+        }
+      }
 
       toast({
         title: "Success!",

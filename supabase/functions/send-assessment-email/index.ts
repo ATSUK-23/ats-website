@@ -11,6 +11,9 @@ const corsHeaders = {
 interface AssessmentEmailRequest {
   name: string;
   email: string;
+  companyName?: string;
+  phone?: string;
+  additionalInfo?: string;
   answers: Record<number, number>;
   overallScore: number;
   domainScores: Array<{
@@ -28,7 +31,7 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, answers, overallScore, domainScores, maturity }: AssessmentEmailRequest = await req.json();
+    const { name, email, companyName, phone, additionalInfo, answers, overallScore, domainScores, maturity }: AssessmentEmailRequest = await req.json();
 
     console.log("📧 Starting email send for:", email);
 
@@ -43,9 +46,16 @@ const handler = async (req: Request): Promise<Response> => {
       .join('\n');
 
     const emailContent = `
-      <h2>AI Assessment Results</h2>
-      <p><strong>Participant:</strong> ${name}</p>
+      <h2>AI Assessment & Consultation Request</h2>
+      
+      <h3>Contact Information:</h3>
+      <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
+      ${companyName ? `<p><strong>Company:</strong> ${companyName}</p>` : ''}
+      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
+      ${additionalInfo ? `<p><strong>Additional Information:</strong> ${additionalInfo}</p>` : ''}
+      
+      <h3>AI Assessment Results:</h3>
       <p><strong>Overall Score:</strong> ${Math.round(overallScore)}%</p>
       <p><strong>Maturity Level:</strong> ${maturity}</p>
       
