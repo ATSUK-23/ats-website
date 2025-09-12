@@ -14,15 +14,15 @@ interface AssessmentEmailRequest {
   companyName?: string;
   phone?: string;
   additionalInfo?: string;
-  answers: Record<number, number>;
-  overallScore: number;
-  domainScores: Array<{
+  answers?: Record<number, number>;
+  overallScore?: number;
+  domainScores?: Array<{
     domain: string;
     score: number;
     weight: number;
     description: string;
   }>;
-  maturity: string;
+  maturity?: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -35,18 +35,20 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("📧 Starting email send for:", email);
 
-    // Format answers for email
-    const answersText = Object.entries(answers)
+    // Format answers for email (if available)
+    const answersText = answers ? Object.entries(answers)
       .map(([questionId, answerIndex]) => `Question ${questionId}: Option ${parseInt(answerIndex) + 1}`)
-      .join('\n');
+      .join('\n') : '';
 
-    // Format domain scores
-    const domainScoresText = domainScores
+    // Format domain scores (if available)
+    const domainScoresText = domainScores ? domainScores
       .map(domain => `${domain.domain}: ${Math.round(domain.score)}%`)
-      .join('\n');
+      .join('\n') : '';
+
+    const hasAssessmentResults = answers && overallScore && domainScores && maturity;
 
     const emailContent = `
-      <h2>AI Assessment & Consultation Request</h2>
+      <h2>${hasAssessmentResults ? 'AI Assessment & Consultation Request' : 'AI Consultation Request'}</h2>
       
       <h3>Contact Information:</h3>
       <p><strong>Name:</strong> ${name}</p>
@@ -55,8 +57,9 @@ const handler = async (req: Request): Promise<Response> => {
       ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
       ${additionalInfo ? `<p><strong>Additional Information:</strong> ${additionalInfo}</p>` : ''}
       
+      ${hasAssessmentResults ? `
       <h3>AI Assessment Results:</h3>
-      <p><strong>Overall Score:</strong> ${Math.round(overallScore)}%</p>
+      <p><strong>Overall Score:</strong> ${Math.round(overallScore!)}%</p>
       <p><strong>Maturity Level:</strong> ${maturity}</p>
       
       <h3>Domain Scores:</h3>
@@ -64,6 +67,7 @@ const handler = async (req: Request): Promise<Response> => {
       
       <h3>Detailed Answers:</h3>
       <pre>${answersText}</pre>
+      ` : '<p><em>No assessment results - direct consultation request</em></p>'}
     `;
 
     // Send to both email addresses

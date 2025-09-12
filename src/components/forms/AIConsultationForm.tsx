@@ -163,39 +163,43 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
       
       console.log("FormSubmit response:", formSubmitResponse.status, formSubmitResponse.statusText);
 
-      // Send assessment email with consultation details
-      if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
-        console.log("Sending assessment email with consultation details...");
-        try {
-          const getMaturityLevel = (score: number) => {
-            if (score >= 76) return "AI Advanced";
-            if (score >= 51) return "AI Capable"; 
-            if (score >= 26) return "AI Curious";
-            return "AI Unaware";
-          };
+      // Send email with consultation details (with or without assessment results)
+      console.log("Sending consultation email...");
+      try {
+        const getMaturityLevel = (score: number) => {
+          if (score >= 76) return "AI Advanced";
+          if (score >= 51) return "AI Capable"; 
+          if (score >= 26) return "AI Curious";
+          return "AI Unaware";
+        };
 
-          const emailResponse = await supabase.functions.invoke('send-assessment-email', {
-            body: {
-              name: formData.fullName,
-              email: formData.email,
-              companyName: formData.companyName,
-              phone: formData.phone,
-              additionalInfo: formData.additionalInfo,
-              answers: assessmentResults.answers,
-              overallScore: assessmentResults.overallScore,
-              domainScores: assessmentResults.domainScores,
-              maturity: getMaturityLevel(assessmentResults.overallScore)
-            }
-          });
+        const emailBody: any = {
+          name: formData.fullName,
+          email: formData.email,
+          companyName: formData.companyName,
+          phone: formData.phone,
+          additionalInfo: formData.additionalInfo,
+        };
 
-          if (emailResponse.error) {
-            console.error("Assessment email error:", emailResponse.error);
-          } else {
-            console.log("Assessment email sent successfully");
-          }
-        } catch (emailError) {
-          console.error("Assessment email exception:", emailError);
+        // Add assessment results if available
+        if (assessmentResults && assessmentResults.answers && assessmentResults.domainScores) {
+          emailBody.answers = assessmentResults.answers;
+          emailBody.overallScore = assessmentResults.overallScore;
+          emailBody.domainScores = assessmentResults.domainScores;
+          emailBody.maturity = getMaturityLevel(assessmentResults.overallScore);
         }
+
+        const emailResponse = await supabase.functions.invoke('send-assessment-email', {
+          body: emailBody
+        });
+
+        if (emailResponse.error) {
+          console.error("Assessment email error:", emailResponse.error);
+        } else {
+          console.log("Assessment email sent successfully");
+        }
+      } catch (emailError) {
+        console.error("Assessment email exception:", emailError);
       }
 
       toast({
