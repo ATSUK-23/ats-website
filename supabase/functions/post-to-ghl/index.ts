@@ -66,6 +66,7 @@ const handler = async (req: Request): Promise<Response> => {
       headers: {
         'Authorization': `Bearer ${ghlApiKey}`,
         'Content-Type': 'application/json',
+        'Version': '2021-07-28', // Required version header for GHL API
       },
       body: JSON.stringify(ghlPayload)
     });
