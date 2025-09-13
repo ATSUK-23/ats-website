@@ -13,6 +13,8 @@ export const SiteFooter = () => {
           <a href="#sales-marketing-automation" className="hover:text-primary">Sales & Marketing Automation</a>
           <a href="#about" className="hover:text-primary">About</a>
           <a href="#contact" className="hover:text-primary">Contact</a>
+          <Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="hover:text-primary">Terms of Service</Link>
         </nav>
       </div>
     </footer>

@@ -19,7 +19,10 @@ import AssessmentQuestions from "./pages/AssessmentQuestions";
 import AIConsultation from "./pages/AIConsultation";
 import EmailTemplatePreview from "./pages/EmailTemplatePreview";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +34,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <CookieBanner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/vibe-coding" element={<VibeCoding />} />
@@ -45,6 +49,8 @@ const App = () => (
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/email-template" element={<EmailTemplatePreview />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
