@@ -9,6 +9,7 @@ import whyImg from "@/assets/why-choose-us.jpg";
 const auditImg = "/lovable-uploads/267ce356-fb37-4f4b-8001-76a4a464c8a1.png";
 import workshopsImg from "@/assets/workshops.jpg";
 const sourcingImg = "/lovable-uploads/bc0882a0-dbff-46c2-b567-5f2cdffb425b.png";
+
 const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -17,47 +18,57 @@ const Index = () => {
     url: "https://automatetosell.com/",
     description: "AI automation consultancy helping businesses boost sales and efficiency."
   };
-  return <div className="dark min-h-screen bg-background text-foreground">
+
+  return (
+    <div className="dark min-h-screen bg-background text-foreground">
       <SiteHeader />
       <main>
         <Hero />
 
-        <section id="service-pillars" className="container py-8 sm:py-12 md:py-16 px-4">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Implement End-to-End Automation & AI In Your Business</h2>
+        <section id="service-pillars" className="relative py-8 sm:py-12 md:py-16">
+          {/* Background with Dark Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/30 to-secondary/40">
+            <div className="absolute inset-0 bg-black/80"></div>
           </div>
           
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Global e-Commerce System </h3>
-              <p className="mt-2 text-sm text-muted-foreground">Go global the easy way. <br />We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
-            </article>
-            <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">AI Solutions</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain. <br />Streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
-            </article>
-            <article id="e-commerce" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Vibe Coding</h3>
-              <p className="mt-2 text-sm text-muted-foreground">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. <br />Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
-            </article>
-            <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Close more deals with less effort. We design and implement smart automation systems. <br />From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
-            </article>
-            <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
-              <p className="mt-2 text-sm text-muted-foreground">We help you cut through the noise with authentic, done-for-you content that builds a powerful personal brand. <br />Grow your influence, open doors to new opportunities, and scale your business while we handle the heavy lifting.</p>
-            </article>
-            <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. <br />Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
-            </article>
+          {/* Content */}
+          <div className="container relative z-10 px-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">Implement End-to-End Automation & AI In Your Business</h2>
+            </div>
+            
+            <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              <article id="ai-solutions" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">Global e-Commerce System </h3>
+                <p className="mt-2 text-sm text-white/90">Go global the easy way. <br />We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
+              </article>
+              <article id="vibe-coding" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+                <p className="mt-2 text-sm text-white/90">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain. <br />Streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
+              </article>
+              <article id="e-commerce" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">Vibe Coding</h3>
+                <p className="mt-2 text-sm text-white/90">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. <br />Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
+              </article>
+              <article id="social-content" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">Sales & Marketing Automation</h3>
+                <p className="mt-2 text-sm text-white/90">Close more deals with less effort. We design and implement smart automation systems. <br />From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
+              </article>
+              <article id="sales-marketing-automation" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">Social Content & Distribution</h3>
+                <p className="mt-2 text-sm text-white/90">We help you cut through the noise with authentic, done-for-you content that builds a powerful personal brand. <br />Grow your influence, open doors to new opportunities, and scale your business while we handle the heavy lifting.</p>
+              </article>
+              <article id="training" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white">Training</h3>
+                <p className="mt-2 text-sm text-white/90">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. <br />Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
+              </article>
+            </div>
           </div>
         </section>
 
         <SplitSection id="about" title="Technology Should Serve Your Strategy, Not Replace It" image={whyImg} imageAlt="Before and after comparison of messy vs streamlined automated business systems" description={<>
               <p>
-                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it’s easy to get lost in “shiny object” syndrome. We cut through the noise to:
+                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it's easy to get lost in "shiny object" syndrome. We cut through the noise to:
               </p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Analyse your processes end-to-end</li>
@@ -65,7 +76,7 @@ const Index = () => {
                 <li>Recommend only what you truly need</li>
                 <li>Integrate everything into one seamless system</li>
               </ul>
-              <p className="pt-2">We’re not tied to one software vendor. Our loyalty is to your results.</p>
+              <p className="pt-2">We're not tied to one software vendor. Our loyalty is to your results.</p>
             </>} />
 
         <SplitSection id="audit" reverse title="Your Automation Journey Starts with a Business Process Audit" image={auditImg} imageAlt="Dashboard flow showing Audit → Recommendations → Implementation → Results" description={<p>
@@ -93,7 +104,7 @@ const Index = () => {
         </SplitSection>
 
         <SplitSection id="workshops" title="Upskill Your Team to Harness AI & Automation (Workshops & Training)" image={workshopsImg} imageAlt="Professional workshop with team and facilitator at whiteboard" description={<p>
-              We don’t just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
+              We don't just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
             </p>}>
           <div className="grid gap-6 md:grid-cols-2">
             <article className="rounded-lg border bg-card p-6 shadow-sm">
@@ -102,7 +113,7 @@ const Index = () => {
             </article>
             <article className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Internal Company Workshops</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence. high-impact social presence</p>
+              <p className="mt-2 text-sm text-muted-foreground">Authentic, done-for-you brand content to build your high-impact social presence. high-impact social presence</p>
             </article>
           </div>
           <p className="mt-6 text-muted-foreground">Your staff leave confident, capable, and ready to get the most from your automation investment.</p>
@@ -114,7 +125,7 @@ const Index = () => {
         </SplitSection>
 
         <SplitSection id="solution-sourcing" reverse title="We Find and Manage the Best AI Solution Provider for Your Business" image={sourcingImg} imageAlt="3D business building with department labels showing Sales, Marketing, IT & Operations, Customer Support, Finance & Reporting, and HR" description={<>
-              <p>No one platform does it all and no single vendor is best at everything. We’ll:</p>
+              <p>No one platform does it all and no single vendor is best at everything. We'll:</p>
               <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                 <li>Identify the best-fit automation & AI providers for your needs</li>
                 <li>Manage the vendor relationship</li>
@@ -122,13 +133,12 @@ const Index = () => {
               </ul>
             </>} />
 
-
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold">Work Smarter. Grow Faster.</h2>
             <p className="mt-4 max-w-2xl mx-auto">
-              Let’s design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
+              Let's design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
               <Link to="/ai-audit">
@@ -146,8 +156,10 @@ const Index = () => {
       <SiteFooter />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{
-      __html: JSON.stringify(jsonLd)
-    }} />
-    </div>;
+        __html: JSON.stringify(jsonLd)
+      }} />
+    </div>
+  );
 };
+
 export default Index;
