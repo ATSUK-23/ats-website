@@ -30,7 +30,7 @@ const Index = () => {
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <article id="ai-solutions" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Global e-Commerce System </h3>
-              <p className="mt-2 text-sm text-muted-foreground">Go global the easy way. We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Go global the easy way. <br />We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
             </article>
             <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">AI Solutions</h3>
