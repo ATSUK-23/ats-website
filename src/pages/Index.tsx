@@ -34,7 +34,7 @@ const Index = () => {
             </article>
             <article id="vibe-coding" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">AI Solutions</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain, streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain. <br />Streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
             </article>
             <article id="e-commerce" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Vibe Coding</h3>
