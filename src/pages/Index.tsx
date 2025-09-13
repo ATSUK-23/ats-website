@@ -106,6 +106,11 @@ const Index = () => {
             </article>
           </div>
           <p className="mt-6 text-muted-foreground">Your staff leave confident, capable, and ready to get the most from your automation investment.</p>
+          <div className="mt-6">
+            <Link to="/training">
+              <Button size="lg" className="w-full sm:w-auto">AI Training For Your Team</Button>
+            </Link>
+          </div>
         </SplitSection>
 
         <SplitSection id="solution-sourcing" reverse title="We Find and Manage the Right Suppliers for You" image={sourcingImg} imageAlt="3D business building with department labels showing Sales, Marketing, IT & Operations, Customer Support, Finance & Reporting, and HR" description={<>
