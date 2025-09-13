@@ -42,7 +42,7 @@ const Index = () => {
             </article>
             <article id="social-content" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Sales & Marketing Automation</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Close more deals with less effort. We design and implement smart automation systems. From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Close more deals with less effort. We design and implement smart automation systems. <br />From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
             </article>
             <article id="sales-marketing-automation" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Social Content & Distribution</h3>
