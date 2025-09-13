@@ -141,9 +141,9 @@ const Index = () => {
               Let's design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <Link to="/ai-audit">
+              <a href="https://automatetosell.com/ai-audit" target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="lg">Book Your Business Automation Audit</Button>
-              </Link>
+              </a>
               <a href="#contact">
                 <Button variant="outline" size="lg" className="bg-transparent">Schedule a Call</Button>
               </a>
