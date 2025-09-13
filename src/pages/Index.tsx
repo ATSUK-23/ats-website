@@ -50,7 +50,7 @@ const Index = () => {
             </article>
             <article id="training" className="rounded-lg border bg-card p-6 shadow-sm">
               <h3 className="text-xl font-semibold">Training</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. <br />Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
             </article>
           </div>
         </section>
