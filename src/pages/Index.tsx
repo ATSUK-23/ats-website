@@ -50,7 +50,9 @@ const Index = () => {
               <article id="vibe-coding" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
-                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  <a href="https://preview--ats-website.lovable.app/ai-audit" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  </a>
                 </div>
                 <p className="mt-2 text-sm text-white/90">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain. <br />Streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
               </article>
