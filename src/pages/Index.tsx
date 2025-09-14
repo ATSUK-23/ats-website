@@ -68,7 +68,9 @@ const Index = () => {
               <article id="social-content" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">Sales & Marketing Automation</h3>
-                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  <a href="https://preview--ats-website.lovable.app/sales-funnel-automation" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  </a>
                 </div>
                 <p className="mt-2 text-sm text-white/90">Close more deals with less effort. We design and implement smart automation systems. <br />From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
               </article>
