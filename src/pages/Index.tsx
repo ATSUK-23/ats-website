@@ -59,7 +59,7 @@ const Index = () => {
               <article id="e-commerce" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">Vibe Coding</h3>
-                  <a href="https://preview--ats-website.lovable.app/vibe-coding" target="_blank" rel="noopener noreferrer">
+                  <a href="https://preview--ats-website.lovable.app/vibe-coding">
                     <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
                   </a>
                 </div>
