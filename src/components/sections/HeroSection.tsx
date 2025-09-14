@@ -56,7 +56,7 @@ export const HeroSection = ({
               size="lg" 
               className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
               onClick={() => {
-                const element = document.getElementById('ai-lead-form');
+                const element = document.getElementById('vibe-coding-form');
                 if (element) {
                   element.scrollIntoView({
                     behavior: 'smooth'
