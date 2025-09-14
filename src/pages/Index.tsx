@@ -38,28 +38,46 @@ const Index = () => {
             </div>
             
             <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              <article id="ai-solutions" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">Global e-Commerce System </h3>
+              <article id="ai-solutions" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">Global e-Commerce System </h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">Go global the easy way. <br />We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
               </article>
-              <article id="vibe-coding" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+              <article id="vibe-coding" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">Gain clarity with AI Audits and instant online AI Assessment to build your AI Brain. <br />Streamline operations with intelligent agents, scale efficiency through AI voice automation, and unlock new skills by joining our workshops or hosting them in-house.</p>
               </article>
-              <article id="e-commerce" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">Vibe Coding</h3>
+              <article id="e-commerce" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">Vibe Coding</h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. <br />Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
               </article>
-              <article id="social-content" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">Sales & Marketing Automation</h3>
+              <article id="social-content" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">Sales & Marketing Automation</h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">Close more deals with less effort. We design and implement smart automation systems. <br />From CRM and funnels to email follow-ups, booking calendars, e-learning platforms and other 3rd party integrations. Enabling you to nurture leads, streamline sales, and grow revenue without adding to your workload.</p>
               </article>
-              <article id="sales-marketing-automation" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">Social Content & Distribution</h3>
+              <article id="sales-marketing-automation" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">Social Content & Distribution</h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">We help you cut through the noise with authentic, done-for-you content that builds a powerful personal brand. <br />Grow your influence, open doors to new opportunities, and scale your business while we handle the heavy lifting.</p>
               </article>
-              <article id="training" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white">Training</h3>
+              <article id="training" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-semibold text-white">Training</h3>
+                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                </div>
                 <p className="mt-2 text-sm text-white/90">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. <br />Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
               </article>
             </div>
