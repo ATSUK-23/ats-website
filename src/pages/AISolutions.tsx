@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -305,7 +305,7 @@ export default function AISolutions() {
             </div>
             
             <Button size="lg" className="bg-green-700 text-white hover:bg-green-800 mb-8" asChild>
-              <a href="/ai-assessment">Start AI Assessment</a>
+              <Link to="/ai-assessment">Start AI Assessment</Link>
             </Button>
           </div>
         </section>
