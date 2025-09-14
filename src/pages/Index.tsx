@@ -59,7 +59,9 @@ const Index = () => {
               <article id="e-commerce" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">Vibe Coding</h3>
-                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  <a href="https://preview--ats-website.lovable.app/vibe-coding" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  </a>
                 </div>
                 <p className="mt-2 text-sm text-white/90">From simple websites to dashboards, sales tools, e-commerce stores, or even full SaaS platforms, we take you from idea to working prototype fast. <br />Join our small, focused public workshops or run private in-house sprints where we shape strategy and build together.</p>
               </article>
