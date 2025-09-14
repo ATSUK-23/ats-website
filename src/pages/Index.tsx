@@ -86,7 +86,9 @@ const Index = () => {
               <article id="training" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">Training</h3>
-                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  <a href="https://preview--ats-website.lovable.app/training" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  </a>
                 </div>
                 <p className="mt-2 text-sm text-white/90">Equip your team with the skills to boost productivity by up to 40%, overcome resistance to new technology, and stay ahead with cutting-edge AI knowledge. <br />Our training not only improves day-to-day performance but also fosters a culture of innovation and continuous learning that drives measurable business results.</p>
               </article>
