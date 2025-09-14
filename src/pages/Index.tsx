@@ -41,7 +41,9 @@ const Index = () => {
               <article id="ai-solutions" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 relative">
                 <div className="flex justify-between items-start">
                   <h3 className="text-xl font-semibold text-white">Global e-Commerce System </h3>
-                  <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  <a href="https://preview--ats-website.lovable.app/e-commerce" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="bg-white/20 border-white/30 text-white hover:bg-white/30 text-xs px-3 py-1 h-auto">More</Button>
+                  </a>
                 </div>
                 <p className="mt-2 text-sm text-white/90">Go global the easy way. <br />We build automated e-commerce systems that manage sales, fulfilment, support, and ads, so you can sell your winning products worldwide without increasing headcount.</p>
               </article>
