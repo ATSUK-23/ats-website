@@ -344,7 +344,7 @@ export default function AssessmentQuestions() {
     
     const totalScore = domain.questions_list.reduce((sum, q) => {
       const answer = answers[q.id];
-      return sum + (answer !== undefined ? answer : 0); // Answer is already 1-4 now
+      return sum + (answer !== undefined ? answer + 1 : 0); // Convert 0-based to 1-4 for scoring
     }, 0);
     
     const maxScore = domain.questions_list.length * 4;
@@ -389,7 +389,7 @@ export default function AssessmentQuestions() {
     if (currentQuestion) {
       setAnswers(prev => ({
         ...prev,
-        [currentQuestion.id]: optionIndex + 1 // Convert from 0-based index to 1-based answer
+        [currentQuestion.id]: optionIndex // Keep 0-based indexing for consistency
       }));
     }
   };
