@@ -91,35 +91,69 @@ const About = () => {
             <div className="md:col-span-2 mt-8 md:mt-0">
               <div className="prose prose-sm sm:prose-lg max-w-none text-foreground">
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  I've been deeply immersed in the digital world since the late 1990s, starting with building and selling websites when the internet was just beginning to take shape. It's been an exciting journey from those early days to now!
+                  I'm Martin Keene, founder of Automate to Sell and an early adopter of what's now being called Go-To-Market Engineering (GTME) — combining strategy, automation, and AI to build scalable growth systems for SMEs and global businesses.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">Over the past 20+ years, my career has followed a unique and dynamic path, blending leadership roles in large corporate environments (including mobile operators and media companies) with entrepreneurial ventures across mobile, e-commerce, and digital transformation.</p>
-
-                <p className="text-lg leading-relaxed mb-6">
-                  I've also launched three startups, each rooted in emerging technology and customer-centric digital strategies.
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  I've spent more than 20 years at the intersection of sales, marketing, and technology:
                 </p>
 
-                
-
-                
-
-                <p className="text-lg leading-relaxed mb-6">
-                  I was an early adopter of ClickFunnels, joining the platform in October 2014 and completing their inaugural Certification Program the following year.
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>2010–2020:</strong> I led digital transformation and sales automation projects that replaced manual processes with scalable workflows.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">In partnership with one client I was recognised for the 2 Comma Club Award and I helped another client (Reliable Education) reach the 2 Comma Club X award.
-
-
-For the last eight years, I've also focused on building turn key global eCommerce systems taking one of my clients from $40kpm to generate $1M months and 4 years revenue of over $40 Million.</p>
-
-                <p className="text-lg leading-relaxed mb-6">
-                  In 2020, I expanded my expertise into Go High Level, launching my own digital agency to support clients with turn key scalable marketing systems and smart automation.
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>2020–2024:</strong> I designed and implemented a global e-commerce growth system that scaled a health & wellness brand from $40K/month to $40M+ in sales. That included running 10+ online marketplaces, 6 Shopify stores, automating fulfilment across 8 international hubs, and managing it all with a lean team of 5.
                 </p>
 
-                <p className="text-lg leading-relaxed mb-6">
-                  Currently based in London, I've also lived and worked in Munich, Sydney, and Los Angeles, experiences that have enriched both my professional outlook and personal life. I'm passionate about sunny climates, global perspectives, and my guilty pleasure?...fine dining experiences.
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs — including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 2 years.
                 </p>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>Startup Founder:</strong> I've also launched three startups, each rooted in emerging technology and customer-centric digital strategies.
+                </p>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>ClickFunnels Pioneer:</strong> I was an early adopter of ClickFunnels in 2014, completing their inaugural Certification Program in 2015. I went on to help one client win the 2 Comma Club Award, and another (Reliable Education) reach the 2 Comma Club X Award.
+                </p>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  <strong>Go High Level Agency:</strong> In 2020, I expanded into Go High Level, launching my own digital agency to build scalable marketing systems and smart automations for clients.
+                </p>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+                  Now, with the rapid rise of AI-powered tools, I'm applying everything I know about systems and scale to the next wave of business transformation.
+                </p>
+
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">What I Do</h3>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  I work with businesses to design and implement AI-powered growth systems that save time, capture more leads, and scale revenue.
+                </p>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                  Here's how I can help:
+                </p>
+
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-base sm:text-lg">
+                  <li><strong>AI-Powered Websites & Funnels</strong> – built in days, not months.</li>
+                  <li><strong>CRM + Automation Systems</strong> – capture, nurture, and convert leads automatically.</li>
+                  <li><strong>Email, SMS & Campaign Workflows</strong> – keep customers engaged and increase conversions.</li>
+                  <li><strong>AI Assistants & Chatbots</strong> – available 24/7 to answer questions and book appointments.</li>
+                  <li><strong>Social Media Content Systems</strong> – AI-driven, branded content that builds authority.</li>
+                  <li><strong>Live AI Workshops & Training</strong> – hands-on sessions where teams learn to prototype and deploy AI solutions fast.</li>
+                </ul>
+
+                <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+                  👉 For me, it's never been about chasing tools — it's about building systems that deliver measurable growth, efficiency, and scale.
+                </p>
+
+                <div className="text-center">
+                  <Button size="lg" className="text-sm sm:text-base">
+                    Schedule a Consultation
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
