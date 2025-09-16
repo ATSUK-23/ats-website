@@ -98,13 +98,13 @@ const About = () => {
                   I've spent more than 20 years at the intersection of sales, marketing, and technology:
                 </p>
 
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  <strong>2010–2020:</strong> I led digital transformation and sales automation projects that replaced manual processes with scalable workflows.
-                </p>
+                <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-base sm:text-lg">
+                  <li><strong>2000–2010:</strong> Went mobile-first with Vodafone, building V1 of mobile content, games, and music platforms for early devices, and pioneered the premium billing engine that enabled third-party apps and services to be charged directly to customer bills laying the foundation for today's app economy.</li>
+                  
+                  <li><strong>2010–2020:</strong> I led digital transformation and sales automation projects that replaced manual processes with scalable workflows.</li>
 
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  <strong>2020–2024:</strong> I designed and implemented a global e-commerce growth system that scaled a health & wellness brand from $40K/month to $40M+ in sales. That included running 10+ online marketplaces, 6 Shopify stores, automating fulfilment across 8 international hubs, and managing it all with a lean team of 5.
-                </p>
+                  <li><strong>2020–2024:</strong> I designed and implemented a global e-commerce growth system that scaled a health & wellness brand from $40K/month to $40M+ in sales. That included running 10+ online marketplaces, 6 Shopify stores, automating fulfilment across 8 international hubs, and managing it all with a lean team of 5.</li>
+                </ul>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs — including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 2 years.
