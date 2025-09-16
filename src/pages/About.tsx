@@ -126,23 +126,19 @@ const About = () => {
                   Now, with the rapid rise of AI-powered tools, I'm applying everything I know about systems and scale to the next wave of business transformation.
                 </p>
 
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">What I Do</h3>
+                
 
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  I work with businesses to design and implement AI-powered growth systems that save time, capture more leads, and scale revenue.
-                </p>
+                
 
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  Here's how I can help:
-                </p>
+                
 
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-base sm:text-lg">
-                  <li><strong>AI-Powered Websites & Funnels</strong> – built in days, not months.</li>
-                  <li><strong>CRM + Automation Systems</strong> – capture, nurture, and convert leads automatically.</li>
-                  <li><strong>Email, SMS & Campaign Workflows</strong> – keep customers engaged and increase conversions.</li>
-                  <li><strong>AI Assistants & Chatbots</strong> – available 24/7 to answer questions and book appointments.</li>
-                  <li><strong>Social Media Content Systems</strong> – AI-driven, branded content that builds authority.</li>
-                  <li><strong>Live AI Workshops & Training</strong> – hands-on sessions where teams learn to prototype and deploy AI solutions fast.</li>
+                  
+                  
+                  
+                  
+                  
+                  
                 </ul>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
