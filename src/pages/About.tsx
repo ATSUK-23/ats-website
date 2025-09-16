@@ -101,12 +101,10 @@ const About = () => {
                   
                   <li><strong>2010–2020:</strong> I led digital transformation and sales automation projects that replaced manual processes with scalable workflows.</li>
 
+                  <li><strong>Online Education:</strong> I've helped clients launch and scale digital membership programs, including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 4 years.</li>
+
                   <li><strong>2020–2024:</strong> I designed and implemented a global e-commerce growth system that scaled a health & wellness brand from $40K/month to $40M+ in sales. That included running 10+ online marketplaces, 6 Shopify stores, automating fulfilment across 8 international hubs, and managing it all with a lean team of 5.</li>
                 </ul>
-
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs, including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 4 years.
-                </p>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   <strong>Startup Founder:</strong> I've also launched three startups, each rooted in emerging technology and customer-centric digital strategies.
