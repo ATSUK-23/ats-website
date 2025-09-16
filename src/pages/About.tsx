@@ -30,15 +30,23 @@ const About = () => {
                 <div className="w-full md:w-2/3">
                   <div className="prose prose-lg max-w-none text-foreground">
                     <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                      At Automate to Sell, I've built a leaner, more effective way to deliver results. Instead of a big in-house team with high overheads, I collaborate with proven specialists across the digital economy, from AI and automation to advertising, marketing and operations.
+                      At Automate to Sell, I help businesses engineer growth through automation, AI, and smart digital systems.
                     </p>
                     
                     <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                      You will typically work directly with me as your strategist and project lead, ensuring clarity, accountability, and results. Then, for each part of the project or training, I bring in the best expert I know and trust to implement the work.
+                      I don't run a big in-house agency with high overheads. Instead, I've built a leaner, more effective way to deliver results:
+                    </p>
+                    
+                    <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                      You work directly with me as your strategist and project lead, so there's always clarity and accountability.
+                    </p>
+
+                    <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                      For each part of your project or training, I bring in specialists I know and trust in automation, AI, advertising, marketing, and operations.
                     </p>
                     
                     <p className="text-base sm:text-lg leading-relaxed">
-                      The result? You avoid paying premium agency fees, but still get access to top-level expertise in every area. It's a business model designed to be flexible, cost-effective, and laser-focused on delivering the right outcome for you.
+                      This means you avoid paying premium agency fees, but still get access to top-level expertise. Flexible, cost-effective, and laser-focused on the right outcome for your business.
                     </p>
                   </div>
                 </div>
