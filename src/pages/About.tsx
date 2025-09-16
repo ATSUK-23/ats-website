@@ -90,9 +90,7 @@ const About = () => {
 
             <div className="md:col-span-2 mt-8 md:mt-0">
               <div className="prose prose-sm sm:prose-lg max-w-none text-foreground">
-                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  I'm Martin Keene, founder of Automate to Sell and an early adopter of what's now being called Go-To-Market Engineering (GTME) - combining strategy, automation, and AI to build scalable growth systems for SMEs and global businesses.
-                </p>
+                <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">I'm Martin Keene, founder of Automate to Sell and an early adopter of what's now being called Go-To-Market Engineering (GTME) combining strategy, automation, low code/no code tools and AI to build global scalable growth systems for SMEs and e-commerce businesses.</p>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   I've spent more than 20 years at the intersection of sales, marketing, and technology:
