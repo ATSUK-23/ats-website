@@ -91,7 +91,7 @@ const About = () => {
             <div className="md:col-span-2 mt-8 md:mt-0">
               <div className="prose prose-sm sm:prose-lg max-w-none text-foreground">
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  I'm Martin Keene, founder of Automate to Sell and an early adopter of what's now being called Go-To-Market Engineering (GTME) — combining strategy, automation, and AI to build scalable growth systems for SMEs and global businesses.
+                  I'm Martin Keene, founder of Automate to Sell and an early adopter of what's now being called Go-To-Market Engineering (GTME) - combining strategy, automation, and AI to build scalable growth systems for SMEs and global businesses.
                 </p>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -107,7 +107,7 @@ const About = () => {
                 </ul>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs — including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 4 years.
+                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs, including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 4 years.
                 </p>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
@@ -142,7 +142,7 @@ const About = () => {
                 </ul>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
-                  👉 For me, it's never been about chasing tools — it's about building systems that deliver measurable growth, efficiency, and scale.
+                  👉 For me, it's never been about chasing tools - it's about building systems that deliver measurable growth, efficiency, and scale.
                 </p>
 
                 <div className="text-center">
