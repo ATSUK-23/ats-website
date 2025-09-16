@@ -107,7 +107,7 @@ const About = () => {
                 </ul>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs — including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 2 years.
+                  <strong>Online Education:</strong> I've helped clients launch and scale digital membership programs — including one that grew from 0 to 16,000 students and generated $70M+ in revenue in just 4 years.
                 </p>
 
                 <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
