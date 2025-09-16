@@ -17,7 +17,7 @@ export const Hero = () => {
       <div className="container py-12 sm:py-16 md:py-24 text-center relative z-10 px-4">
         <p className="text-xs sm:text-sm tracking-wider text-muted-foreground uppercase">Automation & AI | GTM Engineer & Consultants</p>
         <h1 className="mt-3 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight">Scale Smarter With AI & Automation That Deliver Growth</h1>
-        <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">We help you analyse, prioritise, and implement automation and AI solutions that deliver real growth and efficiency without wasting time or budget on tech you don't need.</p>
+        <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto">Turn complexity into clarity: automation and AI built to fit your business, not the other way around.</p>
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link to="/ai-audit">
