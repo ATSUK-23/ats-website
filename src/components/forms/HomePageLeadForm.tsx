@@ -72,7 +72,7 @@ const HomePageLeadForm = () => {
 
       // Send data to Zapier webhook
       try {
-        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqsrsx/', {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/u1m4dqg/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
