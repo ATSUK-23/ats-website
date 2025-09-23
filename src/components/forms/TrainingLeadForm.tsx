@@ -74,36 +74,23 @@ export default function TrainingLeadForm() {
 
       // Send to Zapier webhook
       try {
-        // Build query parameters for LeadConnector
-        const queryParams = new URLSearchParams();
-        queryParams.append('email', formData.email);
-        if (formData.phone) {
-          queryParams.append('number', formData.phone);
-        }
-        queryParams.append('firstName', formData.firstName);
-        queryParams.append('lastName', formData.lastName);
-        if (formData.jobTitle) {
-          queryParams.append('jobTitle', formData.jobTitle);
-        }
-        if (formData.companyName) {
-          queryParams.append('companyName', formData.companyName);
-        }
-        if (formData.comments) {
-          queryParams.append('comments', formData.comments);
-        }
-        queryParams.append('formTag', 'training');
-        queryParams.append('source', 'Training Form');
-        
-        const webhookUrl = `https://hooks.zapier.com/hooks/catch/5146490/uhqle29/?${queryParams.toString()}`;
-        
-        await fetch(webhookUrl, {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqle29/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           mode: 'no-cors',
           body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            jobTitle: formData.jobTitle,
+            companyName: formData.companyName,
+            comments: formData.comments,
+            formTag: 'training',
             timestamp: new Date().toISOString(),
+            source: 'Training Form'
           }),
         });
       } catch (webhookError) {
