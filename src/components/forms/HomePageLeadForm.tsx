@@ -67,7 +67,7 @@ const HomePageLeadForm = () => {
           job_title: formData.jobTitle,
           company_name: formData.companyName,
           comments: formData.comments,
-          form_tag: 'home-page-info'
+          form_tag: 'home-page'
         });
 
       if (error) {
@@ -96,7 +96,7 @@ const HomePageLeadForm = () => {
             jobTitle: formData.jobTitle,
             companyName: formData.companyName,
             comments: formData.comments,
-            formTag: 'home-page-info',
+            formTag: 'home-page',
             timestamp: new Date().toISOString(),
             source: 'Homepage Contact Form'
           }),
