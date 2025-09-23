@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-import { useToast } from "@/hooks/use-toast";
+
 
 interface FormData {
   fullName: string;
@@ -44,7 +44,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -60,11 +60,6 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
     e.preventDefault();
     
     if (!formData.fullName || !formData.email || !formData.companyName) {
-      toast({
-        title: "Error",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
       return;
     }
 
@@ -202,10 +197,6 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         console.error("Assessment email exception:", emailError);
       }
 
-      toast({
-        title: "Success!",
-        description: "Your consultation request has been submitted successfully.",
-      });
 
       setIsSubmitted(true);
       setFormData({
@@ -220,11 +211,6 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
 
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast({
-        title: "Error",
-        description: "Failed to submit form. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }

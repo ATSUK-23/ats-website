@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+
 import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
@@ -19,7 +19,7 @@ interface FormData {
 }
 
 const SFALeadForm = () => {
-  const { toast } = useToast();
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
@@ -46,11 +46,6 @@ const SFALeadForm = () => {
 
     // Basic validation
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.mobile) {
-      toast({
-        title: "Please fill in required fields",
-        description: "First name, last name, email, and mobile are required.",
-        variant: "destructive"
-      });
       setIsSubmitting(false);
       return;
     }
@@ -72,11 +67,6 @@ const SFALeadForm = () => {
 
       if (error) {
         console.error('Supabase error:', error);
-        toast({
-          title: "Something went wrong",
-          description: "Please try again later.",
-          variant: "destructive"
-        });
         return;
       }
 
@@ -105,11 +95,6 @@ const SFALeadForm = () => {
         console.warn('Zapier webhook failed:', zapierError);
         // Don't show error to user since Supabase succeeded
       }
-      
-      toast({
-        title: "Thank you for your submission!",
-        description: "We'll be in touch soon to discuss your automation needs.",
-      });
 
       // Store name and show success state
       setSubmittedName(formData.firstName);
@@ -127,11 +112,6 @@ const SFALeadForm = () => {
       });
     } catch (error) {
       console.error('Unexpected error:', error);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive"
-      });
     } finally {
       setIsSubmitting(false);
     }

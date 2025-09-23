@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
+
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface VibeCodingLeadFormProps {
@@ -20,7 +20,7 @@ export default function VibeCodingLeadForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
-  const { toast } = useToast();
+  
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -86,10 +86,6 @@ export default function VibeCodingLeadForm({
         // Don't fail the form submission if webhook fails
       }
 
-      toast({
-        title: "Thank you for your submission!",
-        description: "We'll be in touch soon to discuss your Vibe Coding project needs.",
-      });
 
       // Store name and show success state
       setSubmittedName(formData.firstName);
@@ -108,11 +104,6 @@ export default function VibeCodingLeadForm({
 
     } catch (error) {
       console.error('Form submission error:', error);
-      toast({
-        title: "Submission failed",
-        description: "There was an error submitting your form. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }

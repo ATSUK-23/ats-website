@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
+
 import { CheckCircle } from "lucide-react";
 
 interface FormData {
@@ -31,7 +31,7 @@ export default function TrainingLeadForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -45,11 +45,6 @@ export default function TrainingLeadForm() {
     e.preventDefault();
     
     if (!formData.firstName || !formData.lastName || !formData.email) {
-      toast({
-        title: "Required Fields Missing",
-        description: "Please fill in all required fields (Name and Email).",
-        variant: "destructive",
-      });
       return;
     }
 
@@ -95,10 +90,6 @@ export default function TrainingLeadForm() {
         // Don't fail the form submission if webhook fails
       }
 
-      toast({
-        title: "Success!",
-        description: "Your training inquiry has been submitted successfully.",
-      });
 
       setFormData({
         firstName: "",
@@ -114,11 +105,6 @@ export default function TrainingLeadForm() {
 
     } catch (error) {
       console.error('Form submission error:', error);
-      toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your form. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }

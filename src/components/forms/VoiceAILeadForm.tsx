@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+
 import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle } from "lucide-react";
 
@@ -25,7 +25,7 @@ interface VoiceAILeadFormProps {
 }
 
 const VoiceAILeadForm = ({ formTag, title, subtitle }: VoiceAILeadFormProps) => {
-  const { toast } = useToast();
+  
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -52,10 +52,6 @@ const VoiceAILeadForm = ({ formTag, title, subtitle }: VoiceAILeadFormProps) => 
     e.preventDefault();
     
     if (!formData.firstName || !formData.lastName || !formData.email) {
-      toast({
-        title: "Please fill in all required fields",
-        variant: "destructive",
-      });
       return;
     }
 
@@ -77,25 +73,11 @@ const VoiceAILeadForm = ({ formTag, title, subtitle }: VoiceAILeadFormProps) => 
 
       if (error) {
         console.error("Error submitting form:", error);
-        toast({
-          title: "There was an error submitting your information",
-          description: "Please try again or contact support if the problem persists.",
-          variant: "destructive",
-        });
       } else {
         setIsSubmitted(true);
-        toast({
-          title: "Thank you for your interest!",
-          description: "We'll be in touch with you soon.",
-        });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast({
-        title: "There was an error submitting your information",
-        description: "Please try again or contact support if the problem persists.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }
