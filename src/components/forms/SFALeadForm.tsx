@@ -181,14 +181,16 @@ const SFALeadForm = () => {
       <div className="container px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
-            <CardHeader className="text-center pb-8">
-              <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                Get Your Sales & Marketing Automation Assessment
-              </CardTitle>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ready to automate your sales funnel? Let's discuss how we can streamline your processes and boost your revenue.
-              </p>
-            </CardHeader>
+            {!isSubmitted && (
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                  Get Your Sales & Marketing Automation Assessment
+                </CardTitle>
+                <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Ready to automate your sales funnel? Let's discuss how we can streamline your processes and boost your revenue.
+                </p>
+              </CardHeader>
+            )}
             
             {/* Conditional Content */}
             {isSubmitted ? (
