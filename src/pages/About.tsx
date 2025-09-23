@@ -142,9 +142,11 @@ const About = () => {
                 </p>
 
                 <div className="text-center">
-                  <Button size="lg" className="text-sm sm:text-base">
-                    Schedule a Consultation
-                  </Button>
+                  <a href="/#contact">
+                    <Button size="lg" className="text-sm sm:text-base">
+                      Schedule a Consultation
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
