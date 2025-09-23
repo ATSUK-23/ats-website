@@ -79,10 +79,18 @@ export default function TrainingLeadForm() {
           headers: {
             'Content-Type': 'application/json',
           },
+          mode: 'no-cors', // Add this to handle CORS
           body: JSON.stringify({
-            ...formData,
-            form_type: 'training',
-            submitted_at: new Date().toISOString(),
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            jobTitle: formData.jobTitle,
+            companyName: formData.companyName,
+            comments: formData.comments,
+            formTag: 'training',
+            timestamp: new Date().toISOString(),
+            source: 'Training Form'
           }),
         });
       } catch (webhookError) {
