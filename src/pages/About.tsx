@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { Link } from "react-router-dom";
 import profileImage from "@/assets/martin-keene-profile.jpeg";
 const About = () => {
   return <div className="min-h-screen bg-background text-foreground">
@@ -142,11 +143,11 @@ const About = () => {
                 </p>
 
                 <div className="text-center">
-                  <a href="/#contact">
+                  <Link to="/#contact">
                     <Button size="lg" className="text-sm sm:text-base">
                       Schedule a Consultation
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
