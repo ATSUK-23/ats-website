@@ -197,11 +197,8 @@ const HomePageLeadForm = () => {
           <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                Get in touch
+                Contact Us
               </CardTitle>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Tell us about your goals and we'll recommend the right AI strategy and implementation plan.
-              </p>
             </CardHeader>
             
             {/* Conditional Content */}

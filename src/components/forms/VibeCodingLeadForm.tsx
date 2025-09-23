@@ -15,7 +15,7 @@ interface VibeCodingLeadFormProps {
 
 export default function VibeCodingLeadForm({ 
   title = "Ready to Start Your Vibe Coding Project?",
-  subtitle = "Get in touch with our Vibe Coding experts and turn your idea into reality."
+  subtitle = "Connect with our Vibe Coding experts and turn your idea into reality."
 }: VibeCodingLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
