@@ -62,7 +62,7 @@ const SFALeadForm = () => {
           job_title: formData.jobTitle,
           company_name: formData.companyName,
           comments: formData.comments,
-          form_tag: 'sales-funnel-automation'
+          form_tag: 'sfa-opt-in'
         });
 
       if (error) {
@@ -86,7 +86,7 @@ const SFALeadForm = () => {
             jobTitle: formData.jobTitle,
             companyName: formData.companyName,
             comments: formData.comments,
-            formTag: 'sales-funnel-automation',
+            formTag: 'sfa-opt-in',
             timestamp: new Date().toISOString(),
             source: 'Sales Funnel Automation Form'
           }),
