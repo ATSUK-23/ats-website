@@ -64,7 +64,7 @@ export const HeroSection = ({
                 }
               }}
             >
-              Book Your AI Audit
+              Schedule Consultation
             </Button>
           )}
         </div>
