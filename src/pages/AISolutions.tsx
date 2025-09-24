@@ -9,7 +9,7 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
-import { AIConsultationForm } from "@/components/forms/AIConsultationForm";
+import AILeadForm from "@/components/forms/AILeadForm";
 const aiBrainBackground = "/lovable-uploads/924a7d77-7fc5-4519-858c-c9f930246863.png";
 import aiKnowledgeComparison from "@/assets/ai-knowledge-comparison.jpg";
 import aiProcessSteps from "@/assets/ai-process-steps.jpg";
@@ -136,7 +136,11 @@ export default function AISolutions() {
 
                 {/* Right Side - Consultation Form */}
                 <div>
-                  <AIConsultationForm assessmentResults={assessmentResults} />
+                  <AILeadForm 
+                    formTag="Ai-Audit"
+                    title="Book Your AI Audit"
+                    subtitle="Schedule a consultation with our AI experts to assess your business readiness and create a personalized AI implementation roadmap."
+                  />
                 </div>
               </div>
             </div>
@@ -482,9 +486,11 @@ export default function AISolutions() {
 
 
         {/* Lead Form */}
-        <div id="ai-lead-form">
-          <AIConsultationForm />
-        </div>
+        <AILeadForm 
+          formTag="Ai-Audit"
+          title="Book Your AI Audit"
+          subtitle="Schedule a consultation with our AI experts to assess your business readiness and create a personalized AI implementation roadmap."
+        />
 
       </main>
 
