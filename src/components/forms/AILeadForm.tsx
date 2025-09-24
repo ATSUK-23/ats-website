@@ -19,7 +19,7 @@ interface FormData {
 }
 
 interface AILeadFormProps {
-  formTag: 'Ai-Audit' | 'Agents' | 'Voice-AI';
+  formTag: 'Ai-Audit' | 'ai-audit-page' | 'Agents' | 'Voice-AI';
   title: string;
   subtitle: string;
 }
