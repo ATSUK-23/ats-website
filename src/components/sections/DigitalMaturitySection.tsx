@@ -47,7 +47,7 @@ export const DigitalMaturitySection = () => {
             The 5 Stages of Digital & AI Maturity
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            AI success doesn't start with AI. It starts with strong digital foundations. Most failed AI projects come from skipping steps and trying to leap straight from manual processes to AI. That's why we use a proven maturity scale to show you where your business really is — and how to move forward with confidence.
+            AI success doesn't start with AI. It starts with strong digital foundations. Most failed AI projects come from skipping steps and trying to leap straight from manual processes to AI. That's why we use a proven maturity scale to show you where your business really is - and how to move forward with confidence.
           </p>
         </div>
 
