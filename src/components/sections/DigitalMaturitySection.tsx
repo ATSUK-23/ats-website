@@ -20,7 +20,7 @@ const maturityStages = [
   {
     stage: 2,
     title: "Automation",
-    description: "Connecting tools, automating repetitive tasks, and driving efficiency across processes.",
+    description: "Connecting tools, automating sales, marketing and repetitive tasks, and driving efficiency across processes.",
     icon: Zap,
   },
   {
