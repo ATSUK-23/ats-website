@@ -26,7 +26,7 @@ const maturityStages = [
   {
     stage: 3,
     title: "AI Integration",
-    description: "Applying AI to enhance processes, make smarter decisions, and unlock new efficiencies.",
+    description: "Applying AI to enhance processes, make smarter unique decisions, and unlock new efficiencies, whilst learning on the fly.",
     icon: Brain,
   },
   {
