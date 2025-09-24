@@ -138,7 +138,7 @@ export default function AISolutions() {
                 <div>
                   <AILeadForm 
                     formTag="Ai-Audit"
-                    title="Book Your AI Audit"
+                    title="Schedule Your Consultation"
                     subtitle="Schedule a consultation with our AI experts to assess your business readiness and create a personalized AI implementation roadmap."
                   />
                 </div>
@@ -488,7 +488,7 @@ export default function AISolutions() {
         {/* Lead Form */}
         <AILeadForm 
           formTag="Ai-Audit"
-          title="Book Your AI Audit"
+          title="Schedule Your Consultation"
           subtitle="Schedule a consultation with our AI experts to assess your business readiness and create a personalized AI implementation roadmap."
         />
 
