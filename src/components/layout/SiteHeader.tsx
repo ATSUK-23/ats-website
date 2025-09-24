@@ -37,79 +37,68 @@ export const SiteHeader = () => {
   return (
     <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[80]">
       <nav className="container flex items-center justify-between py-4 min-h-[4rem]">
-        {/* Mobile layout: menu icon left, logo center, button right */}
-        <div className="md:hidden relative flex items-center w-full h-16">
-          {/* Menu icon - positioned on the left */}
-          <div className="absolute left-0">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon" aria-label="Open menu">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <nav className="mt-16 space-y-2">
-                  <SheetClose asChild>
-                    <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
-                  </SheetClose>
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="ai-solutions" className="border-b">
-                      <AccordionTrigger className="text-left py-3 hover:text-primary hover:no-underline">
-                        AI Solutions
-                      </AccordionTrigger>
-                      <AccordionContent className="pb-2">
-                        <div className="ml-4 space-y-2">
-                          {aiItems.map((item) => (
-                            <SheetClose asChild key={item.id}>
-                              <Link 
-                                to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-audit"}
-                                className="block py-2 text-sm hover:text-primary"
-                              >
-                                {item.label}
-                              </Link>
-                            </SheetClose>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                  <SheetClose asChild>
-                    <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/training" className="w-full text-left py-1.5 hover:text-primary block">Training</Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/about" className="w-full text-left py-1.5 hover:text-primary block">About</Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <button onClick={() => handleScroll('contact')} className="w-full text-left py-1.5 hover:text-primary">Contact</button>
-                  </SheetClose>
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
+        {/* Mobile layout: logo left, menu icon right */}
+        <div className="md:hidden flex items-center justify-between w-full h-16">
+          {/* Logo - positioned on the left */}
+          <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
+            <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
+            <span className="sr-only">Automate To Sell</span>
+          </Link>
 
-          {/* Logo - perfectly centered */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
-              <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
-              <span className="sr-only">Automate To Sell</span>
-            </Link>
-          </div>
-
-          {/* Book Audit button - positioned on the right */}
-          <div className="absolute right-0">
-            <a href="https://preview--ats-website.lovable.app/ai-audit" target="_blank" rel="noreferrer">
-              <Button variant="hero" size="sm" className="text-xs px-3">Book Audit</Button>
-            </a>
-          </div>
+          {/* Menu icon - positioned on the right */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" aria-label="Open menu">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-80">
+              <nav className="mt-16 space-y-2">
+                <SheetClose asChild>
+                  <Link to="/e-commerce" className="w-full text-left py-1.5 hover:text-primary block">E‑Commerce</Link>
+                </SheetClose>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="ai-solutions" className="border-b">
+                    <AccordionTrigger className="text-left py-3 hover:text-primary hover:no-underline">
+                      AI Solutions
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2">
+                      <div className="ml-4 space-y-2">
+                        {aiItems.map((item) => (
+                          <SheetClose asChild key={item.id}>
+                            <Link 
+                              to={item.id === "agents" ? "/agents" : item.id === "voice" ? "/voice-ai" : "/ai-audit"}
+                              className="block py-2 text-sm hover:text-primary"
+                            >
+                              {item.label}
+                            </Link>
+                          </SheetClose>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                <SheetClose asChild>
+                  <Link to="/vibe-coding" className="w-full text-left py-1.5 hover:text-primary block">Vibe Coding</Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link to="/sales-funnel-automation" className="w-full text-left py-1.5 hover:text-primary block">Sales Funnel Automation</Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link to="/social-content" className="w-full text-left py-1.5 hover:text-primary block">Social Content</Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link to="/training" className="w-full text-left py-1.5 hover:text-primary block">Training</Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link to="/about" className="w-full text-left py-1.5 hover:text-primary block">About</Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <button onClick={() => handleScroll('contact')} className="w-full text-left py-1.5 hover:text-primary">Contact</button>
+                </SheetClose>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
 
         {/* Desktop logo */}
