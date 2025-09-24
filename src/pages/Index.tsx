@@ -1,6 +1,7 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import Hero from "@/components/sections/Hero";
+import DigitalMaturitySection from "@/components/sections/DigitalMaturitySection";
 import HomePageLeadForm from "@/components/forms/HomePageLeadForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -24,6 +25,8 @@ const Index = () => {
       <SiteHeader />
       <main>
         <Hero />
+        
+        <DigitalMaturitySection />
 
         <section id="service-pillars" className="relative py-8 sm:py-12 md:py-16">
           {/* Background with Dark Gradient */}
