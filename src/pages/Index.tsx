@@ -28,6 +28,43 @@ const Index = () => {
         
         <DigitalMaturitySection />
 
+        <SplitSection id="about" title="Technology Should Serve Your Strategy, Not Replace It" image={whyImg} imageAlt="Before and after comparison of messy vs streamlined automated business systems" description={<>
+              <p>
+                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it's easy to get lost in "shiny object" syndrome. We cut through the noise to:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                <li>Analyse your processes end-to-end</li>
+                <li>Identify where automation and AI can create measurable ROI</li>
+                <li>Recommend only what you truly need</li>
+                <li>Integrate everything into one seamless system</li>
+              </ul>
+              <p className="pt-2">We're not tied to one software vendor. Our loyalty is to your results.</p>
+            </>} />
+
+        <SplitSection id="audit" reverse title="Your Automation Journey Starts with a Business Process Audit" image={auditImg} imageAlt="Dashboard flow showing Audit → Recommendations → Implementation → Results" description={<p>
+              The fastest way to see results is to start with a clear picture of where you are now. Our Business Process Audit covers:
+            </p>}>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 text-muted-foreground">
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Sales & Marketing</li>
+              <li>Product Development</li>
+            </ul>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>IT & Operations</li>
+              <li>Customer Support</li>
+            </ul>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Finance & Reporting</li>
+              <li>And more…</li>
+            </ul>
+          </div>
+          <div className="mt-6">
+            <Link to="/ai-audit">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto">Book Your Audit Now</Button>
+            </Link>
+          </div>
+        </SplitSection>
+
         <section id="service-pillars" className="relative py-8 sm:py-12 md:py-16">
           {/* Background with Dark Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/30 to-secondary/40">
@@ -98,43 +135,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        <SplitSection id="about" title="Technology Should Serve Your Strategy, Not Replace It" image={whyImg} imageAlt="Before and after comparison of messy vs streamlined automated business systems" description={<>
-              <p>
-                The automation and AI space is evolving at lightning speed. But with so many tools and platforms, it's easy to get lost in "shiny object" syndrome. We cut through the noise to:
-              </p>
-              <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                <li>Analyse your processes end-to-end</li>
-                <li>Identify where automation and AI can create measurable ROI</li>
-                <li>Recommend only what you truly need</li>
-                <li>Integrate everything into one seamless system</li>
-              </ul>
-              <p className="pt-2">We're not tied to one software vendor. Our loyalty is to your results.</p>
-            </>} />
-
-        <SplitSection id="audit" reverse title="Your Automation Journey Starts with a Business Process Audit" image={auditImg} imageAlt="Dashboard flow showing Audit → Recommendations → Implementation → Results" description={<p>
-              The fastest way to see results is to start with a clear picture of where you are now. Our Business Process Audit covers:
-            </p>}>
-          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 text-muted-foreground">
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Sales & Marketing</li>
-              <li>Product Development</li>
-            </ul>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>IT & Operations</li>
-              <li>Customer Support</li>
-            </ul>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Finance & Reporting</li>
-              <li>And more…</li>
-            </ul>
-          </div>
-          <div className="mt-6">
-            <Link to="/ai-audit">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto">Book Your Audit Now</Button>
-            </Link>
-          </div>
-        </SplitSection>
 
         <SplitSection id="workshops" title="Upskill Your Team to Harness AI & Automation (Workshops & Training)" image={workshopsImg} imageAlt="Professional workshop with team and facilitator at whiteboard" description={<p>
               We don't just install systems and walk away. We empower your team to make automation and AI part of their everyday workflow.
