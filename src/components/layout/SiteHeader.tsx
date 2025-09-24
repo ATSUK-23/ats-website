@@ -37,8 +37,8 @@ export const SiteHeader = () => {
   return (
     <header className="w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[80]">
       <nav className="container flex items-center justify-between py-4 min-h-[4rem]">
-        {/* Mobile layout: menu icon left, logo center */}
-        <div className="md:hidden flex items-center gap-2">
+        {/* Mobile layout: menu icon left, logo center, button right */}
+        <div className="md:hidden flex items-center justify-between w-full">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" aria-label="Open menu">
@@ -92,16 +92,24 @@ export const SiteHeader = () => {
               </nav>
             </SheetContent>
           </Sheet>
+
+          {/* Logo - centered on mobile */}
+          <Link to="/" className="flex items-center gap-3" aria-label="Automate To Sell Home">
+            <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
+            <span className="sr-only">Automate To Sell</span>
+          </Link>
+
+          {/* Book Audit button on mobile */}
+          <a href="https://preview--ats-website.lovable.app/ai-audit" target="_blank" rel="noreferrer">
+            <Button variant="hero" size="sm" className="text-xs px-3">Book Audit</Button>
+          </a>
         </div>
 
-        {/* Logo - center on mobile, left on desktop */}
-        <Link to="/" className="flex items-center gap-3 md:order-first absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none" aria-label="Automate To Sell Home">
+        {/* Desktop logo */}
+        <Link to="/" className="hidden md:flex items-center gap-3" aria-label="Automate To Sell Home">
           <img src={logo} alt="Automate To Sell logo" className="h-8 w-auto" loading="eager" />
           <span className="sr-only">Automate To Sell</span>
         </Link>
-
-        {/* Spacer for mobile layout */}
-        <div className="md:hidden w-6"></div>
 
         <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
           <Link to="/e-commerce" className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">E‑Commerce</Link>
@@ -129,7 +137,8 @@ export const SiteHeader = () => {
           <button onClick={() => handleScroll('contact')} className="text-sm font-medium hover:text-primary transition-colors whitespace-nowrap min-w-fit">Contact</button>
         </div>
 
-        <div className="flex items-center gap-3 flex-shrink-0 ml-auto md:ml-0">
+        {/* Desktop Book Audit button */}
+        <div className="hidden md:flex items-center gap-3 flex-shrink-0 ml-auto">
           <a href="https://preview--ats-website.lovable.app/ai-audit" target="_blank" rel="noreferrer">
             <Button variant="hero" size="sm">Book Audit</Button>
           </a>

@@ -165,17 +165,17 @@ const Index = () => {
 
         {/* CTA Bottom Banner */}
         <section id="cta-bottom" className="py-16 md:py-20 bg-primary text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Work Smarter. Grow Faster.</h2>
-            <p className="mt-4 max-w-2xl mx-auto">
+          <div className="container text-center px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Work Smarter. Grow Faster.</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base">
               Let's design a strategy, choose the right tools, and build automation systems that deliver results — so you can focus on growing your business.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="https://preview--ats-website.lovable.app/ai-audit">
-                <Button variant="secondary" size="lg">Book Your Business Automation Audit</Button>
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto">Book Your Business Automation Audit</Button>
               </a>
               <a href="#contact">
-                <Button variant="outline" size="lg" className="bg-transparent">Schedule a Call</Button>
+                <Button variant="outline" size="lg" className="bg-transparent w-full sm:w-auto">Schedule a Call</Button>
               </a>
             </div>
           </div>
