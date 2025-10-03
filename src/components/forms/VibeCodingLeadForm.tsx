@@ -4,8 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
-
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface VibeCodingLeadFormProps {
@@ -44,22 +42,6 @@ export default function VibeCodingLeadForm({
     setIsSubmitting(true);
 
     try {
-      // Submit to Supabase
-      const { error } = await supabase
-        .from('vibe-coding')
-        .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.phone || null,
-          job_title: formData.jobTitle || null,
-          company_name: formData.companyName || null,
-          comments: formData.comments || null,
-          form_tag: 'Vibe-Coding'
-        });
-
-      if (error) throw error;
-
       // Send to Zapier webhook
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhgjr5b/', {

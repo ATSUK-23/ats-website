@@ -5,7 +5,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 
 
 
@@ -75,52 +74,7 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
         domainScoresType: typeof assessmentResults?.domainScores
       });
       
-      // Save assessment results to Supabase if available
-      if (assessmentResults && assessmentResults.domainScores) {
-        const getMaturityLevel = (score: number) => {
-          if (score >= 76) return "AI Advanced";
-          if (score >= 51) return "AI Capable"; 
-          if (score >= 26) return "AI Curious";
-          return "AI Unaware";
-        };
-
-        console.log("Attempting Supabase insert with data:", {
-          user_name: formData.fullName,
-          user_email: formData.email,
-          company_name: formData.companyName,
-          phone: formData.phone,
-          additional_info: formData.additionalInfo,
-          assessment_answers: assessmentResults.answers || {}, // Use empty object if no answers
-          overall_score: assessmentResults.overallScore,
-          domain_scores: assessmentResults.domainScores,
-          maturity_level: getMaturityLevel(assessmentResults.overallScore)
-        });
-
-        const { data, error: supabaseError } = await supabase
-          .from('assessment_results')
-          .insert({
-            user_name: formData.fullName,
-            user_email: formData.email,
-            company_name: formData.companyName,
-            phone: formData.phone,
-            additional_info: formData.additionalInfo,
-            assessment_answers: assessmentResults.answers || {}, // Use empty object if no answers
-            overall_score: assessmentResults.overallScore,
-            domain_scores: assessmentResults.domainScores,
-            maturity_level: getMaturityLevel(assessmentResults.overallScore)
-          })
-          .select();
-
-        if (supabaseError) {
-          console.error("Error saving to Supabase:", supabaseError);
-          console.error("Full Supabase error details:", JSON.stringify(supabaseError, null, 2));
-        } else {
-          console.log("Assessment results saved to Supabase successfully");
-          console.log("Inserted data:", data);
-        }
-      } else {
-        console.log("No assessment results to save - this is likely a direct form submission");
-      }
+      // Assessment results will be submitted via form data
       
       // Submit to FormSubmit with assessment data
       const formSubmitData = new FormData();
@@ -184,15 +138,8 @@ export function AIConsultationForm({ assessmentResults }: AIConsultationFormProp
           emailBody.maturity = getMaturityLevel(assessmentResults.overallScore);
         }
 
-        const emailResponse = await supabase.functions.invoke('send-assessment-email', {
-          body: emailBody
-        });
-
-        if (emailResponse.error) {
-          console.error("Assessment email error:", emailResponse.error);
-        } else {
-          console.log("Assessment email sent successfully");
-        }
+        // Email will be sent via formsubmit
+        console.log("Email data prepared");
       } catch (emailError) {
         console.error("Assessment email exception:", emailError);
       }

@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 
-import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface FormData {
@@ -77,27 +76,6 @@ const ECommerceLeadForm = () => {
     }
 
     try {
-      // Insert data into Supabase
-      const { error } = await supabase
-        .from('e-commerce')
-        .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          mobile: formData.mobile,
-          product_niche: formData.productNiche,
-          patent_status: formData.hasPatent,
-          unique_features: formData.productUnique,
-          sales_channels: formData.salesChannels,
-          sku_count: formData.skuCount,
-          monthly_sales: formData.monthlySales
-        });
-
-      if (error) {
-        console.error('Supabase error:', error);
-        return;
-      }
-
       // Submit to Zapier webhook
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/5146490/ud1034x/', {

@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface FormData {
@@ -57,25 +56,6 @@ const AILeadForm = ({ formTag, title, subtitle }: AILeadFormProps) => {
     }
 
     try {
-      // Insert data into Supabase
-      const { error } = await supabase
-        .from('ai_leads')
-        .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.mobile,
-          job_title: formData.jobTitle,
-          company_name: formData.companyName,
-          comments: formData.comments,
-          form_tag: formTag
-        });
-
-      if (error) {
-        console.error('Supabase error:', error);
-        return;
-      }
-
       // Send data to Zapier webhook
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/6684569/bi2zqjv/', {
@@ -98,8 +78,7 @@ const AILeadForm = ({ formTag, title, subtitle }: AILeadFormProps) => {
           }),
         });
       } catch (zapierError) {
-        console.warn('Zapier webhook failed:', zapierError);
-        // Don't show error to user since Supabase succeeded
+        console.error('Zapier webhook failed:', zapierError);
       }
 
       // Store name and show success state

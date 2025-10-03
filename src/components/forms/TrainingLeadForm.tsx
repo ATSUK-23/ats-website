@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { supabase } from "@/integrations/supabase/client";
-
 import { CheckCircle } from "lucide-react";
 
 interface FormData {
@@ -51,27 +49,6 @@ export default function TrainingLeadForm() {
     setIsSubmitting(true);
 
     try {
-      // Insert into Supabase
-      const { error } = await supabase
-        .from('training')
-        .insert([
-          {
-            first_name: formData.firstName,
-            last_name: formData.lastName,
-            email: formData.email,
-            phone: formData.phone || null,
-            job_title: formData.jobTitle || null,
-            company_name: formData.companyName || null,
-            comments: formData.comments || null,
-            form_tag: 'training'
-          }
-        ]);
-
-      if (error) {
-        console.error('Supabase error:', error);
-        throw error;
-      }
-
       // Send to Zapier webhook
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqle29/', {

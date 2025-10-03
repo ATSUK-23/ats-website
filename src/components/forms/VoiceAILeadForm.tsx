@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle } from "lucide-react";
 
 interface FormData {
@@ -58,24 +57,7 @@ const VoiceAILeadForm = ({ formTag, title, subtitle }: VoiceAILeadFormProps) => 
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.from("ai_voice").insert([
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.mobile,
-          job_title: formData.jobTitle,
-          company_name: formData.companyName,
-          comments: formData.comments,
-          form_tag: formTag,
-        },
-      ]);
-
-      if (error) {
-        console.error("Error submitting form:", error);
-      } else {
-        setIsSubmitted(true);
-      }
+      setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {

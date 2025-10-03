@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-import { supabase } from "@/integrations/supabase/client";
 import { CheckCircle2, Calendar, FileText, Users } from "lucide-react";
 
 interface FormData {
@@ -51,25 +50,6 @@ const SocialContentLeadForm = () => {
     }
 
     try {
-      // Insert data into Supabase
-      const { error } = await supabase
-        .from('social_content')
-        .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          email: formData.email,
-          phone: formData.mobile,
-          job_title: formData.jobTitle,
-          company_name: formData.companyName,
-          comments: formData.comments,
-          form_tag: 'social-content'
-        });
-
-      if (error) {
-        console.error('Supabase error:', error);
-        return;
-      }
-
       // Send data to Zapier webhook
       try {
         await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqsrsx/', {
