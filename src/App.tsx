@@ -10,6 +10,7 @@ import SocialContent from "./pages/SocialContent";
 import ECommerce from "./pages/ECommerce";
 import SalesFunnelAutomation from "./pages/SalesFunnelAutomation";
 import Training from "./pages/Training";
+import SuperSkills from "./pages/SuperSkills";
 import About from "./pages/About";
 import AISolutions from "./pages/AISolutions";
 import Agents from "./pages/Agents";
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/agents" element={<Agents />} />
             <Route path="/voice-ai" element={<VoiceAI />} />
             <Route path="/training" element={<Training />} />
+            <Route path="/training/superskills" element={<SuperSkills />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
