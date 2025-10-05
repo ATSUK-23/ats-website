@@ -4,22 +4,18 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import HeroSection from "@/components/sections/HeroSection";
 import SuperSkillsLeadForm from "@/components/forms/SuperSkillsLeadForm";
-
 export default function SuperSkills() {
   const [showForm, setShowForm] = useState(false);
-
   const scrollToForm = () => {
     setShowForm(true);
     setTimeout(() => {
-      document.getElementById('superskills-form')?.scrollIntoView({ 
+      document.getElementById('superskills-form')?.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
     }, 100);
   };
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>The SuperSkills Era: Thriving in the Age of AI | Keynote Bookings</title>
         <meta name="description" content="Now accepting keynote bookings for Q3 2025 & Q4 2026. Executive session for boards and senior leadership teams on thriving in the AI era." />
@@ -29,22 +25,9 @@ export default function SuperSkills() {
 
       <main>
         {/* Hero Section */}
-        <HeroSection 
-          title="The SuperSkills Era: Thriving in the Age of AI"
-          subtitle="Now accepting keynote bookings for Q3 2025 & Q4 2026"
-          ctaText="Find Out More"
-          ctaLink="#"
-          backgroundImage="/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png"
-          className="py-8 md:py-12"
-          hideSecondaryButton={true}
-        >
+        <HeroSection title="The SuperSkills Era: Thriving in the Age of AI" subtitle="Now accepting keynote bookings for Q3 2025 & Q4 2026" ctaText="Find Out More" ctaLink="#" backgroundImage="/lovable-uploads/69f481cd-156e-4ce8-91f4-94a5b2dfa309.png" className="py-8 md:py-12" hideSecondaryButton={true}>
           <div className="mt-6">
-            <button 
-              onClick={scrollToForm}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-[hsl(var(--brand))] to-[hsl(var(--brand-2))] text-[hsl(var(--brand-foreground))] shadow-lg hover:shadow-xl hover:from-[hsl(var(--brand)/0.95)] hover:to-[hsl(var(--brand-2)/0.95)] h-11 px-8"
-            >
-              Find Out More →
-            </button>
+            
           </div>
         </HeroSection>
 
@@ -90,10 +73,7 @@ export default function SuperSkills() {
               </div>
 
               <div className="mt-10 text-center">
-                <button 
-                  onClick={scrollToForm}
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-[hsl(var(--brand))] to-[hsl(var(--brand-2))] text-[hsl(var(--brand-foreground))] shadow-lg hover:shadow-xl hover:from-[hsl(var(--brand)/0.95)] hover:to-[hsl(var(--brand-2)/0.95)] h-11 px-8"
-                >
+                <button onClick={scrollToForm} className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-[hsl(var(--brand))] to-[hsl(var(--brand-2))] text-[hsl(var(--brand-foreground))] shadow-lg hover:shadow-xl hover:from-[hsl(var(--brand)/0.95)] hover:to-[hsl(var(--brand-2)/0.95)] h-11 px-8">
                   Find Out More →
                 </button>
               </div>
@@ -102,14 +82,11 @@ export default function SuperSkills() {
         </section>
 
         {/* Form Section - Only shown when button is clicked */}
-        {showForm && (
-          <div id="superskills-form">
+        {showForm && <div id="superskills-form">
             <SuperSkillsLeadForm />
-          </div>
-        )}
+          </div>}
       </main>
 
       <SiteFooter />
-    </div>
-  );
+    </div>;
 }

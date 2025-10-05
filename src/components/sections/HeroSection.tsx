@@ -42,31 +42,18 @@ export const HeroSection = ({
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href={ctaLink}>
-            <Button 
-              variant={customButtonClasses?.primary ? "default" : "hero"}
-              size="lg" 
-              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.primary || ''}`}
-            >
-              {ctaText}
-            </Button>
+            
           </a>
-          {!hideSecondaryButton && (
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`}
-              onClick={() => {
-                const element = document.getElementById('ai-form');
-                if (element) {
-                  element.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }
-              }}
-            >
+          {!hideSecondaryButton && <Button variant="outline" size="lg" className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`} onClick={() => {
+          const element = document.getElementById('ai-form');
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }}>
               Schedule Consultation
-            </Button>
-          )}
+            </Button>}
         </div>
         
         {children}
