@@ -11,7 +11,7 @@ const Agents = () => {
     title: "AI Lead Generation Agent",
     description: "Fill your sales calendar with qualified prospects through automated LinkedIn and cold-email outreach that never sleeps.",
     bullets: ["Problem: Prospecting manually is slow, inconsistent, and drains your team's time.", "Automation: Identifies target accounts, crafts personalised messages, and books calls automatically.", "Solution: Generates a predictable flow of meetings without relying on constant manual effort."],
-    cta: "Generate Leads Faster",
+    cta: "Generate Leads Faster - Performance Model",
     icon: <Target className="h-8 w-8" />
   }, {
     title: "AI Inbound Lead Response Agent",
@@ -130,7 +130,7 @@ const Agents = () => {
           <Button className="w-full mt-auto" onClick={() => document.getElementById('ai-agents-form')?.scrollIntoView({
           behavior: 'smooth'
         })}>
-            {cta} - Performance Model
+            {cta}
           </Button>
         </div>
       </CardContent>
