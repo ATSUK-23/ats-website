@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle2, Calendar, Users, FileText } from "lucide-react";
 
 interface FormData {
   firstName: string;
@@ -103,28 +103,74 @@ const AIAgentsLeadForm: React.FC<AIAgentsLeadFormProps> = ({ formTag, title, sub
   };
 
   const SuccessMessage = () => (
-    <div className="text-center py-12">
-      <div className="mb-6">
-        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-700 mb-2">Thank You!</h3>
-        <p className="text-lg text-gray-600 mb-4">
-          Your AI agent inquiry has been received successfully.
-        </p>
+    <div className="text-center py-16">
+      <div className="space-y-8">
+        {/* Success Icon */}
+        <div className="flex justify-center">
+          <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg">
+            <CheckCircle2 className="w-12 h-12 text-white" />
+          </div>
+        </div>
+
+        {/* Thank You Message */}
+        <div className="space-y-4">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+            Thank You!
+          </h3>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Your AI agent inquiry has been successfully submitted. We're excited to help you build powerful automation!
+          </p>
+        </div>
+
+        {/* What Happens Next */}
+        <div className="bg-card/50 border border-primary/20 rounded-xl p-8 max-w-3xl mx-auto">
+          <h4 className="text-xl font-semibold mb-6 text-foreground">What happens next?</h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Calendar className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Within 24 Hours</h5>
+                <p className="text-sm text-muted-foreground">Our AI specialists review your requirements</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Strategy Call</h5>
+                <p className="text-sm text-muted-foreground">We'll schedule a personalized consultation</p>
+              </div>
+            </div>
+            <div className="text-center space-y-3">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
+                <FileText className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h5 className="font-medium text-foreground">Automation Roadmap</h5>
+                <p className="text-sm text-muted-foreground">Receive your custom AI agent blueprint</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
+        <div className="space-y-4">
+          <p className="text-muted-foreground">
+            In the meantime, explore our AI solutions and resources
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="outline" size="lg" asChild>
+              <a href="/ai-solutions">Explore AI Solutions</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/training">Free Resources</a>
+            </Button>
+          </div>
+        </div>
       </div>
-      
-      <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-        <h4 className="font-semibold text-green-800 mb-2">What happens next?</h4>
-        <ul className="text-sm text-green-700 space-y-1">
-          <li>• Our AI specialists will review your requirements</li>
-          <li>• We'll schedule a strategy call within 24 hours</li>
-          <li>• You'll receive a custom automation roadmap</li>
-          <li>• We'll discuss implementation timelines and next steps</li>
-        </ul>
-      </div>
-      
-      <p className="text-sm text-gray-500">
-        Check your email for confirmation and next steps.
-      </p>
     </div>
   );
 
