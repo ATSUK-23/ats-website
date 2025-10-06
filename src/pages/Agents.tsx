@@ -6,324 +6,221 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import AIAgentsLeadForm from "@/components/forms/AIAgentsLeadForm";
 import { 
-  Bot, 
-  FileText, 
-  Image, 
-  Database, 
-  Headphones, 
-  Table, 
-  Globe, 
-  MessageSquare, 
-  Bell, 
-  Users, 
-  CheckCircle, 
-  Wrench,
-  Code,
-  Settings,
-  Workflow,
-  Monitor,
-  Mail,
-  Webhook,
-  Server,
-  Eye,
-  Upload,
-  Plug,
-  Share2,
-  Smartphone,
-  BarChart3,
-  TestTube,
   Target,
-  FileCheck,
-  Cog,
-  Key,
-  GitBranch
+  MessageSquare,
+  PenTool,
+  Network,
+  RefreshCw,
+  CheckSquare,
+  Zap,
+  BookOpen,
+  Headphones,
+  Radio,
+  TrendingUp,
+  Puzzle
 } from "lucide-react";
 
 const Agents = () => {
   const agentTypes = [
     {
-      title: "AI Lead Generation Agent",
-      description: "Book qualified meetings with automated LinkedIn outreach and personalised cold email campaigns that run on autopilot.",
-      icon: <Users className="h-6 w-6" />
+      title: "Automate Your Prospecting",
+      description: "Fill your calendar with qualified leads using AI-powered outreach across LinkedIn, email, and other channels.",
+      bullets: [
+        "Builds and updates ideal customer profiles automatically.",
+        "Scrapes contact data and segments by persona or niche.",
+        "Writes personalised connection messages and emails.",
+        "Books meetings directly into your calendar."
+      ],
+      value: "Creates a consistent lead pipeline without hiring more sales reps.",
+      cta: "Generate Leads Faster",
+      icon: <Target className="h-8 w-8" />
     },
     {
-      title: "AI Inbound Lead Response Agent",
-      description: "Turn inbound enquiries into booked meetings with instant replies, smart qualification, and automated follow-ups.",
-      icon: <MessageSquare className="h-6 w-6" />
+      title: "Never Miss an Enquiry Again",
+      description: "Convert inbound messages into meetings with lightning-fast, human-sounding responses.",
+      bullets: [
+        "Replies instantly across chat, email, and web forms.",
+        "Qualifies prospects using custom rules or scoring.",
+        "Schedules calls automatically in your booking system.",
+        "Syncs data into your CRM in real time."
+      ],
+      value: "Turns inbound interest into revenue while you focus on delivery.",
+      cta: "Respond Instantly",
+      icon: <MessageSquare className="h-8 w-8" />
     },
     {
-      title: "AI Authority Builder Agent",
-      description: "Publish timely blogs and social posts that position your business as the go-to authority in your industry.",
-      icon: <FileText className="h-6 w-6" />
+      title: "Stay Top-of-Mind, Effortlessly",
+      description: "Publish smart, SEO-friendly content that keeps you visible and relevant in your market.",
+      bullets: [
+        "Scans industry trends and suggests new topics.",
+        "Drafts LinkedIn posts, articles, and blogs in your voice.",
+        "Repurposes long content into short-form posts.",
+        "Queues and publishes across multiple platforms."
+      ],
+      value: "Grows brand authority and visibility without content burnout.",
+      cta: "Build Authority",
+      icon: <PenTool className="h-8 w-8" />
     },
     {
-      title: "AI Social Engagement Agent",
-      description: "Engage prospects on social platforms with instant replies and relevant comments that build connections automatically.",
-      icon: <Share2 className="h-6 w-6" />
+      title: "Engage Like a Human — 24/7",
+      description: "Build relationships on social media by automatically liking, commenting, and messaging the right people.",
+      bullets: [
+        "Tracks hashtags, mentions, and competitors.",
+        "Writes thoughtful comments and DMs using context.",
+        "Keeps your brand visible with daily micro-engagements.",
+        "Nurtures warm leads ready for outreach."
+      ],
+      value: "Builds trust and engagement without manual scrolling.",
+      cta: "Boost Engagement",
+      icon: <Network className="h-8 w-8" />
     },
     {
-      title: "AI CRM Reactivation Agent",
-      description: "Revive prospects and clients in your CRM with personalised outreach that re-engages them and books meetings automatically.",
-      icon: <Database className="h-6 w-6" />
+      title: "Revive Your Dead Leads",
+      description: "Re-engage dormant contacts with context-aware follow-ups that spark fresh conversations.",
+      bullets: [
+        "Analyses old CRM data and contact activity.",
+        "Writes personalised re-engagement messages.",
+        "Runs automated outreach sequences by segment.",
+        "Books calls or directs to offers automatically."
+      ],
+      value: "Uncovers hidden revenue inside your existing database.",
+      cta: "Reignite Pipeline",
+      icon: <RefreshCw className="h-8 w-8" />
     },
     {
-      title: "AI Deal Qualifier Agent",
-      description: "Walk into every call fully prepared with instant insight on company size, industry, funding stage, fit, and opportunity potential.",
-      icon: <Target className="h-6 w-6" />
+      title: "Focus on the Right Prospects",
+      description: "Instantly assess every lead's fit and potential so your team only pursues high-value deals.",
+      bullets: [
+        "Gathers company data from web, LinkedIn, and databases.",
+        "Scores leads using your ideal client criteria.",
+        "Flags high-potential accounts for follow-up.",
+        "Updates CRM with qualification details."
+      ],
+      value: "Increases close rates by removing low-value leads early.",
+      cta: "Qualify Smarter",
+      icon: <CheckSquare className="h-8 w-8" />
     },
     {
-      title: "AI Proposal & Quote Agent",
-      description: "Send tailored proposals and quotes instantly from discovery notes with automated follow-up reminders.",
-      icon: <FileCheck className="h-6 w-6" />
+      title: "Send Proposals in Minutes, Not Hours",
+      description: "Create and send personalised proposals automatically from call notes or CRM data.",
+      bullets: [
+        "Extracts details from discovery calls or forms.",
+        "Generates branded proposals or quotes instantly.",
+        "Sends automatically with polite follow-ups.",
+        "Tracks opens, views, and responses."
+      ],
+      value: "Speeds up the sales cycle and boosts win rates.",
+      cta: "Quote Instantly",
+      icon: <Zap className="h-8 w-8" />
     },
     {
-      title: "AI Sales Knowledge Agent",
-      description: "Give your team instant access to your playbook, product knowledge, and objection handling anytime they need it.",
-      icon: <Bot className="h-6 w-6" />
+      title: "Your Team's Instant Sales Coach",
+      description: "Give reps on-demand access to scripts, pricing, case studies, and product answers.",
+      bullets: [
+        "Centralises playbooks and sales materials.",
+        "Answers rep questions through chat or Slack.",
+        "Suggests talking points and objection replies.",
+        "Updates automatically as new content is added."
+      ],
+      value: "Keeps every rep on-message and confident during calls.",
+      cta: "Train Instantly",
+      icon: <BookOpen className="h-8 w-8" />
+    },
+    {
+      title: "24/7 Support That Never Sleeps",
+      description: "Deliver fast, accurate, multi-channel customer support with AI triage and escalation.",
+      bullets: [
+        "Reads and responds to emails, chat, and WhatsApp.",
+        "Recognises sentiment and urgency automatically.",
+        "Escalates complex issues to human agents.",
+        "Logs every conversation in your helpdesk."
+      ],
+      value: "Reduces response time and improves customer satisfaction.",
+      cta: "Support Smarter",
+      icon: <Headphones className="h-8 w-8" />
+    },
+    {
+      title: "Turn Every Call into Data",
+      description: "Analyse conversations, score performance, and create actionable follow-ups automatically.",
+      bullets: [
+        "Transcribes and summarises every call.",
+        "Detects objections, tone, and buying signals.",
+        "Scores reps against your playbook.",
+        "Suggests next steps and sends follow-ups."
+      ],
+      value: "Improves call quality and helps teams close more deals.",
+      cta: "Analyse Calls",
+      icon: <Radio className="h-8 w-8" />
+    },
+    {
+      title: "Manage by Insight, Not Guesswork",
+      description: "Track performance, get summaries, and coach your team automatically.",
+      bullets: [
+        "Monitors team calls and activity.",
+        "Sends concise updates and leaderboards.",
+        "Flags coaching opportunities instantly.",
+        "Provides weekly summaries and trends."
+      ],
+      value: "Saves managers hours while improving team performance.",
+      cta: "Manage Smarter",
+      icon: <TrendingUp className="h-8 w-8" />
+    },
+    {
+      title: "Build Your Own Growth Agent",
+      description: "Create a fully bespoke AI solution that automates your unique workflow.",
+      bullets: [
+        "Scopes and designs an agent for your exact needs.",
+        "Connects seamlessly to your CRM or apps.",
+        "Includes logic, prompts, and integrations.",
+        "Deployed securely in your Lovable Cloud environment."
+      ],
+      value: "A made-to-measure automation built to grow your business.",
+      cta: "Design Yours",
+      icon: <Puzzle className="h-8 w-8" />
     }
   ];
 
-  const contentGeneration = [
-    {
-      title: "Text",
-      description: "Access 90+ LLMs without API keys for diverse content creation.",
-      icon: <FileText className="h-6 w-6" />
-    },
-    {
-      title: "Images",
-      description: "Generate visuals with multiple models for any creative need.",
-      icon: <Image className="h-6 w-6" />
-    },
-    {
-      title: "HTML",
-      description: "Produce styled web pages with professional layouts.",
-      icon: <Code className="h-6 w-6" />
-    },
-    {
-      title: "PDF",
-      description: "Create slide decks, reports, or documents automatically.",
-      icon: <FileCheck className="h-6 w-6" />
-    },
-    {
-      title: "Audio / Podcasts",
-      description: "Text-to-speech and multi-speaker shows for engaging content.",
-      icon: <Headphones className="h-6 w-6" />
-    },
-    {
-      title: "Structured Data",
-      description: "Output CSV, JSON, XML, YAML for data integration.",
-      icon: <Table className="h-6 w-6" />
-    }
-  ];
+  interface AgentCardProps {
+    title: string;
+    description: string;
+    bullets: string[];
+    value: string;
+    cta: string;
+    icon: React.ReactNode;
+  }
 
-  const dataIngestion = [
-    {
-      title: "Scrape Websites",
-      description: "Extract structured data from live URLs automatically.",
-      icon: <Globe className="h-6 w-6" />
-    },
-    {
-      title: "Databases",
-      description: "Connect to relational, document, vector DBs seamlessly.",
-      icon: <Database className="h-6 w-6" />
-    },
-    {
-      title: "Social Listening",
-      description: "Track mentions, trends, competitors across platforms.",
-      icon: <Share2 className="h-6 w-6" />
-    },
-    {
-      title: "Vision Models",
-      description: "OCR, object detection, image analysis capabilities.",
-      icon: <Eye className="h-6 w-6" />
-    },
-    {
-      title: "Upload & Vectorize",
-      description: "Enable RAG from bulk data for intelligent responses.",
-      icon: <Upload className="h-6 w-6" />
-    },
-    {
-      title: "App Integrations",
-      description: "Connect Docs, Sheets, Notion, HubSpot seamlessly.",
-      icon: <Plug className="h-6 w-6" />
-    }
-  ];
-
-  const socialCommunications = [
-    {
-      title: "Social Media",
-      description: "Post, comment, and analyse across major platforms.",
-      icon: <Share2 className="h-6 w-6" />
-    },
-    {
-      title: "SMS & Email",
-      description: "Send and receive transactional messages automatically.",
-      icon: <Smartphone className="h-6 w-6" />
-    },
-    {
-      title: "Notifications",
-      description: "Alerts via Slack or email for important updates.",
-      icon: <Bell className="h-6 w-6" />
-    }
-  ];
-
-  const humanInLoop = [
-    {
-      title: "User Interfaces",
-      description: "Forms, charts, dashboards for human interaction.",
-      icon: <Monitor className="h-6 w-6" />
-    },
-    {
-      title: "Checkpoints",
-      description: "Human approval steps for critical decisions.",
-      icon: <CheckCircle className="h-6 w-6" />
-    },
-    {
-      title: "Context Enrichment",
-      description: "Collect additional info for better outcomes.",
-      icon: <Target className="h-6 w-6" />
-    },
-    {
-      title: "File Uploads",
-      description: "Process runtime uploads for dynamic content.",
-      icon: <Upload className="h-6 w-6" />
-    },
-    {
-      title: "Onboarding",
-      description: "Capture data to personalise agents effectively.",
-      icon: <Users className="h-6 w-6" />
-    }
-  ];
-
-  const testingQA = [
-    {
-      title: "Diagnostics",
-      description: "Identify inefficiencies and optimize performance.",
-      icon: <BarChart3 className="h-6 w-6" />
-    },
-    {
-      title: "Evaluations",
-      description: "Run structured test cases for quality assurance.",
-      icon: <TestTube className="h-6 w-6" />
-    },
-    {
-      title: "Test Case Generation",
-      description: "Auto-create scenarios for comprehensive testing.",
-      icon: <Workflow className="h-6 w-6" />
-    },
-    {
-      title: "Debugger",
-      description: "Step-by-step run breakdown for troubleshooting.",
-      icon: <Wrench className="h-6 w-6" />
-    },
-    {
-      title: "Errors Panel",
-      description: "View warnings & problem links for quick fixes.",
-      icon: <FileCheck className="h-6 w-6" />
-    },
-    {
-      title: "Model Profiler",
-      description: "Compare speed, cost, quality across models.",
-      icon: <Target className="h-6 w-6" />
-    }
-  ];
-
-  const agentDevelopment = [
-    {
-      title: "Prompt Engineering",
-      description: "Write or auto-generate prompts for optimal results.",
-      icon: <FileText className="h-6 w-6" />
-    },
-    {
-      title: "Custom Functions",
-      description: "Extend with Python/JS for specialized capabilities.",
-      icon: <Code className="h-6 w-6" />
-    },
-    {
-      title: "Auto Docs",
-      description: "Document custom code automatically for maintenance.",
-      icon: <FileCheck className="h-6 w-6" />
-    },
-    {
-      title: "Function Tester",
-      description: "Validate with test data before deployment.",
-      icon: <TestTube className="h-6 w-6" />
-    },
-    {
-      title: "Prompt Tester",
-      description: "Chat with AI to refine prompts interactively.",
-      icon: <MessageSquare className="h-6 w-6" />
-    },
-    {
-      title: "API Builder",
-      description: "Create & log requests for external integrations.",
-      icon: <Webhook className="h-6 w-6" />
-    }
-  ];
-
-  const workspaceManagement = [
-    {
-      title: "Organizations & Teams",
-      description: "Manage multiple workspaces with role-based access.",
-      icon: <Users className="h-6 w-6" />
-    },
-    {
-      title: "Budgets",
-      description: "Control monthly or per-agent usage limits.",
-      icon: <Target className="h-6 w-6" />
-    },
-    {
-      title: "Payment Options",
-      description: "Multiple payment methods for flexible billing.",
-      icon: <Cog className="h-6 w-6" />
-    },
-    {
-      title: "Version Control",
-      description: "View & restore builds with complete history.",
-      icon: <GitBranch className="h-6 w-6" />
-    },
-    {
-      title: "API Keys",
-      description: "Manage external service integrations securely.",
-      icon: <Key className="h-6 w-6" />
-    },
-    {
-      title: "Workspace Transfer",
-      description: "Move agents across accounts seamlessly.",
-      icon: <Settings className="h-6 w-6" />
-    }
-  ];
-
-  const integrationLogos = [
-    "Zapier", "Slack", "Google", "HubSpot", "Salesforce", "Notion", 
-    "Microsoft", "OpenAI", "Anthropic", "GitHub", "AWS", "Stripe"
-  ];
-
-  const AgentCard = ({ title, description, icon }: { title: string; description: string; icon: React.ReactNode }) => (
-    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border bg-card">
-      <CardContent className="p-6">
-        <div className="flex flex-col items-start gap-3">
-          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+  const AgentCard = ({ title, description, bullets, value, cta, icon }: AgentCardProps) => (
+    <Card className="group hover:shadow-xl hover:scale-[1.03] transition-all duration-300 border bg-card h-full">
+      <CardContent className="p-6 flex flex-col h-full">
+        <div className="flex flex-col items-center text-center gap-4 flex-grow">
+          <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
             {icon}
           </div>
-          <h3 className="font-semibold text-lg">{title}</h3>
+          <h3 className="font-bold text-xl">{title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+          
+          <ul className="text-left text-sm space-y-2 w-full mt-2">
+            {bullets.map((bullet, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span className="text-muted-foreground">{bullet}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <p className="font-semibold text-sm text-primary mt-4">
+            {value}
+          </p>
+          
+          <Button 
+            className="w-full mt-auto"
+            onClick={() => document.getElementById('ai-agents-form')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            {cta}
+          </Button>
         </div>
       </CardContent>
     </Card>
-  );
-
-  const SectionGrid = ({ title, items }: { title: string; items: any[] }) => (
-    <section className="py-12 sm:py-16">
-      <div className="container px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">{title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {items.map((item, index) => (
-            <AgentCard key={index} {...item} />
-          ))}
-        </div>
-      </div>
-    </section>
   );
 
   return (
@@ -367,8 +264,17 @@ const Agents = () => {
           </div>
         </section>
 
-        {/* Agent Collections */}
-        <SectionGrid title="AI Agents for Growth" items={agentTypes} />
+        {/* AI Agents for Growth Section */}
+        <section className="py-12 sm:py-16">
+          <div className="container px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12">AI Agents for Growth</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {agentTypes.map((agent, index) => (
+                <AgentCard key={index} {...agent} />
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Call to Action Buttons */}
         <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
