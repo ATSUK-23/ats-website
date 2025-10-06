@@ -56,8 +56,44 @@ const AIAgentsLeadForm: React.FC<AIAgentsLeadFormProps> = ({ formTag, title, sub
     setIsSubmitting(true);
 
     try {
+      // Send data to Zapier webhook
+      try {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqraq6/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'no-cors',
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            mobile: formData.mobile,
+            jobTitle: formData.jobTitle,
+            companyName: formData.companyName,
+            comments: formData.comments,
+            formTag: formTag,
+            timestamp: new Date().toISOString(),
+            source: 'AI Agents Lead Form'
+          }),
+        });
+      } catch (zapierError) {
+        console.error('Zapier webhook failed:', zapierError);
+      }
+
       toast.success("Form submitted successfully!");
       setIsSubmitted(true);
+      
+      // Reset form data
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        jobTitle: "",
+        companyName: "",
+        comments: "",
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("There was an error submitting your form. Please try again.");
@@ -93,9 +129,9 @@ const AIAgentsLeadForm: React.FC<AIAgentsLeadFormProps> = ({ formTag, title, sub
   );
 
   return (
-    <section id="ai-agents-form" className="py-12 sm:py-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+    <section id="ai-agents-form" className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="container px-4 max-w-4xl mx-auto">
-        <Card className="shadow-xl border-0">
+        <Card className="bg-card/80 backdrop-blur-sm border border-primary/20 shadow-xl">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-2xl sm:text-3xl font-bold mb-4">{title}</CardTitle>
             <p className="text-muted-foreground text-lg">{subtitle}</p>
