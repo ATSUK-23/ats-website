@@ -17,7 +17,7 @@ const Agents = () => {
     title: "AI Inbound Lead Response Agent",
     description: "Instantly convert every incoming enquiry into a booked meeting with intelligent replies and automated scheduling.",
     bullets: ["Problem: Delayed responses cause leads to lose interest or go elsewhere.", "Automation: Replies instantly via chat, email, or web forms, qualifies leads, and books calls into calendars.", "Solution: Ensures every inbound opportunity is handled fast and professionally 24/7."],
-    cta: "Respond Instantly",
+    cta: "Respond & Convert Instantly",
     icon: <MessageSquare className="h-8 w-8" />
   }, {
     title: "AI Authority Builder Agent",
