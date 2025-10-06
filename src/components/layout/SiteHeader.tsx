@@ -13,7 +13,7 @@ import { Menu } from "lucide-react";
 
 const aiItems = [
   { id: "audits", label: "AI Audit", description: "How You Build Your AI Brain" },
-  { id: "agents", label: "Agents", description: "Intelligent Automation For Workflows" },
+  { id: "agents", label: "Growth Agents", description: "Drive Leads, Conversions & Revenue" },
   { id: "voice", label: "Voice AI", description: "1-2-1 Conversations With Prospects" },
 ];
 
