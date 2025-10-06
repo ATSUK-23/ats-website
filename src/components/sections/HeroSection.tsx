@@ -44,16 +44,7 @@ export const HeroSection = ({
           <a href={ctaLink}>
             
           </a>
-          {!hideSecondaryButton && <Button variant="outline" size="lg" className={`w-full sm:w-auto text-sm sm:text-base ${customButtonClasses?.secondary || 'border-white/20 text-white hover:bg-white/10'}`} onClick={() => {
-          const element = document.getElementById('ai-form');
-          if (element) {
-            element.scrollIntoView({
-              behavior: 'smooth'
-            });
-          }
-        }}>
-              Schedule Consultation
-            </Button>}
+          {!hideSecondaryButton}
         </div>
         
         {children}
