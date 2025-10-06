@@ -23,158 +23,134 @@ import {
 const Agents = () => {
   const agentTypes = [
     {
-      title: "Automate Your Prospecting",
-      description: "Fill your calendar with qualified leads using AI-powered outreach across LinkedIn, email, and other channels.",
+      title: "AI Lead Generation Agent",
+      description: "Fill your sales calendar with qualified prospects through automated LinkedIn and cold-email outreach that never sleeps.",
       bullets: [
-        "Builds and updates ideal customer profiles automatically.",
-        "Scrapes contact data and segments by persona or niche.",
-        "Writes personalised connection messages and emails.",
-        "Books meetings directly into your calendar."
+        "Problem: Prospecting manually is slow, inconsistent, and drains your team's time.",
+        "Automation: Identifies target accounts, crafts personalised messages, and books calls automatically.",
+        "Solution: Generates a predictable flow of meetings without relying on constant manual effort."
       ],
-      value: "Creates a consistent lead pipeline without hiring more sales reps.",
       cta: "Generate Leads Faster",
       icon: <Target className="h-8 w-8" />
     },
     {
-      title: "Never Miss an Enquiry Again",
-      description: "Convert inbound messages into meetings with lightning-fast, human-sounding responses.",
+      title: "AI Inbound Lead Response Agent",
+      description: "Instantly convert every incoming enquiry into a booked meeting with intelligent replies and automated scheduling.",
       bullets: [
-        "Replies instantly across chat, email, and web forms.",
-        "Qualifies prospects using custom rules or scoring.",
-        "Schedules calls automatically in your booking system.",
-        "Syncs data into your CRM in real time."
+        "Problem: Delayed responses cause leads to lose interest or go elsewhere.",
+        "Automation: Replies instantly via chat, email, or web forms, qualifies leads, and books calls into calendars.",
+        "Solution: Ensures every inbound opportunity is handled fast and professionally — 24/7."
       ],
-      value: "Turns inbound interest into revenue while you focus on delivery.",
       cta: "Respond Instantly",
       icon: <MessageSquare className="h-8 w-8" />
     },
     {
-      title: "Stay Top-of-Mind, Effortlessly",
-      description: "Publish smart, SEO-friendly content that keeps you visible and relevant in your market.",
+      title: "AI Authority Builder Agent",
+      description: "Publish fresh, relevant content that positions your brand as the industry voice — automatically.",
       bullets: [
-        "Scans industry trends and suggests new topics.",
-        "Drafts LinkedIn posts, articles, and blogs in your voice.",
-        "Repurposes long content into short-form posts.",
-        "Queues and publishes across multiple platforms."
+        "Problem: Producing thought-leadership content consistently is time-consuming and hard to sustain.",
+        "Automation: Tracks trends, generates blog and social posts in your tone, and schedules them for release.",
+        "Solution: Keeps your audience engaged and builds trust with zero content bottlenecks."
       ],
-      value: "Grows brand authority and visibility without content burnout.",
       cta: "Build Authority",
       icon: <PenTool className="h-8 w-8" />
     },
     {
-      title: "Engage Like a Human — 24/7",
-      description: "Build relationships on social media by automatically liking, commenting, and messaging the right people.",
+      title: "AI Social Engagement Agent",
+      description: "Build meaningful relationships on social media with smart, context-aware interactions handled automatically.",
       bullets: [
-        "Tracks hashtags, mentions, and competitors.",
-        "Writes thoughtful comments and DMs using context.",
-        "Keeps your brand visible with daily micro-engagements.",
-        "Nurtures warm leads ready for outreach."
+        "Problem: Missed comments and slow engagement mean fewer genuine connections.",
+        "Automation: Monitors hashtags, competitor posts, and audience activity, replying with relevant messages.",
+        "Solution: Grows brand presence and nurtures prospects without needing daily manual effort."
       ],
-      value: "Builds trust and engagement without manual scrolling.",
       cta: "Boost Engagement",
       icon: <Network className="h-8 w-8" />
     },
     {
-      title: "Revive Your Dead Leads",
-      description: "Re-engage dormant contacts with context-aware follow-ups that spark fresh conversations.",
+      title: "AI CRM Reactivation Agent",
+      description: "Re-ignite cold contacts and past clients in your CRM with personalised outreach that wins them back.",
       bullets: [
-        "Analyses old CRM data and contact activity.",
-        "Writes personalised re-engagement messages.",
-        "Runs automated outreach sequences by segment.",
-        "Books calls or directs to offers automatically."
+        "Problem: Valuable leads go dormant and are rarely re-contacted.",
+        "Automation: Reviews historic data, segments contacts, and sends contextual follow-ups automatically.",
+        "Solution: Converts forgotten records into new deals and revenue opportunities."
       ],
-      value: "Uncovers hidden revenue inside your existing database.",
       cta: "Reignite Pipeline",
       icon: <RefreshCw className="h-8 w-8" />
     },
     {
-      title: "Focus on the Right Prospects",
-      description: "Instantly assess every lead's fit and potential so your team only pursues high-value deals.",
+      title: "AI Deal Qualifier Agent",
+      description: "Know exactly who to chase — with instant data-driven insights into every prospect before the first call.",
       bullets: [
-        "Gathers company data from web, LinkedIn, and databases.",
-        "Scores leads using your ideal client criteria.",
-        "Flags high-potential accounts for follow-up.",
-        "Updates CRM with qualification details."
+        "Problem: Sales teams spend hours researching leads that don't convert.",
+        "Automation: Pulls firmographic and behavioural data, scores leads, and flags best-fit opportunities.",
+        "Solution: Lets your team focus only on the prospects most likely to close."
       ],
-      value: "Increases close rates by removing low-value leads early.",
       cta: "Qualify Smarter",
       icon: <CheckSquare className="h-8 w-8" />
     },
     {
-      title: "Send Proposals in Minutes, Not Hours",
-      description: "Create and send personalised proposals automatically from call notes or CRM data.",
+      title: "AI Proposal & Quote Agent",
+      description: "Create and send personalised proposals in minutes — not hours — with automated follow-ups that close deals faster.",
       bullets: [
-        "Extracts details from discovery calls or forms.",
-        "Generates branded proposals or quotes instantly.",
-        "Sends automatically with polite follow-ups.",
-        "Tracks opens, views, and responses."
+        "Problem: Writing proposals manually slows down your sales process.",
+        "Automation: Extracts notes from discovery calls, generates branded proposals, and triggers reminders.",
+        "Solution: Speeds up quoting and keeps prospects moving smoothly toward signature."
       ],
-      value: "Speeds up the sales cycle and boosts win rates.",
       cta: "Quote Instantly",
       icon: <Zap className="h-8 w-8" />
     },
     {
-      title: "Your Team's Instant Sales Coach",
-      description: "Give reps on-demand access to scripts, pricing, case studies, and product answers.",
+      title: "AI Sales Knowledge Agent",
+      description: "Give every rep an instant knowledge base that delivers playbooks, pricing, and pitch answers on demand.",
       bullets: [
-        "Centralises playbooks and sales materials.",
-        "Answers rep questions through chat or Slack.",
-        "Suggests talking points and objection replies.",
-        "Updates automatically as new content is added."
+        "Problem: Teams lose time searching for information or improvising answers.",
+        "Automation: Centralises all product data and training material into a smart chat assistant.",
+        "Solution: Ensures consistent, confident conversations that improve conversion rates."
       ],
-      value: "Keeps every rep on-message and confident during calls.",
       cta: "Train Instantly",
       icon: <BookOpen className="h-8 w-8" />
     },
     {
-      title: "24/7 Support That Never Sleeps",
-      description: "Deliver fast, accurate, multi-channel customer support with AI triage and escalation.",
+      title: "AI Customer Service Agent",
+      description: "Deliver instant, consistent support across email, chat, and social channels with intelligent triage and response.",
       bullets: [
-        "Reads and responds to emails, chat, and WhatsApp.",
-        "Recognises sentiment and urgency automatically.",
-        "Escalates complex issues to human agents.",
-        "Logs every conversation in your helpdesk."
+        "Problem: Support inboxes fill with repetitive questions that slow your team down.",
+        "Automation: Detects message intent, responds automatically, and routes complex issues to humans.",
+        "Solution: Cuts response times and boosts customer satisfaction around the clock."
       ],
-      value: "Reduces response time and improves customer satisfaction.",
       cta: "Support Smarter",
       icon: <Headphones className="h-8 w-8" />
     },
     {
-      title: "Turn Every Call into Data",
-      description: "Analyse conversations, score performance, and create actionable follow-ups automatically.",
+      title: "AI Sales Call Analyser Agent",
+      description: "Transform every sales conversation into actionable insights and next-step recommendations — automatically.",
       bullets: [
-        "Transcribes and summarises every call.",
-        "Detects objections, tone, and buying signals.",
-        "Scores reps against your playbook.",
-        "Suggests next steps and sends follow-ups."
+        "Problem: Important insights from sales calls are lost in inconsistent note-taking.",
+        "Automation: Transcribes conversations, scores performance, and drafts personalised follow-ups.",
+        "Solution: Delivers sharper coaching insights and higher close rates across your team."
       ],
-      value: "Improves call quality and helps teams close more deals.",
       cta: "Analyse Calls",
       icon: <Radio className="h-8 w-8" />
     },
     {
-      title: "Manage by Insight, Not Guesswork",
-      description: "Track performance, get summaries, and coach your team automatically.",
+      title: "AI Sales Manager Agent",
+      description: "Gain real-time visibility into your team's performance without endless call reviews or reports.",
       bullets: [
-        "Monitors team calls and activity.",
-        "Sends concise updates and leaderboards.",
-        "Flags coaching opportunities instantly.",
-        "Provides weekly summaries and trends."
+        "Problem: Managers struggle to track activity and identify where coaching is needed.",
+        "Automation: Analyses call data, compiles concise summaries, and highlights performance trends.",
+        "Solution: Frees up leadership time and improves results through data-driven feedback."
       ],
-      value: "Saves managers hours while improving team performance.",
       cta: "Manage Smarter",
       icon: <TrendingUp className="h-8 w-8" />
     },
     {
-      title: "Build Your Own Growth Agent",
-      description: "Create a fully bespoke AI solution that automates your unique workflow.",
+      title: "Fully Customised AI Agent",
+      description: "Design a purpose-built AI agent crafted precisely around your workflows and growth objectives.",
       bullets: [
-        "Scopes and designs an agent for your exact needs.",
-        "Connects seamlessly to your CRM or apps.",
-        "Includes logic, prompts, and integrations.",
-        "Deployed securely in your Lovable Cloud environment."
+        "Problem: Generic automations can't solve unique, business-specific challenges.",
+        "Automation: Scopes, designs, and deploys a tailor-made agent that integrates into your tools.",
+        "Solution: Creates measurable impact with AI built exclusively for your business model."
       ],
-      value: "A made-to-measure automation built to grow your business.",
       cta: "Design Yours",
       icon: <Puzzle className="h-8 w-8" />
     }
@@ -184,12 +160,11 @@ const Agents = () => {
     title: string;
     description: string;
     bullets: string[];
-    value: string;
     cta: string;
     icon: React.ReactNode;
   }
 
-  const AgentCard = ({ title, description, bullets, value, cta, icon }: AgentCardProps) => (
+  const AgentCard = ({ title, description, bullets, cta, icon }: AgentCardProps) => (
     <Card className="group hover:shadow-xl hover:scale-[1.03] transition-all duration-300 border bg-card h-full">
       <CardContent className="p-6 flex flex-col h-full">
         <div className="flex flex-col items-center text-center gap-4 flex-grow">
@@ -199,20 +174,15 @@ const Agents = () => {
           <h3 className="font-bold text-xl">{title}</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
           
-          <ul className="text-left text-sm space-y-2 w-full mt-2">
+          <ul className="text-left text-sm space-y-3 w-full mt-4">
             {bullets.map((bullet, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-primary mt-1">•</span>
-                <span className="text-muted-foreground">{bullet}</span>
+              <li key={index} className="text-muted-foreground leading-relaxed">
+                {bullet}
               </li>
             ))}
           </ul>
           
-          <p className="font-semibold text-sm text-primary mt-4">
-            {value}
-          </p>
-          
-          <Button 
+          <Button
             className="w-full mt-auto"
             onClick={() => document.getElementById('ai-agents-form')?.scrollIntoView({ behavior: 'smooth' })}
           >
