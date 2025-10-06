@@ -180,7 +180,7 @@ const Agents = () => {
           <ul className="text-left text-sm space-y-3 w-full mt-4">
             {bullets.map((bullet, index) => {
               const getBulletIcon = () => {
-                if (bullet.startsWith('Problem:')) return <AlertTriangle className="h-4 w-4 text-destructive flex-shrink-0 mt-0.5" />;
+                if (bullet.startsWith('Problem:')) return <AlertTriangle className="h-4 w-4 text-white flex-shrink-0 mt-0.5" />;
                 if (bullet.startsWith('Automation:')) return <Wand2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />;
                 if (bullet.startsWith('Solution:')) return <PoundSterling className="h-4 w-4 text-success flex-shrink-0 mt-0.5" />;
                 return null;
