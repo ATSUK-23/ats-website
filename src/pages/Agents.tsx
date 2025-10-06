@@ -42,34 +42,44 @@ import {
 const Agents = () => {
   const agentTypes = [
     {
-      title: "Web Apps",
-      description: "User-facing apps with screens & forms.",
-      icon: <Monitor className="h-6 w-6" />
+      title: "AI Lead Generation Agent",
+      description: "Book qualified meetings with automated LinkedIn outreach and personalised cold email campaigns that run on autopilot.",
+      icon: <Users className="h-6 w-6" />
     },
     {
-      title: "Autonomous Agents",
-      description: "Scheduled automations that run independently.",
+      title: "AI Inbound Lead Response Agent",
+      description: "Turn inbound enquiries into booked meetings with instant replies, smart qualification, and automated follow-ups.",
+      icon: <MessageSquare className="h-6 w-6" />
+    },
+    {
+      title: "AI Authority Builder Agent",
+      description: "Publish timely blogs and social posts that position your business as the go-to authority in your industry.",
+      icon: <FileText className="h-6 w-6" />
+    },
+    {
+      title: "AI Social Engagement Agent",
+      description: "Engage prospects on social platforms with instant replies and relevant comments that build connections automatically.",
+      icon: <Share2 className="h-6 w-6" />
+    },
+    {
+      title: "AI CRM Reactivation Agent",
+      description: "Revive prospects and clients in your CRM with personalised outreach that re-engages them and books meetings automatically.",
+      icon: <Database className="h-6 w-6" />
+    },
+    {
+      title: "AI Deal Qualifier Agent",
+      description: "Walk into every call fully prepared with instant insight on company size, industry, funding stage, fit, and opportunity potential.",
+      icon: <Target className="h-6 w-6" />
+    },
+    {
+      title: "AI Proposal & Quote Agent",
+      description: "Send tailored proposals and quotes instantly from discovery notes with automated follow-up reminders.",
+      icon: <FileCheck className="h-6 w-6" />
+    },
+    {
+      title: "AI Sales Knowledge Agent",
+      description: "Give your team instant access to your playbook, product knowledge, and objection handling anytime they need it.",
       icon: <Bot className="h-6 w-6" />
-    },
-    {
-      title: "Browser Extensions",
-      description: "Triggered via browser toolbar for seamless integration.",
-      icon: <Globe className="h-6 w-6" />
-    },
-    {
-      title: "Email Triggered",
-      description: "Activate via forwarding or CC for automated responses.",
-      icon: <Mail className="h-6 w-6" />
-    },
-    {
-      title: "Webhooks & APIs",
-      description: "Trigger via Zapier, Make, or any app integration.",
-      icon: <Webhook className="h-6 w-6" />
-    },
-    {
-      title: "MCP Servers",
-      description: "Expose agent-to-agent capabilities for complex workflows.",
-      icon: <Server className="h-6 w-6" />
     }
   ];
 
@@ -330,22 +340,35 @@ const Agents = () => {
       <main>
         {/* Hero Section */}
         <HeroSection
-          title="Automate Anything with AI Agents"
-          subtitle="Launch AI agents as apps, automations, or integrations wherever you need them."
-          ctaText="Start Building"
-          ctaLink="https://www.automatetosell.com/ats-application"
+          title="AI Growth Agents that Drive Revenue"
+          subtitle="Proven AI agents that bring leads, book meetings and speed sales, fully managed and customisable, plus bespoke builds when required."
+          ctaText="See How It Works"
+          ctaLink="#ai-agents-form"
           backgroundImage="/lovable-uploads/6f46dcfa-73ab-402b-8d25-de2cdf561d8c.png"
         />
 
+        {/* Value Propositions */}
+        <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+          <div className="container px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <h3 className="text-xl font-bold mb-3">More Leads, More Meetings</h3>
+                <p className="text-muted-foreground">Agents designed to fill your pipeline by prospecting, email outreach, event promotion and social engagement.</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold mb-3">Faster Sales, Higher Conversions</h3>
+                <p className="text-muted-foreground">From instant proposals to ad optimisation and SEO content, our agents help you close deals quicker and maximise campaign returns.</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold mb-3">Stronger Client Revenue</h3>
+                <p className="text-muted-foreground">Reactivation, upsells, cross-sells and smart content distribution keep your brand front of mind and expand revenue from existing customers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Agent Collections */}
-        <SectionGrid title="Agent Types" items={agentTypes} />
-        <SectionGrid title="Content Generation" items={contentGeneration} />
-        <SectionGrid title="Data Ingestion" items={dataIngestion} />
-        <SectionGrid title="Social & Communications" items={socialCommunications} />
-        <SectionGrid title="Human in the Loop" items={humanInLoop} />
-        <SectionGrid title="Testing & Quality Assurance" items={testingQA} />
-        <SectionGrid title="Agent Development" items={agentDevelopment} />
-        <SectionGrid title="Workspace & Management" items={workspaceManagement} />
+        <SectionGrid title="AI Agents for Growth" items={agentTypes} />
 
         {/* Call to Action Buttons */}
         <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/10 to-secondary/10">
