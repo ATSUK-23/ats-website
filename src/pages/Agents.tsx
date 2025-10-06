@@ -16,12 +16,12 @@ const Agents = () => {
   }, {
     title: "AI Inbound Lead Response Agent",
     description: "Instantly convert every incoming enquiry into a booked meeting with intelligent replies and automated scheduling.",
-    bullets: ["Problem: Delayed responses cause leads to lose interest or go elsewhere.", "Automation: Replies instantly via chat, email, or web forms, qualifies leads, and books calls into calendars.", "Solution: Ensures every inbound opportunity is handled fast and professionally — 24/7."],
+    bullets: ["Problem: Delayed responses cause leads to lose interest or go elsewhere.", "Automation: Replies instantly via chat, email, or web forms, qualifies leads, and books calls into calendars.", "Solution: Ensures every inbound opportunity is handled fast and professionally 24/7."],
     cta: "Respond Instantly",
     icon: <MessageSquare className="h-8 w-8" />
   }, {
     title: "AI Authority Builder Agent",
-    description: "Publish fresh, relevant content that positions your brand as the industry voice — automatically.",
+    description: "Publish fresh, relevant content that positions your brand as the industry voice automatically.",
     bullets: ["Problem: Producing thought-leadership content consistently is time-consuming and hard to sustain.", "Automation: Tracks trends, generates blog and social posts in your tone, and schedules them for release.", "Solution: Keeps your audience engaged and builds trust with zero content bottlenecks."],
     cta: "Build Authority",
     icon: <PenTool className="h-8 w-8" />
@@ -39,13 +39,13 @@ const Agents = () => {
     icon: <RefreshCw className="h-8 w-8" />
   }, {
     title: "AI Deal Qualifier Agent",
-    description: "Know exactly who to chase — with instant data-driven insights into every prospect before the first call.",
+    description: "Know exactly who to chase with instant data-driven insights into every prospect before the first call.",
     bullets: ["Problem: Sales teams spend hours researching leads that don't convert.", "Automation: Pulls firmographic and behavioural data, scores leads, and flags best-fit opportunities.", "Solution: Lets your team focus only on the prospects most likely to close."],
     cta: "Qualify Smarter",
     icon: <CheckSquare className="h-8 w-8" />
   }, {
     title: "AI Proposal & Quote Agent",
-    description: "Create and send personalised proposals in minutes — not hours — with automated follow-ups that close deals faster.",
+    description: "Create and send personalised proposals in minutes, not hours, with automated follow-ups that close deals faster.",
     bullets: ["Problem: Writing proposals manually slows down your sales process.", "Automation: Extracts notes from discovery calls, generates branded proposals, and triggers reminders.", "Solution: Speeds up quoting and keeps prospects moving smoothly toward signature."],
     cta: "Quote Instantly",
     icon: <Zap className="h-8 w-8" />
@@ -63,7 +63,7 @@ const Agents = () => {
     icon: <Headphones className="h-8 w-8" />
   }, {
     title: "AI Sales Call Analyser Agent",
-    description: "Transform every sales conversation into actionable insights and next-step recommendations — automatically.",
+    description: "Transform every sales conversation into actionable insights and next-step recommendations automatically.",
     bullets: ["Problem: Important insights from sales calls are lost in inconsistent note-taking.", "Automation: Transcribes conversations, scores performance, and drafts personalised follow-ups.", "Solution: Delivers sharper coaching insights and higher close rates across your team."],
     cta: "Analyse Calls",
     icon: <Radio className="h-8 w-8" />
