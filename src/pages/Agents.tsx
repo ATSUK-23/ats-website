@@ -183,7 +183,7 @@ const Agents = () => {
         
 
         {/* Lead Form */}
-        <AIAgentsLeadForm formTag="Agents" title="Build Your AI Agents Today" subtitle="Tell us about your automation needs and we'll help you build powerful AI agents that work 24/7." />
+        <AIAgentsLeadForm formTag="agent-opt-in" title="Build Your AI Agents Today" subtitle="Tell us about your automation needs and we'll help you build powerful AI agents that work 24/7." />
 
         {/* Final CTA Banner */}
         <section className="py-12 sm:py-16 bg-primary text-primary-foreground">

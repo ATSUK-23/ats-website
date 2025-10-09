@@ -58,7 +58,7 @@ const AIAgentsLeadForm: React.FC<AIAgentsLeadFormProps> = ({ formTag, title, sub
     try {
       // Send data to Zapier webhook
       try {
-        await fetch('https://hooks.zapier.com/hooks/catch/5146490/uhqraq6/', {
+        await fetch('https://hooks.zapier.com/hooks/catch/5146490/u523rwr/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
