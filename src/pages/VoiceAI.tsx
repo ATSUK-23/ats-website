@@ -204,17 +204,7 @@ const VoiceAI = () => {
             </div>
             
             {/* Testimonial */}
-            <Card className="max-w-4xl mx-auto p-8">
-              <CardContent className="text-center space-y-4">
-                <div className="flex justify-center gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)}
-                </div>
-                <blockquote className="text-lg italic">
-                  "After testing multiple providers, Assistable was the only one that handled over 25,000 calls flawlessly. Reliability and features are unmatched."
-                </blockquote>
-                <cite className="text-muted-foreground font-medium">Maurice M.</cite>
-              </CardContent>
-            </Card>
+            
           </div>
         </section>
 
@@ -265,11 +255,7 @@ const VoiceAI = () => {
         </section>
 
         {/* Lead Form */}
-        <VoiceAILeadForm 
-          formTag="Voice-AI"
-          title="Ready to Transform Your Customer Experience?"
-          subtitle="Get started with AI voice and chat assistants that delight customers and grow your business 24/7."
-        />
+        <VoiceAILeadForm formTag="Voice-AI" title="Ready to Transform Your Customer Experience?" subtitle="Get started with AI voice and chat assistants that delight customers and grow your business 24/7." />
 
         {/* Closing CTA */}
         <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
