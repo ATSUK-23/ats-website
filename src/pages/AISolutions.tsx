@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -153,11 +155,27 @@ export default function AISolutions() {
   }
 
   // Default view when no assessment results
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Audit & Implementation",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "Professional AI assessment revealing automation opportunities and creating clear implementation roadmaps.",
+    category: "AI Consulting",
+    areaServed: "Global"
+  };
+
   return <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>AI Solutions - Unleash the AI Brain in Your Business | Automate to Sell</title>
-        <meta name="description" content="AI solutions that delight customers, boost sales, increase efficiency, slash costs & maximize profits. We help develop your AI strategy and manage implementation." />
-      </Helmet>
+      <GlobalSEO 
+        title="AI Solutions - Unleash the AI Brain in Your Business"
+        description="AI solutions that delight customers, boost sales, increase efficiency, slash costs & maximize profits. We help develop your AI strategy and manage implementation."
+        path="/ai-solutions"
+        keywords="AI solutions, AI audit, AI strategy, business automation, AI implementation"
+      />
+      <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
 

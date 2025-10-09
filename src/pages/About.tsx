@@ -2,14 +2,32 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { Link } from "react-router-dom";
 import profileImage from "@/assets/martin-keene-profile.jpeg";
+
 const About = () => {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Martin Keene",
+    jobTitle: "Director of Strategy & Operations",
+    worksFor: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    url: "https://automatetosell.com/about",
+    sameAs: ["https://www.linkedin.com/in/martinkeene"]
+  };
+
   return <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>About Martin Keene - Automate To Sell | Digital Marketing Expert</title>
-        <meta name="description" content="Learn about Martin Keene's 20+ years experience in digital marketing, eCommerce automation, and building scalable business systems." />
-      </Helmet>
+      <GlobalSEO 
+        title="About Martin Keene - Digital Marketing Expert"
+        description="Learn about Martin Keene's 20+ years experience in digital marketing, eCommerce automation, and building scalable business systems."
+        path="/about"
+      />
+      <SchemaMarkup schema={personSchema} />
 
       <SiteHeader />
       

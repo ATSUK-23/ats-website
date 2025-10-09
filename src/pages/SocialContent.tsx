@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
 import SocialContentLeadForm from "@/components/forms/SocialContentLeadForm";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import heroImage from "@/assets/social-hero.jpg";
 import brandingBenefitsImage from "@/assets/personal-branding-benefits.jpg";
 import contentSystemImage from "@/assets/content-system.jpg";
@@ -12,28 +14,28 @@ import authenticContentImage from "@/assets/authentic-content.jpg";
 import influenceGrowthImage from "@/assets/influence-growth.jpg";
 
 const SocialContent = () => {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Social Content Automation",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "AI tools for generating, scheduling, and managing multi-channel social media content with analytics integration.",
+    category: "Social Automation",
+    areaServed: "Global"
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Social Content & Personal Branding - Grow Your Influence | Automate To Sell</title>
-        <meta name="description" content="Transform your ideas into a powerful online presence. Our done-for-you social content system helps you build your personal brand, grow influence, and attract opportunities." />
-        <meta name="keywords" content="personal branding, social media content, content creation, influence marketing, authentic content, brand building" />
-        <link rel="canonical" href="https://automatetosell.com/social-content" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Social Content & Personal Branding",
-            "description": "Done-for-you social content system to build your personal brand and grow your influence",
-            "provider": {
-              "@type": "Organization",
-              "name": "Automate To Sell"
-            },
-            "serviceType": "Social Media and Personal Branding Services",
-            "areaServed": "Worldwide"
-          })}
-        </script>
-      </Helmet>
+      <GlobalSEO 
+        title="Social Content & Personal Branding - Grow Your Influence"
+        description="Transform your ideas into a powerful online presence. Our done-for-you social content system helps you build your personal brand, grow influence, and attract opportunities."
+        path="/social-content"
+        keywords="personal branding, social media content, content creation, influence marketing, authentic content, brand building"
+      />
+      <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
 

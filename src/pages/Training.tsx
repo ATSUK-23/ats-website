@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -218,11 +220,26 @@ export default function Training() {
       bookingLink: "https://epitome-ai-reboot.lovable.app/ai-prototyping-workshop"
     }]
   }];
+
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "AI & Automation Training",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "Live and online training helping SMEs implement AI and automation to increase efficiency and revenue."
+  };
+
   return <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>AI Training & Upskilling Programs | Automate to Sell</title>
-        <meta name="description" content="Transform your team from AI curious to AI competent with our comprehensive training programs. Foundation to advanced level courses available." />
-      </Helmet>
+      <GlobalSEO 
+        title="AI Training & Upskilling Programs"
+        description="Transform your team from AI curious to AI competent with our comprehensive training programs. Foundation to advanced level courses available."
+        path="/training"
+        keywords="AI training, automation training, business AI courses, AI upskilling, AI workshops"
+      />
+      <SchemaMarkup schema={courseSchema} />
 
       <SiteHeader />
 

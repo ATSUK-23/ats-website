@@ -7,13 +7,32 @@ import HeroSection from "@/components/sections/HeroSection";
 import SplitSection from "@/components/sections/SplitSection";
 import { Contact } from "@/components/sections/Contact";
 import VoiceAILeadForm from "@/components/forms/VoiceAILeadForm";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { Phone, MessageCircle, Calendar, Users, TrendingUp, Clock, Shield, Zap, CheckCircle, Star } from "lucide-react";
+
 const VoiceAI = () => {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Voice AI Systems",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "AI-powered voice assistants for sales and customer support that improve response speed and reduce workload.",
+    category: "AI Voice Automation",
+    areaServed: "Global"
+  };
+
   return <>
-      <Helmet>
-        <title>Voice AI Solutions - Human-Like AI Voice & Chat Assistants | Automate To Sell</title>
-        <meta name="description" content="Elevate your business with human-like AI voice and chat assistants. Delight customers, capture leads, and grow revenue 24/7. No coding required." />
-      </Helmet>
+      <GlobalSEO 
+        title="Voice AI Solutions - Human-Like AI Voice & Chat Assistants"
+        description="Elevate your business with human-like AI voice and chat assistants. Delight customers, capture leads, and grow revenue 24/7. No coding required."
+        path="/voice-ai"
+        keywords="voice AI, AI chat assistants, AI voice assistants, customer service automation, AI phone systems"
+      />
+      <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
       

@@ -4,6 +4,8 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import { Button } from "@/components/ui/button";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import heroImage from "@/assets/ecommerce-hero.jpg";
 import globalEcommerceHero from "@/assets/global-ecommerce-hero.jpg";
 import globalSystemsImage from "@/assets/global-systems.jpg";
@@ -14,28 +16,29 @@ import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
 import ECommerceLeadForm from "@/components/forms/ECommerceLeadForm";
 import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
+
 const ECommerce = () => {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "E-Commerce Automation",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "Designs and automates multi-market e-commerce systems, CRM pipelines, and fulfillment workflows for global scaling.",
+    category: "E-Commerce Automation",
+    areaServed: "Global"
+  };
+
   return <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>E-Commerce Solutions - Scale Your Online Sales | Automate To Sell</title>
-        <meta name="description" content="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." />
-        <meta name="keywords" content="e-commerce, Shopify, online sales, marketplaces, Amazon, eBay, ad management, global systems, crowdfunding" />
-        <link rel="canonical" href="https://automatetosell.com/e-commerce" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "E-Commerce Solutions",
-          "description": "Scale your online sales with smart e-commerce systems and automation",
-          "provider": {
-            "@type": "Organization",
-            "name": "Automate To Sell"
-          },
-          "serviceType": "E-Commerce Development and Management",
-          "areaServed": "Worldwide"
-        })}
-        </script>
-      </Helmet>
+      <GlobalSEO 
+        title="E-Commerce Solutions - Scale Your Online Sales"
+        description="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly."
+        path="/e-commerce"
+        keywords="e-commerce, Shopify, online sales, marketplaces, Amazon, eBay, ad management, global systems, crowdfunding"
+      />
+      <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
 

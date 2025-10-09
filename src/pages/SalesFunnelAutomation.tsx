@@ -5,19 +5,36 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import { HeroSection } from "@/components/sections/HeroSection";
 import SFALeadForm from "@/components/forms/SFALeadForm";
 import SplitSection from "@/components/sections/SplitSection";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import salesHeroImage from "@/assets/sales-automation-hero.jpg";
 import automationBenefitsImage from "@/assets/automation-benefits.jpg";
 import ghlPlatformImage from "@/assets/ghl-platform.jpg";
 import systemIntegrationImage from "@/assets/system-integration.jpg";
 const businessTransformationImage = "/lovable-uploads/e22b0f2d-1042-45c9-af98-266a311f1fc5.png";
+
 const SalesFunnelAutomation = () => {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Sales Funnel Automation",
+    provider: {
+      "@type": "Organization",
+      name: "Automate to Sell"
+    },
+    description: "Builds and automates end-to-end sales funnels connecting CRM, ads, and follow-ups to increase conversion rates.",
+    category: "Funnel Automation",
+    areaServed: "Global"
+  };
+
   return <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-muted/50 text-foreground">
-      <Helmet>
-        <title>Sales Funnel Automation - Automate To Sell</title>
-        <meta name="description" content="Automated sales & marketing systems built for your business. Streamline sales, nurture leads, and grow revenue with smart automation strategies." />
-        <meta name="keywords" content="sales automation, marketing automation, GoHighLevel, CRM, lead nurturing, sales funnel" />
-        <link rel="canonical" href="/sales-funnel-automation" />
-      </Helmet>
+      <GlobalSEO 
+        title="Sales Funnel Automation"
+        description="Automated sales & marketing systems built for your business. Streamline sales, nurture leads, and grow revenue with smart automation strategies."
+        path="/sales-funnel-automation"
+        keywords="sales automation, marketing automation, GoHighLevel, CRM, lead nurturing, sales funnel"
+      />
+      <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
       

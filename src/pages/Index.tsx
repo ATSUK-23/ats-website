@@ -6,22 +6,49 @@ import HomePageLeadForm from "@/components/forms/HomePageLeadForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SplitSection from "@/components/sections/SplitSection";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import whyImg from "@/assets/why-choose-us.jpg";
 const auditImg = "/lovable-uploads/267ce356-fb37-4f4b-8001-76a4a464c8a1.png";
 import workshopsImg from "@/assets/workshops.jpg";
 const sourcingImg = "/lovable-uploads/bc0882a0-dbff-46c2-b567-5f2cdffb425b.png";
 
 const Index = () => {
-  const jsonLd = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Automate To Sell",
-    url: "https://automatetosell.com/",
-    description: "AI automation consultancy helping businesses boost sales and efficiency."
+    name: "Automate to Sell",
+    url: "https://automatetosell.com",
+    logo: "https://automatetosell.com/favicon.png",
+    description: "Helping SMEs scale marketing, sales and operations through AI automation systems and digital transformation.",
+    founder: {
+      "@type": "Person",
+      name: "Martin Keene",
+      jobTitle: "Director of Strategy & Operations"
+    },
+    sameAs: [
+      "https://www.linkedin.com/in/martinkeene",
+      "https://www.instagram.com/automatetosell",
+      "https://www.facebook.com/automatetosell"
+    ],
+    contactPoint: [{
+      "@type": "ContactPoint",
+      contactType: "Sales",
+      email: "martin@automatetosell.com",
+      areaServed: "GB",
+      availableLanguage: ["en"]
+    }]
   };
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
+      <GlobalSEO 
+        title="Automate To Sell — AI Automation Consulting"
+        description="AI automation consultancy helping businesses boost sales and efficiency. We assess, recommend strategy, and implement with the best tech partners."
+        path="/"
+      />
+      <SchemaMarkup schema={organizationSchema} />
+      
       <SiteHeader />
       <main>
         <Hero />
@@ -187,10 +214,6 @@ const Index = () => {
         <HomePageLeadForm />
       </main>
       <SiteFooter />
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify(jsonLd)
-      }} />
     </div>
   );
 };

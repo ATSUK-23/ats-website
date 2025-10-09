@@ -1,9 +1,10 @@
-import { useEffect } from "react";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SplitSection from "@/components/sections/SplitSection";
 import HeroSection from "@/components/sections/HeroSection";
 import VibeCodingLeadForm from "@/components/forms/VibeCodingLeadForm";
+import { GlobalSEO } from "@/components/seo/GlobalSEO";
+import { SchemaMarkup } from "@/components/seo/SchemaMarkup";
 import { Button } from "@/components/ui/button";
 import vibeHero from "@/assets/vibe-hero.jpg";
 import vibeWhatIs from "@/assets/vibe-what-is.jpg";
@@ -11,40 +12,55 @@ import vibeWorkshops from "@/assets/vibe-workshops.jpg";
 import vibeProcess from "@/assets/vibe-process.jpg";
 import vibeBenefits from "@/assets/vibe-benefits.jpg";
 import vibeCta from "@/assets/vibe-cta.jpg";
+
 const VibeCoding = () => {
-  const metaDescription = "Vibe Coding: build websites and apps in days using AI and low-code. Workshops, rapid prototyping, and full builds.";
-  const jsonLd = {
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Vibe Coding Workshop",
+    startDate: "2025-11-01T09:00:00+00:00",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: "Surbiton",
+      address: "Surbiton, United Kingdom"
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Automate to Sell",
+      url: "https://automatetosell.com"
+    },
+    description: "Hands-on AI prototyping workshop teaching businesses how to build apps and websites in minutes.",
+    offers: {
+      "@type": "Offer",
+      price: "199",
+      priceCurrency: "GBP",
+      availability: "https://schema.org/InStock"
+    }
+  };
+
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Vibe Coding Rapid Prototyping & App Builds",
     serviceType: "Vibe Coding",
-    url: "https://automatetosell.com/vibe-coding",
     provider: {
       "@type": "Organization",
-      name: "Automate To Sell",
-      url: "https://automatetosell.com/"
+      name: "Automate To Sell"
     },
     areaServed: "Global",
-    description: metaDescription
+    description: "Build websites and apps in days using AI and low-code. Workshops, rapid prototyping, and full builds.",
+    category: "AI Development & Prototyping"
   };
-  useEffect(() => {
-    document.title = "Vibe Coding | Build websites and apps in days";
-    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    meta.content = metaDescription;
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = `${window.location.origin}/vibe-coding`;
-  }, []);
+
   return <div className="dark min-h-screen bg-background text-foreground">
+      <GlobalSEO 
+        title="Vibe Coding | Build websites and apps in days"
+        description="Vibe Coding: build websites and apps in days using AI and low-code. Workshops, rapid prototyping, and full builds."
+        path="/vibe-coding"
+        keywords="vibe coding, AI prototyping, rapid development, low-code, no-code, AI workshops, app development"
+      />
+      <SchemaMarkup schema={[eventSchema, serviceSchema]} />
       <SiteHeader />
       <main>
         {/* Hero */}
@@ -215,10 +231,6 @@ Whether you need a customer portal, e-commerce platform, internal dashboard, or 
         <VibeCodingLeadForm />
       </main>
       <SiteFooter />
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-      __html: JSON.stringify(jsonLd)
-    }} />
     </div>;
 };
 export default VibeCoding;
