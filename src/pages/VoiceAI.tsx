@@ -22,9 +22,7 @@ const VoiceAI = () => {
         <HeroSection title="Elevate Your Business With Human-Like AI Voice & Chat Assistants" subtitle="Delight customers, capture more leads, and grow revenue with AI-powered voice and chat that works 24/7. No coding, no complexity—just results." ctaText="Start Free Trial" ctaLink="https://www.automatetosell.com/ats-application" backgroundImage="/lovable-uploads/a0a37eb9-ee13-49f7-b089-029ad1a11537.png" className="min-h-[70vh]">
           <div className="mt-8 flex items-center justify-center gap-4">
             <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                See Pricing
-              </Button>
+              
             </a>
           </div>
         </HeroSection>
