@@ -245,10 +245,10 @@ const VoiceAI = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto text-sm sm:text-base">View Pricing Plans</Button>
+                
               </a>
               <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto text-sm sm:text-base">Start Free Trial</Button>
+                
               </a>
             </div>
           </div>
