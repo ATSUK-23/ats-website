@@ -145,9 +145,7 @@ const VoiceAI = () => {
         {/* Simplicity & Speed */}
         <section className="py-12 sm:py-16">
           <div className="container text-center px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">
-              Launch in Minutes, No Tech Headaches
-            </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Quicl To Launch, No Tech Headaches</h2>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
               <div className="space-y-4">
                 <div className="mx-auto w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
