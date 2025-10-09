@@ -254,21 +254,7 @@ const VoiceAI = () => {
         <VoiceAILeadForm formTag="Voice-AI" title="Ready to Transform Your Customer Experience?" subtitle="Get started with AI voice and chat assistants that delight customers and grow your business 24/7." />
 
         {/* Closing CTA */}
-        <section className="py-12 sm:py-16 bg-primary text-primary-foreground">
-          <div className="container text-center px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-              Your Customers Expect Speed. Your Business Deserves Growth.
-            </h2>
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Put AI to work for you capture every lead, delight every customer, and scale without limits.
-            </p>
-            <a href="https://www.automatetosell.com/ats-application" target="_blank" rel="noreferrer">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto text-sm sm:text-base">
-                Start Your Free Trial Today
-              </Button>
-            </a>
-          </div>
-        </section>
+        
 
         <Contact />
       </main>
