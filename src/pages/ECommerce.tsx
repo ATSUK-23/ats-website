@@ -16,7 +16,6 @@ import crowdfundingImage from "@/assets/crowdfunding.jpg";
 import growthImage from "@/assets/ecommerce-growth.jpg";
 import ECommerceLeadForm from "@/components/forms/ECommerceLeadForm";
 import { ShoppingCart, Factory, Lightbulb, Target, TrendingUp, Users, Truck } from "lucide-react";
-
 const ECommerce = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -30,14 +29,8 @@ const ECommerce = () => {
     category: "E-Commerce Automation",
     areaServed: "Global"
   };
-
   return <div className="min-h-screen bg-background text-foreground">
-      <GlobalSEO 
-        title="E-Commerce Solutions - Scale Your Online Sales"
-        description="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly."
-        path="/e-commerce"
-        keywords="e-commerce, Shopify, online sales, marketplaces, Amazon, eBay, ad management, global systems, crowdfunding"
-      />
+      <GlobalSEO title="E-Commerce Solutions - Scale Your Online Sales" description="Scale your online sales with smart e-commerce systems. From Shopify stores to global systems, marketplaces, and ad management - we help you sell more and manage everything seamlessly." path="/e-commerce" keywords="e-commerce, Shopify, online sales, marketplaces, Amazon, eBay, ad management, global systems, crowdfunding" />
       <SchemaMarkup schema={serviceSchema} />
 
       <SiteHeader />
@@ -364,69 +357,10 @@ const ECommerce = () => {
             </>} image="/lovable-uploads/be7b54d5-3430-46e2-b634-55880cea311c.png" imageAlt="Multi-platform advertising ecosystem showing Google, Meta, TikTok, and Amazon ads integration" reverse />
 
         {/* Crowdfunding */}
-        <SplitSection title="Launch Your Product to the World and Get Funded Fast" description={<>
-              <p className="mb-4">
-                Crowdfunding is one of the most powerful ways to launch a new product, test the market, and build a loyal customer base before you've even shipped.
-              </p>
-              <p className="mb-6">
-                That's why we've partnered with LaunchBoom — the No. 1 launch agency in the world, helping product creators raise over $175M to create their dream businesses.
-              </p>
-              <p className="mb-6">
-                Certified by Kickstarter and Indiegogo, LaunchBoom has developed a proprietary 4-step process proven to deliver results with many campaigns funded in less than 24 hours (average funding time: just 15 minutes).
-              </p>
-              <p className="font-medium mb-6">
-                By combining our e-commerce expertise with LaunchBoom's proven crowdfunding system, we help you reduce risk, maximise exposure, and bring your product to market with both funding and an audience in place.
-              </p>
-              <Button variant="hero" size="lg" asChild>
-                <a href="#ecommerce-form">Book a Crowdfunding Strategy Call</a>
-              </Button>
-            </>} image="/lovable-uploads/ee4cdcd5-6188-4808-b6a2-7339d263f6b5.png" imageAlt="Crowdfunding campaign dashboard showing Kickstarter and Indiegogo funding progress" reverse />
+        
 
         {/* LaunchBoom 4-Step Process - Full Width */}
-        <section className="py-8 md:py-12 bg-muted/30">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">The LaunchBoom 4-Step Process</h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Proven strategies that have helped raise over $175M across successful crowdfunding campaigns
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-card p-8 rounded-xl border shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-primary font-bold text-2xl">1</span>
-                </div>
-                <h4 className="font-bold text-lg mb-4">Set Up Funnel</h4>
-                <p className="text-muted-foreground">Use proprietary strategies proven to convert 30–50× more and eliminate wasteful ad spend.</p>
-              </div>
-              
-              <div className="bg-card p-8 rounded-xl border shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-primary font-bold text-2xl">2</span>
-                </div>
-                <h4 className="font-bold text-lg mb-4">Test & Validate</h4>
-                <p className="text-muted-foreground">Test your product and positioning with real customer demand before you commit to a full launch.</p>
-              </div>
-              
-              <div className="bg-card p-8 rounded-xl border shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-primary font-bold text-2xl">3</span>
-                </div>
-                <h4 className="font-bold text-lg mb-4">Build an Audience</h4>
-                <p className="text-muted-foreground">Attract real buyers and craft a campaign message that speaks directly to them.</p>
-              </div>
-              
-              <div className="bg-card p-8 rounded-xl border shadow-sm hover:shadow-md transition-shadow text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">4</span>
-                </div>
-                <h4 className="font-bold text-lg mb-4">LaunchBoom 🚀</h4>
-                <p className="text-muted-foreground">Launch on Kickstarter or Indiegogo with a campaign primed to succeed and get funded fast.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
 
         {/* Lead Generation Form */}
